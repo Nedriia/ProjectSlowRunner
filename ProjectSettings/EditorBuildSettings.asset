@@ -6,12 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Nathan/_Scenes/empty.unity
-    guid: 24c292930509ee74b83df087e1855967
-  - enabled: 0
-    path: Assets/Nathan/_Scenes/Icosphere 1.unity
-    guid: f247c5e9d26ec304ab58471d1cd8bbad
-  - enabled: 0
     path: Assets/Nathan/_Scenes/test_nate_scene.unity
     guid: 6aa214603470649488bea8e78c9a6028
   m_configObjects: {}

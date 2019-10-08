@@ -31,12 +31,11 @@ public class CameraController : MonoBehaviour
     }
     void LateUpdate()
     {
-        transform.LookAt(target);
         if (target)
         {
-            if (/*Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Moved*/ Input.GetMouseButton(0))
+            if (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Moved)
             {
-                //Touch touch = Input.GetTouch(0);
+                Touch touch = Input.GetTouch(0);
                 velocityX += xSpeed * Input.GetAxis("Mouse X") * distance * -0.02f;
                 velocityY += ySpeed * Input.GetAxis("Mouse Y") * distance * -0.02f;
             }
@@ -55,10 +54,10 @@ public class CameraController : MonoBehaviour
     }
     public static float ClampAngle(float angle, float min, float max)
     {
-        if (angle < -360f)
-            angle += 360f;
-        if (angle > 360f)
-            angle -= 360f;
+        if (angle < -360F)
+            angle += 360F;
+        if (angle > 360F)
+            angle -= 360F;
         return Mathf.Clamp(angle, min, max);
     }
 }
