@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
 {
-    public Animator animator;
+    /*public Animator animator;
     public PlayerController player;
 
     void Update()
@@ -14,5 +14,5 @@ public class PlayerAnimation : MonoBehaviour
 
 
         
-    }
+    }*/
 }

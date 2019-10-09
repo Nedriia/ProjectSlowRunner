@@ -8,7 +8,7 @@ public class InspectElement_Map : Editor
 {
     public override void OnInspectorGUI()
     {
-        InspectElement map = (InspectElement)target;
+        InspectElement map = (InspectElement)target ; //TODO : Change that to targets to enable multiple edit with switch
         if (!map.elementTest.test.Contains(map))
         {
             map.elementTest.test.Add(map);

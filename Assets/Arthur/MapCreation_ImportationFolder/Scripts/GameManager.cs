@@ -35,8 +35,8 @@ public class GameManager : MonoBehaviour
                 sp.block.possiblePaths[sp.index].active = (count == pc.conditions.Count);
         }
 
-        if (player.walking)
-            return;
+        /*if (player.walking)
+            return;*/
 
         if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow))
         {

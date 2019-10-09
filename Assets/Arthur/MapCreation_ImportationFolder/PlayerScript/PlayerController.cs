@@ -7,7 +7,7 @@ using DG.Tweening;
 [SelectionBase]
 public class PlayerController : MonoBehaviour
 {
-    public bool walking = false;
+    //public bool walking = false;
 
     [Space]
 
@@ -21,11 +21,15 @@ public class PlayerController : MonoBehaviour
     [Space]
 
     public List<Transform> finalPath = new List<Transform>();
+    public List<Transform> temp_finalPath = new List<Transform>();
+    public bool finalform = false;
 
     //public gravityAttractor planet;
     public float speed;
 
     public int index;
+
+    public Material pathPlanned;
 
     void Start()
     {
@@ -37,7 +41,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if(finalPath.Count != 0)
+        if (finalPath.Count != 0)
         {
             FollowPath();
         }
@@ -68,13 +72,20 @@ public class PlayerController : MonoBehaviour
                     DOTween.Kill(gameObject.transform);
                     if (clickedCube != currentCube)
                     {
-                        if (waypoints.Count == 0)
+                        if (finalPath.Count != 0)
                         {
-                            finalPath.Clear();
-                            index = 0;
-                            Clicked_NewFindPath();
+                            foreach (Transform element in finalPath)
+                            {
+                                element.GetComponent<MeshRenderer>().material.color = Color.grey;
+                            }
                         }
+                        waypoints.Clear();
+                        finalform = false;
                         waypoints.Add(clickedCube);
+                        finalPath.Clear();
+                        index = 0;
+                        Clicked_NewFindPath();
+                        //waypoints.Add(clickedCube);
 
                         indicator.position = mouseHit.transform.GetComponent<Walkable>().GetWalkPoint();
                         Sequence s = DOTween.Sequence();
@@ -89,26 +100,23 @@ public class PlayerController : MonoBehaviour
 
         if (mainTarget == currentCube)
         {
-            waypoints.Clear();
-            walking = false;
-            finalPath.Clear();
-            index = 0;
-        }
-
-        if (waypoints.Count != 0 && transform.position == waypoints[0].transform.position)
-        {
-            waypoints.RemoveAt(0);
-            if (waypoints.Count > 0)
+            if (finalPath.Count != 0)
             {
-                finalPath.Clear();
-                Test1(waypoints[0]);
+                foreach (Transform temp in finalPath)
+                {
+                    temp.GetComponent<MeshRenderer>().material.color = Color.grey;
+                }
             }
-        else if (waypoints.Count == 0 && transform.position != mainTarget.transform.position)
-        {
-            FindPath();
-        }
-        else
-            Debug.Log("Main Target Reached");
+            if (temp_finalPath.Count != 0)
+            {
+                foreach (Transform element in temp_finalPath)
+                {
+                    element.GetComponent<MeshRenderer>().material.color = Color.grey;
+                }
+            }
+            waypoints.Clear();
+            finalPath.Clear();
+            index = 0;           
         }
     }
 
@@ -150,23 +158,28 @@ public class PlayerController : MonoBehaviour
 
         ExploreCube(nextCubes, pastCubes, clickedCube);
         BuildPath(clickedCube);
+
+        Test1(mainTarget);
     }
 
     public void Test1(Transform target)
     {
+        finalform = true;
         List<Transform> nextCubes = new List<Transform>();
         List<Transform> pastCubes = new List<Transform>();
 
-        foreach (WalkPath path in currentCube.GetComponent<Walkable>().possiblePaths)
+        Transform temp_currentCube = waypoints[0];
+        Debug.Log(waypoints[0].name);
+        foreach (WalkPath path in temp_currentCube.GetComponent<Walkable>().possiblePaths)
         {
             if (path.active)
             {
                 nextCubes.Add(path.target);
-                path.target.GetComponent<Walkable>().previousBlock = currentCube;
+                path.target.GetComponent<Walkable>().previousBlock = temp_currentCube;
             }
         }
 
-        pastCubes.Add(currentCube);
+        pastCubes.Add(temp_currentCube);
 
         ExploreCube(nextCubes, pastCubes, target);
         BuildPath(target);
@@ -202,30 +215,60 @@ public class PlayerController : MonoBehaviour
     void BuildPath(Transform target)
     {
         Transform cube = target;
-        while (cube != currentCube)
+        if (finalform)
         {
-            finalPath.Add(cube);
+            while (cube != waypoints[0])
+            {
+                temp_finalPath.Insert(0, cube);
 
-            cube.GetComponent<MeshRenderer>().material.color = Color.blue;
-            if (cube.GetComponent<Walkable>().previousBlock != null)
-                cube = cube.GetComponent<Walkable>().previousBlock;
-            else
-                return;
+                if (!finalform)
+                    cube.GetComponent<MeshRenderer>().material = pathPlanned;
+                else
+                    cube.GetComponent<MeshRenderer>().material.color = Color.yellow;
+                if (cube.GetComponent<Walkable>().previousBlock != null)
+                    cube = cube.GetComponent<Walkable>().previousBlock;
+                else
+                    return;
+            }
         }
-        finalPath.Insert(0, target);
+        else if (!finalform)
+        {
+            while (cube != currentCube)
+            {
+                finalPath.Insert(0, cube);
 
-        index = finalPath.Count -1;
+                cube.GetComponent<MeshRenderer>().material = pathPlanned;
+                if (cube.GetComponent<Walkable>().previousBlock != null)
+                    cube = cube.GetComponent<Walkable>().previousBlock;
+                else
+                    return;
+            }
+        }
+        if (!finalform)
+            finalPath.Insert(finalPath.Count - 1, target);
+
+        foreach (Transform element in temp_finalPath)
+        {
+            finalPath.Insert(finalPath.Count - 1, element);
+        }
+
+        temp_finalPath.Clear();
+        if (finalform)
+            finalPath.RemoveAt(finalPath.Count - 1);
+        index = finalPath.Count - 1;
+        finalform = false;
+        index = 0;
+
     }
 
     void FollowPath()
-    {        
-        walking = true;
+    {
         transform.position = Vector3.MoveTowards(transform.position, finalPath[index].transform.position, Time.deltaTime * speed);
 
-        if (transform.position == finalPath[index].transform.position) //Watch for more precision on the stop point
+        if (transform.position == finalPath[index].transform.position) //TODO : Precision on the stop point
         {
-            if(index >=1)
-            index--;
+            if (index <= finalPath.Count - 1)
+                index++;
         }
     }
 
@@ -239,12 +282,10 @@ public class PlayerController : MonoBehaviour
                 t.GetComponent<MeshRenderer>().material.color = Color.gray;
             }
         }
-        walking = false;
     }
 
     public void RayCastDown()
     {
-        
         Ray playerRay = new Ray(transform.GetChild(0).position, -transform.up);
         RaycastHit playerHit;
 
@@ -252,7 +293,6 @@ public class PlayerController : MonoBehaviour
         {
             if (playerHit.transform.GetComponent<Walkable>() != null)
             {
-                //planet.Attract(transform);
                 currentCube = playerHit.transform;
 
                 if (!playerHit.transform.GetComponent<Walkable>().visited)
@@ -260,9 +300,8 @@ public class PlayerController : MonoBehaviour
                     playerHit.transform.GetComponent<Walkable>().visited = true;
                     playerHit.transform.GetComponent<MeshRenderer>().material.color = Color.gray;
                 }
-                else if (playerHit.transform.GetComponent<Walkable>().visited && playerHit.transform.GetComponent<MeshRenderer>().material.color == Color.magenta || playerHit.transform.GetComponent<MeshRenderer>().material.color == Color.blue)
+                else if (playerHit.transform.GetComponent<Walkable>().visited && playerHit.transform.GetComponent<MeshRenderer>().material == pathPlanned)
                     playerHit.transform.GetComponent<MeshRenderer>().material.color = Color.gray;
-
             }
         }
     }
