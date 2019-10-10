@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4bef953b2636a548b7a7b6b21bd40c3, type: 3}
+  m_Name: Batman
+  m_EditorClassIdentifier: 
+  Name: Batman
+  Face: {fileID: 21300000, guid: 0e4279e467ed4eb44acf2f21dfaa0c8d, type: 3}
+  NumberOfStars: 5
+  BaseLevelAngryness: 60
+  MaxLevelAngryness: 150
+  BaseLevelHappyness: 10
+  MaxLevelHappyness: 100
+  Mutators: 07000000
+  materials: []
+  SpotsLiked:
+  - {fileID: 0}
+  SpotsHated: []

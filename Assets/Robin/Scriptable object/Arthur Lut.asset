@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4bef953b2636a548b7a7b6b21bd40c3, type: 3}
+  m_Name: Arthur Lut
+  m_EditorClassIdentifier: 
+  Name: Arthur Lut
+  Face: {fileID: 0}
+  NumberOfStars: 4
+  Template: {fileID: 11400000, guid: 7bda49d6dfa71b641b1e501fc67a84ac, type: 2}
+  BaseLevelAngryness: 50
+  MaxLevelAngryness: 100
+  BaseLevelHappyness: 25
+  MaxLevelHappyness: 100
+  Mutators: 08000000
+  TasteLiked:
+  - {fileID: 11400000, guid: 5bedda7b0cc48744eaf06f83d007f9a0, type: 2}
+  - {fileID: 11400000, guid: 534e38653c04c754a9e81f3003408874, type: 2}
+  - {fileID: 11400000, guid: 5997aa5c06fa0904990e9c0b1d09c9bc, type: 2}
+  - {fileID: 11400000, guid: fe7e133afab8a074f8230db5f4e0f084, type: 2}
+  - {fileID: 11400000, guid: 587df358a21db1a4fb8ef07f32614be9, type: 2}
+  TasteHated:
+  - {fileID: 11400000, guid: cbc9f57135ad4ab469599f5217ed8a06, type: 2}
+  - {fileID: 11400000, guid: 643bec1f0ab8dd042b35de76c2b13d31, type: 2}
