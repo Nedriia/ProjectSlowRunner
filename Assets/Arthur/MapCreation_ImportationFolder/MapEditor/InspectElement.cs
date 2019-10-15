@@ -4,12 +4,6 @@ using UnityEngine;
 
 public class InspectElement : MonoBehaviour
 {
-    public Material city;
-    public Material road;
-    public Material grass;
-    public Material crossroadsMat;
-    public Material default_Mat;
-
     public MapEditorTest elementTest;
 
     public enum Tyle_Type
@@ -19,9 +13,19 @@ public class InspectElement : MonoBehaviour
         City,
         Grass,
         CrossRoads,
+        Monument_Source,
+    }
+
+    public enum Tyle_Evenement
+    {
+        Empty,
+        Monument,
+        Trafic_Jam,
+        Concert,
     }
 
     public Tyle_Type type;
+    public Tyle_Evenement Event;
 
     public float distance_Check;
 

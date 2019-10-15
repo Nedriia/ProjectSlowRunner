@@ -261,11 +261,11 @@ public class Pathfinder : MonoBehaviour {
 
                 /* 
                 Gizmos.color = Color.cyan;
-                var node = GetClosestNodeFromWorldPoint (a.position);
-                Gizmos.DrawSphere (node.position, .2f);
+                var node = GetClosestNodeFromWorldPoint (a.Roads_Position);
+                Gizmos.DrawSphere (node.Roads_Position, .2f);
                 Gizmos.color = Color.black;
                 foreach (Node n in node.neighbours) {
-                    Gizmos.DrawSphere (n.position, .2f);
+                    Gizmos.DrawSphere (n.Roads_Position, .2f);
                 }
                 */
             }

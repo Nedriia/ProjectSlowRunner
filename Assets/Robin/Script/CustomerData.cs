@@ -37,6 +37,11 @@ public class CustomerData : ScriptableObject
     [SerializeField]
     public List<language> Languages;
 
+    [Header("Faces")]
+    public Sprite angryFace;
+    public Sprite neutralFace;
+    public Sprite happyFace;
+
     public bool IsAlreadyTemplateLoaded { get; set; } = false;
 
     public void TemplateLoad()

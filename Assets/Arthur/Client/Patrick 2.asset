@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4bef953b2636a548b7a7b6b21bd40c3, type: 3}
+  m_Name: Patrick 2
+  m_EditorClassIdentifier: 
+  Name: Patoche
+  Face: {fileID: 21300000, guid: c99e152488410cb4ca8d15a6a7bf8bfe, type: 3}
+  NumberOfStars: 3
+  Template: {fileID: 11400000, guid: 7bda49d6dfa71b641b1e501fc67a84ac, type: 2}
+  BaseGainMoney: 40
+  MaxGainMoney: 1500
+  BaseLevelAngryness: 25
+  MaxLevelAngryness: 100
+  BaseLevelHappyness: 25
+  MaxLevelHappyness: 100
+  Mutators: 04000000
+  TasteLiked:
+  - {fileID: 11400000, guid: 30530da8654d2834fb91b2f9dc0b128c, type: 2}
+  - {fileID: 11400000, guid: e10ad7b74e577db40b5de3912c543cba, type: 2}
+  - {fileID: 11400000, guid: febc464e52a57854c99933b9e1ee5f3b, type: 2}
+  - {fileID: 11400000, guid: 1c5321f57974f3e4da496221ec77ddab, type: 2}
+  - {fileID: 11400000, guid: f97025f569d4fd94caf2466dc11cc938, type: 2}
+  TasteHated:
+  - {fileID: 11400000, guid: 86b0aefb17778c7408b5fd6ac6000d57, type: 2}
+  - {fileID: 11400000, guid: 0dc84fc354f440141b538989359cf742, type: 2}
+  Languages: 04000000
+  angryFace: {fileID: 21300000, guid: c99e152488410cb4ca8d15a6a7bf8bfe, type: 3}
+  neutralFace: {fileID: 21300000, guid: 82cd6db31cafa19429cb73235ba42f7a, type: 3}
+  happyFace: {fileID: 21300000, guid: c74e3c02ad9b3044f8af5a9b7bd29ef9, type: 3}
