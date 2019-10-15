@@ -16,6 +16,8 @@ MonoBehaviour:
   Face: {fileID: 0}
   NumberOfStars: 4
   Template: {fileID: 11400000, guid: 7bda49d6dfa71b641b1e501fc67a84ac, type: 2}
+  BaseGainMoney: 0
+  MaxGainMoney: 0
   BaseLevelAngryness: 50
   MaxLevelAngryness: 100
   BaseLevelHappyness: 25
@@ -30,3 +32,4 @@ MonoBehaviour:
   TasteHated:
   - {fileID: 11400000, guid: cbc9f57135ad4ab469599f5217ed8a06, type: 2}
   - {fileID: 11400000, guid: 643bec1f0ab8dd042b35de76c2b13d31, type: 2}
+  Languages: 

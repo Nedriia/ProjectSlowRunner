@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Customer : MonoBehaviour
@@ -21,6 +22,7 @@ public class Customer : MonoBehaviour
     public List<TasteCustomer> TasteHated { get; set; }
     public List<language> Languages { get; set; }
 
+    public Vector3 Destination { get; set; }
 
     // Start is called before the first frame update
     void Start()
@@ -82,4 +84,34 @@ public class Customer : MonoBehaviour
         return false;
     }
 
+    public void BeneficEffect()
+    {
+
+    }
+
+    public void MalusEffect()
+    {
+
+    }
+
+    public void DetectSpot(SpotType spotType)
+    {
+        if( TasteLiked.Where(ts => ts.SpotType == spotType) != null )
+        {
+            BeneficEffect();
+            return;
+        }
+
+        if(TasteHated.Where(ts => ts.SpotType == spotType) != null)
+        {
+            MalusEffect();
+            return;
+        }
+
+    }
+
+    void Starfoulah()
+    {
+        CheckLikeable(new TasteCustomer() { BeveragesType = BeveragesType.Beer });
+    }
 }
