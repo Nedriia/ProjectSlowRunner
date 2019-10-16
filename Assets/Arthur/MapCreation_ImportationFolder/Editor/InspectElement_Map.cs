@@ -87,6 +87,7 @@ public class InspectElement_Map : Editor
                 {
                     foreach (Transform child in temp.transform)
                     {
+                        child.transform.parent = null;
                         DestroyImmediate(child.gameObject);
                     }
                 }
@@ -107,13 +108,13 @@ public class InspectElement_Map : Editor
 
         if (GUILayout.Button("Generate"))
         {
-            if (EditorUtility.DisplayDialog("Confirm Generation ? ", " Make sure every road are interconnected\n\n And that you have place everything where you really want", "Place", "Do not Generate"))
+            if (EditorUtility.DisplayDialog("Confirm Generation ? ", " Make sure every road are interconnected\n\n And that you have place everything where you really want","Place", "Do not Generate"))
             {
                 for (int i = 0; i < map.elementTest.Roads_Position.Count; i++)
                 {
                     for (int j = 0; j < map.elementTest.Roads_Position.Count; j++)
                     {
-                        if (map.elementTest.Roads_Position[i] != map.elementTest.Roads_Position[j] && map.elementTest.Roads_Position[i].GetComponent<Walkable>() != null)
+                        if (map.elementTest.Roads_Position[i] != map.elementTest.Roads_Position[j] && map.elementTest.Roads_Position[i].GetComponent<Walkable>() == null)
                         {
                             if (Vector3.Distance(map.elementTest.Roads_Position[i].transform.position, map.elementTest.Roads_Position[j].transform.position) < map.distance_Check)
                             {
@@ -132,71 +133,72 @@ public class InspectElement_Map : Editor
                         map.elementTest.Roads_Position[i].GetComponent<MeshRenderer>().material = map.elementTest.traficJam_Mat;
                     }
                 }
-            }
+            
 
-            foreach (Transform temp in map.elementTest.Roads_Position)
-            {
-                //Crossroads
-                if (temp.GetComponent<InspectElement>().type == InspectElement.Tyle_Type.Road || temp.GetComponent<InspectElement>().type == InspectElement.Tyle_Type.CrossRoads)
+                foreach (Transform temp in map.elementTest.Roads_Position)
                 {
-                    if (temp.GetComponent<Walkable>() == null)
+                    //Crossroads
+                    if (temp.GetComponent<InspectElement>().type == InspectElement.Tyle_Type.Road || temp.GetComponent<InspectElement>().type == InspectElement.Tyle_Type.CrossRoads)
                     {
-                        var walk_Script = temp.gameObject.AddComponent<Walkable>();
-                        foreach (Transform element in temp.gameObject.GetComponent<InspectElement>().neighborHex)
+                        if (temp.GetComponent<Walkable>() == null)
                         {
-                            WalkPath walk = new WalkPath();
-                            walk.target = element;
-                            walk.active = true;
-                            walk_Script.possiblePaths.Add(walk);
+                            var walk_Script = temp.gameObject.AddComponent<Walkable>();
+                            foreach (Transform element in temp.gameObject.GetComponent<InspectElement>().neighborHex)
+                            {
+                                WalkPath walk = new WalkPath();
+                                walk.target = element;
+                                walk.active = true;
+                                walk_Script.possiblePaths.Add(walk);
+                            }
                         }
                     }
                 }
-            }
 
-            //Monument
-            if (map.elementTest.Monuments_Position.Count != 0)
-            {
-                for (int j = 0; j < map.elementTest.isoSphere.childCount; j++)
+                //Monument
+                if (map.elementTest.Monuments_Position.Count != 0)
                 {
-                    for (int i = 0; i < map.elementTest.Monuments_Position.Count; i++)
+                    for (int j = 0; j < map.elementTest.isoSphere.childCount; j++)
                     {
-                        if (Vector3.Distance(map.elementTest.isoSphere.GetChild(j).position, map.elementTest.Monuments_Position[i].position) < map.distance_Check && map.elementTest.isoSphere.GetChild(j) != map.elementTest.Monuments_Position[i])
+                        for (int i = 0; i < map.elementTest.Monuments_Position.Count; i++)
                         {
-                            Debug.Log("monument neighbour" + map.elementTest.isoSphere.GetChild(j));
-                            map.elementTest.isoSphere.GetChild(j).GetComponent<InspectElement>().Event = InspectElement.Tyle_Evenement.Monument;
+                            if (Vector3.Distance(map.elementTest.isoSphere.GetChild(j).position, map.elementTest.Monuments_Position[i].position) < map.distance_Check && map.elementTest.isoSphere.GetChild(j) != map.elementTest.Monuments_Position[i])
+                            {
+                                Debug.Log("monument neighbour" + map.elementTest.isoSphere.GetChild(j));
+                                map.elementTest.isoSphere.GetChild(j).GetComponent<InspectElement>().Event = InspectElement.Tyle_Evenement.Monument;
+                            }
                         }
                     }
                 }
-            }
 
-            for (int i = 0; i < map.elementTest.isoSphere.transform.childCount; i++)
-            {
-                if (map.elementTest.isoSphere.transform.GetChild(i).GetComponent<InspectElement>().type == InspectElement.Tyle_Type.Monument_Source)
+                for (int i = 0; i < map.elementTest.isoSphere.transform.childCount; i++)
                 {
-                    Vector3 normal = map.elementTest.isoSphere.transform.position - map.elementTest.isoSphere.transform.GetChild(i).transform.position;
+                    if (map.elementTest.isoSphere.transform.GetChild(i).GetComponent<InspectElement>().type == InspectElement.Tyle_Type.Monument_Source)
+                    {
+                        Vector3 normal = map.elementTest.isoSphere.transform.position - map.elementTest.isoSphere.transform.GetChild(i).transform.position;
 
-                    GameObject gameObject_ = Instantiate(map.elementTest.monumentPrefab[Random.Range(0, map.elementTest.monumentPrefab.Length)], map.elementTest.isoSphere.transform.GetChild(i));
-                    gameObject_.transform.localScale = new Vector3(0.003f, 0.003f, 0.003f);
-                    gameObject_.transform.localPosition = new Vector3(0, 0, 0);
-                    gameObject_.transform.up = -normal;
-                }
-                else if (map.elementTest.isoSphere.transform.GetChild(i).GetComponent<InspectElement>().type == InspectElement.Tyle_Type.City)
-                {
-                    Vector3 normal = map.elementTest.isoSphere.transform.position - map.elementTest.isoSphere.transform.GetChild(i).transform.position;
+                        GameObject gameObject_ = Instantiate(map.elementTest.monumentPrefab[Random.Range(0, map.elementTest.monumentPrefab.Length)], map.elementTest.isoSphere.transform.GetChild(i));
+                        gameObject_.transform.localScale = new Vector3(0.003f, 0.003f, 0.003f);
+                        gameObject_.transform.localPosition = new Vector3(0, 0, 0);
+                        gameObject_.transform.up = -normal;
+                    }
+                    else if (map.elementTest.isoSphere.transform.GetChild(i).GetComponent<InspectElement>().type == InspectElement.Tyle_Type.City)
+                    {
+                        Vector3 normal = map.elementTest.isoSphere.transform.position - map.elementTest.isoSphere.transform.GetChild(i).transform.position;
 
-                    GameObject gameObject_ = Instantiate(map.elementTest.cityPrefab[Random.Range(0, map.elementTest.cityPrefab.Length)], map.elementTest.isoSphere.transform.GetChild(i));
-                    gameObject_.transform.localScale = new Vector3(0.003f, 0.003f, 0.003f);
-                    gameObject_.transform.localPosition = new Vector3(0, 0, 0);
-                    gameObject_.transform.up = -normal;
-                }
-                else if (map.elementTest.isoSphere.transform.GetChild(i).GetComponent<InspectElement>().type == InspectElement.Tyle_Type.Grass)
-                {
-                    Vector3 normal = map.elementTest.isoSphere.transform.position - map.elementTest.isoSphere.transform.GetChild(i).transform.position;
+                        GameObject gameObject_ = Instantiate(map.elementTest.cityPrefab[Random.Range(0, map.elementTest.cityPrefab.Length)], map.elementTest.isoSphere.transform.GetChild(i));
+                        gameObject_.transform.localScale = new Vector3(0.003f, 0.003f, 0.003f);
+                        gameObject_.transform.localPosition = new Vector3(0, 0, 0);
+                        gameObject_.transform.up = -normal;
+                    }
+                    else if (map.elementTest.isoSphere.transform.GetChild(i).GetComponent<InspectElement>().type == InspectElement.Tyle_Type.Grass)
+                    {
+                        Vector3 normal = map.elementTest.isoSphere.transform.position - map.elementTest.isoSphere.transform.GetChild(i).transform.position;
 
-                    GameObject gameObject_ = Instantiate(map.elementTest.grassPrefab[Random.Range(0, map.elementTest.grassPrefab.Length)], map.elementTest.isoSphere.transform.GetChild(i));
-                    gameObject_.transform.localScale = new Vector3(0.003f, 0.003f, 0.003f);
-                    gameObject_.transform.localPosition = new Vector3(0, 0, 0);
-                    gameObject_.transform.up = -normal;
+                        GameObject gameObject_ = Instantiate(map.elementTest.grassPrefab[Random.Range(0, map.elementTest.grassPrefab.Length)], map.elementTest.isoSphere.transform.GetChild(i));
+                        gameObject_.transform.localScale = new Vector3(0.003f, 0.003f, 0.003f);
+                        gameObject_.transform.localPosition = new Vector3(0, 0, 0);
+                        gameObject_.transform.up = -normal;
+                    }
                 }
             }
         }

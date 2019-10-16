@@ -32,6 +32,12 @@ public class PlayerController : MonoBehaviour
 
     public Material pathPlanned;
 
+    /// <summary>
+    /// bool slowdown;
+    /// public float speedSlowDown;
+    /// public float currentSpeed;
+    /// </summary>
+
     void Start()
     {
         RayCastDown();

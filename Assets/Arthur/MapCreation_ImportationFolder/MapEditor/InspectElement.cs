@@ -22,6 +22,8 @@ public class InspectElement : MonoBehaviour
         Monument,
         Trafic_Jam,
         Concert,
+        Restaurant,
+        Construction,
     }
 
     public Tyle_Type type;
