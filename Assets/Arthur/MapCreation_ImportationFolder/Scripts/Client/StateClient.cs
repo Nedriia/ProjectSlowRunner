@@ -26,17 +26,17 @@ public class StateClient : MonoBehaviour
         if(stateEmotion > client.BaseLevelAngryness)
         {
             //Happy
-            spriteClient.sprite = client.happyFace;
+            spriteClient.sprite = client.HappyFace;
         }
         else if(stateEmotion < client.BaseLevelHappyness)
         {
             //Angry
-            spriteClient.sprite = client.angryFace;
+            spriteClient.sprite = client.AngryFace;
         }
         else
         {
             //Neutral
-            spriteClient.sprite = client.neutralFace;
+            spriteClient.sprite = client.NeutralFace;
         }
     }
 }

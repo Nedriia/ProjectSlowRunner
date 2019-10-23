@@ -7,16 +7,27 @@ public class Customer : MonoBehaviour
 {
 
     public CustomerData Data;
+    public SpriteRenderer SpriteMiror;
+    public float StateEmotion;
+    public float DecreaseFactor;
+    public float HateImpact;
+    public float HappyImpact;
+
 
     public string Name { get; set; }
     public Sprite Face { get; set; }
     public int NumberOfStars { get; set; }
     public float BaseGainMoney { get; set; }
     public float MaxGainMoney { get; set; }
+
+ 
+
     public float BaseLevelAngryness { get; set; }
     public float MaxLevelAngryness { get; set; }
+
     public float BaseLevelHappyness { get; set; }
     public float MaxLevelHappyness { get; set; }
+
     public List<Mutator> Mutators { get; set; }
     public List<TasteCustomer> TasteLiked { get; set; }
     public List<TasteCustomer> TasteHated { get; set; }
@@ -28,13 +39,14 @@ public class Customer : MonoBehaviour
     void Start()
     {
         LoadCustomerData();
+        StateEmotion = (BaseLevelAngryness + BaseLevelHappyness) / 2;
 
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        UpdateEmotion();
     }
 
 
@@ -86,23 +98,40 @@ public class Customer : MonoBehaviour
 
     public void BeneficEffect()
     {
+        if(StateEmotion+ HappyImpact<=100)
+        {
+            StateEmotion += HappyImpact;
+        }
+        else
+        {
+            StateEmotion = MaxLevelHappyness;
+        }
 
     }
 
     public void MalusEffect()
     {
+        if (StateEmotion + HateImpact <= 100)
+        {
+            StateEmotion += HateImpact;
+        }
+        else
+        {
+            StateEmotion = MaxLevelHappyness;
+        }
+
 
     }
 
     public void DetectSpot(SpotType spotType)
     {
-        if( TasteLiked.Where(ts => ts.SpotType == spotType) != null )
+        if (TasteLiked.Where(ts => ts.SpotType == spotType) != null)
         {
             BeneficEffect();
             return;
         }
 
-        if(TasteHated.Where(ts => ts.SpotType == spotType) != null)
+        if (TasteHated.Where(ts => ts.SpotType == spotType) != null)
         {
             MalusEffect();
             return;
@@ -110,8 +139,27 @@ public class Customer : MonoBehaviour
 
     }
 
-    void Starfoulah()
+    void UpdateEmotion()
     {
-        CheckLikeable(new TasteCustomer() { BeveragesType = BeveragesType.Beer });
+
+        if (Time.timeScale == 1)
+            StateEmotion *= DecreaseFactor;
+        if (StateEmotion > BaseLevelAngryness)
+        {
+            //Happy
+            SpriteMiror.sprite = Data.HappyFace;
+        }
+        else if (StateEmotion < Data.BaseLevelHappyness)
+        {
+            //Angry
+            SpriteMiror.sprite = Data.AngryFace;
+        }
+        else
+        {
+            //Neutral
+            SpriteMiror.sprite = Data.NeutralFace;
+        }
     }
+
+
 }

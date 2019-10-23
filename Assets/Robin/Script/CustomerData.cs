@@ -38,9 +38,9 @@ public class CustomerData : ScriptableObject
     public List<language> Languages;
 
     [Header("Faces")]
-    public Sprite angryFace;
-    public Sprite neutralFace;
-    public Sprite happyFace;
+    public Sprite AngryFace;
+    public Sprite NeutralFace;
+    public Sprite HappyFace;
 
     public bool IsAlreadyTemplateLoaded { get; set; } = false;
 

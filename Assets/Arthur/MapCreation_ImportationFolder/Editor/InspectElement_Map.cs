@@ -79,7 +79,7 @@ public class InspectElement_Map : Editor
             {
                 temp.GetComponent<MeshRenderer>().material = map.elementTest.default_Mat;
                 temp.GetComponent<InspectElement>().type = InspectElement.Tyle_Type.Empty;
-                temp.GetComponent<InspectElement>().Event = InspectElement.Tyle_Evenement.Empty;
+                temp.GetComponent<InspectElement>().Event = SpotType.Empty;
                 temp.GetComponent<InspectElement>().neighborHex.Clear();
                 if (temp.GetComponent<Walkable>() != null)
                     DestroyImmediate(temp.GetComponent<Walkable>());
@@ -127,7 +127,7 @@ public class InspectElement_Map : Editor
                         }
                     }
 
-                    if (map.elementTest.Roads_Position[i].GetComponent<InspectElement>().Event == InspectElement.Tyle_Evenement.Trafic_Jam)
+                    if (map.elementTest.Roads_Position[i].GetComponent<InspectElement>().Event == SpotType.Trafic_Jam)
                     {
                         map.elementTest.Roads_Position[i].GetComponent<MeshRenderer>().material = map.elementTest.traficJam_Mat;
                     }
@@ -163,7 +163,7 @@ public class InspectElement_Map : Editor
                         if (Vector3.Distance(map.elementTest.isoSphere.GetChild(j).position, map.elementTest.Monuments_Position[i].position) < map.distance_Check && map.elementTest.isoSphere.GetChild(j) != map.elementTest.Monuments_Position[i])
                         {
                             Debug.Log("monument neighbour" + map.elementTest.isoSphere.GetChild(j));
-                            map.elementTest.isoSphere.GetChild(j).GetComponent<InspectElement>().Event = InspectElement.Tyle_Evenement.Monument;
+                            map.elementTest.isoSphere.GetChild(j).GetComponent<InspectElement>().Event = SpotType.Monument;
                         }
                     }
                 }
@@ -244,7 +244,7 @@ public class InspectElement_Map : Editor
                         {
                             if (Vector3.Distance(map.elementTest.isoSphere.GetChild(j).position, map.elementTest.Monuments_Position[i].position) < map.distance_Check && map.elementTest.isoSphere.GetChild(j) != map.elementTest.Monuments_Position[i])
                             {
-                                map.elementTest.isoSphere.GetChild(j).GetComponent<InspectElement>().Event = InspectElement.Tyle_Evenement.Monument;
+                                map.elementTest.isoSphere.GetChild(j).GetComponent<InspectElement>().Event = SpotType.Monument;
                             }
                         }
                     }
@@ -267,7 +267,7 @@ public class InspectElement_Map : Editor
                             }
                         }
                     }
-                    if (map.elementTest.Roads_Position[i].GetComponent<InspectElement>().Event == InspectElement.Tyle_Evenement.Trafic_Jam)
+                    if (map.elementTest.Roads_Position[i].GetComponent<InspectElement>().Event == SpotType.Trafic_Jam)
                     {
                         map.elementTest.Roads_Position[i].GetComponent<MeshRenderer>().material = map.elementTest.traficJam_Mat;
                     }

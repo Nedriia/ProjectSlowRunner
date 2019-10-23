@@ -34,6 +34,9 @@ public enum SpotType
     Shop,
     Beach,
     Bank,
+    Empty,
+    Trafic_Jam,
+    Concert,
 
 }
 

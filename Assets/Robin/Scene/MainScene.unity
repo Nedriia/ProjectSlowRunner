@@ -186,19 +186,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &567477069 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2578123595033771522, guid: e3886b4907fe2d94cbea8711ac43d57f,
-    type: 3}
-  m_PrefabInstance: {fileID: 685806792}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &567477070 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3856032358823357949, guid: e3886b4907fe2d94cbea8711ac43d57f,
     type: 3}
   m_PrefabInstance: {fileID: 685806792}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 567477069}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ee837bc066d0e548aa3699ae388cc25, type: 3}
@@ -222,6 +216,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlanetRobin
       objectReference: {fileID: 0}
+    - target: {fileID: 3856032358823357949, guid: e3886b4907fe2d94cbea8711ac43d57f,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1095913329}
     - target: {fileID: 1557132872184007697, guid: e3886b4907fe2d94cbea8711ac43d57f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -277,11 +276,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -284.543
       objectReference: {fileID: 0}
-    - target: {fileID: 3856032358823357949, guid: e3886b4907fe2d94cbea8711ac43d57f,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1095913329}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3886b4907fe2d94cbea8711ac43d57f, type: 3}
 --- !u!1001 &780104756
@@ -697,8 +691,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb44e6c8e7f003b42a7b393e5a1770bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1095913326}
-  moveSpeed: 300
+  _target: {fileID: 0}
+  _distance: 20
+  _zoomStep: 1
+  _xSpeed: 1
+  _ySpeed: 1
 --- !u!114 &1052089391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -716,156 +713,18 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   isoSphere: {fileID: 567477071}
-  position:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  Roads_Position: []
+  Monuments_Position: []
+  city: {fileID: 0}
+  road: {fileID: 0}
+  grass: {fileID: 0}
+  crossroadsMat: {fileID: 0}
+  monument_Mat: {fileID: 0}
+  traficJam_Mat: {fileID: 0}
+  default_Mat: {fileID: 0}
+  cityPrefab: []
+  grassPrefab: []
+  monumentPrefab: []
 --- !u!114 &1052089392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1053,6 +912,7 @@ MonoBehaviour:
   finalPath: []
   temp_finalPath: []
   finalform: 0
+  road: {fileID: 0}
   speed: 0.5
   index: 0
   pathPlanned: {fileID: 2100000, guid: 5f58af862ef783149a5a2b13536fafe4, type: 2}
@@ -1084,7 +944,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 953f65d218af86b48aaa41a70141361f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Map: {fileID: 567477069}
   Money: 0
 --- !u!1 &2012139449
 GameObject:
