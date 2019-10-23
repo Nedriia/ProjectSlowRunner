@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ff0e4b63e35c8f498fc9c0abfd84805, type: 3}
-  m_Name: BusinessMann
+  m_Name: Hurry
   m_EditorClassIdentifier: 
   BaseGainMoney: 150
   MaxGainMoney: 400
@@ -20,12 +20,14 @@ MonoBehaviour:
   MaxLevelHappyness: 100
   Mutators: 08000000
   TasteLiked:
-  - {fileID: 11400000, guid: 72be8393c3bf33a46821eb675f02f051, type: 2}
-  - {fileID: 11400000, guid: e10ad7b74e577db40b5de3912c543cba, type: 2}
-  - {fileID: 11400000, guid: da78c67a97925a1409b12a0adac639a1, type: 2}
-  TasteHated:
+  - {fileID: 11400000, guid: 1c5321f57974f3e4da496221ec77ddab, type: 2}
   - {fileID: 11400000, guid: 86b0aefb17778c7408b5fd6ac6000d57, type: 2}
+  - {fileID: 11400000, guid: f97025f569d4fd94caf2466dc11cc938, type: 2}
   - {fileID: 11400000, guid: 30530da8654d2834fb91b2f9dc0b128c, type: 2}
-  - {fileID: 11400000, guid: 0dc84fc354f440141b538989359cf742, type: 2}
+  TasteHated:
   - {fileID: 11400000, guid: a5d40e90426351d47bef19eea7d32529, type: 2}
+  - {fileID: 11400000, guid: 20974f88518dd4141a321ac9957c5a7b, type: 2}
+  - {fileID: 11400000, guid: 72be8393c3bf33a46821eb675f02f051, type: 2}
+  - {fileID: 11400000, guid: 06877189edb544a499434e265679ea57, type: 2}
+  - {fileID: 11400000, guid: e10ad7b74e577db40b5de3912c543cba, type: 2}
   Languages: 0000000001000000
