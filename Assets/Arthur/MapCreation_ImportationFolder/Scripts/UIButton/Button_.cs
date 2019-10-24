@@ -13,11 +13,14 @@ public class Button_ : MonoBehaviour
     public StateClient state;
 
     private void Awake()
-    {
-        client = Camera.main.GetComponent<ClientCard>().currentClient;
+    {       
         parent = gameObject;
     }
 
+    private void Start()
+    {
+        client = Camera.main.GetComponent<ClientCard>().currentClient;
+    }
     public void Activation()
     {
         PowerToHide.SetActive(false);

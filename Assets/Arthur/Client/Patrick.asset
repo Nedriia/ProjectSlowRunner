@@ -24,15 +24,15 @@ MonoBehaviour:
   MaxLevelHappyness: 100
   Mutators: 08000000
   TasteLiked:
-  - {fileID: 11400000, guid: a5d40e90426351d47bef19eea7d32529, type: 2}
-  - {fileID: 11400000, guid: 534e38653c04c754a9e81f3003408874, type: 2}
-  - {fileID: 11400000, guid: 5997aa5c06fa0904990e9c0b1d09c9bc, type: 2}
-  - {fileID: 11400000, guid: fe7e133afab8a074f8230db5f4e0f084, type: 2}
-  - {fileID: 11400000, guid: 587df358a21db1a4fb8ef07f32614be9, type: 2}
+  - {fileID: 11400000, guid: 72be8393c3bf33a46821eb675f02f051, type: 2}
+  - {fileID: 11400000, guid: e10ad7b74e577db40b5de3912c543cba, type: 2}
+  - {fileID: 11400000, guid: da78c67a97925a1409b12a0adac639a1, type: 2}
   TasteHated:
-  - {fileID: 11400000, guid: cbc9f57135ad4ab469599f5217ed8a06, type: 2}
-  - {fileID: 11400000, guid: 643bec1f0ab8dd042b35de76c2b13d31, type: 2}
+  - {fileID: 11400000, guid: 86b0aefb17778c7408b5fd6ac6000d57, type: 2}
+  - {fileID: 11400000, guid: 30530da8654d2834fb91b2f9dc0b128c, type: 2}
+  - {fileID: 11400000, guid: 0dc84fc354f440141b538989359cf742, type: 2}
+  - {fileID: 11400000, guid: a5d40e90426351d47bef19eea7d32529, type: 2}
   Languages: 00000000
-  angryFace: {fileID: 21300000, guid: 1332ff8c8b65ea14a9099693095c1ddc, type: 3}
-  neutralFace: {fileID: 21300000, guid: 49a0c1f362ecd5c4e9c3db7310f03d82, type: 3}
-  happyFace: {fileID: 21300000, guid: 4651589bdd67d044bab065da52ff8f0b, type: 3}
+  AngryFace: {fileID: 21300000, guid: 1332ff8c8b65ea14a9099693095c1ddc, type: 3}
+  NeutralFace: {fileID: 21300000, guid: 49a0c1f362ecd5c4e9c3db7310f03d82, type: 3}
+  HappyFace: {fileID: 21300000, guid: 4651589bdd67d044bab065da52ff8f0b, type: 3}

@@ -16,18 +16,16 @@ public class InspectElement : MonoBehaviour
         Monument_Source,
     }
 
-
-   
-    //public enum Tyle_Evenement
-    //{
-    //    Empty,
-    //    Monument,
-    //    Trafic_Jam,
-    //    Concert,
-    //}
+    public enum Tyle_Evenement
+    {
+        Empty,
+        Monument,
+        Trafic_Jam,
+        Concert,
+    }
 
     public Tyle_Type type;
-    public SpotType Event;
+    public Tyle_Evenement Event;
 
     public float distance_Check;
 

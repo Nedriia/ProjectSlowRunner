@@ -219,6 +219,7 @@ public class PlayerController : MonoBehaviour
                     cube.GetComponent<MeshRenderer>().material = pathPlanned;
                 else
                     cube.GetComponent<MeshRenderer>().material.color = Color.yellow;
+
                 if (cube.GetComponent<Walkable>().previousBlock != null)
                     cube = cube.GetComponent<Walkable>().previousBlock;
                 else

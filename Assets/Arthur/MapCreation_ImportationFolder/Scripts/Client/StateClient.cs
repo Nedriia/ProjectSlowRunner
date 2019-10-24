@@ -28,6 +28,8 @@ public class StateClient : MonoBehaviour
         stateEmotion = (client.BaseLevelAngryness + client.BaseLevelHappyness) / 2;
 
         tempCube = controller.currentCube.GetComponent<InspectElement>();
+        client.TemplateLoad();
+
     }
 
     // Update is called once per frame
@@ -43,7 +45,7 @@ public class StateClient : MonoBehaviour
                 {
                     CheckCondition_Hated("MonumentT (TasteCustomer)");
                 }
-                else if(tempCube.Event == InspectElement.Tyle_Evenement.Construction)
+                /*else if(tempCube.Event == InspectElement.Tyle_Evenement.Construction)
                 {
                     //Slow Down
                     CheckCondition_Hated("");
@@ -52,7 +54,7 @@ public class StateClient : MonoBehaviour
                 {
                     //Lose money
                     CheckCondition_Hated("");
-                }
+                }*/
             }
 
         }
