@@ -157,7 +157,7 @@ public class InspectElement_Map : Editor
                     Vector3 normal = map.elementTest.isoSphere.transform.position - map.elementTest.isoSphere.transform.GetChild(i).transform.position; //Normal calculation of the actual tile
 
                     GameObject gameObject_ = Instantiate(map.elementTest.monumentPrefab[Random.Range(0, map.elementTest.monumentPrefab.Length)], map.elementTest.isoSphere.transform.GetChild(i));
-                    gameObject_.transform.localScale = new Vector3(0.003f, 0.003f, 0.003f);
+                    gameObject_.transform.localScale = new Vector3(0.0006f, 0.0006f, 0.0006f);
                     gameObject_.transform.localPosition = new Vector3(0, 0, 0);
                     gameObject_.transform.up = -normal;
                 }
@@ -165,7 +165,7 @@ public class InspectElement_Map : Editor
                     Vector3 normal = map.elementTest.isoSphere.transform.position - map.elementTest.isoSphere.transform.GetChild(i).transform.position;
 
                     GameObject gameObject_ = Instantiate(map.elementTest.cityPrefab[Random.Range(0, map.elementTest.cityPrefab.Length)], map.elementTest.isoSphere.transform.GetChild(i));
-                    gameObject_.transform.localScale = new Vector3(0.003f, 0.003f, 0.003f);
+                    gameObject_.transform.localScale = new Vector3(0.0006f, 0.0006f, 0.0006f);
                     gameObject_.transform.localPosition = new Vector3(0, 0, 0);
                     gameObject_.transform.up = -normal;
                 }
@@ -173,7 +173,7 @@ public class InspectElement_Map : Editor
                     Vector3 normal = map.elementTest.isoSphere.transform.position - map.elementTest.isoSphere.transform.GetChild(i).transform.position;
 
                     GameObject gameObject_ = Instantiate(map.elementTest.grassPrefab[Random.Range(0, map.elementTest.grassPrefab.Length)], map.elementTest.isoSphere.transform.GetChild(i));
-                    gameObject_.transform.localScale = new Vector3(0.003f, 0.003f, 0.003f);
+                    gameObject_.transform.localScale = new Vector3(0.0006f, 0.0006f, 0.0006f);
                     gameObject_.transform.localPosition = new Vector3(0, 0, 0);
                     gameObject_.transform.up = -normal;
                 }
