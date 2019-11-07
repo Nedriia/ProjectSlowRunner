@@ -34,21 +34,16 @@ public class ClientCard : MonoBehaviour
     public GameObject canvas;
     public Image clientSpriteCanvas;
 
+    public GameManager manager;
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
-        int clientNum = Random.Range(0, client.Length);
-        currentClient = client[clientNum];
-        name.text = currentClient.Name;
-        clientImage.sprite = currentClient.Face;
-        maxProfitText.text = currentClient.MaxGainMoney.ToString();
-        estimateText.text = currentClient.BaseGainMoney.ToString();
-        baseMutator.text = currentClient.Mutators[0].ToString();
-        likeable.text = currentClient.TasteLiked[0].ToString();
-        hated.text = currentClient.TasteHated[0].ToString();
-        speakable.text = currentClient.Languages[0].ToString();
-        clientSpriteCanvas.sprite = currentClient.Face;
+        manager = GetComponent<GameManager>();
+        //Random client
+        currentClient = manager.currentClient;
+
+        NewClient(currentClient);
 
         switch (currentClient.NumberOfStars)
         {
@@ -63,6 +58,9 @@ public class ClientCard : MonoBehaviour
                 break;
             case 4:
                 starsDisplay.sprite = four_star;
+                break;
+            case 5:
+                starsDisplay.sprite = five_star;
                 break;
             default:
                 break;
@@ -80,5 +78,29 @@ public class ClientCard : MonoBehaviour
             canvas.SetActive(true);
             Time.timeScale = 1;
         }
+
+        if (currentClient != manager.currentClient)
+        {
+            currentClient = manager.currentClient;
+            NewClient_InGame(currentClient);
+        }
+    }
+
+    public void NewClient(CustomerData client)
+    {
+        name.text = client.Name;
+        clientImage.sprite = client.Face;
+        maxProfitText.text = client.MaxGainMoney.ToString();
+        estimateText.text = client.BaseGainMoney.ToString();
+        baseMutator.text = client.Mutators[0].ToString();
+        likeable.text = client.TasteLiked[0].ToString();
+        hated.text = client.TasteHated[0].ToString();
+        speakable.text = client.Languages[0].ToString();
+        clientSpriteCanvas.sprite = client.Face;
+    }
+
+    public void NewClient_InGame(CustomerData client)
+    {
+        clientImage.sprite = client.Face;
     }
 }

@@ -22,14 +22,7 @@ public class StateClient : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        client = Camera.main.GetComponent<ClientCard>().currentClient;
-        spriteClient = Camera.main.GetComponent<ClientCard>().clientSpriteCanvas;
-
-        stateEmotion = (client.BaseLevelAngryness + client.BaseLevelHappyness) / 2;
-
-        tempCube = controller.currentCube.GetComponent<InspectElement>();
-        client.TemplateLoad();
-
+        Load_ClientInfo();
     }
 
     // Update is called once per frame
@@ -121,5 +114,16 @@ public class StateClient : MonoBehaviour
             Debug.Log("I Don't Care");
         }
         found = false;
+    }
+
+    public void Load_ClientInfo()
+    {
+        client = Camera.main.GetComponent<ClientCard>().currentClient;
+        spriteClient = Camera.main.GetComponent<ClientCard>().clientSpriteCanvas;
+
+        stateEmotion = (client.BaseLevelAngryness + client.BaseLevelHappyness) / 2;
+
+        tempCube = controller.currentCube.GetComponent<InspectElement>();
+        client.TemplateLoad();
     }
 }

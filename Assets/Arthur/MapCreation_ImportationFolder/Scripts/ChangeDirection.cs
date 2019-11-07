@@ -16,7 +16,7 @@ public class ChangeDirection : MonoBehaviour
     void Update()
     {
         //Next I need to read the tiles until it's a crossroads
-        if(Input.GetKeyDown(KeyCode.LeftArrow))
+        /*if(Input.GetKeyDown(KeyCode.LeftArrow))
         {
             foreach(Transform tiles in path.finalPath)
             {
@@ -52,6 +52,6 @@ public class ChangeDirection : MonoBehaviour
                     break;
                 }
             }
-        }
+        }*/
     }
 }

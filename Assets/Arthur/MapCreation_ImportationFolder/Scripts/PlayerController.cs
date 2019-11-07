@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public Transform currentCube;
     public Transform clickedCube;
     public Transform mainTarget;
+
     public Transform indicator;
 
     //Prefab Planet
@@ -22,7 +23,6 @@ public class PlayerController : MonoBehaviour
     public float offset;
 
     public List<Transform> waypoints = new List<Transform>();
-
     [Space]
 
     public List<Transform> finalPath = new List<Transform>();
@@ -32,7 +32,6 @@ public class PlayerController : MonoBehaviour
 
     //public gravityAttractor planet;
     public float speed;
-
     public int index;
 
     public Material pathPlanned;
@@ -44,13 +43,15 @@ public class PlayerController : MonoBehaviour
     /// public float speedSlowDown;
     /// public float currentSpeed;
     /// </summary>
+    /// 
+    public GameManager manager;
 
     void Start()
     {
         RayCastDown();
-
+        mainTarget = manager.Get_Destination();
         index = 0;
-        FindPath();
+        FindPath(mainTarget);
     }
 
     void Update()
@@ -117,13 +118,35 @@ public class PlayerController : MonoBehaviour
 
         if (mainTarget == currentCube)
         {
-            waypoints.Clear();
-            finalPath.Clear();
-            index = 0;           
+            //Pick the next destination
+            //Check if it's not the last element
+            if (!manager.finalClient)
+            {
+                index = 0;
+                manager.NextClient();
+                mainTarget = manager.Get_Destination();
+
+                indicator.position = mainTarget.transform.GetComponent<Walkable>().GetWalkPoint();
+                Sequence s = DOTween.Sequence();
+                s.AppendCallback(() => indicator.GetComponentInChildren<ParticleSystem>().Play());
+                s.Append(indicator.GetComponent<Renderer>().material.DOColor(Color.white, .1f));
+                s.Append(indicator.GetComponent<Renderer>().material.DOColor(Color.black, .3f).SetDelay(.2f));
+                s.Append(indicator.GetComponent<Renderer>().material.DOColor(Color.clear, .3f));
+
+                FindPath(mainTarget);
+            }
+            else
+            {
+                waypoints.Clear();
+                finalPath.Clear();
+                index = 0;
+                Time.timeScale = 0;
+                //Load notation sample
+            }
         }
     }
 
-    public void FindPath()
+    public void FindPath(Transform target)
     {
         List<Transform> nextCubes = new List<Transform>();
         List<Transform> pastCubes = new List<Transform>();
@@ -139,8 +162,8 @@ public class PlayerController : MonoBehaviour
 
         pastCubes.Add(currentCube);
 
-        ExploreCube(nextCubes, pastCubes, mainTarget);
-        BuildPath(mainTarget);
+        ExploreCube(nextCubes, pastCubes, target);
+        BuildPath(target);
     }
 
     public void Clicked_NewFindPath()
