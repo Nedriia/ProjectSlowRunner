@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class pathfindingMovementTest : MonoBehaviour
 {
-    public Pathfinder pathfinder;
+    //public Pathfinder pathfinder;
     public Vector3 target;
     public float speed;
     public float distance;
@@ -14,7 +14,7 @@ public class pathfindingMovementTest : MonoBehaviour
 
     void Start()
     {
-        pathfinder = transform.root.GetComponent<Pathfinder>();
+        //pathfinder = transform.root.GetComponent<Pathfinder>();
     }
 
     // Update is called once per frame
@@ -22,7 +22,7 @@ public class pathfindingMovementTest : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            path = pathfinder.FindPath(pathfinder.testA.position, pathfinder.testB.position);
+            //path = pathfinder.FindPath(pathfinder.testA.position, pathfinder.testB.position);
             if (target == Vector3.zero)
                 target = path[0];
             test = true;

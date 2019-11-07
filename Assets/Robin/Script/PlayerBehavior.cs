@@ -11,13 +11,13 @@ public class PlayerBehavior : MonoBehaviour
    // public GameObject Map;
  
     public float Money;
-    private PlayerController _playerController { get; set; }
+    //private PlayerController _playerController { get; set; }
 
 
     // Start is called before the first frame update
     void Start()
     {
-        _playerController = GetComponent<PlayerController>();
+        //_playerController = GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
