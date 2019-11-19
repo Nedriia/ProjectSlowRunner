@@ -29,5 +29,4 @@ public class MapEditor_MainController : MonoBehaviour
     public GameObject[] cityPrefab;
     public GameObject[] grassPrefab;
     public GameObject[] monumentPrefab;
-    public GameObject[] cubeReplace_ForRoads;
 }
