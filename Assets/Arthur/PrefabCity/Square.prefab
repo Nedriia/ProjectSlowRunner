@@ -28,7 +28,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8736238518734008076
 Transform:
@@ -58,6 +58,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8736238518734008076}
     m_Modifications:
+    - target: {fileID: 1968100152798516, guid: 47ff32009e461ff4389953ac9eaee00c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4955826888165060, guid: 47ff32009e461ff4389953ac9eaee00c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -114,6 +118,10 @@ PrefabInstance:
     - target: {fileID: 1398701804796156, guid: 39d1b958d822a234bae2f9b86d635f57, type: 3}
       propertyPath: m_Name
       value: SM_Env_WallPark_Corner_02 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1398701804796156, guid: 39d1b958d822a234bae2f9b86d635f57, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4921625704279140, guid: 39d1b958d822a234bae2f9b86d635f57, type: 3}
       propertyPath: m_LocalPosition.x
@@ -182,6 +190,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_WallPark_Corner_02 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1398701804796156, guid: 39d1b958d822a234bae2f9b86d635f57, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4921625704279140, guid: 39d1b958d822a234bae2f9b86d635f57, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.453
@@ -248,6 +260,10 @@ PrefabInstance:
     - target: {fileID: 1398701804796156, guid: 39d1b958d822a234bae2f9b86d635f57, type: 3}
       propertyPath: m_Name
       value: SM_Env_WallPark_Corner_02 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1398701804796156, guid: 39d1b958d822a234bae2f9b86d635f57, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4921625704279140, guid: 39d1b958d822a234bae2f9b86d635f57, type: 3}
       propertyPath: m_LocalPosition.x
@@ -316,6 +332,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_WallPark_Corner_02 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1398701804796156, guid: 39d1b958d822a234bae2f9b86d635f57, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4921625704279140, guid: 39d1b958d822a234bae2f9b86d635f57, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.3909991
@@ -383,6 +403,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_WallPark_Corner_02 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1398701804796156, guid: 39d1b958d822a234bae2f9b86d635f57, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4921625704279140, guid: 39d1b958d822a234bae2f9b86d635f57, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.344001
@@ -446,6 +470,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8736238518734008076}
     m_Modifications:
+    - target: {fileID: 1424873954934640, guid: 60970092d353ea444a21bbdba017cd0d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4774264373945594, guid: 60970092d353ea444a21bbdba017cd0d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.058998823

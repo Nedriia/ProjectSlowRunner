@@ -185,11 +185,13 @@ public class InspectElement_Map : Editor
                 else if (map.elementTest.isoSphere.transform.GetChild(i).GetComponent<InspectElement>().type == InspectElement.Tyle_Type.Road)
                 {
                     Vector3 normal = map.elementTest.isoSphere.transform.position - map.elementTest.isoSphere.transform.GetChild(i).transform.position;
-
-                    GameObject gameObject_ = Instantiate(map.elementTest.cubeReplace_ForRoads[Random.Range(0, map.elementTest.cubeReplace_ForRoads.Length)], map.elementTest.isoSphere.transform.GetChild(i));
-                    gameObject_.transform.localScale = new Vector3(0.0036f, 0.0036f, 0.0036f);
-                    gameObject_.transform.localPosition = new Vector3(0, 0, 0);
-                    gameObject_.transform.up = -normal;
+                    if (map.elementTest.cubeReplace_ForRoads.Length != 0)
+                    {
+                        GameObject gameObject_ = Instantiate(map.elementTest.cubeReplace_ForRoads[Random.Range(0, map.elementTest.cubeReplace_ForRoads.Length)], map.elementTest.isoSphere.transform.GetChild(i));
+                        gameObject_.transform.localScale = new Vector3(0.0036f, 0.0036f, 0.0036f);
+                        gameObject_.transform.localPosition = new Vector3(0, 0, 0);
+                        gameObject_.transform.up = -normal;
+                    }
                 }
             }
         }

@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &35232813037963715
 Transform:
@@ -66,6 +66,10 @@ PrefabInstance:
     - target: {fileID: 1426761401228798, guid: d2cc7aa5b74e38e49a2b6b3d62afa808, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Potplants_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426761401228798, guid: d2cc7aa5b74e38e49a2b6b3d62afa808, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4487404791396254, guid: d2cc7aa5b74e38e49a2b6b3d62afa808, type: 3}
       propertyPath: m_LocalPosition.x
@@ -130,6 +134,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 35232813037963715}
     m_Modifications:
+    - target: {fileID: 1426761401228798, guid: d2cc7aa5b74e38e49a2b6b3d62afa808, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4487404791396254, guid: d2cc7aa5b74e38e49a2b6b3d62afa808, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.5779998
@@ -197,6 +205,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Generic_Bush_01 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1906273514939432, guid: 4ebf1005ad1e1324aad376f55cecd7fe, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4293938142500662, guid: 4ebf1005ad1e1324aad376f55cecd7fe, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.2309997
@@ -260,6 +272,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Generic_Bush_02 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1722487303580194, guid: 56e413689cad46548a1478dd0147d3cf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4097171518584860, guid: 56e413689cad46548a1478dd0147d3cf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.235
@@ -319,6 +335,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 35232813037963715}
     m_Modifications:
+    - target: {fileID: 1744794866909098, guid: 4e135c0e8b48b8d4eb4c90241e41a510, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4611024970149874, guid: 4e135c0e8b48b8d4eb4c90241e41a510, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.9049995
@@ -385,6 +405,10 @@ PrefabInstance:
     - target: {fileID: 1906273514939432, guid: 4ebf1005ad1e1324aad376f55cecd7fe, type: 3}
       propertyPath: m_Name
       value: SM_Env_Generic_Bush_01 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1906273514939432, guid: 4ebf1005ad1e1324aad376f55cecd7fe, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4293938142500662, guid: 4ebf1005ad1e1324aad376f55cecd7fe, type: 3}
       propertyPath: m_LocalPosition.x
@@ -453,6 +477,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Generic_Bush_02 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1722487303580194, guid: 56e413689cad46548a1478dd0147d3cf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4097171518584860, guid: 56e413689cad46548a1478dd0147d3cf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.6060002
@@ -512,6 +540,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 35232813037963715}
     m_Modifications:
+    - target: {fileID: 1968100152798516, guid: 47ff32009e461ff4389953ac9eaee00c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4955826888165060, guid: 47ff32009e461ff4389953ac9eaee00c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -568,6 +600,10 @@ PrefabInstance:
     - target: {fileID: 1426761401228798, guid: d2cc7aa5b74e38e49a2b6b3d62afa808, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Potplants_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426761401228798, guid: d2cc7aa5b74e38e49a2b6b3d62afa808, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4487404791396254, guid: d2cc7aa5b74e38e49a2b6b3d62afa808, type: 3}
       propertyPath: m_LocalPosition.x
@@ -636,6 +672,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Generic_Bush_01 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1906273514939432, guid: 4ebf1005ad1e1324aad376f55cecd7fe, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4293938142500662, guid: 4ebf1005ad1e1324aad376f55cecd7fe, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.8419998
@@ -703,6 +743,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Generic_Bush_02 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1722487303580194, guid: 56e413689cad46548a1478dd0147d3cf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4097171518584860, guid: 56e413689cad46548a1478dd0147d3cf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.65200114
@@ -765,6 +809,10 @@ PrefabInstance:
     - target: {fileID: 1906273514939432, guid: 4ebf1005ad1e1324aad376f55cecd7fe, type: 3}
       propertyPath: m_Name
       value: SM_Env_Generic_Bush_01 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1906273514939432, guid: 4ebf1005ad1e1324aad376f55cecd7fe, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4293938142500662, guid: 4ebf1005ad1e1324aad376f55cecd7fe, type: 3}
       propertyPath: m_LocalPosition.x

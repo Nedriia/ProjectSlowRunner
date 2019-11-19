@@ -28,7 +28,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2925678312482526730
 Transform:
@@ -59,6 +59,10 @@ PrefabInstance:
     - target: {fileID: 1968100152798516, guid: 47ff32009e461ff4389953ac9eaee00c, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Hex_Grass_01 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1968100152798516, guid: 47ff32009e461ff4389953ac9eaee00c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4955826888165060, guid: 47ff32009e461ff4389953ac9eaee00c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -113,6 +117,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2925678312482526730}
     m_Modifications:
+    - target: {fileID: 1748060347252440, guid: 16a10f601f7ec0247b41a38e304e4bd4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4332098219736620, guid: 16a10f601f7ec0247b41a38e304e4bd4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.91089964
@@ -176,6 +184,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2925678312482526730}
     m_Modifications:
+    - target: {fileID: 1748927832601558, guid: 6e4803fc2f64b5d41b161a66c0d31377, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4770515111490416, guid: 6e4803fc2f64b5d41b161a66c0d31377, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.44510317
@@ -239,6 +251,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2925678312482526730}
     m_Modifications:
+    - target: {fileID: 1105727373443860, guid: 910c72b6390cf664494b7fd7b1e070b0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4950243234136926, guid: 910c72b6390cf664494b7fd7b1e070b0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.262897
@@ -302,6 +318,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2925678312482526730}
     m_Modifications:
+    - target: {fileID: 1266431062089378, guid: fd04b3900343ad7429e4fc105edfa185, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4059089795230772, guid: fd04b3900343ad7429e4fc105edfa185, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.131
