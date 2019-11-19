@@ -29,15 +29,16 @@ public enum TasteType
 [System.Serializable]
 public enum SpotType
 {
-
-    Monument,
-    Shop,
-    Beach,
-    Bank,
     Empty,
-    Trafic_Jam,
-    Concert,
-
+    Monument,
+    //Shop,
+    //Beach,
+    //Bank,
+    
+    //Trafic_Jam,
+    //Concert,
+    Restaurant,
+    Chantier,
 }
 
 [System.Serializable]

@@ -10,7 +10,6 @@ public class PlayerController : MonoBehaviour
     //public bool walking = false;
 
     [Space]
-
     public Transform currentCube;
     public Transform clickedCube;
     public Transform mainTarget;
@@ -28,15 +27,14 @@ public class PlayerController : MonoBehaviour
     public List<Transform> finalPath = new List<Transform>();
     public List<Transform> temp_finalPath = new List<Transform>();
     public bool finalform = false;
-    public Material road;
 
     //public gravityAttractor planet;
     public float speed;
+    public float optimalSpeed;
+    public float speedInChantier;
     public int index;
 
-    public Material pathPlanned;
-    public Material pathTemp;
-    public Material alreadyPassed;
+    private MapEditor_MainController controllerMat;
 
     /// <summary>
     /// bool slowdown;
@@ -48,6 +46,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        controllerMat = Camera.main.GetComponent<MapEditor_MainController>();
         RayCastDown();
         mainTarget = manager.Get_Destination();
         index = 0;
@@ -56,45 +55,42 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (finalPath.Count != 0)
-        {
+        if (finalPath.Count != 0){
             FollowPath();
         }
         //GET CURRENT CUBE (UNDER PLAYER)
 
         RayCastDown();
 
-        if (currentCube.GetComponent<Walkable>().movingGround)
-        {
+        if (currentCube.GetComponent<Walkable>().movingGround){
             transform.parent = currentCube.parent;
         }
-        else
-        {
+        else{
             transform.parent = null;
         }
 
         // CLICK ON CUBE
 
-        if (Input.GetMouseButtonDown(0))
-        {
+        if (Input.GetMouseButtonDown(0)){
             Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition); RaycastHit mouseHit;
 
-            if (Physics.Raycast(mouseRay, out mouseHit))
-            {
-                if (mouseHit.transform.GetComponent<Walkable>() != null)
-                {
+            if (Physics.Raycast(mouseRay, out mouseHit)){
+                if (mouseHit.transform.GetComponent<Walkable>() != null){
                     clickedCube = mouseHit.transform;
                     DOTween.Kill(gameObject.transform);
-                    if (clickedCube != currentCube)
-                    {
-                        if (finalPath.Count != 0)
-                        {
-                            foreach (Transform element in finalPath)
-                            {
-                                if(element.GetComponent<MeshRenderer>().sharedMaterial != alreadyPassed)
-                                    element.GetComponent<MeshRenderer>().material = road;
-                                if (element.GetComponent<InspectElement>().visited)
-                                    element.GetComponent<MeshRenderer>().material = alreadyPassed;
+                    if (clickedCube != currentCube){
+                        if (finalPath.Count != 0){
+                            foreach (Transform element in finalPath){
+                                var checkVar = element.GetComponent<InspectElement>();
+                                if (element.GetComponent<MeshRenderer>().sharedMaterial != controllerMat.alreadyPassed && checkVar.Event == InspectElement.Tyle_Evenement.Empty || checkVar.Event == InspectElement.Tyle_Evenement.Monument)
+                                    element.GetComponent<MeshRenderer>().material = controllerMat.road;
+                                else if(element.GetComponent<MeshRenderer>().sharedMaterial != controllerMat.alreadyPassed && checkVar.Event == InspectElement.Tyle_Evenement.Restaurant)
+                                    element.GetComponent<MeshRenderer>().material = controllerMat.restaurant_Mat;
+                                else if (element.GetComponent<MeshRenderer>().sharedMaterial != controllerMat.alreadyPassed && checkVar.Event == InspectElement.Tyle_Evenement.Chantier)
+                                    element.GetComponent<MeshRenderer>().material = controllerMat.chantier_Mat;
+
+                                if (checkVar.visited)
+                                    element.GetComponent<MeshRenderer>().material = controllerMat.alreadyPassed;
                             }
                         }
                         waypoints.Clear();
@@ -120,28 +116,24 @@ public class PlayerController : MonoBehaviour
         {
             //Pick the next destination
             //Check if it's not the last element
-            if (!manager.finalClient)
-            {
+            if (!manager.finalClient){
                 index = 0;
                 manager.NextClient();
                 mainTarget = manager.Get_Destination();
 
-                indicator.position = mainTarget.transform.GetComponent<Walkable>().GetWalkPoint();
-                Sequence s = DOTween.Sequence();
-                s.AppendCallback(() => indicator.GetComponentInChildren<ParticleSystem>().Play());
-                s.Append(indicator.GetComponent<Renderer>().material.DOColor(Color.white, .1f));
-                s.Append(indicator.GetComponent<Renderer>().material.DOColor(Color.black, .3f).SetDelay(.2f));
-                s.Append(indicator.GetComponent<Renderer>().material.DOColor(Color.clear, .3f));
-
-                FindPath(mainTarget);
+                setNew_Distination();
             }
-            else
-            {
+            else{
                 waypoints.Clear();
                 finalPath.Clear();
                 index = 0;
                 Time.timeScale = 0;
-                //Load notation sample
+
+                if (manager.levelIsOver){
+                    //End of the level
+                    manager.managerScore.enabled = false;
+                    Debug.Log("End of the level");
+                }
             }
         }
     }
@@ -246,10 +238,10 @@ public class PlayerController : MonoBehaviour
             while (cube != waypoints[0])
             {
                 temp_finalPath.Insert(0, cube);
-                cube.GetComponent<MeshRenderer>().material = pathPlanned;
+                cube.GetComponent<MeshRenderer>().material = controllerMat.pathPlanned;
 
                 if (finalform)
-                    cube.GetComponent<MeshRenderer>().material = pathTemp;
+                    cube.GetComponent<MeshRenderer>().material = controllerMat.pathTemp;
 
                 if (cube.GetComponent<Walkable>().previousBlock != null)
                     cube = cube.GetComponent<Walkable>().previousBlock;
@@ -263,7 +255,7 @@ public class PlayerController : MonoBehaviour
             {
                 finalPath.Insert(0, cube);
 
-                cube.GetComponent<MeshRenderer>().material = pathPlanned;
+                cube.GetComponent<MeshRenderer>().material = controllerMat.pathPlanned;
                 if (cube.GetComponent<Walkable>().previousBlock != null)
                     cube = cube.GetComponent<Walkable>().previousBlock;
                 else
@@ -290,18 +282,15 @@ public class PlayerController : MonoBehaviour
     void FollowPath()
     {
         transform.position = Vector3.MoveTowards(transform.position, finalPath[index].transform.position, Time.deltaTime * speed);
-
-
         //Handle Rotation
         Vector3 normal = planet.transform.position - finalPath[index].transform.position;
         Debug.DrawRay(finalPath[index].transform.position, -normal, Color.blue, 1);
         //Rotate the car towards the next tile targeted, rotation depends of the normal of the tile
-        var rotationTo = Quaternion.LookRotation(-normal.normalized, car.transform.up) * (Quaternion.AngleAxis(offset, Vector3.right));
+        var rotationTo = Quaternion.LookRotation(normal.normalized, car.transform.up)* (Quaternion.AngleAxis(offset, Vector3.right));
         //We still got some artefacts with rotation
         car.transform.rotation = Quaternion.Lerp(car.transform.rotation,rotationTo,1f);
 
-        if (transform.position == finalPath[index].transform.position)
-        {
+        if (transform.position == finalPath[index].transform.position){
             if (index <= finalPath.Count - 1)
                 index++;
         }
@@ -320,17 +309,16 @@ public class PlayerController : MonoBehaviour
         Ray playerRay = new Ray(transform.GetChild(0).position, -transform.up);
         RaycastHit playerHit;
 
-        if (Physics.Raycast(playerRay, out playerHit))
-        {
-            if (playerHit.transform.GetComponent<Walkable>() != null)
-            {
+        if (Physics.Raycast(playerRay, out playerHit)){
+            if (playerHit.transform.GetComponent<Walkable>() != null){
                 currentCube = playerHit.transform;
-                playerHit.transform.GetComponent<MeshRenderer>().material = alreadyPassed;
-                playerHit.transform.GetComponent<InspectElement>().visited = true;
+                playerHit.transform.GetComponent<MeshRenderer>().material = controllerMat.alreadyPassed;
 
-                if (!playerHit.transform.GetComponent<Walkable>().visited)
-                {
-                    playerHit.transform.GetComponent<Walkable>().visited = true;
+                if(index != 0){
+                    if (index == finalPath.Count)
+                        finalPath[index].GetComponent<InspectElement>().visited = true;
+                    else
+                        finalPath[index - 1].GetComponent<InspectElement>().visited = true;
                 }
             }
         }
@@ -341,5 +329,17 @@ public class PlayerController : MonoBehaviour
         Gizmos.color = Color.blue;
         Ray ray = new Ray(transform.GetChild(0).position, -transform.up);
         Gizmos.DrawRay(ray);
+    }
+
+    public void setNew_Distination()
+    {
+        indicator.position = mainTarget.transform.GetComponent<Walkable>().GetWalkPoint();
+        Sequence s = DOTween.Sequence();
+        s.AppendCallback(() => indicator.GetComponentInChildren<ParticleSystem>().Play());
+        s.Append(indicator.GetComponent<Renderer>().material.DOColor(Color.white, .1f));
+        s.Append(indicator.GetComponent<Renderer>().material.DOColor(Color.black, .3f).SetDelay(.2f));
+        s.Append(indicator.GetComponent<Renderer>().material.DOColor(Color.clear, .3f));
+
+        FindPath(mainTarget);
     }
 }

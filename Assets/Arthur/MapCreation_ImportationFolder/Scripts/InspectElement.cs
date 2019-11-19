@@ -18,10 +18,12 @@ public class InspectElement : MonoBehaviour
 
     public enum Tyle_Evenement
     {
-        Empty,
+        Empty,      
+        //Trafic_Jam,
+        //Concert,
         Monument,
-        Trafic_Jam,
-        Concert,
+        Chantier,
+        Restaurant
     }
 
     public Tyle_Type type;

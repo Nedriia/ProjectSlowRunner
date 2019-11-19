@@ -8,7 +8,10 @@ public class StateClient : MonoBehaviour
     private CustomerData client;
     private Image spriteClient;
     public float stateEmotion;
-    public float decreaseFactor;
+
+    private float decreaseFactor_Impact = 0.15f;
+    private float decreaseFactor = 0.9999f;
+    public float currentDecrease = 0.9999f;
 
     public PlayerController controller;
     private InspectElement tempCube;
@@ -29,27 +32,41 @@ public class StateClient : MonoBehaviour
     void Update()
     {
         sliderValue.value = stateEmotion;
-        if(tempCube != null && tempCube.name != controller.currentCube.name)
-        {
+        if(tempCube != null && tempCube.name != controller.currentCube.name){
             tempCube = controller.currentCube.GetComponent<InspectElement>();
-            if (tempCube.Event != InspectElement.Tyle_Evenement.Empty)
-            {
-                if (tempCube.Event == InspectElement.Tyle_Evenement.Monument)
-                {
-                    CheckCondition_Hated("MonumentT (TasteCustomer)");
+            if (tempCube.Event != InspectElement.Tyle_Evenement.Empty){
+                if (tempCube.Event == InspectElement.Tyle_Evenement.Chantier){
+                    //CheckCondition_Hated("ChantierT (TasteCustomer)");
+                    //Animation car accident
+                    controller.speed = controller.speedInChantier;
                 }
-                /*else if(tempCube.Event == InspectElement.Tyle_Evenement.Construction)
-                {
-                    //Slow Down
-                    CheckCondition_Hated("");
+                else{
+                    controller.speed = controller.optimalSpeed;
+                    if (tempCube.Event == InspectElement.Tyle_Evenement.Monument){
+                        CheckCondition_Hated("MonumentT (TasteCustomer)");
+                    }
+                    else if (tempCube.Event == InspectElement.Tyle_Evenement.Restaurant){
+                        //CheckCondition_Hated("RestaurantT (TasteCustomer)");
+                        //pay
+                        if ((ScoreManager.score - controller.manager.priceRestaurant) <= 0)
+                            ScoreManager.score = 0;
+                        else
+                            ScoreManager.score -= controller.manager.priceRestaurant;
+                    }
                 }
-                else if(tempCube.Event == InspectElement.Tyle_Evenement.Restaurant)
-                {
-                    //Lose money
-                    CheckCondition_Hated("");
-                }*/
+            }
+            else{
+                controller.speed = controller.optimalSpeed;
             }
 
+            if (tempCube.visited){
+                Debug.Log("already been here");
+                currentDecrease = decreaseFactor_Impact;
+            }
+            else
+            {
+                currentDecrease = decreaseFactor;
+            }
         }
 
         //TODO : Optional
@@ -81,7 +98,7 @@ public class StateClient : MonoBehaviour
             {
                 imageColorFeedback.color = Color.red;
                 Debug.Log("I Hate it");
-                if (stateEmotion + hatedImpact >= 0)
+                if (stateEmotion - hatedImpact >= 0)
                     stateEmotion -= hatedImpact;
                 else
                     stateEmotion = 0;
@@ -118,12 +135,12 @@ public class StateClient : MonoBehaviour
 
     public void Load_ClientInfo()
     {
-        client = Camera.main.GetComponent<ClientCard>().currentClient;
+        client = Camera.main.GetComponent<GameManager>().currentClient;
         spriteClient = Camera.main.GetComponent<ClientCard>().clientSpriteCanvas;
 
         stateEmotion = (client.BaseLevelAngryness + client.BaseLevelHappyness) / 2;
 
-        tempCube = controller.currentCube.GetComponent<InspectElement>();
+        tempCube = controller.currentCube.GetComponent<InspectElement>(); //-> ?
         client.TemplateLoad();
     }
 }

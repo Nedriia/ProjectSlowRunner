@@ -116,8 +116,12 @@ public class InspectElement_Map : Editor
                                 }*/
                         }
                     }
-                    if (map.elementTest.Roads_Position[i].GetComponent<InspectElement>().Event == InspectElement.Tyle_Evenement.Trafic_Jam){
-                        map.elementTest.Roads_Position[i].GetComponent<MeshRenderer>().material = map.elementTest.traficJam_Mat;
+                    if (map.elementTest.Roads_Position[i].GetComponent<InspectElement>().Event == InspectElement.Tyle_Evenement.Restaurant){
+                        map.elementTest.Roads_Position[i].GetComponent<MeshRenderer>().sharedMaterial = map.elementTest.restaurant_Mat;
+                    }
+
+                    if (map.elementTest.Roads_Position[i].GetComponent<InspectElement>().Event == InspectElement.Tyle_Evenement.Chantier){
+                        map.elementTest.Roads_Position[i].GetComponent<MeshRenderer>().sharedMaterial = map.elementTest.chantier_Mat;
                     }
                 }
             }
@@ -143,7 +147,8 @@ public class InspectElement_Map : Editor
                 for (int j = 0; j < map.elementTest.isoSphere.childCount; j++){
                     for (int i = 0; i < map.elementTest.Monuments_Position.Count; i++){
                         if (Vector3.Distance(map.elementTest.isoSphere.GetChild(j).position, map.elementTest.Monuments_Position[i].position) < map.distance_Check && map.elementTest.isoSphere.GetChild(j) != map.elementTest.Monuments_Position[i]){
-                            map.elementTest.isoSphere.GetChild(j).GetComponent<InspectElement>().Event = InspectElement.Tyle_Evenement.Monument;
+                            if(map.elementTest.isoSphere.GetChild(j).GetComponent<InspectElement>().Event == InspectElement.Tyle_Evenement.Empty)
+                                map.elementTest.isoSphere.GetChild(j).GetComponent<InspectElement>().Event = InspectElement.Tyle_Evenement.Monument;
                         }
                     }
                 }
@@ -229,8 +234,15 @@ public class InspectElement_Map : Editor
                                 map.elementTest.Roads_Position[i].GetComponent<InspectElement>().neighborHex.Add(map.elementTest.Roads_Position[j]);
                         }
                     }
-                    if (map.elementTest.Roads_Position[i].GetComponent<InspectElement>().Event == InspectElement.Tyle_Evenement.Trafic_Jam)
-                        map.elementTest.Roads_Position[i].GetComponent<MeshRenderer>().material = map.elementTest.traficJam_Mat;
+                    /*if (map.elementTest.Roads_Position[i].GetComponent<InspectElement>().Event == InspectElement.Tyle_Evenement.Trafic_Jam)
+                        map.elementTest.Roads_Position[i].GetComponent<MeshRenderer>().material = map.elementTest.traficJam_Mat;*/
+                    if (map.elementTest.Roads_Position[i].GetComponent<InspectElement>().Event == InspectElement.Tyle_Evenement.Restaurant){
+                        map.elementTest.Roads_Position[i].GetComponent<MeshRenderer>().material = map.elementTest.restaurant_Mat;
+                    }
+
+                    if (map.elementTest.Roads_Position[i].GetComponent<InspectElement>().Event == InspectElement.Tyle_Evenement.Chantier){
+                        map.elementTest.Roads_Position[i].GetComponent<MeshRenderer>().material = map.elementTest.chantier_Mat;
+                    }
                 }
             }
         }

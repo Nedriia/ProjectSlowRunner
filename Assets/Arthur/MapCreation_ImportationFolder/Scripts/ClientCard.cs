@@ -15,10 +15,12 @@ public class ClientCard : MonoBehaviour
     public Text maxProfitText;
     public Text estimateText;
     public Text baseMutator;
-    public Text likeable;
-    public Text hated;
+    public HorizontalLayoutGroup likeable;
+    public HorizontalLayoutGroup hated;
     public Text speakable;
     public Image starsDisplay;
+
+    public GameObject textPrefab;
 
     [Header("GameObject Card")]
     public GameObject card;
@@ -34,7 +36,7 @@ public class ClientCard : MonoBehaviour
     public GameObject canvas;
     public Image clientSpriteCanvas;
 
-    public GameManager manager;
+    private GameManager manager;
 
     // Start is called before the first frame update
     void Start()
@@ -45,26 +47,7 @@ public class ClientCard : MonoBehaviour
 
         NewClient(currentClient);
 
-        switch (currentClient.NumberOfStars)
-        {
-            case 1:
-                starsDisplay.sprite = one_star;
-                break;
-            case 2:
-                starsDisplay.sprite = two_star;
-                break;
-            case 3:
-                starsDisplay.sprite = three_star;
-                break;
-            case 4:
-                starsDisplay.sprite = four_star;
-                break;
-            case 5:
-                starsDisplay.sprite = five_star;
-                break;
-            default:
-                break;
-        }
+        Actualisation_StarClient(currentClient, starsDisplay);
 
         Time.timeScale = 0;
     }
@@ -77,6 +60,11 @@ public class ClientCard : MonoBehaviour
             card.SetActive(false);
             canvas.SetActive(true);
             Time.timeScale = 1;
+            canvas.SetActive(true);
+            if (manager.managerScore.enabled == false)
+            {
+                manager.managerScore.enabled = true;
+            }
         }
 
         if (currentClient != manager.currentClient)
@@ -88,15 +76,53 @@ public class ClientCard : MonoBehaviour
 
     public void NewClient(CustomerData client)
     {
+        card.SetActive(true);
+
         name.text = client.Name;
         clientImage.sprite = client.Face;
         maxProfitText.text = client.MaxGainMoney.ToString();
         estimateText.text = client.BaseGainMoney.ToString();
+
         baseMutator.text = client.Mutators[0].ToString();
-        likeable.text = client.TasteLiked[0].ToString();
-        hated.text = client.TasteHated[0].ToString();
+        foreach (TasteCustomer mutator in client.TasteLiked)
+        {
+            var text = Instantiate(textPrefab, likeable.transform);
+            text.GetComponent<Text>().text = mutator.ToString();
+        }
+        foreach (TasteCustomer mutator in client.TasteHated)
+        {
+            var text = Instantiate(textPrefab, hated.transform);
+            text.GetComponent<Text>().text = mutator.ToString();
+        }
+
         speakable.text = client.Languages[0].ToString();
         clientSpriteCanvas.sprite = client.Face;
+
+        Time.timeScale = 0;
+    }
+
+    public void Actualisation_StarClient(CustomerData Client, Image display)
+    {
+        switch (Client.NumberOfStars)
+        {
+            case 1:
+                display.sprite = one_star;
+                break;
+            case 2:
+                display.sprite = two_star;
+                break;
+            case 3:
+                display.sprite = three_star;
+                break;
+            case 4:
+                display.sprite = four_star;
+                break;
+            case 5:
+                display.sprite = five_star;
+                break;
+            default:
+                break;
+        }
     }
 
     public void NewClient_InGame(CustomerData client)
