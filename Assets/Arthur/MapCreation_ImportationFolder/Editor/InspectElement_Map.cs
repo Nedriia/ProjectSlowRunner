@@ -155,7 +155,7 @@ public class InspectElement_Map : Editor
             }
 
             //Prefabs instantiation
-            for (int i = 0; i < map.elementTest.isoSphere.transform.childCount; i++){
+            /*for (int i = 0; i < map.elementTest.isoSphere.transform.childCount; i++){
                 //We spawn prefabs depending of the type of the event we found on the planet
                 //We calculate the normal to spawn the object on the ground of the tile
                 if (map.elementTest.isoSphere.transform.GetChild(i).GetComponent<InspectElement>().type == InspectElement.Tyle_Type.Monument_Source){
@@ -182,8 +182,8 @@ public class InspectElement_Map : Editor
                     gameObject_.transform.localPosition = new Vector3(0, 0, 0);
                     gameObject_.transform.up = -normal;
                 }
-
-            }
+                
+            }*/
         }
 
         EditorGUILayout.Space();

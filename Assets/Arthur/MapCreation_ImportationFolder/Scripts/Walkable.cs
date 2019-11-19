@@ -45,8 +45,8 @@ public class Walkable : MonoBehaviour
         {
             if (p.target == null)
                 return;
-            Gizmos.color = p.active ? Color.black : Color.clear;
-            Gizmos.DrawLine(GetWalkPoint(), p.target.GetComponent<Walkable>().GetWalkPoint());
+            /*Gizmos.color = p.active ? Color.black : Color.clear;
+            Gizmos.DrawLine(GetWalkPoint(), p.target.GetComponent<Walkable>().GetWalkPoint());*/
         }
     }
 }
