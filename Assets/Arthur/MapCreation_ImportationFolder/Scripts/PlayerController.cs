@@ -286,9 +286,9 @@ public class PlayerController : MonoBehaviour
         Vector3 normal = planet.transform.position - finalPath[index].transform.position;
         Debug.DrawRay(finalPath[index].transform.position, -normal, Color.blue, 1);
         //Rotate the car towards the next tile targeted, rotation depends of the normal of the tile
-        var rotationTo = Quaternion.LookRotation(normal.normalized, car.transform.up)* (Quaternion.AngleAxis(offset, Vector3.right));
+        //var rotationTo = Quaternion.LookRotation(normal.normalized, car.transform.up)* (Quaternion.AngleAxis(offset, Vector3.right));
         //We still got some artefacts with rotation
-        car.transform.rotation = Quaternion.Lerp(car.transform.rotation,rotationTo,1f);
+        //car.transform.rotation = Quaternion.Lerp(car.transform.rotation,rotationTo,1f);
 
         if (transform.position == finalPath[index].transform.position){
             if (index <= finalPath.Count - 1)
@@ -326,19 +326,19 @@ public class PlayerController : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.blue;
+        /*Gizmos.color = Color.blue;
         Ray ray = new Ray(transform.GetChild(0).position, -transform.up);
-        Gizmos.DrawRay(ray);
+        Gizmos.DrawRay(ray);*/
     }
 
     public void setNew_Distination()
     {
-        indicator.position = mainTarget.transform.GetComponent<Walkable>().GetWalkPoint();
+        /*indicator.position = mainTarget.transform.GetComponent<Walkable>().GetWalkPoint();
         Sequence s = DOTween.Sequence();
         s.AppendCallback(() => indicator.GetComponentInChildren<ParticleSystem>().Play());
         s.Append(indicator.GetComponent<Renderer>().material.DOColor(Color.white, .1f));
         s.Append(indicator.GetComponent<Renderer>().material.DOColor(Color.black, .3f).SetDelay(.2f));
-        s.Append(indicator.GetComponent<Renderer>().material.DOColor(Color.clear, .3f));
+        s.Append(indicator.GetComponent<Renderer>().material.DOColor(Color.clear, .3f));*/
 
         FindPath(mainTarget);
     }
