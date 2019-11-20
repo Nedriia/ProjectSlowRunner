@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.5686275, g: 0.5686275, b: 0.5686275, a: 1}
   m_AmbientGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 1
+  m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
@@ -3041,7 +3041,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -79, y: -2}
   m_SizeDelta: {x: 500, y: 30}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &420683143
@@ -3069,7 +3069,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.05724907, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3089,7 +3089,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Score
+  m_Text: 
 --- !u!222 &420683145
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7248,12 +7248,12 @@ GameObject:
   - component: {fileID: 1138299465}
   - component: {fileID: 1138299464}
   m_Layer: 5
-  m_Name: RawImage
+  m_Name: RenderTextureCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1138299463
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7268,11 +7268,11 @@ RectTransform:
   m_Father: {fileID: 703830124}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -196.41, y: -379.58}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: 452}
   m_SizeDelta: {x: 99.39, y: 97.64}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1138299464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7543,11 +7543,11 @@ RectTransform:
   m_Father: {fileID: 703830124}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -321.09998, y: -390}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: 530}
   m_SizeDelta: {x: 350, y: 200}
-  m_Pivot: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1224359689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8804,6 +8804,7 @@ RectTransform:
   - {fileID: 642456216}
   - {fileID: 703830124}
   - {fileID: 420683142}
+  - {fileID: 1471578484}
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9226,6 +9227,97 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 8993203727518233176, guid: b40e2d327fc19ce46846092fd207b78b, type: 3}
+--- !u!1 &1446227159
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1446227161}
+  - component: {fileID: 1446227160}
+  m_Layer: 0
+  m_Name: Directional Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &1446227160
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446227159}
+  m_Enabled: 1
+  serializedVersion: 9
+  m_Type: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &1446227161
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446227159}
+  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalPosition: {x: -2.6989892, y: 1.9323261, z: -0.59199405}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1453017487
 GameObject:
   m_ObjectHideFlags: 0
@@ -9402,6 +9494,98 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1462942942}
+  m_CullTransparentMesh: 0
+--- !u!1 &1471578483
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1471578484}
+  - component: {fileID: 1471578487}
+  - component: {fileID: 1471578486}
+  - component: {fileID: 1471578485}
+  m_Layer: 5
+  m_Name: Percentage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1471578484
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471578483}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1332025777}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -89, y: -113}
+  m_SizeDelta: {x: 500, y: 30}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!114 &1471578485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471578483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1f4c83b9ef31de40a2b3a0e29c49ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1471578486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471578483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 25
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &1471578487
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471578483}
   m_CullTransparentMesh: 0
 --- !u!64 &1483594100
 MeshCollider:
@@ -10956,11 +11140,11 @@ RectTransform:
   m_Father: {fileID: 703830124}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -251.85199, y: -419.1}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: 452}
   m_SizeDelta: {x: 160.32, y: 120.59}
-  m_Pivot: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1698015383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11185,14 +11369,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1715079179}
-  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: -0.02, z: 5.87}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.02, z: -3.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 503583647823688829}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1715079183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11206,7 +11390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 4364321273752776452}
-  _distance: 9
+  _distance: 5
   _zoomStep: 1
   _xSpeed: 1
   _ySpeed: 1
@@ -11223,76 +11407,67 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test:
-  - {fileID: 8785286874931348795}
-  - {fileID: 8785286874931348845}
-  - {fileID: 8785286874931348772}
-  - {fileID: 8785286874931348846}
-  - {fileID: 8785286874931348803}
-  - {fileID: 8785286874931348963}
-  - {fileID: 8785286874931348962}
+  - {fileID: 8785286874931348850}
+  - {fileID: 8785286874931348782}
+  - {fileID: 8785286874931348820}
+  - {fileID: 8785286874931348818}
+  - {fileID: 8785286874931348966}
+  - {fileID: 8785286874931348793}
+  - {fileID: 8785286874931348767}
+  - {fileID: 8785286874931348776}
+  - {fileID: 8785286874931348969}
+  - {fileID: 8785286874931348942}
   isoSphere: {fileID: 4364321273752776452}
   Roads_Position:
   - {fileID: 912896319502637393}
-  - {fileID: 1808661112165488024}
-  - {fileID: 1665740061070026860}
-  - {fileID: 8398485756382703027}
-  - {fileID: 3028729275196219165}
-  - {fileID: 2392370442465744458}
-  - {fileID: 8489297101738424294}
-  - {fileID: 5383161550790484201}
-  - {fileID: 6838879030362020562}
-  - {fileID: 8679391751896911801}
-  - {fileID: 1089605591167568046}
-  - {fileID: 7610762720079532175}
   - {fileID: 3530027670771020996}
+  - {fileID: 7610762720079532175}
+  - {fileID: 1089605591167568046}
+  - {fileID: 8679391751896911801}
+  - {fileID: 6838879030362020562}
+  - {fileID: 5383161550790484201}
+  - {fileID: 8489297101738424294}
+  - {fileID: 2392370442465744458}
+  - {fileID: 3028729275196219165}
+  - {fileID: 8470442972133105650}
   - {fileID: 928568815773469160}
-  - {fileID: 2216235976376349533}
   - {fileID: 3940726123590947634}
-  - {fileID: 4757755768065789878}
+  - {fileID: 1665740061070026860}
+  - {fileID: 1808661112165488024}
+  - {fileID: 4325031797091878462}
+  - {fileID: 7565634496930067600}
+  - {fileID: 8888937983307520204}
+  - {fileID: 8372217553982750511}
+  - {fileID: 2805102022456209605}
+  - {fileID: 4434249080488144495}
+  - {fileID: 5933539731967571020}
+  - {fileID: 5346192252712123463}
+  - {fileID: 8158195878653050948}
+  - {fileID: 5247486954276981010}
   - {fileID: 7919622142989618552}
   - {fileID: 1995404305365247926}
   - {fileID: 7234823360625324750}
-  - {fileID: 7075256466626582155}
-  - {fileID: 5247486954276981010}
-  - {fileID: 8158195878653050948}
-  - {fileID: 5346192252712123463}
-  - {fileID: 6719936888065745840}
-  - {fileID: 3654070816727429398}
-  - {fileID: 4300810255872111336}
-  - {fileID: 7565634496930067600}
-  - {fileID: 4325031797091878462}
-  - {fileID: 283216344938914870}
-  - {fileID: 4782667987975822956}
-  - {fileID: 1217486238670516527}
-  - {fileID: 6354388568079362586}
-  - {fileID: 3879055142936035136}
+  - {fileID: 6393693841233981221}
+  - {fileID: 206169529632182447}
+  - {fileID: 478735862663567374}
+  - {fileID: 6574718795519240498}
+  - {fileID: 6700449127203697636}
   - {fileID: 7631381474283763487}
   - {fileID: 4228227099799876184}
   - {fileID: 9205595405277993997}
-  - {fileID: 517284219275156447}
-  - {fileID: 2840553318365589942}
-  - {fileID: 6741027629454804379}
-  - {fileID: 6087451071483728089}
-  - {fileID: 1530971754753378341}
-  - {fileID: 7078481986868607006}
-  - {fileID: 8372217553982750511}
-  - {fileID: 7382811024783997368}
-  - {fileID: 206169529632182447}
-  - {fileID: 478735862663567374}
-  - {fileID: 681632626597985120}
-  - {fileID: 8957304997140870714}
-  - {fileID: 7579156472588488680}
-  - {fileID: 3113332051552334587}
+  - {fileID: 7798536358126165117}
   - {fileID: 3386908437332894565}
   - {fileID: 3287326207453943203}
-  - {fileID: 4076813222114651783}
-  - {fileID: 8502597417447957632}
-  - {fileID: 4206560457331818440}
-  - {fileID: 3474899439882144322}
-  - {fileID: 8470442972133105650}
-  - {fileID: 8495918284231217808}
-  - {fileID: 8888937983307520204}
-  Monuments_Position: []
+  - {fileID: 7601173382471475082}
+  - {fileID: 3207807275811384366}
+  - {fileID: 3746681794225268322}
+  - {fileID: 1530971754753378341}
+  - {fileID: 1190493646861014617}
+  - {fileID: 3286942798835136570}
+  Monuments_Position:
+  - {fileID: 517284219275156447}
+  - {fileID: 2962828793373705407}
+  - {fileID: 5039665830935564164}
   city: {fileID: 2100000, guid: fd95d3916d125c142b491881c0ad93e4, type: 2}
   road: {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   grass: {fileID: 2100000, guid: 34c05f7b82dbc8349b7dab9b37fbee90, type: 2}
@@ -11456,6 +11631,7 @@ MonoBehaviour:
   loveImpact: 20
   sliderValue: {fileID: 434384253}
   imageColorFeedback: {fileID: 2121163964}
+  percentageState: {fileID: 1471578486}
 --- !u!114 &1715079189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11477,9 +11653,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e2aad69ecda94c54e976dbf00e79ce8f, type: 2}
   - {fileID: 11400000, guid: a4800da013008b648be2a27c3be9389f, type: 2}
   DestinationPointList:
-  - {fileID: 3028729275196219165}
-  - {fileID: 1089605591167568046}
-  - {fileID: 5383161550790484201}
+  - {fileID: 1530971754753378341}
+  - {fileID: 7798536358126165117}
+  - {fileID: 8372217553982750511}
   index: 0
   currentClient: {fileID: 0}
   currentDestination: {fileID: 0}
@@ -14233,6 +14409,7 @@ GameObject:
   - component: {fileID: 5626958142350714047}
   - component: {fileID: 8785286874931348861}
   - component: {fileID: 1786623964}
+  - component: {fileID: 64752142414598054}
   m_Layer: 0
   m_Name: Icosphere.038
   m_TagString: Untagged
@@ -14240,6 +14417,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &64752142414598054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64752142414598053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 5247486954276981010}
+    active: 1
+  - target: {fileID: 7234823360625324750}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!1 &67249996831991301
 GameObject:
   m_ObjectHideFlags: 0
@@ -14804,7 +15006,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15348,6 +15550,7 @@ GameObject:
   - component: {fileID: 6655637090111777538}
   - component: {fileID: 8785286874931348824}
   - component: {fileID: 523549826}
+  - component: {fileID: 390584599903453297}
   m_Layer: 0
   m_Name: Icosphere.011
   m_TagString: Untagged
@@ -15355,6 +15558,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &390584599903453297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390584599903453296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 3530027670771020996}
+    active: 1
+  - target: {fileID: 1089605591167568046}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!23 &393575455166016905
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15980,7 +16208,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16014,6 +16242,7 @@ GameObject:
   - component: {fileID: 5620712398744928097}
   - component: {fileID: 8785286874931348840}
   - component: {fileID: 1739944063}
+  - component: {fileID: 410319546642473838}
   m_Layer: 0
   m_Name: Icosphere.027
   m_TagString: Untagged
@@ -16021,6 +16250,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &410319546642473838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410319546642473837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 2392370442465744458}
+    active: 1
+  - target: {fileID: 1190493646861014617}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!1 &415941151433297145
 GameObject:
   m_ObjectHideFlags: 0
@@ -16070,6 +16324,7 @@ GameObject:
   - component: {fileID: 8236293467027497052}
   - component: {fileID: 8785286874931348768}
   - component: {fileID: 478814981}
+  - component: {fileID: 445023440432457410}
   m_Layer: 0
   m_Name: Icosphere.099
   m_TagString: Untagged
@@ -16077,6 +16332,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &445023440432457410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445023440432457409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 6838879030362020562}
+    active: 1
+  - target: {fileID: 8489297101738424294}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!1 &449082481031754119
 GameObject:
   m_ObjectHideFlags: 0
@@ -17641,6 +17921,7 @@ GameObject:
   - component: {fileID: 1432382692675583382}
   - component: {fileID: 8785286874931348747}
   - component: {fileID: 2040219521}
+  - component: {fileID: 522631176539984329}
   m_Layer: 0
   m_Name: Icosphere.056
   m_TagString: Untagged
@@ -17648,6 +17929,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &522631176539984329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522631176539984328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 5933539731967571020}
+    active: 1
+  - target: {fileID: 8158195878653050948}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!1 &523874159492733791
 GameObject:
   m_ObjectHideFlags: 0
@@ -18112,6 +18418,7 @@ GameObject:
   - component: {fileID: 8811954714278963260}
   - component: {fileID: 8785286874931348740}
   - component: {fileID: 103491748}
+  - component: {fileID: 676659122316204459}
   m_Layer: 0
   m_Name: Icosphere.063
   m_TagString: Untagged
@@ -18119,6 +18426,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &676659122316204459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676659122316204458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 206169529632182447}
+    active: 1
+  - target: {fileID: 6574718795519240498}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!4 &681632626597985120
 Transform:
   m_ObjectHideFlags: 0
@@ -28524,7 +28856,7 @@ PrefabInstance:
     - target: {fileID: 808261058923036219, guid: 9d360146ea2cb4a44aa897a4aa05ac15,
         type: 3}
       propertyPath: optimalSpeed
-      value: 0.3
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 808261058923036219, guid: 9d360146ea2cb4a44aa897a4aa05ac15,
         type: 3}
@@ -28534,12 +28866,27 @@ PrefabInstance:
     - target: {fileID: 808261058923036219, guid: 9d360146ea2cb4a44aa897a4aa05ac15,
         type: 3}
       propertyPath: speed
-      value: 0.3
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 808261058923036219, guid: 9d360146ea2cb4a44aa897a4aa05ac15,
+        type: 3}
+      propertyPath: car
+      value: 
+      objectReference: {fileID: 1568344612}
+    - target: {fileID: 808261058923036219, guid: 9d360146ea2cb4a44aa897a4aa05ac15,
+        type: 3}
+      propertyPath: offset
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 808261058923036219, guid: 9d360146ea2cb4a44aa897a4aa05ac15,
+        type: 3}
+      propertyPath: threeshold
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3440053450353302122, guid: 9d360146ea2cb4a44aa897a4aa05ac15,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.1008
+      value: 0.0787
       objectReference: {fileID: 0}
     - target: {fileID: 3440053450353302122, guid: 9d360146ea2cb4a44aa897a4aa05ac15,
         type: 3}
@@ -28549,7 +28896,7 @@ PrefabInstance:
     - target: {fileID: 3440053450353302122, guid: 9d360146ea2cb4a44aa897a4aa05ac15,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.2274
+      value: 0.256
       objectReference: {fileID: 0}
     - target: {fileID: 3440053450353302122, guid: 9d360146ea2cb4a44aa897a4aa05ac15,
         type: 3}
@@ -28620,6 +28967,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 808261058713113174, guid: 9d360146ea2cb4a44aa897a4aa05ac15,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 808261060329967347, guid: 9d360146ea2cb4a44aa897a4aa05ac15,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.651
+      objectReference: {fileID: 0}
+    - target: {fileID: 6754696760576841151, guid: 9d360146ea2cb4a44aa897a4aa05ac15,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.103
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d360146ea2cb4a44aa897a4aa05ac15, type: 3}
@@ -28916,6 +29278,7 @@ GameObject:
   - component: {fileID: 7522967582525587547}
   - component: {fileID: 8785286874931348928}
   - component: {fileID: 1910612938}
+  - component: {fileID: 880134250704654327}
   m_Layer: 0
   m_Name: Icosphere.131
   m_TagString: Untagged
@@ -28923,6 +29286,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &880134250704654327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880134250704654326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 4434249080488144495}
+    active: 1
+  - target: {fileID: 5346192252712123463}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!33 &886046599286673900
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -29008,6 +29396,7 @@ GameObject:
   - component: {fileID: 8507624949161402505}
   - component: {fileID: 8785286874931348737}
   - component: {fileID: 163061655}
+  - component: {fileID: 895673936429336529}
   m_Layer: 0
   m_Name: Icosphere.066
   m_TagString: Untagged
@@ -29015,6 +29404,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &895673936429336529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 895673936429336528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 6574718795519240498}
+    active: 1
+  - target: {fileID: 7631381474283763487}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!33 &900443256267926375
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -29504,7 +29918,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 5e6bb2c44ac8c0a4b8fe26c7d5759217, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29704,6 +30118,7 @@ GameObject:
   - component: {fileID: 4024540894880570937}
   - component: {fileID: 8785286874931348800}
   - component: {fileID: 1728098208}
+  - component: {fileID: 1096337479185247048}
   m_Layer: 0
   m_Name: Icosphere.003
   m_TagString: Untagged
@@ -29711,6 +30126,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1096337479185247048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096337479185247047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 8679391751896911801}
+    active: 1
+  - target: {fileID: 5383161550790484201}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!33 &1096517842332324318
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -29732,6 +30172,7 @@ GameObject:
   - component: {fileID: 2153680300617923685}
   - component: {fileID: 8785286874931348941}
   - component: {fileID: 33629442}
+  - component: {fileID: 1109241333970890063}
   m_Layer: 0
   m_Name: Icosphere.118
   m_TagString: Untagged
@@ -29739,6 +30180,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1109241333970890063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109241333970890062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 928568815773469160}
+    active: 1
+  - target: {fileID: 1995404305365247926}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!23 &1114821637700509387
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30308,6 +30774,7 @@ GameObject:
   - component: {fileID: 5352785970687341304}
   - component: {fileID: 8785286874931348798}
   - component: {fileID: 1338267352}
+  - component: {fileID: 1344751002171876827}
   m_Layer: 0
   m_Name: Icosphere.101
   m_TagString: Untagged
@@ -30315,6 +30782,33 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1344751002171876827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344751002171876826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 8489297101738424294}
+    active: 1
+  - target: {fileID: 3028729275196219165}
+    active: 1
+  - target: {fileID: 3286942798835136570}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!23 &1345561598038834431
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30380,6 +30874,7 @@ GameObject:
   - component: {fileID: 1641312375557848977}
   - component: {fileID: 8785286874931348803}
   - component: {fileID: 223290972}
+  - component: {fileID: 1354346552495732250}
   m_Layer: 0
   m_Name: Icosphere
   m_TagString: Untagged
@@ -30387,6 +30882,33 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1354346552495732250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354346552495732249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 912896319502637393}
+    active: 1
+  - target: {fileID: 7610762720079532175}
+    active: 1
+  - target: {fileID: 4325031797091878462}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!33 &1364939204926268516
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -30504,6 +31026,7 @@ GameObject:
   - component: {fileID: 2282136262460563947}
   - component: {fileID: 8785286874931348818}
   - component: {fileID: 57384738}
+  - component: {fileID: 1428094543614137828}
   m_Layer: 0
   m_Name: Icosphere.017
   m_TagString: Untagged
@@ -30511,6 +31034,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1428094543614137828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428094543614137827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 3530027670771020996}
+    active: 1
+  - target: {fileID: 7565634496930067600}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!23 &1432382692675583382
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30528,7 +31076,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30566,7 +31114,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 5e6bb2c44ac8c0a4b8fe26c7d5759217, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -31542,7 +32090,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32161,7 +32709,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -37528,7 +38076,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: ce10507030eb2c142878473c3813959f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -37618,6 +38166,7 @@ GameObject:
   - component: {fileID: 5760741249264567489}
   - component: {fileID: 8785286874931348969}
   - component: {fileID: 1709195572}
+  - component: {fileID: 1925769828757104458}
   m_Layer: 0
   m_Name: Icosphere.154
   m_TagString: Untagged
@@ -37625,6 +38174,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1925769828757104458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925769828757104457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 3746681794225268322}
+    active: 1
+  - target: {fileID: 1190493646861014617}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!1 &1926613786857277815
 GameObject:
   m_ObjectHideFlags: 0
@@ -59868,7 +60442,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -77570,7 +78144,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -77756,6 +78330,7 @@ GameObject:
   - component: {fileID: 1833905362635029664}
   - component: {fileID: 8785286874931348954}
   - component: {fileID: 160494156}
+  - component: {fileID: 2180838869338814805}
   m_Layer: 0
   m_Name: Icosphere.137
   m_TagString: Untagged
@@ -77763,6 +78338,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2180838869338814805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2180838869338814804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 9205595405277993997}
+    active: 1
+  - target: {fileID: 3386908437332894565}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!1 &2184733733306113968
 GameObject:
   m_ObjectHideFlags: 0
@@ -78270,6 +78870,7 @@ GameObject:
   - component: {fileID: 7033257722521998836}
   - component: {fileID: 8785286874931348848}
   - component: {fileID: 1290514543}
+  - component: {fileID: 2274416373408077882}
   m_Layer: 0
   m_Name: Icosphere.051
   m_TagString: Untagged
@@ -78277,6 +78878,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2274416373408077882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2274416373408077881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 7798536358126165117}
+    active: 1
+  - target: {fileID: 3287326207453943203}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!23 &2282136262460563947
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -78294,7 +78920,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -78384,7 +79010,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -80258,6 +80884,7 @@ GameObject:
   - component: {fileID: 4702350373657604023}
   - component: {fileID: 8785286874931348855}
   - component: {fileID: 101306706}
+  - component: {fileID: 2547648010687881796}
   m_Layer: 0
   m_Name: Icosphere.044
   m_TagString: Untagged
@@ -80265,6 +80892,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2547648010687881796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2547648010687881795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 8158195878653050948}
+    active: 1
+  - target: {fileID: 6393693841233981221}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!33 &2553640324698443733
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -80628,6 +81280,7 @@ GameObject:
   - component: {fileID: 7584364439235395430}
   - component: {fileID: 8785286874931348845}
   - component: {fileID: 1405744697}
+  - component: {fileID: 2685977301091842539}
   m_Layer: 0
   m_Name: Icosphere.022
   m_TagString: Untagged
@@ -80635,6 +81288,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2685977301091842539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2685977301091842538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 912896319502637393}
+    active: 1
+  - target: {fileID: 1665740061070026860}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!33 &2703998154651879411
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -80922,7 +81600,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: d23bec9e3931ee04c8894565359624e4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -81212,6 +81890,7 @@ GameObject:
   - component: {fileID: 6145697772913948678}
   - component: {fileID: 8785286874931348767}
   - component: {fileID: 433242483}
+  - component: {fileID: 2876463345041029250}
   m_Layer: 0
   m_Name: Icosphere.068
   m_TagString: Untagged
@@ -81219,6 +81898,33 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2876463345041029250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2876463345041029249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 8372217553982750511}
+    active: 1
+  - target: {fileID: 4434249080488144495}
+    active: 1
+  - target: {fileID: 206169529632182447}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!33 &2882056209848128021
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -83226,7 +83932,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83702,6 +84408,7 @@ GameObject:
   - component: {fileID: 4982367692231465111}
   - component: {fileID: 8785286874931348964}
   - component: {fileID: 1527317758}
+  - component: {fileID: 3027761372656824285}
   m_Layer: 0
   m_Name: Icosphere.159
   m_TagString: Untagged
@@ -83709,6 +84416,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &3027761372656824285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3027761372656824284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 2392370442465744458}
+    active: 1
+  - target: {fileID: 8470442972133105650}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!4 &3028729275196219165
 Transform:
   m_ObjectHideFlags: 0
@@ -83909,7 +84641,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -84350,6 +85082,7 @@ GameObject:
   - component: {fileID: 4544786826221643807}
   - component: {fileID: 8785286874931348949}
   - component: {fileID: 1010929702}
+  - component: {fileID: 3169440532066246179}
   m_Layer: 0
   m_Name: Icosphere.142
   m_TagString: Untagged
@@ -84357,6 +85090,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &3169440532066246179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3169440532066246178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 3386908437332894565}
+    active: 1
+  - target: {fileID: 7601173382471475082}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!23 &3184926209054532344
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -84722,7 +85480,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: d23bec9e3931ee04c8894565359624e4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -84756,6 +85514,7 @@ GameObject:
   - component: {fileID: 1433319245093713504}
   - component: {fileID: 8785286874931348736}
   - component: {fileID: 1905849109}
+  - component: {fileID: 3248153003371143114}
   m_Layer: 0
   m_Name: Icosphere.067
   m_TagString: Untagged
@@ -84763,6 +85522,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &3248153003371143114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3248153003371143113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 2805102022456209605}
+    active: 1
+  - target: {fileID: 478735862663567374}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!33 &3248779669244543303
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -84970,6 +85754,7 @@ GameObject:
   - component: {fileID: 2305887441408245292}
   - component: {fileID: 8785286874931348744}
   - component: {fileID: 1757487505}
+  - component: {fileID: 3359204755415922920}
   m_Layer: 0
   m_Name: Icosphere.059
   m_TagString: Untagged
@@ -84977,6 +85762,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &3359204755415922920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3359204755415922919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 7631381474283763487}
+    active: 1
+  - target: {fileID: 9205595405277993997}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!33 &3361869647999485457
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -85378,7 +86188,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -86384,7 +87194,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -86806,7 +87616,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -86840,6 +87650,7 @@ GameObject:
   - component: {fileID: 9139241273852333617}
   - component: {fileID: 8785286874931348839}
   - component: {fileID: 595544742}
+  - component: {fileID: 3979292889428073091}
   m_Layer: 0
   m_Name: Icosphere.028
   m_TagString: Untagged
@@ -86847,6 +87658,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &3979292889428073091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3979292889428073090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 8470442972133105650}
+    active: 1
+  - target: {fileID: 7919622142989618552}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!4 &4016560504666086820
 Transform:
   m_ObjectHideFlags: 0
@@ -86878,7 +87714,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -87276,6 +88112,7 @@ GameObject:
   - component: {fileID: 1995915317211466061}
   - component: {fileID: 8785286874931348938}
   - component: {fileID: 1008893058}
+  - component: {fileID: 4104718597604679522}
   m_Layer: 0
   m_Name: Icosphere.121
   m_TagString: Untagged
@@ -87283,6 +88120,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4104718597604679522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4104718597604679521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 8888937983307520204}
+    active: 1
+  - target: {fileID: 2805102022456209605}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!1 &4105283214192541354
 GameObject:
   m_ObjectHideFlags: 0
@@ -88420,6 +89282,7 @@ GameObject:
   - component: {fileID: 5006135044639447002}
   - component: {fileID: 8785286874931348782}
   - component: {fileID: 709754052}
+  - component: {fileID: 4336386212647275803}
   m_Layer: 0
   m_Name: Icosphere.085
   m_TagString: Untagged
@@ -88427,6 +89290,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4336386212647275803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4336386212647275802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 7565634496930067600}
+    active: 1
+  - target: {fileID: 8372217553982750511}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!4 &4364321273752776452
 Transform:
   m_ObjectHideFlags: 0
@@ -89356,7 +90244,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -90274,7 +91162,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -90424,7 +91312,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -91200,7 +92088,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -91272,7 +92160,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -91310,7 +92198,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: ce10507030eb2c142878473c3813959f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -91500,6 +92388,7 @@ GameObject:
   - component: {fileID: 5310283954429502441}
   - component: {fileID: 8785286874931348932}
   - component: {fileID: 811993145}
+  - component: {fileID: 5038869488926229097}
   m_Layer: 0
   m_Name: Icosphere.127
   m_TagString: Untagged
@@ -91507,6 +92396,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &5038869488926229097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5038869488926229096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 7601173382471475082}
+    active: 1
+  - target: {fileID: 3746681794225268322}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!4 &5039665830935564164
 Transform:
   m_ObjectHideFlags: 0
@@ -91826,7 +92740,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: d23bec9e3931ee04c8894565359624e4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -91868,6 +92782,7 @@ GameObject:
   - component: {fileID: 4745189875708938444}
   - component: {fileID: 8785286874931348966}
   - component: {fileID: 264086712}
+  - component: {fileID: 5167023858841656061}
   m_Layer: 0
   m_Name: Icosphere.157
   m_TagString: Untagged
@@ -91875,6 +92790,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &5167023858841656061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5167023858841656060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 4325031797091878462}
+    active: 1
+  - target: {fileID: 8888937983307520204}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!33 &5192352340538830608
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -91996,6 +92936,7 @@ GameObject:
   - component: {fileID: 2921567465661187619}
   - component: {fileID: 8785286874931348771}
   - component: {fileID: 1302682667}
+  - component: {fileID: 5246346434267437773}
   m_Layer: 0
   m_Name: Icosphere.096
   m_TagString: Untagged
@@ -92003,6 +92944,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &5246346434267437773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5246346434267437772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 5383161550790484201}
+    active: 1
+  - target: {fileID: 2392370442465744458}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!4 &5247486954276981010
 Transform:
   m_ObjectHideFlags: 0
@@ -92050,6 +93016,7 @@ GameObject:
   - component: {fileID: 399321581023831761}
   - component: {fileID: 8785286874931348761}
   - component: {fileID: 1696107134}
+  - component: {fileID: 5270859506403404357}
   m_Layer: 0
   m_Name: Icosphere.074
   m_TagString: Untagged
@@ -92057,6 +93024,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &5270859506403404357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5270859506403404356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 1995404305365247926}
+    active: 1
+  - target: {fileID: 6393693841233981221}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!1 &5291816768725989262
 GameObject:
   m_ObjectHideFlags: 0
@@ -92094,7 +93086,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -92220,7 +93212,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -92682,7 +93674,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -92720,7 +93712,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -92940,6 +93932,7 @@ GameObject:
   - component: {fileID: 3070684737975588540}
   - component: {fileID: 8785286874931348738}
   - component: {fileID: 950503055}
+  - component: {fileID: 5556134845754021511}
   m_Layer: 0
   m_Name: Icosphere.065
   m_TagString: Untagged
@@ -92947,6 +93940,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &5556134845754021511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5556134845754021510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 6700449127203697636}
+    active: 1
+  - target: {fileID: 4228227099799876184}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!1 &5558313986676531098
 GameObject:
   m_ObjectHideFlags: 0
@@ -93040,6 +94058,7 @@ GameObject:
   - component: {fileID: 7744198590617130775}
   - component: {fileID: 8785286874931348942}
   - component: {fileID: 1617868270}
+  - component: {fileID: 5588015545897536681}
   m_Layer: 0
   m_Name: Icosphere.117
   m_TagString: Untagged
@@ -93047,6 +94066,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &5588015545897536681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5588015545897536680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 1530971754753378341}
+    active: 1
+  - target: {fileID: 3286942798835136570}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!23 &5590056492613960885
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -93216,7 +94260,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -93254,7 +94298,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -93340,6 +94384,7 @@ GameObject:
   - component: {fileID: 1916814858670271426}
   - component: {fileID: 8785286874931348962}
   - component: {fileID: 868994073}
+  - component: {fileID: 5648646751771340831}
   m_Layer: 0
   m_Name: Icosphere.161
   m_TagString: Untagged
@@ -93347,6 +94392,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &5648646751771340831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5648646751771340830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 1089605591167568046}
+    active: 1
+  - target: {fileID: 6838879030362020562}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!4 &5651581230404560619
 Transform:
   m_ObjectHideFlags: 0
@@ -93680,7 +94750,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -93962,6 +95032,7 @@ GameObject:
   - component: {fileID: 6273418149892424796}
   - component: {fileID: 8785286874931348762}
   - component: {fileID: 279919408}
+  - component: {fileID: 5895610427080700769}
   m_Layer: 0
   m_Name: Icosphere.073
   m_TagString: Untagged
@@ -93969,6 +95040,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &5895610427080700769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5895610427080700768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 3207807275811384366}
+    active: 1
+  - target: {fileID: 1530971754753378341}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!33 &5904000818042005005
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -94044,6 +95140,7 @@ GameObject:
   - component: {fileID: 3978772302146027259}
   - component: {fileID: 8785286874931348826}
   - component: {fileID: 1738140610}
+  - component: {fileID: 5923076587947399459}
   m_Layer: 0
   m_Name: Icosphere.009
   m_TagString: Untagged
@@ -94051,6 +95148,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &5923076587947399459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5923076587947399458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 7610762720079532175}
+    active: 1
+  - target: {fileID: 8679391751896911801}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!1 &5931958529907696304
 GameObject:
   m_ObjectHideFlags: 0
@@ -94878,7 +96000,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 5e6bb2c44ac8c0a4b8fe26c7d5759217, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -95450,7 +96572,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -96206,7 +97328,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -96680,7 +97802,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -97542,6 +98664,7 @@ GameObject:
   - component: {fileID: 5517872710824288458}
   - component: {fileID: 8785286874931348795}
   - component: {fileID: 1562781243}
+  - component: {fileID: 6889217530188823822}
   m_Layer: 0
   m_Name: Icosphere.104
   m_TagString: Untagged
@@ -97549,6 +98672,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6889217530188823822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6889217530188823821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 3940726123590947634}
+    active: 1
+  - target: {fileID: 1808661112165488024}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!33 &6889373443966828426
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -97714,6 +98862,7 @@ GameObject:
   - component: {fileID: 3437162751451112669}
   - component: {fileID: 8785286874931348846}
   - component: {fileID: 384656210}
+  - component: {fileID: 6962358298225285086}
   m_Layer: 0
   m_Name: Icosphere.021
   m_TagString: Untagged
@@ -97721,6 +98870,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6962358298225285086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6962358298225285085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 3530027670771020996}
+    active: 1
+  - target: {fileID: 1808661112165488024}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!33 &6966253136545385744
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -97962,7 +99136,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -98106,6 +99280,7 @@ GameObject:
   - component: {fileID: 4969028443478321382}
   - component: {fileID: 8785286874931348760}
   - component: {fileID: 407086742}
+  - component: {fileID: 7109607904006476453}
   m_Layer: 0
   m_Name: Icosphere.075
   m_TagString: Untagged
@@ -98113,6 +99288,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7109607904006476453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7109607904006476452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 7919622142989618552}
+    active: 1
+  - target: {fileID: 7234823360625324750}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!23 &7119000109848081723
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -98278,6 +99478,7 @@ GameObject:
   - component: {fileID: 346436276129046377}
   - component: {fileID: 8785286874931348858}
   - component: {fileID: 226580229}
+  - component: {fileID: 7197737028680234804}
   m_Layer: 0
   m_Name: Icosphere.041
   m_TagString: Untagged
@@ -98285,6 +99486,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7197737028680234804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7197737028680234803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 478735862663567374}
+    active: 1
+  - target: {fileID: 6700449127203697636}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!23 &7220457936306476682
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -99500,7 +100726,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -99676,7 +100902,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -99946,7 +101172,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -100036,6 +101262,7 @@ GameObject:
   - component: {fileID: 1010713194974924981}
   - component: {fileID: 8785286874931348799}
   - component: {fileID: 1796693224}
+  - component: {fileID: 7735941505002862486}
   m_Layer: 0
   m_Name: Icosphere.100
   m_TagString: Untagged
@@ -100043,6 +101270,33 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7735941505002862486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7735941505002862485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 3028729275196219165}
+    active: 1
+  - target: {fileID: 928568815773469160}
+    active: 1
+  - target: {fileID: 3940726123590947634}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!23 &7744198590617130775
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -100060,7 +101314,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -101684,7 +102938,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -103142,6 +104396,7 @@ GameObject:
   - component: {fileID: 6494761515052096948}
   - component: {fileID: 8785286874931348746}
   - component: {fileID: 456562709}
+  - component: {fileID: 8479449004794405139}
   m_Layer: 0
   m_Name: Icosphere.057
   m_TagString: Untagged
@@ -103149,6 +104404,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8479449004794405139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8479449004794405138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 5346192252712123463}
+    active: 1
+  - target: {fileID: 5247486954276981010}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!23 &8485691813393816188
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -103312,7 +104592,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -103486,6 +104766,7 @@ GameObject:
   - component: {fileID: 7705066460659225558}
   - component: {fileID: 8785286874931348953}
   - component: {fileID: 1635585867}
+  - component: {fileID: 8578673426646618834}
   m_Layer: 0
   m_Name: Icosphere.138
   m_TagString: Untagged
@@ -103493,6 +104774,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8578673426646618834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8578673426646618833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 4228227099799876184}
+    active: 1
+  - target: {fileID: 7798536358126165117}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!33 &8588892094810022630
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -104082,6 +105388,7 @@ GameObject:
   - component: {fileID: 5512399046180327455}
   - component: {fileID: 8785286874931348748}
   - component: {fileID: 2096009614}
+  - component: {fileID: 8763755010462925679}
   m_Layer: 0
   m_Name: Icosphere.055
   m_TagString: Untagged
@@ -104089,6 +105396,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8763755010462925679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8763755010462925678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 3287326207453943203}
+    active: 1
+  - target: {fileID: 3207807275811384366}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!23 &8770568668113594303
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -108215,10 +109547,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
-  Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  type: 1
+  Event: 2
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 2805102022456209605}
+  - {fileID: 478735862663567374}
+  - {fileID: 2805102022456209605}
+  - {fileID: 478735862663567374}
   visited: 0
 --- !u!114 &8785286874931348737
 MonoBehaviour:
@@ -108233,10 +109569,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 6574718795519240498}
+  - {fileID: 7631381474283763487}
+  - {fileID: 6574718795519240498}
+  - {fileID: 7631381474283763487}
   visited: 0
 --- !u!114 &8785286874931348738
 MonoBehaviour:
@@ -108251,10 +109591,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 6700449127203697636}
+  - {fileID: 4228227099799876184}
+  - {fileID: 6700449127203697636}
+  - {fileID: 4228227099799876184}
   visited: 0
 --- !u!114 &8785286874931348739
 MonoBehaviour:
@@ -108271,7 +109615,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348740
@@ -108287,10 +109631,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 206169529632182447}
+  - {fileID: 6574718795519240498}
+  - {fileID: 206169529632182447}
+  - {fileID: 6574718795519240498}
   visited: 0
 --- !u!114 &8785286874931348741
 MonoBehaviour:
@@ -108306,8 +109654,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
   type: 0
-  Event: 0
-  distance_Check: 0.45
+  Event: 1
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348742
@@ -108324,8 +109672,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
   type: 0
-  Event: 0
-  distance_Check: 0.45
+  Event: 1
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348743
@@ -108343,7 +109691,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348744
@@ -108359,10 +109707,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 7631381474283763487}
+  - {fileID: 9205595405277993997}
+  - {fileID: 7631381474283763487}
+  - {fileID: 9205595405277993997}
   visited: 0
 --- !u!114 &8785286874931348745
 MonoBehaviour:
@@ -108379,7 +109731,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348746
@@ -108395,10 +109747,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 5346192252712123463}
+  - {fileID: 5247486954276981010}
+  - {fileID: 5346192252712123463}
+  - {fileID: 5247486954276981010}
   visited: 0
 --- !u!114 &8785286874931348747
 MonoBehaviour:
@@ -108413,10 +109769,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 5933539731967571020}
+  - {fileID: 8158195878653050948}
+  - {fileID: 5933539731967571020}
+  - {fileID: 8158195878653050948}
   visited: 0
 --- !u!114 &8785286874931348748
 MonoBehaviour:
@@ -108431,10 +109791,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 3287326207453943203}
+  - {fileID: 3207807275811384366}
+  - {fileID: 3287326207453943203}
+  - {fileID: 3207807275811384366}
   visited: 0
 --- !u!114 &8785286874931348749
 MonoBehaviour:
@@ -108451,7 +109815,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348750
@@ -108469,7 +109833,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348751
@@ -108487,7 +109851,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348752
@@ -108505,7 +109869,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348753
@@ -108523,7 +109887,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348754
@@ -108541,7 +109905,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348755
@@ -108559,7 +109923,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348756
@@ -108577,7 +109941,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348757
@@ -108595,7 +109959,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348758
@@ -108613,7 +109977,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348759
@@ -108631,7 +109995,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348760
@@ -108647,10 +110011,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 7919622142989618552}
+  - {fileID: 7234823360625324750}
+  - {fileID: 7919622142989618552}
+  - {fileID: 7234823360625324750}
   visited: 0
 --- !u!114 &8785286874931348761
 MonoBehaviour:
@@ -108665,10 +110033,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 1995404305365247926}
+  - {fileID: 6393693841233981221}
+  - {fileID: 1995404305365247926}
+  - {fileID: 6393693841233981221}
   visited: 0
 --- !u!114 &8785286874931348762
 MonoBehaviour:
@@ -108683,10 +110055,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 3207807275811384366}
+  - {fileID: 1530971754753378341}
+  - {fileID: 3207807275811384366}
+  - {fileID: 1530971754753378341}
   visited: 0
 --- !u!114 &8785286874931348763
 MonoBehaviour:
@@ -108703,7 +110079,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348764
@@ -108721,7 +110097,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348765
@@ -108739,7 +110115,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348766
@@ -108757,7 +110133,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348767
@@ -108773,10 +110149,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
-  Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  type: 1
+  Event: 2
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 8372217553982750511}
+  - {fileID: 4434249080488144495}
+  - {fileID: 206169529632182447}
+  - {fileID: 8372217553982750511}
+  - {fileID: 4434249080488144495}
+  - {fileID: 206169529632182447}
   visited: 0
 --- !u!114 &8785286874931348768
 MonoBehaviour:
@@ -108791,10 +110173,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 6838879030362020562}
+  - {fileID: 8489297101738424294}
+  - {fileID: 6838879030362020562}
+  - {fileID: 8489297101738424294}
   visited: 0
 --- !u!114 &8785286874931348769
 MonoBehaviour:
@@ -108811,7 +110197,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348770
@@ -108829,7 +110215,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348771
@@ -108845,10 +110231,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 5383161550790484201}
+  - {fileID: 2392370442465744458}
+  - {fileID: 5383161550790484201}
+  - {fileID: 2392370442465744458}
   visited: 0
 --- !u!114 &8785286874931348772
 MonoBehaviour:
@@ -108865,7 +110255,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348773
@@ -108883,7 +110273,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348774
@@ -108901,7 +110291,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348775
@@ -108919,7 +110309,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348776
@@ -108935,9 +110325,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 5
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348777
@@ -108954,8 +110344,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
   type: 0
-  Event: 0
-  distance_Check: 0.45
+  Event: 1
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348778
@@ -108973,7 +110363,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348779
@@ -108991,7 +110381,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348780
@@ -109009,7 +110399,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348781
@@ -109027,7 +110417,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348782
@@ -109043,10 +110433,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
-  Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  type: 1
+  Event: 3
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 7565634496930067600}
+  - {fileID: 8372217553982750511}
+  - {fileID: 7565634496930067600}
+  - {fileID: 8372217553982750511}
   visited: 0
 --- !u!114 &8785286874931348783
 MonoBehaviour:
@@ -109062,8 +110456,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
   type: 0
-  Event: 0
-  distance_Check: 0.45
+  Event: 1
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348784
@@ -109081,7 +110475,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348785
@@ -109099,7 +110493,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348786
@@ -109117,7 +110511,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348787
@@ -109135,7 +110529,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348788
@@ -109153,7 +110547,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348789
@@ -109171,7 +110565,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348790
@@ -109189,7 +110583,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348791
@@ -109207,7 +110601,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348792
@@ -109225,7 +110619,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348793
@@ -109243,7 +110637,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348794
@@ -109261,7 +110655,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348795
@@ -109277,10 +110671,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 3940726123590947634}
+  - {fileID: 1808661112165488024}
+  - {fileID: 3940726123590947634}
+  - {fileID: 1808661112165488024}
   visited: 0
 --- !u!114 &8785286874931348796
 MonoBehaviour:
@@ -109295,10 +110693,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 8470442972133105650}
+  - {fileID: 1665740061070026860}
+  - {fileID: 8470442972133105650}
+  - {fileID: 1665740061070026860}
   visited: 0
 --- !u!114 &8785286874931348797
 MonoBehaviour:
@@ -109315,7 +110717,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348798
@@ -109331,10 +110733,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
-  Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  type: 1
+  Event: 1
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 8489297101738424294}
+  - {fileID: 3028729275196219165}
+  - {fileID: 3286942798835136570}
+  - {fileID: 8489297101738424294}
+  - {fileID: 3028729275196219165}
+  - {fileID: 3286942798835136570}
   visited: 0
 --- !u!114 &8785286874931348799
 MonoBehaviour:
@@ -109349,10 +110757,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
-  Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  type: 1
+  Event: 2
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 3028729275196219165}
+  - {fileID: 928568815773469160}
+  - {fileID: 3940726123590947634}
+  - {fileID: 3028729275196219165}
+  - {fileID: 928568815773469160}
+  - {fileID: 3940726123590947634}
   visited: 0
 --- !u!114 &8785286874931348800
 MonoBehaviour:
@@ -109367,10 +110781,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 8679391751896911801}
+  - {fileID: 5383161550790484201}
+  - {fileID: 8679391751896911801}
+  - {fileID: 5383161550790484201}
   visited: 0
 --- !u!114 &8785286874931348801
 MonoBehaviour:
@@ -109387,7 +110805,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348802
@@ -109405,7 +110823,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348803
@@ -109421,10 +110839,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
-  Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  type: 1
+  Event: 1
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 912896319502637393}
+  - {fileID: 7610762720079532175}
+  - {fileID: 4325031797091878462}
+  - {fileID: 912896319502637393}
+  - {fileID: 7610762720079532175}
+  - {fileID: 4325031797091878462}
   visited: 0
 --- !u!114 &8785286874931348816
 MonoBehaviour:
@@ -109441,7 +110865,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348817
@@ -109459,7 +110883,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348818
@@ -109475,10 +110899,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
-  Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  type: 1
+  Event: 1
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 3530027670771020996}
+  - {fileID: 7565634496930067600}
+  - {fileID: 3530027670771020996}
+  - {fileID: 7565634496930067600}
   visited: 0
 --- !u!114 &8785286874931348819
 MonoBehaviour:
@@ -109494,8 +110922,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
   type: 0
-  Event: 0
-  distance_Check: 0.45
+  Event: 1
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348820
@@ -109511,9 +110939,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 5
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348821
@@ -109531,7 +110959,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348822
@@ -109549,7 +110977,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348823
@@ -109567,7 +110995,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348824
@@ -109583,10 +111011,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
-  Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  type: 1
+  Event: 1
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 3530027670771020996}
+  - {fileID: 1089605591167568046}
+  - {fileID: 3530027670771020996}
+  - {fileID: 1089605591167568046}
   visited: 0
 --- !u!114 &8785286874931348825
 MonoBehaviour:
@@ -109603,7 +111035,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348826
@@ -109619,10 +111051,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 7610762720079532175}
+  - {fileID: 8679391751896911801}
+  - {fileID: 7610762720079532175}
+  - {fileID: 8679391751896911801}
   visited: 0
 --- !u!114 &8785286874931348827
 MonoBehaviour:
@@ -109639,7 +111075,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348828
@@ -109657,7 +111093,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348829
@@ -109675,7 +111111,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348830
@@ -109693,7 +111129,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348831
@@ -109711,7 +111147,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348832
@@ -109729,7 +111165,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348833
@@ -109747,7 +111183,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348834
@@ -109765,7 +111201,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348835
@@ -109783,7 +111219,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348836
@@ -109801,7 +111237,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348837
@@ -109819,7 +111255,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348838
@@ -109837,7 +111273,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348839
@@ -109853,10 +111289,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 8470442972133105650}
+  - {fileID: 7919622142989618552}
+  - {fileID: 8470442972133105650}
+  - {fileID: 7919622142989618552}
   visited: 0
 --- !u!114 &8785286874931348840
 MonoBehaviour:
@@ -109871,10 +111311,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
-  Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  type: 1
+  Event: 1
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 2392370442465744458}
+  - {fileID: 1190493646861014617}
+  - {fileID: 2392370442465744458}
+  - {fileID: 1190493646861014617}
   visited: 0
 --- !u!114 &8785286874931348841
 MonoBehaviour:
@@ -109891,7 +111335,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348842
@@ -109909,7 +111353,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348843
@@ -109927,7 +111371,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348844
@@ -109945,7 +111389,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348845
@@ -109961,10 +111405,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 912896319502637393}
+  - {fileID: 1665740061070026860}
+  - {fileID: 912896319502637393}
+  - {fileID: 1665740061070026860}
   visited: 0
 --- !u!114 &8785286874931348846
 MonoBehaviour:
@@ -109979,10 +111427,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 3530027670771020996}
+  - {fileID: 1808661112165488024}
+  - {fileID: 3530027670771020996}
+  - {fileID: 1808661112165488024}
   visited: 0
 --- !u!114 &8785286874931348847
 MonoBehaviour:
@@ -109999,7 +111451,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348848
@@ -110015,10 +111467,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
-  Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  type: 1
+  Event: 1
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 7798536358126165117}
+  - {fileID: 3287326207453943203}
+  - {fileID: 7798536358126165117}
+  - {fileID: 3287326207453943203}
   visited: 0
 --- !u!114 &8785286874931348849
 MonoBehaviour:
@@ -110034,8 +111490,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
   type: 0
-  Event: 0
-  distance_Check: 0.45
+  Event: 1
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348850
@@ -110053,7 +111509,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348851
@@ -110071,7 +111527,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348852
@@ -110089,7 +111545,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348853
@@ -110107,7 +111563,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348854
@@ -110125,7 +111581,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348855
@@ -110141,10 +111597,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 8158195878653050948}
+  - {fileID: 6393693841233981221}
+  - {fileID: 8158195878653050948}
+  - {fileID: 6393693841233981221}
   visited: 0
 --- !u!114 &8785286874931348856
 MonoBehaviour:
@@ -110161,7 +111621,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348857
@@ -110179,7 +111639,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348858
@@ -110195,10 +111655,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 478735862663567374}
+  - {fileID: 6700449127203697636}
+  - {fileID: 478735862663567374}
+  - {fileID: 6700449127203697636}
   visited: 0
 --- !u!114 &8785286874931348859
 MonoBehaviour:
@@ -110215,7 +111679,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348860
@@ -110233,7 +111697,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348861
@@ -110249,10 +111713,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 5247486954276981010}
+  - {fileID: 7234823360625324750}
+  - {fileID: 5247486954276981010}
+  - {fileID: 7234823360625324750}
   visited: 0
 --- !u!114 &8785286874931348862
 MonoBehaviour:
@@ -110269,7 +111737,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348863
@@ -110287,7 +111755,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348928
@@ -110303,10 +111771,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 4434249080488144495}
+  - {fileID: 5346192252712123463}
+  - {fileID: 4434249080488144495}
+  - {fileID: 5346192252712123463}
   visited: 0
 --- !u!114 &8785286874931348929
 MonoBehaviour:
@@ -110323,7 +111795,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348930
@@ -110341,7 +111813,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348931
@@ -110359,7 +111831,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348932
@@ -110375,10 +111847,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 7601173382471475082}
+  - {fileID: 3746681794225268322}
+  - {fileID: 7601173382471475082}
+  - {fileID: 3746681794225268322}
   visited: 0
 --- !u!114 &8785286874931348933
 MonoBehaviour:
@@ -110395,7 +111871,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348934
@@ -110413,7 +111889,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348935
@@ -110431,7 +111907,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348936
@@ -110449,7 +111925,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348937
@@ -110467,7 +111943,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348938
@@ -110483,10 +111959,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 8888937983307520204}
+  - {fileID: 2805102022456209605}
+  - {fileID: 8888937983307520204}
+  - {fileID: 2805102022456209605}
   visited: 0
 --- !u!114 &8785286874931348939
 MonoBehaviour:
@@ -110503,7 +111983,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348940
@@ -110521,7 +112001,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348941
@@ -110537,10 +112017,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 928568815773469160}
+  - {fileID: 1995404305365247926}
+  - {fileID: 928568815773469160}
+  - {fileID: 1995404305365247926}
   visited: 0
 --- !u!114 &8785286874931348942
 MonoBehaviour:
@@ -110555,10 +112039,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
-  Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  type: 1
+  Event: 1
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 1530971754753378341}
+  - {fileID: 3286942798835136570}
+  - {fileID: 1530971754753378341}
+  - {fileID: 3286942798835136570}
   visited: 0
 --- !u!114 &8785286874931348943
 MonoBehaviour:
@@ -110575,7 +112063,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348944
@@ -110593,7 +112081,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348945
@@ -110611,7 +112099,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348946
@@ -110627,9 +112115,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 5
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348947
@@ -110647,7 +112135,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348948
@@ -110665,7 +112153,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348949
@@ -110681,10 +112169,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 3386908437332894565}
+  - {fileID: 7601173382471475082}
+  - {fileID: 3386908437332894565}
+  - {fileID: 7601173382471475082}
   visited: 0
 --- !u!114 &8785286874931348950
 MonoBehaviour:
@@ -110701,7 +112193,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348951
@@ -110719,7 +112211,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348952
@@ -110737,7 +112229,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348953
@@ -110753,10 +112245,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
-  Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  type: 1
+  Event: 1
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 4228227099799876184}
+  - {fileID: 7798536358126165117}
+  - {fileID: 4228227099799876184}
+  - {fileID: 7798536358126165117}
   visited: 0
 --- !u!114 &8785286874931348954
 MonoBehaviour:
@@ -110771,10 +112267,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
-  Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  type: 1
+  Event: 1
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 9205595405277993997}
+  - {fileID: 3386908437332894565}
+  - {fileID: 9205595405277993997}
+  - {fileID: 3386908437332894565}
   visited: 0
 --- !u!114 &8785286874931348955
 MonoBehaviour:
@@ -110791,7 +112291,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348956
@@ -110809,7 +112309,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348957
@@ -110827,7 +112327,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348958
@@ -110843,10 +112343,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
-  Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  type: 1
+  Event: 2
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 2805102022456209605}
+  - {fileID: 5933539731967571020}
+  - {fileID: 2805102022456209605}
+  - {fileID: 5933539731967571020}
   visited: 0
 --- !u!114 &8785286874931348959
 MonoBehaviour:
@@ -110863,7 +112367,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348962
@@ -110879,10 +112383,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
-  Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  type: 1
+  Event: 3
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 1089605591167568046}
+  - {fileID: 6838879030362020562}
+  - {fileID: 1089605591167568046}
+  - {fileID: 6838879030362020562}
   visited: 0
 --- !u!114 &8785286874931348963
 MonoBehaviour:
@@ -110899,7 +112407,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348964
@@ -110915,10 +112423,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
-  Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  type: 1
+  Event: 1
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 2392370442465744458}
+  - {fileID: 8470442972133105650}
+  - {fileID: 2392370442465744458}
+  - {fileID: 8470442972133105650}
   visited: 0
 --- !u!114 &8785286874931348965
 MonoBehaviour:
@@ -110935,7 +112447,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348966
@@ -110951,10 +112463,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
-  Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  type: 1
+  Event: 1
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 4325031797091878462}
+  - {fileID: 8888937983307520204}
+  - {fileID: 4325031797091878462}
+  - {fileID: 8888937983307520204}
   visited: 0
 --- !u!114 &8785286874931348967
 MonoBehaviour:
@@ -110971,7 +112487,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348968
@@ -110989,7 +112505,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348969
@@ -111005,10 +112521,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
-  Event: 0
-  distance_Check: 0.45
-  neighborHex: []
+  type: 1
+  Event: 1
+  distance_Check: 0.35
+  neighborHex:
+  - {fileID: 3746681794225268322}
+  - {fileID: 1190493646861014617}
+  - {fileID: 3746681794225268322}
+  - {fileID: 1190493646861014617}
   visited: 0
 --- !u!114 &8785286874931348970
 MonoBehaviour:
@@ -111025,7 +112545,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348971
@@ -111043,7 +112563,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348972
@@ -111061,7 +112581,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348973
@@ -111079,7 +112599,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348974
@@ -111097,7 +112617,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!114 &8785286874931348975
@@ -111115,7 +112635,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 0
   Event: 0
-  distance_Check: 0.45
+  distance_Check: 0.35
   neighborHex: []
   visited: 0
 --- !u!4 &8785286874972175040
@@ -115325,7 +116845,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -115845,6 +117365,7 @@ GameObject:
   - component: {fileID: 9113005907811650099}
   - component: {fileID: 8785286874931348958}
   - component: {fileID: 604770162}
+  - component: {fileID: 8934898956951143136}
   m_Layer: 0
   m_Name: Icosphere.133
   m_TagString: Untagged
@@ -115852,6 +117373,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8934898956951143136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8934898956951143135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 2805102022456209605}
+    active: 1
+  - target: {fileID: 5933539731967571020}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!23 &8936153171634763078
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -115929,6 +117475,7 @@ GameObject:
   - component: {fileID: 3798736885153785931}
   - component: {fileID: 8785286874931348796}
   - component: {fileID: 912770676}
+  - component: {fileID: 8945731455636321560}
   m_Layer: 0
   m_Name: Icosphere.103
   m_TagString: Untagged
@@ -115936,6 +117483,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8945731455636321560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8945731455636321559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 8470442972133105650}
+    active: 1
+  - target: {fileID: 1665740061070026860}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0
+  stairOffset: 0.4
 --- !u!33 &8953600369758663692
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -116377,7 +117949,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 5e6bb2c44ac8c0a4b8fe26c7d5759217, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -116645,7 +118217,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -17,7 +17,7 @@ public class ScoreManager : MonoBehaviour
 
    void Update()
    {
-       text.text = "Score: " + score + " $ ";
+       text.text = score + " $ ";
        score += 0.03f;
        score = Mathf.Round(score * 100f) / 100f;
     }

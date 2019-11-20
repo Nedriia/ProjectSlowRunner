@@ -34,7 +34,7 @@ public class Walkable : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.gray;
+        /*Gizmos.color = Color.gray;
         float stair = isStair ? .4f : 0;
         Gizmos.DrawSphere(GetWalkPoint(), .005f);
 
@@ -45,9 +45,9 @@ public class Walkable : MonoBehaviour
         {
             if (p.target == null)
                 return;
-            /*Gizmos.color = p.active ? Color.black : Color.clear;
-            Gizmos.DrawLine(GetWalkPoint(), p.target.GetComponent<Walkable>().GetWalkPoint());*/
-        }
+            Gizmos.color = p.active ? Color.black : Color.clear;
+            Gizmos.DrawLine(GetWalkPoint(), p.target.GetComponent<Walkable>().GetWalkPoint());
+        }*/
     }
 }
 
