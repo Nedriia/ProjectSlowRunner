@@ -109,11 +109,6 @@ public class InspectElement_Map : Editor
                             if (Vector3.Distance(map.elementTest.Roads_Position[i].transform.position, map.elementTest.Roads_Position[j].transform.position) < map.distance_Check){
                                 map.elementTest.Roads_Position[i].GetComponent<InspectElement>().neighborHex.Add(map.elementTest.Roads_Position[j]);
                             }
-                                //Not used anymore
-                                /*if (map.elementTest.Roads_Position[i].GetComponent<InspectElement>().neighborHex.Count >= 3 && map.elementTest.Roads_Position[j].GetComponent<InspectElement>().type == InspectElement.Tyle_Type.Road){ //it's a crossroads, we will need it to change of direction{
-                                    map.elementTest.Roads_Position[i].GetComponent<InspectElement>().type = InspectElement.Tyle_Type.CrossRoads;
-                                    map.elementTest.Roads_Position[i].GetComponent<MeshRenderer>().material = map.elementTest.crossroadsMat;
-                                }*/
                         }
                     }
                     if (map.elementTest.Roads_Position[i].GetComponent<InspectElement>().Event == InspectElement.Tyle_Evenement.Restaurant){

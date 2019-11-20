@@ -22,6 +22,8 @@ public class StateClient : MonoBehaviour
     public Slider sliderValue;
     public Image imageColorFeedback;
 
+    public Text percentageState;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +33,19 @@ public class StateClient : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(stateEmotion > 60 )
+        {
+            percentageState.color = Color.green;
+        }
+        else if(stateEmotion > 31 && stateEmotion < 60)
+        {
+            percentageState.color = Color.yellow;
+        }
+        else
+        {
+            percentageState.color = Color.red;
+        }
+        percentageState.text = Mathf.Round(stateEmotion) + "%";
         sliderValue.value = stateEmotion;
         if(tempCube != null && tempCube.name != controller.currentCube.name){
             tempCube = controller.currentCube.GetComponent<InspectElement>();
