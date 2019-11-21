@@ -61,18 +61,14 @@ public class PlayerController : MonoBehaviour
         {
             Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition); RaycastHit mouseHit;
 
-            if (Physics.Raycast(mouseRay, out mouseHit))
-            {
-                if (mouseHit.transform.GetComponent<Walkable>() != null)
-                {
+            if (Physics.Raycast(mouseRay, out mouseHit)){
+                if (mouseHit.transform.GetComponent<Walkable>() != null){
                     clickedCube = mouseHit.transform;
 
                     float angel = Vector3.Angle(car.transform.forward, clickedCube.position - car.transform.position);
-                    if (angel < 90 && angel > -90)
-                    {
+                    if (angel < 100 && angel > -100){
                         DOTween.Kill(gameObject.transform);
-                        if (clickedCube != currentCube)
-                        {
+                        if (clickedCube != currentCube){
                             if (finalPath.Count != 0)
                             {
                                 foreach (Transform element in finalPath)
@@ -97,14 +93,27 @@ public class PlayerController : MonoBehaviour
                             finalPath.Clear();
                             index = 0;
                             Clicked_NewFindPath();
-                            //waypoints.Add(clickedCube);
 
-                            indicator.position = mouseHit.transform.GetComponent<Walkable>().GetWalkPoint();
-                            Sequence s = DOTween.Sequence();
-                            s.AppendCallback(() => indicator.GetComponentInChildren<ParticleSystem>().Play());
-                            s.Append(indicator.GetComponent<Renderer>().material.DOColor(Color.white, .1f));
-                            s.Append(indicator.GetComponent<Renderer>().material.DOColor(Color.black, .3f).SetDelay(.2f));
-                            s.Append(indicator.GetComponent<Renderer>().material.DOColor(Color.clear, .3f));
+                            angel = Vector3.Angle(car.transform.forward, finalPath[0].transform.position - car.transform.position);
+                            if (angel < 100 && angel > -100)
+                            {
+                                foreach(Transform element in finalPath)
+                                {
+                                    element.GetComponent<MeshRenderer>().material = controllerMat.pathPlanned;
+                                }
+                                indicator.position = mouseHit.transform.GetComponent<Walkable>().GetWalkPoint();
+                                Sequence s = DOTween.Sequence();
+                                s.AppendCallback(() => indicator.GetComponentInChildren<ParticleSystem>().Play());
+                                s.Append(indicator.GetComponent<Renderer>().material.DOColor(Color.white, .1f));
+                                s.Append(indicator.GetComponent<Renderer>().material.DOColor(Color.black, .3f).SetDelay(.2f));
+                                s.Append(indicator.GetComponent<Renderer>().material.DOColor(Color.clear, .3f));
+                            }
+                            else
+                            {
+                                waypoints.Clear();
+                                finalform = false;
+                                finalPath.Clear();
+                            }
                         }
                     }
                 }
@@ -199,7 +208,6 @@ public class PlayerController : MonoBehaviour
                 path.target.GetComponent<Walkable>().previousBlock = currentCube;
             }
         }
-
         pastCubes.Add(currentCube);
 
         ExploreCube(nextCubes, pastCubes, target);
@@ -211,21 +219,16 @@ public class PlayerController : MonoBehaviour
         List<Transform> nextCubes = new List<Transform>();
         List<Transform> pastCubes = new List<Transform>();
 
-        foreach (WalkPath path in currentCube.GetComponent<Walkable>().possiblePaths)
-        {
-            if (path.active)
-            {
+        foreach (WalkPath path in currentCube.GetComponent<Walkable>().possiblePaths){
+            if (path.active){
                 nextCubes.Add(path.target);
                 path.target.GetComponent<Walkable>().previousBlock = currentCube;
             }
         }
-
         pastCubes.Add(currentCube);
 
         ExploreCube(nextCubes, pastCubes, clickedCube);
         BuildPath(clickedCube);
-
-        //Test1(mainTarget);
     }
 
     public void Test1(Transform target)
@@ -286,7 +289,7 @@ public class PlayerController : MonoBehaviour
             while (cube != waypoints[0])
             {
                 temp_finalPath.Insert(0, cube);
-                cube.GetComponent<MeshRenderer>().material = controllerMat.pathPlanned;
+                //cube.GetComponent<MeshRenderer>().material = controllerMat.pathPlanned;
 
                 if (finalform)
                     cube.GetComponent<MeshRenderer>().material = controllerMat.pathTemp;
@@ -303,7 +306,7 @@ public class PlayerController : MonoBehaviour
             {
                 finalPath.Insert(0, cube);
 
-                cube.GetComponent<MeshRenderer>().material = controllerMat.pathPlanned;
+                //cube.GetComponent<MeshRenderer>().material = controllerMat.pathPlanned;
                 if (cube.GetComponent<Walkable>().previousBlock != null)
                     cube = cube.GetComponent<Walkable>().previousBlock;
                 else
