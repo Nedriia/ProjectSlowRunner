@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 112000000, guid: 4e66e6299d462774a87ee0d9c0a177de,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -134,7 +134,6 @@ GameObject:
   - component: {fileID: 7221673}
   - component: {fileID: 7221672}
   - component: {fileID: 7221671}
-  - component: {fileID: 7221675}
   m_Layer: 0
   m_Name: Cube (68)
   m_TagString: Untagged
@@ -169,12 +168,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 1
+  type: 0
   Event: 0
   distance_Check: 1.2
-  neighborHex:
-  - {fileID: 2041958410}
+  neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &7221672
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -205,7 +205,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
+  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -234,29 +234,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7221669}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &7221675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7221669}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  possiblePaths:
-  - target: {fileID: 2041958410}
-    active: 1
-  previousBlock: {fileID: 0}
-  isStair: 0
-  movingGround: 0
-  isButton: 0
-  dontRotate: 0
-  visited: 0
-  walkPointOffset: 0
-  stairOffset: 0.4
 --- !u!1 &36521983
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,6 +346,7 @@ GameObject:
   - component: {fileID: 54056008}
   - component: {fileID: 54056007}
   - component: {fileID: 54056006}
+  - component: {fileID: 54056010}
   m_Layer: 0
   m_Name: Cube (69)
   m_TagString: Untagged
@@ -403,11 +381,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
   distance_Check: 1.2
-  neighborHex: []
+  neighborHex:
+  - {fileID: 1433259154}
+  - {fileID: 762123621}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &54056007
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -438,7 +420,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -467,6 +449,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 54056004}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &54056010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54056004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 1433259154}
+    active: 1
+  - target: {fileID: 762123621}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0.5
+  stairOffset: 0.4
 --- !u!1 &55878237
 GameObject:
   m_ObjectHideFlags: 0
@@ -480,6 +487,7 @@ GameObject:
   - component: {fileID: 55878241}
   - component: {fileID: 55878240}
   - component: {fileID: 55878239}
+  - component: {fileID: 55878243}
   m_Layer: 0
   m_Name: Cube (5)
   m_TagString: Untagged
@@ -514,11 +522,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
   distance_Check: 1.2
-  neighborHex: []
+  neighborHex:
+  - {fileID: 2027886644}
+  - {fileID: 377591853}
+  - {fileID: 301808040}
+  - {fileID: 637849215}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &55878240
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -549,7 +563,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -578,6 +592,35 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 55878237}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &55878243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55878237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 2027886644}
+    active: 1
+  - target: {fileID: 377591853}
+    active: 1
+  - target: {fileID: 301808040}
+    active: 1
+  - target: {fileID: 637849215}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0.5
+  stairOffset: 0.4
 --- !u!1 &59297620
 GameObject:
   m_ObjectHideFlags: 0
@@ -1623,6 +1666,7 @@ GameObject:
   - component: {fileID: 161802422}
   - component: {fileID: 161802421}
   - component: {fileID: 161802420}
+  - component: {fileID: 161802424}
   m_Layer: 0
   m_Name: Cube (82)
   m_TagString: Untagged
@@ -1657,11 +1701,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
   distance_Check: 1.2
-  neighborHex: []
+  neighborHex:
+  - {fileID: 1206942929}
+  - {fileID: 311963649}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &161802421
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1692,7 +1740,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1721,6 +1769,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 161802418}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &161802424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161802418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 1206942929}
+    active: 1
+  - target: {fileID: 311963649}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0.5
+  stairOffset: 0.4
 --- !u!1 &183613266
 GameObject:
   m_ObjectHideFlags: 0
@@ -1773,6 +1846,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &183613269
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1845,6 +1920,7 @@ GameObject:
   - component: {fileID: 194186078}
   - component: {fileID: 194186077}
   - component: {fileID: 194186076}
+  - component: {fileID: 194186080}
   m_Layer: 0
   m_Name: Cube (84)
   m_TagString: Untagged
@@ -1879,11 +1955,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
   distance_Check: 1.2
-  neighborHex: []
+  neighborHex:
+  - {fileID: 311963649}
+  - {fileID: 418816411}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &194186077
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1914,7 +1994,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1943,6 +2023,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 194186074}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &194186080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194186074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 311963649}
+    active: 1
+  - target: {fileID: 418816411}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0.5
+  stairOffset: 0.4
 --- !u!1 &201999546
 GameObject:
   m_ObjectHideFlags: 0
@@ -2171,6 +2276,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &217166935
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2243,6 +2350,7 @@ GameObject:
   - component: {fileID: 217906973}
   - component: {fileID: 217906972}
   - component: {fileID: 217906971}
+  - component: {fileID: 217906975}
   m_Layer: 0
   m_Name: Cube (8)
   m_TagString: Untagged
@@ -2277,11 +2385,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
   distance_Check: 1.2
-  neighborHex: []
+  neighborHex:
+  - {fileID: 1708004266}
+  - {fileID: 1641500290}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &217906972
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2312,7 +2424,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2341,6 +2453,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 217906969}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &217906975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217906969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 1708004266}
+    active: 1
+  - target: {fileID: 1641500290}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0.5
+  stairOffset: 0.4
 --- !u!1 &219043764
 GameObject:
   m_ObjectHideFlags: 0
@@ -2393,6 +2530,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &219043767
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2507,6 +2646,8 @@ MonoBehaviour:
   - {fileID: 930687405}
   - {fileID: 301808040}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &225398344
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2589,7 +2730,7 @@ MonoBehaviour:
   isButton: 0
   dontRotate: 0
   visited: 0
-  walkPointOffset: 0
+  walkPointOffset: 0.5
   stairOffset: 0.4
 --- !u!1 &251276970
 GameObject:
@@ -3128,6 +3269,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &300478112
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3239,9 +3382,11 @@ MonoBehaviour:
   Event: 0
   distance_Check: 1.2
   neighborHex:
+  - {fileID: 55878238}
   - {fileID: 225398342}
-  - {fileID: 1414924791}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &301808042
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3314,9 +3459,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   possiblePaths:
-  - target: {fileID: 225398342}
+  - target: {fileID: 55878238}
     active: 1
-  - target: {fileID: 1414924791}
+  - target: {fileID: 225398342}
     active: 1
   previousBlock: {fileID: 0}
   isStair: 0
@@ -3324,7 +3469,7 @@ MonoBehaviour:
   isButton: 0
   dontRotate: 0
   visited: 0
-  walkPointOffset: 0
+  walkPointOffset: 0.5
   stairOffset: 0.4
 --- !u!1 &311963648
 GameObject:
@@ -3339,6 +3484,7 @@ GameObject:
   - component: {fileID: 311963652}
   - component: {fileID: 311963651}
   - component: {fileID: 311963650}
+  - component: {fileID: 311963654}
   m_Layer: 0
   m_Name: Cube (83)
   m_TagString: Untagged
@@ -3373,11 +3519,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
   distance_Check: 1.2
-  neighborHex: []
+  neighborHex:
+  - {fileID: 161802419}
+  - {fileID: 194186075}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &311963651
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3408,7 +3558,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3437,6 +3587,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 311963648}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &311963654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311963648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 161802419}
+    active: 1
+  - target: {fileID: 194186075}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0.5
+  stairOffset: 0.4
 --- !u!1 &319301687
 GameObject:
   m_ObjectHideFlags: 0
@@ -3867,6 +4042,7 @@ GameObject:
   - component: {fileID: 365825452}
   - component: {fileID: 365825451}
   - component: {fileID: 365825450}
+  - component: {fileID: 365825454}
   m_Layer: 0
   m_Name: Cube (305)
   m_TagString: Untagged
@@ -3901,11 +4077,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
   distance_Check: 1.2
-  neighborHex: []
+  neighborHex:
+  - {fileID: 1556873358}
+  - {fileID: 2027886644}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &365825451
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3936,7 +4116,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3965,6 +4145,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 365825448}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &365825454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365825448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 1556873358}
+    active: 1
+  - target: {fileID: 2027886644}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0.5
+  stairOffset: 0.4
 --- !u!1 &377591852
 GameObject:
   m_ObjectHideFlags: 0
@@ -4017,9 +4222,11 @@ MonoBehaviour:
   Event: 0
   distance_Check: 1.2
   neighborHex:
-  - {fileID: 1414924791}
-  - {fileID: 1280012558}
+  - {fileID: 55878238}
+  - {fileID: 1827866967}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &377591855
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4092,9 +4299,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   possiblePaths:
-  - target: {fileID: 1414924791}
+  - target: {fileID: 55878238}
     active: 1
-  - target: {fileID: 1280012558}
+  - target: {fileID: 1827866967}
     active: 1
   previousBlock: {fileID: 0}
   isStair: 0
@@ -4102,7 +4309,7 @@ MonoBehaviour:
   isButton: 0
   dontRotate: 0
   visited: 0
-  walkPointOffset: 0
+  walkPointOffset: 0.5
   stairOffset: 0.4
 --- !u!1 &382757297
 GameObject:
@@ -4401,6 +4608,7 @@ GameObject:
   - component: {fileID: 418816414}
   - component: {fileID: 418816413}
   - component: {fileID: 418816412}
+  - component: {fileID: 418816416}
   m_Layer: 0
   m_Name: Cube (85)
   m_TagString: Untagged
@@ -4435,11 +4643,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
   distance_Check: 1.2
-  neighborHex: []
+  neighborHex:
+  - {fileID: 194186075}
+  - {fileID: 822099125}
+  - {fileID: 1827866967}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &418816413
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4470,7 +4683,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4499,6 +4712,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 418816410}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &418816416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418816410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 194186075}
+    active: 1
+  - target: {fileID: 822099125}
+    active: 1
+  - target: {fileID: 1827866967}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0.5
+  stairOffset: 0.4
 --- !u!1 &420683141
 GameObject:
   m_ObjectHideFlags: 0
@@ -4722,6 +4962,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &432342256
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5240,6 +5482,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &508253677
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5932,6 +6176,7 @@ GameObject:
   - component: {fileID: 602648955}
   - component: {fileID: 602648954}
   - component: {fileID: 602648953}
+  - component: {fileID: 602648957}
   m_Layer: 0
   m_Name: Cube (288)
   m_TagString: Untagged
@@ -5966,11 +6211,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
   distance_Check: 1.2
-  neighborHex: []
+  neighborHex:
+  - {fileID: 1119176302}
+  - {fileID: 642270589}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &602648954
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6001,7 +6250,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6030,6 +6279,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 602648951}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &602648957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602648951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 1119176302}
+    active: 1
+  - target: {fileID: 642270589}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0.5
+  stairOffset: 0.4
 --- !u!1 &620201124
 GameObject:
   m_ObjectHideFlags: 0
@@ -6373,6 +6647,7 @@ GameObject:
   - component: {fileID: 637849218}
   - component: {fileID: 637849217}
   - component: {fileID: 637849216}
+  - component: {fileID: 637849220}
   m_Layer: 0
   m_Name: Cube (6)
   m_TagString: Untagged
@@ -6407,11 +6682,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
   distance_Check: 1.2
-  neighborHex: []
+  neighborHex:
+  - {fileID: 55878238}
+  - {fileID: 1641500290}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &637849217
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6442,7 +6721,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6471,6 +6750,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 637849214}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &637849220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637849214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 55878238}
+    active: 1
+  - target: {fileID: 1641500290}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0.5
+  stairOffset: 0.4
 --- !u!1 &642270588
 GameObject:
   m_ObjectHideFlags: 0
@@ -6484,6 +6788,7 @@ GameObject:
   - component: {fileID: 642270592}
   - component: {fileID: 642270591}
   - component: {fileID: 642270590}
+  - component: {fileID: 642270594}
   m_Layer: 0
   m_Name: Cube (287)
   m_TagString: Untagged
@@ -6518,11 +6823,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
   distance_Check: 1.2
-  neighborHex: []
+  neighborHex:
+  - {fileID: 602648952}
+  - {fileID: 1093924029}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &642270591
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6553,7 +6862,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6582,6 +6891,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 642270588}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &642270594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642270588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 602648952}
+    active: 1
+  - target: {fileID: 1093924029}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0.5
+  stairOffset: 0.4
 --- !u!1 &642456215
 GameObject:
   m_ObjectHideFlags: 0
@@ -7173,6 +7507,147 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 757976641}
   m_CullTransparentMesh: 0
+--- !u!1 &759399128
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 759399133}
+  - component: {fileID: 759399132}
+  - component: {fileID: 759399131}
+  - component: {fileID: 759399130}
+  - component: {fileID: 759399129}
+  - component: {fileID: 759399134}
+  m_Layer: 0
+  m_Name: Cube (292)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &759399129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759399128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63761754b8dbce5499e115529a61ab49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elementTest: {fileID: 1715079184}
+  type: 1
+  Event: 0
+  distance_Check: 1.2
+  neighborHex:
+  - {fileID: 1735820780}
+  - {fileID: 1128127280}
+  visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
+--- !u!65 &759399130
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759399128}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &759399131
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759399128}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &759399132
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759399128}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &759399133
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759399128}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2, y: 0, z: -3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6496860844886677559}
+  m_RootOrder: 55
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &759399134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759399128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 1735820780}
+    active: 1
+  - target: {fileID: 1128127280}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0.5
+  stairOffset: 0.4
 --- !u!1 &762123620
 GameObject:
   m_ObjectHideFlags: 0
@@ -7186,6 +7661,7 @@ GameObject:
   - component: {fileID: 762123624}
   - component: {fileID: 762123623}
   - component: {fileID: 762123622}
+  - component: {fileID: 762123626}
   m_Layer: 0
   m_Name: Cube (49)
   m_TagString: Untagged
@@ -7220,11 +7696,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
   distance_Check: 1.2
-  neighborHex: []
+  neighborHex:
+  - {fileID: 54056005}
+  - {fileID: 1708004266}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &762123623
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7255,7 +7735,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7284,6 +7764,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 762123620}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &762123626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762123620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 54056005}
+    active: 1
+  - target: {fileID: 1708004266}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0.5
+  stairOffset: 0.4
 --- !u!1 &821592290
 GameObject:
   m_ObjectHideFlags: 0
@@ -7328,6 +7833,7 @@ GameObject:
   - component: {fileID: 822099128}
   - component: {fileID: 822099127}
   - component: {fileID: 822099126}
+  - component: {fileID: 822099130}
   m_Layer: 0
   m_Name: Cube (86)
   m_TagString: Untagged
@@ -7362,11 +7868,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
   distance_Check: 1.2
-  neighborHex: []
+  neighborHex:
+  - {fileID: 418816411}
+  - {fileID: 941454578}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &822099127
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7397,7 +7907,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7426,6 +7936,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 822099124}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &822099130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822099124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 418816411}
+    active: 1
+  - target: {fileID: 941454578}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0.5
+  stairOffset: 0.4
 --- !u!1 &834875048
 GameObject:
   m_ObjectHideFlags: 0
@@ -8130,8 +8665,12 @@ MonoBehaviour:
   Event: 0
   distance_Check: 1.2
   neighborHex:
+  - {fileID: 1253989153}
+  - {fileID: 1847508550}
   - {fileID: 225398342}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &930687407
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8204,6 +8743,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   possiblePaths:
+  - target: {fileID: 1253989153}
+    active: 1
+  - target: {fileID: 1847508550}
+    active: 1
   - target: {fileID: 225398342}
     active: 1
   previousBlock: {fileID: 0}
@@ -8212,7 +8755,7 @@ MonoBehaviour:
   isButton: 0
   dontRotate: 0
   visited: 0
-  walkPointOffset: 0
+  walkPointOffset: 0.5
   stairOffset: 0.4
 --- !u!1 &941454577
 GameObject:
@@ -8227,6 +8770,7 @@ GameObject:
   - component: {fileID: 941454581}
   - component: {fileID: 941454580}
   - component: {fileID: 941454579}
+  - component: {fileID: 941454583}
   m_Layer: 0
   m_Name: Cube (87)
   m_TagString: Untagged
@@ -8261,11 +8805,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
   distance_Check: 1.2
-  neighborHex: []
+  neighborHex:
+  - {fileID: 822099125}
+  - {fileID: 1763369515}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &941454580
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8296,7 +8844,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8325,6 +8873,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 941454577}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &941454583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941454577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 822099125}
+    active: 1
+  - target: {fileID: 1763369515}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0.5
+  stairOffset: 0.4
 --- !u!1 &943047580
 GameObject:
   m_ObjectHideFlags: 0
@@ -8415,6 +8988,7 @@ GameObject:
   - component: {fileID: 959355956}
   - component: {fileID: 959355955}
   - component: {fileID: 959355954}
+  - component: {fileID: 959355958}
   m_Layer: 0
   m_Name: Cube (309)
   m_TagString: Untagged
@@ -8449,11 +9023,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
   distance_Check: 1.2
-  neighborHex: []
+  neighborHex:
+  - {fileID: 1324545941}
+  - {fileID: 1119176302}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &959355955
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8484,7 +9062,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8513,6 +9091,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 959355952}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &959355958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959355952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 1324545941}
+    active: 1
+  - target: {fileID: 1119176302}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0.5
+  stairOffset: 0.4
 --- !u!1 &970663133
 GameObject:
   m_ObjectHideFlags: 0
@@ -8869,6 +9472,7 @@ GameObject:
   - component: {fileID: 1093924032}
   - component: {fileID: 1093924031}
   - component: {fileID: 1093924030}
+  - component: {fileID: 1093924034}
   m_Layer: 0
   m_Name: Cube (286)
   m_TagString: Untagged
@@ -8903,11 +9507,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
   distance_Check: 1.2
-  neighborHex: []
+  neighborHex:
+  - {fileID: 1556873358}
+  - {fileID: 642270589}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1093924031
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8938,7 +9546,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8967,6 +9575,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1093924028}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1093924034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093924028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 1556873358}
+    active: 1
+  - target: {fileID: 642270589}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0.5
+  stairOffset: 0.4
 --- !u!1 &1102426435
 GameObject:
   m_ObjectHideFlags: 0
@@ -9138,6 +9771,7 @@ GameObject:
   - component: {fileID: 1119176305}
   - component: {fileID: 1119176304}
   - component: {fileID: 1119176303}
+  - component: {fileID: 1119176307}
   m_Layer: 0
   m_Name: Cube (289)
   m_TagString: Untagged
@@ -9172,11 +9806,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
   distance_Check: 1.2
-  neighborHex: []
+  neighborHex:
+  - {fileID: 959355953}
+  - {fileID: 602648952}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1119176304
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9207,7 +9845,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9236,6 +9874,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1119176301}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1119176307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1119176301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 959355953}
+    active: 1
+  - target: {fileID: 602648952}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0.5
+  stairOffset: 0.4
 --- !u!1 &1128127279
 GameObject:
   m_ObjectHideFlags: 0
@@ -9249,6 +9912,7 @@ GameObject:
   - component: {fileID: 1128127283}
   - component: {fileID: 1128127282}
   - component: {fileID: 1128127281}
+  - component: {fileID: 1128127285}
   m_Layer: 0
   m_Name: Cube (302)
   m_TagString: Untagged
@@ -9283,11 +9947,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
   distance_Check: 1.2
-  neighborHex: []
+  neighborHex:
+  - {fileID: 759399133}
+  - {fileID: 1253989153}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1128127282
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9318,7 +9986,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9347,6 +10015,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1128127279}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1128127285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128127279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 759399133}
+    active: 1
+  - target: {fileID: 1253989153}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0.5
+  stairOffset: 0.4
 --- !u!1 &1132500811
 GameObject:
   m_ObjectHideFlags: 0
@@ -9701,6 +10394,7 @@ GameObject:
   - component: {fileID: 1206942932}
   - component: {fileID: 1206942931}
   - component: {fileID: 1206942930}
+  - component: {fileID: 1206942934}
   m_Layer: 0
   m_Name: Cube (62)
   m_TagString: Untagged
@@ -9735,11 +10429,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
   distance_Check: 1.2
-  neighborHex: []
+  neighborHex:
+  - {fileID: 1847508550}
+  - {fileID: 161802419}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1206942931
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9770,7 +10468,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9799,6 +10497,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1206942928}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1206942934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206942928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 1847508550}
+    active: 1
+  - target: {fileID: 161802419}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0.5
+  stairOffset: 0.4
 --- !u!1 &1224359687
 GameObject:
   m_ObjectHideFlags: 0
@@ -10071,6 +10794,7 @@ GameObject:
   - component: {fileID: 1253989156}
   - component: {fileID: 1253989155}
   - component: {fileID: 1253989154}
+  - component: {fileID: 1253989158}
   m_Layer: 0
   m_Name: Cube (22)
   m_TagString: Untagged
@@ -10105,11 +10829,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
   distance_Check: 1.2
-  neighborHex: []
+  neighborHex:
+  - {fileID: 930687405}
+  - {fileID: 1128127280}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1253989155
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10140,7 +10868,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10169,6 +10897,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1253989152}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1253989158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253989152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 930687405}
+    active: 1
+  - target: {fileID: 1128127280}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0.5
+  stairOffset: 0.4
 --- !u!1 &1256718955
 GameObject:
   m_ObjectHideFlags: 0
@@ -10499,7 +11252,6 @@ GameObject:
   - component: {fileID: 1280012561}
   - component: {fileID: 1280012560}
   - component: {fileID: 1280012559}
-  - component: {fileID: 1280012563}
   m_Layer: 0
   m_Name: Cube (46)
   m_TagString: Untagged
@@ -10534,13 +11286,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 1
+  type: 0
   Event: 0
   distance_Check: 1.2
-  neighborHex:
-  - {fileID: 377591853}
-  - {fileID: 1284598758}
+  neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1280012560
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10571,7 +11323,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
+  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10600,31 +11352,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1280012557}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1280012563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1280012557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  possiblePaths:
-  - target: {fileID: 377591853}
-    active: 1
-  - target: {fileID: 1284598758}
-    active: 1
-  previousBlock: {fileID: 0}
-  isStair: 0
-  movingGround: 0
-  isButton: 0
-  dontRotate: 0
-  visited: 0
-  walkPointOffset: 0
-  stairOffset: 0.4
 --- !u!1 &1283915028
 GameObject:
   m_ObjectHideFlags: 0
@@ -10704,7 +11431,6 @@ GameObject:
   - component: {fileID: 1284598761}
   - component: {fileID: 1284598760}
   - component: {fileID: 1284598759}
-  - component: {fileID: 1284598763}
   m_Layer: 0
   m_Name: Cube (47)
   m_TagString: Untagged
@@ -10739,13 +11465,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 1
+  type: 0
   Event: 0
   distance_Check: 1.2
-  neighborHex:
-  - {fileID: 1280012558}
-  - {fileID: 2041958410}
+  neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1284598760
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10776,7 +11502,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
+  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10805,31 +11531,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1284598757}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1284598763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1284598757}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  possiblePaths:
-  - target: {fileID: 1280012558}
-    active: 1
-  - target: {fileID: 2041958410}
-    active: 1
-  previousBlock: {fileID: 0}
-  isStair: 0
-  movingGround: 0
-  isButton: 0
-  dontRotate: 0
-  visited: 0
-  walkPointOffset: 0
-  stairOffset: 0.4
 --- !u!1 &1286928639
 GameObject:
   m_ObjectHideFlags: 0
@@ -11207,6 +11908,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1322148290
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11279,6 +11982,7 @@ GameObject:
   - component: {fileID: 1324545944}
   - component: {fileID: 1324545943}
   - component: {fileID: 1324545942}
+  - component: {fileID: 1324545946}
   m_Layer: 0
   m_Name: Cube (29)
   m_TagString: Untagged
@@ -11313,11 +12017,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
   distance_Check: 1.2
-  neighborHex: []
+  neighborHex:
+  - {fileID: 1708004266}
+  - {fileID: 959355953}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1324545943
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11348,7 +12056,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11377,6 +12085,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1324545940}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1324545946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324545940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 1708004266}
+    active: 1
+  - target: {fileID: 959355953}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0.5
+  stairOffset: 0.4
 --- !u!1 &1330807198
 GameObject:
   m_ObjectHideFlags: 0
@@ -11689,6 +12422,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1388481789
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11877,7 +12612,6 @@ GameObject:
   - component: {fileID: 1414924794}
   - component: {fileID: 1414924793}
   - component: {fileID: 1414924792}
-  - component: {fileID: 1414924796}
   m_Layer: 0
   m_Name: Cube (44)
   m_TagString: Untagged
@@ -11912,13 +12646,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 1
+  type: 0
   Event: 0
   distance_Check: 1.2
-  neighborHex:
-  - {fileID: 377591853}
-  - {fileID: 301808040}
+  neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1414924793
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11949,7 +12683,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
+  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11978,31 +12712,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1414924790}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1414924796
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1414924790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  possiblePaths:
-  - target: {fileID: 377591853}
-    active: 1
-  - target: {fileID: 301808040}
-    active: 1
-  previousBlock: {fileID: 0}
-  isStair: 0
-  movingGround: 0
-  isButton: 0
-  dontRotate: 0
-  visited: 0
-  walkPointOffset: 0
-  stairOffset: 0.4
 --- !u!1 &1429693786
 GameObject:
   m_ObjectHideFlags: 0
@@ -12095,6 +12804,7 @@ GameObject:
   - component: {fileID: 1433259157}
   - component: {fileID: 1433259156}
   - component: {fileID: 1433259155}
+  - component: {fileID: 1433259159}
   m_Layer: 0
   m_Name: Cube (89)
   m_TagString: Untagged
@@ -12129,11 +12839,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
   distance_Check: 1.2
-  neighborHex: []
+  neighborHex:
+  - {fileID: 1763369515}
+  - {fileID: 54056005}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1433259156
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12164,7 +12878,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12193,6 +12907,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1433259153}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1433259159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433259153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 1763369515}
+    active: 1
+  - target: {fileID: 54056005}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0.5
+  stairOffset: 0.4
 --- !u!1 &1446227159
 GameObject:
   m_ObjectHideFlags: 0
@@ -13045,6 +13784,7 @@ GameObject:
   - component: {fileID: 1556873361}
   - component: {fileID: 1556873360}
   - component: {fileID: 1556873359}
+  - component: {fileID: 1556873363}
   m_Layer: 0
   m_Name: Cube (285)
   m_TagString: Untagged
@@ -13079,11 +13819,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
   distance_Check: 1.2
-  neighborHex: []
+  neighborHex:
+  - {fileID: 365825449}
+  - {fileID: 2119149091}
+  - {fileID: 1093924029}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1556873360
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13114,7 +13859,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13143,6 +13888,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1556873357}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1556873363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556873357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 365825449}
+    active: 1
+  - target: {fileID: 2119149091}
+    active: 1
+  - target: {fileID: 1093924029}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0.5
+  stairOffset: 0.4
 --- !u!4 &1568344612 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 808261060155700103, guid: 9d360146ea2cb4a44aa897a4aa05ac15,
@@ -13306,6 +14078,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1609040245
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13417,6 +14191,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1613986988
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13806,6 +14582,7 @@ GameObject:
   - component: {fileID: 1641500293}
   - component: {fileID: 1641500292}
   - component: {fileID: 1641500291}
+  - component: {fileID: 1641500295}
   m_Layer: 0
   m_Name: Cube (7)
   m_TagString: Untagged
@@ -13840,11 +14617,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
   distance_Check: 1.2
-  neighborHex: []
+  neighborHex:
+  - {fileID: 637849215}
+  - {fileID: 217906970}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1641500292
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13875,7 +14656,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13904,6 +14685,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1641500289}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1641500295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641500289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 637849215}
+    active: 1
+  - target: {fileID: 217906970}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0.5
+  stairOffset: 0.4
 --- !u!1 &1647347039
 GameObject:
   m_ObjectHideFlags: 0
@@ -14430,6 +15236,7 @@ GameObject:
   - component: {fileID: 1708004269}
   - component: {fileID: 1708004268}
   - component: {fileID: 1708004267}
+  - component: {fileID: 1708004271}
   m_Layer: 0
   m_Name: Cube (9)
   m_TagString: Untagged
@@ -14464,11 +15271,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
   distance_Check: 1.2
-  neighborHex: []
+  neighborHex:
+  - {fileID: 762123621}
+  - {fileID: 1324545941}
+  - {fileID: 217906970}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1708004268
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14499,7 +15311,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14528,6 +15340,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708004265}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1708004271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708004265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 762123621}
+    active: 1
+  - target: {fileID: 1324545941}
+    active: 1
+  - target: {fileID: 217906970}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0.5
+  stairOffset: 0.4
 --- !u!1 &1715079179
 GameObject:
   m_ObjectHideFlags: 0
@@ -14631,18 +15470,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test:
-  - {fileID: 2041958411}
+  - {fileID: 217906971}
+  - {fileID: 759399129}
+  - {fileID: 1119176303}
+  - {fileID: 822099126}
+  - {fileID: 930687406}
+  - {fileID: 1847508551}
+  - {fileID: 1253989154}
+  - {fileID: 1609040244}
   isoSphere: {fileID: 6496860844886677559}
   Roads_Position:
-  - {fileID: 225398342}
+  - {fileID: 365825449}
+  - {fileID: 1556873358}
+  - {fileID: 2119149091}
+  - {fileID: 1735820780}
+  - {fileID: 759399133}
+  - {fileID: 1253989153}
   - {fileID: 930687405}
-  - {fileID: 7221670}
+  - {fileID: 1847508550}
+  - {fileID: 161802419}
+  - {fileID: 1206942929}
+  - {fileID: 311963649}
+  - {fileID: 194186075}
+  - {fileID: 418816411}
+  - {fileID: 822099125}
+  - {fileID: 941454578}
+  - {fileID: 1763369515}
+  - {fileID: 1433259154}
+  - {fileID: 54056005}
+  - {fileID: 762123621}
+  - {fileID: 1708004266}
+  - {fileID: 1324545941}
+  - {fileID: 959355953}
+  - {fileID: 1119176302}
+  - {fileID: 602648952}
+  - {fileID: 642270589}
+  - {fileID: 1093924029}
+  - {fileID: 1128127280}
+  - {fileID: 2027886644}
+  - {fileID: 55878238}
   - {fileID: 377591853}
-  - {fileID: 1414924791}
+  - {fileID: 1827866967}
+  - {fileID: 225398342}
   - {fileID: 301808040}
-  - {fileID: 1280012558}
-  - {fileID: 1284598758}
-  - {fileID: 2041958410}
+  - {fileID: 637849215}
+  - {fileID: 1641500290}
+  - {fileID: 217906970}
   Monuments_Position: []
   city: {fileID: 2100000, guid: fd95d3916d125c142b491881c0ad93e4, type: 2}
   road: {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
@@ -14654,6 +15527,7 @@ MonoBehaviour:
   monument_Mat: {fileID: 2100000, guid: d23bec9e3931ee04c8894565359624e4, type: 2}
   restaurant_Mat: {fileID: 2100000, guid: ce10507030eb2c142878473c3813959f, type: 2}
   chantier_Mat: {fileID: 2100000, guid: 5e6bb2c44ac8c0a4b8fe26c7d5759217, type: 2}
+  feux_Rouge_Mat: {fileID: 2100000, guid: dd8093f34fd706648bd1a1fafaf04f51, type: 2}
   pathPlanned: {fileID: 2100000, guid: 5f58af862ef783149a5a2b13536fafe4, type: 2}
   pathTemp: {fileID: 2100000, guid: 7f44b288202172c498b3cdea7a511801, type: 2}
   alreadyPassed: {fileID: 2100000, guid: dc71ba3e5bc380c4eb5759121d830a9d, type: 2}
@@ -14829,9 +15703,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e2aad69ecda94c54e976dbf00e79ce8f, type: 2}
   - {fileID: 11400000, guid: a4800da013008b648be2a27c3be9389f, type: 2}
   DestinationPointList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 759399133}
+  - {fileID: 1119176302}
+  - {fileID: 822099125}
   index: 0
   currentClient: {fileID: 0}
   currentDestination: {fileID: 0}
@@ -14897,6 +15771,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1735670293
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14956,6 +15832,147 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1735670290}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1735820779
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1735820780}
+  - component: {fileID: 1735820784}
+  - component: {fileID: 1735820783}
+  - component: {fileID: 1735820782}
+  - component: {fileID: 1735820781}
+  - component: {fileID: 1735820785}
+  m_Layer: 0
+  m_Name: Cube (291)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1735820780
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735820779}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3, y: 0, z: -3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6496860844886677559}
+  m_RootOrder: 54
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1735820781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735820779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63761754b8dbce5499e115529a61ab49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elementTest: {fileID: 1715079184}
+  type: 1
+  Event: 0
+  distance_Check: 1.2
+  neighborHex:
+  - {fileID: 2119149091}
+  - {fileID: 759399133}
+  visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
+--- !u!65 &1735820782
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735820779}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1735820783
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735820779}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1735820784
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735820779}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1735820785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735820779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 2119149091}
+    active: 1
+  - target: {fileID: 759399133}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0.5
+  stairOffset: 0.4
 --- !u!1 &1740929560
 GameObject:
   m_ObjectHideFlags: 0
@@ -15113,6 +16130,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1743581087
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15321,6 +16340,7 @@ GameObject:
   - component: {fileID: 1763369518}
   - component: {fileID: 1763369517}
   - component: {fileID: 1763369516}
+  - component: {fileID: 1763369520}
   m_Layer: 0
   m_Name: Cube (88)
   m_TagString: Untagged
@@ -15355,11 +16375,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
   distance_Check: 1.2
-  neighborHex: []
+  neighborHex:
+  - {fileID: 941454578}
+  - {fileID: 1433259154}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1763369517
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15390,7 +16414,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15419,6 +16443,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1763369514}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1763369520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763369514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 941454578}
+    active: 1
+  - target: {fileID: 1433259154}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0.5
+  stairOffset: 0.4
 --- !u!1 &1779865388
 GameObject:
   m_ObjectHideFlags: 0
@@ -15702,6 +16751,7 @@ GameObject:
   - component: {fileID: 1827866970}
   - component: {fileID: 1827866969}
   - component: {fileID: 1827866968}
+  - component: {fileID: 1827866972}
   m_Layer: 0
   m_Name: Cube (65)
   m_TagString: Untagged
@@ -15736,11 +16786,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
   distance_Check: 1.2
-  neighborHex: []
+  neighborHex:
+  - {fileID: 418816411}
+  - {fileID: 377591853}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1827866969
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15771,7 +16825,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15800,6 +16854,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1827866966}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1827866972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827866966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 418816411}
+    active: 1
+  - target: {fileID: 377591853}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0.5
+  stairOffset: 0.4
 --- !u!1 &1833369793
 GameObject:
   m_ObjectHideFlags: 0
@@ -16028,6 +17107,8 @@ GameObject:
   - component: {fileID: 1847508553}
   - component: {fileID: 1847508552}
   - component: {fileID: 1847508551}
+  - component: {fileID: 1847508556}
+  - component: {fileID: 1847508555}
   m_Layer: 0
   m_Name: Cube (42)
   m_TagString: Untagged
@@ -16062,11 +17143,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
-  Event: 0
+  type: 1
+  Event: 4
   distance_Check: 1.2
-  neighborHex: []
+  neighborHex:
+  - {fileID: 930687405}
+  - {fileID: 1206942929}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1847508552
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16097,7 +17182,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: dd8093f34fd706648bd1a1fafaf04f51, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16126,6 +17211,46 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1847508549}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1847508555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847508549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 930687405}
+    active: 1
+  - target: {fileID: 1206942929}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0.5
+  stairOffset: 0.4
+--- !u!114 &1847508556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847508549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba03c29eb782e1841bea078d1c8f6757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 0
+  timerTot: 3
+  red: 0
 --- !u!1 &1886059501
 GameObject:
   m_ObjectHideFlags: 0
@@ -16257,6 +17382,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1900225494
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16997,6 +18124,7 @@ GameObject:
   - component: {fileID: 2027886647}
   - component: {fileID: 2027886646}
   - component: {fileID: 2027886645}
+  - component: {fileID: 2027886649}
   m_Layer: 0
   m_Name: Cube (25)
   m_TagString: Untagged
@@ -17031,11 +18159,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 1
   Event: 0
   distance_Check: 1.2
-  neighborHex: []
+  neighborHex:
+  - {fileID: 365825449}
+  - {fileID: 55878238}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &2027886646
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17066,7 +18198,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -17095,6 +18227,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2027886643}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2027886649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027886643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 365825449}
+    active: 1
+  - target: {fileID: 55878238}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0.5
+  stairOffset: 0.4
 --- !u!1 &2029173828
 GameObject:
   m_ObjectHideFlags: 0
@@ -17209,7 +18366,6 @@ GameObject:
   - component: {fileID: 2041958413}
   - component: {fileID: 2041958412}
   - component: {fileID: 2041958411}
-  - component: {fileID: 2041958415}
   m_Layer: 0
   m_Name: Cube (48)
   m_TagString: Untagged
@@ -17244,13 +18400,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 1
+  type: 0
   Event: 0
   distance_Check: 1.2
-  neighborHex:
-  - {fileID: 7221670}
-  - {fileID: 1284598758}
+  neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &2041958412
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17281,7 +18437,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
+  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -17310,31 +18466,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2041958409}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &2041958415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2041958409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  possiblePaths:
-  - target: {fileID: 7221670}
-    active: 1
-  - target: {fileID: 1284598758}
-    active: 1
-  previousBlock: {fileID: 0}
-  isStair: 0
-  movingGround: 0
-  isButton: 0
-  dontRotate: 0
-  visited: 0
-  walkPointOffset: 0
-  stairOffset: 0.4
 --- !u!1 &2048823351
 GameObject:
   m_ObjectHideFlags: 0
@@ -17599,6 +18730,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &2079942575
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17742,6 +18875,147 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2095866655}
   m_CullTransparentMesh: 0
+--- !u!1 &2119149090
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2119149091}
+  - component: {fileID: 2119149095}
+  - component: {fileID: 2119149094}
+  - component: {fileID: 2119149093}
+  - component: {fileID: 2119149092}
+  - component: {fileID: 2119149096}
+  m_Layer: 0
+  m_Name: Cube (290)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2119149091
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119149090}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4, y: 0, z: -3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6496860844886677559}
+  m_RootOrder: 53
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2119149092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119149090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63761754b8dbce5499e115529a61ab49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elementTest: {fileID: 1715079184}
+  type: 1
+  Event: 0
+  distance_Check: 1.2
+  neighborHex:
+  - {fileID: 1556873358}
+  - {fileID: 1735820780}
+  visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
+--- !u!65 &2119149093
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119149090}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &2119149094
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119149090}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &2119149095
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119149090}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2119149096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119149090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e643b67780ec5e4481b0004084f5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 1556873358}
+    active: 1
+  - target: {fileID: 1735820780}
+    active: 1
+  previousBlock: {fileID: 0}
+  isStair: 0
+  movingGround: 0
+  isButton: 0
+  dontRotate: 0
+  visited: 0
+  walkPointOffset: 0.5
+  stairOffset: 0.4
 --- !u!1 &2121163962
 GameObject:
   m_ObjectHideFlags: 0
@@ -17869,6 +19143,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &2121621327
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19272,10 +20548,15 @@ PrefabInstance:
       propertyPath: threeshold
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 808261058923036219, guid: 9d360146ea2cb4a44aa897a4aa05ac15,
+        type: 3}
+      propertyPath: rotationSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3440053450353302122, guid: 9d360146ea2cb4a44aa897a4aa05ac15,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0787
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3440053450353302122, guid: 9d360146ea2cb4a44aa897a4aa05ac15,
         type: 3}
@@ -19285,7 +20566,7 @@ PrefabInstance:
     - target: {fileID: 3440053450353302122, guid: 9d360146ea2cb4a44aa897a4aa05ac15,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3440053450353302122, guid: 9d360146ea2cb4a44aa897a4aa05ac15,
         type: 3}
@@ -24461,6 +25742,9 @@ Transform:
   - {fileID: 219043765}
   - {fileID: 1743581085}
   - {fileID: 959355953}
+  - {fileID: 2119149091}
+  - {fileID: 1735820780}
+  - {fileID: 759399133}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -13,7 +13,7 @@ public class InspectElement : MonoBehaviour
         City,
         Grass,
         CrossRoads,
-        Monument_Source,
+        Monument_Source
     }
 
     public enum Tyle_Evenement
@@ -23,7 +23,8 @@ public class InspectElement : MonoBehaviour
         //Concert,
         Monument,
         Chantier,
-        Restaurant
+        Restaurant,
+        Feux_Rouge
     }
 
     public Tyle_Type type;
@@ -33,4 +34,6 @@ public class InspectElement : MonoBehaviour
 
     public List<Transform> neighborHex;
     public bool visited;
+    public bool busy;
+    public IA_PathCar carInTheTile;
 }

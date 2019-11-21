@@ -39,13 +39,9 @@ public class PlayerController : MonoBehaviour
 
     private MapEditor_MainController controllerMat;
 
-    /// <summary>
-    /// bool slowdown;
-    /// public float speedSlowDown;
-    /// public float currentSpeed;
-    /// </summary>
-    /// 
     public GameManager manager;
+
+    public Vector3 direction;
 
     void Start()
     {
@@ -58,22 +54,36 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        direction = gameObject.transform.forward.normalized;
+        RayCastDown();
+
+
+        /*if (checkTrafic()){
+            //Get the car on the tile busy
+            if(finalPath[index + 1].GetComponent<InspectElement>().carInTheTile.transform.rotation.y != car.transform.rotation.y)
+            {
+                //Frontal Collision
+                Debug.Log("Frontal Collision");
+                car.GetComponent<Animator>().Play("AnimEvitement");
+                speed = Mathf.Lerp(speed, 0, Time.deltaTime);
+            }
+            else {
+                //I'm behind the car 
+                //Debug.Log("Follow");
+            }
+        }*/
+
         if (finalPath.Count != 0){
             FollowPath();
         }
-        //GET CURRENT CUBE (UNDER PLAYER)
-
-        RayCastDown();
-
+        //GET CURRENT CUBE (UNDER PLAYER) 
         if (currentCube.GetComponent<Walkable>().movingGround){
             transform.parent = currentCube.parent;
         }
         else{
             transform.parent = null;
         }
-
         // CLICK ON CUBE
-
         if (Input.GetMouseButtonDown(0)){
             Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition); RaycastHit mouseHit;
 
@@ -90,7 +100,7 @@ public class PlayerController : MonoBehaviour
                                 else if(element.GetComponent<MeshRenderer>().sharedMaterial != controllerMat.alreadyPassed && checkVar.Event == InspectElement.Tyle_Evenement.Restaurant)
                                     element.GetComponent<MeshRenderer>().material = controllerMat.restaurant_Mat;
                                 else if (element.GetComponent<MeshRenderer>().sharedMaterial != controllerMat.alreadyPassed && checkVar.Event == InspectElement.Tyle_Evenement.Chantier)
-                                    element.GetComponent<MeshRenderer>().material = controllerMat.chantier_Mat;
+                                    element.GetComponent<MeshRenderer>().material = controllerMat.chantier_Mat;                      
 
                                 if (checkVar.visited)
                                     element.GetComponent<MeshRenderer>().material = controllerMat.alreadyPassed;
@@ -114,7 +124,6 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
-
         if (mainTarget == currentCube)
         {
             //Pick the next destination
@@ -287,13 +296,6 @@ public class PlayerController : MonoBehaviour
         //TODO : Check offset variables
         //TODO : Replace 0.5f value by something working in all cases
         transform.position = Vector3.MoveTowards(transform.position, finalPath[index].transform.position + finalPath[index].transform.up * 0.5f, Time.deltaTime * speed);
-        //Handle Rotation
-        //Vector3 normal = planet.transform.position - finalPath[index].transform.position;
-        //Debug.DrawRay(finalPath[index].transform.position, -normal, Color.blue, 1);
-        //Rotate the car towards the next tile targeted, rotation depends of the normal of the tile
-        //var rotationTo = Quaternion.LookRotation(normal.normalized, car.transform.up)* (Quaternion.AngleAxis(offset, Vector3.right));
-        //We still got some artefacts with rotation
-        //car.transform.rotation = Quaternion.Lerp(car.transform.rotation,rotationTo,1f);
 
         Debug.DrawRay(finalPath[index].transform.position + finalPath[index].transform.up * 0.5f, finalPath[index].transform.up, Color.blue, 1);
 
@@ -323,6 +325,14 @@ public class PlayerController : MonoBehaviour
         if (Physics.Raycast(playerRay, out playerHit)){
             if (playerHit.transform.GetComponent<Walkable>() != null){
                 currentCube = playerHit.transform;
+                if (currentCube.GetComponent<InspectElement>().Event == InspectElement.Tyle_Evenement.Feux_Rouge)
+                {
+                    if (currentCube.GetComponent<FeuxRouge>().red)
+                        speed = 0;
+                    else
+                        speed = optimalSpeed;
+                }
+                    
 
                 playerHit.transform.GetComponent<MeshRenderer>().material = controllerMat.alreadyPassed;
 
@@ -336,13 +346,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmos()
-    {
-        /*Gizmos.color = Color.blue;
-        Ray ray = new Ray(transform.GetChild(0).position, -transform.up);
-        Gizmos.DrawRay(ray);*/
-    }
-
     public void setNew_Distination()
     {
         indicator.position = mainTarget.transform.GetComponent<Walkable>().GetWalkPoint();
@@ -353,5 +356,10 @@ public class PlayerController : MonoBehaviour
         s.Append(indicator.GetComponent<Renderer>().material.DOColor(Color.clear, .3f));
 
         FindPath(mainTarget);
+    }
+
+    public bool checkTrafic()
+    {
+        return (finalPath[index + 1].GetComponent<InspectElement>().busy);
     }
 }

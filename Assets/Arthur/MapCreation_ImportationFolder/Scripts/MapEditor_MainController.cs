@@ -20,6 +20,7 @@ public class MapEditor_MainController : MonoBehaviour
     public Material monument_Mat;
     public Material restaurant_Mat;
     public Material chantier_Mat;
+    public Material feux_Rouge_Mat;
 
     [Header("Mats Used by player")]
     public Material pathPlanned;

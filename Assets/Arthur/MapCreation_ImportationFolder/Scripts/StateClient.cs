@@ -24,17 +24,17 @@ public class StateClient : MonoBehaviour
 
     public Text percentageState;
 
-    [Header("Test Reboot Ideas")]
-    public Image feedBackEmotion;
+    //[Header("Test Reboot Ideas")]
+    /*public Image feedBackEmotion;
     public Sprite AngryFace;
     public Sprite HappyFace;
     public Sprite LoveFace;
     public Sprite WonderingFace;
-    public Sprite NeutralFace;
+    public Sprite NeutralFace;*/
 
-    [Header("PopUp Text")]
-    public GameObject floatingText;
-    public Canvas canvas;
+    //[Header("PopUp Text")]
+    /*public GameObject floatingText;
+    public Canvas canvas;*/
 
     // Start is called before the first frame update
     void Start()
@@ -85,7 +85,7 @@ public class StateClient : MonoBehaviour
 
             if (tempCube.visited){
                 //Debug.Log("already been here");
-                feedBackEmotion.sprite = WonderingFace;
+                //feedBackEmotion.sprite = WonderingFace;
                 currentDecrease = decreaseFactor_Impact;
                 ShowFloatingText(false);
             }
@@ -119,7 +119,7 @@ public class StateClient : MonoBehaviour
 
     void ShowFloatingText(bool value)
     {
-        if(floatingText != null)
+        /*if(floatingText != null)
         {
             var floattext = Instantiate(floatingText, canvas.transform.position, Quaternion.identity,canvas.transform);
             if (value){
@@ -133,7 +133,7 @@ public class StateClient : MonoBehaviour
                 tmp_Floatingtext.color = Color.red;
             }
             Destroy(floattext,0.75f);
-        }
+        }*/
     }
 
     public void CheckCondition_Hated(string condition)
@@ -144,7 +144,7 @@ public class StateClient : MonoBehaviour
             {
                 imageColorFeedback.color = Color.red;
                 //Debug.Log("I Hate it");
-                feedBackEmotion.sprite = AngryFace;
+                //feedBackEmotion.sprite = AngryFace;
                 if (stateEmotion - hatedImpact >= 0)
                     stateEmotion -= hatedImpact;
                 else
@@ -163,7 +163,7 @@ public class StateClient : MonoBehaviour
             if (element.ToString() == condition)
             {
                 imageColorFeedback.color = Color.green;
-                feedBackEmotion.sprite = HappyFace;
+                //feedBackEmotion.sprite = HappyFace;
                 //Debug.Log("I Like it");
                 if (stateEmotion + loveImpact <= 100)
                     stateEmotion += loveImpact;
@@ -176,7 +176,7 @@ public class StateClient : MonoBehaviour
         if (!found)
         {
             imageColorFeedback.color = Color.white;
-            feedBackEmotion.sprite = NeutralFace;
+            //feedBackEmotion.sprite = NeutralFace;
             //Debug.Log("I Don't Care");
         }
         found = false;

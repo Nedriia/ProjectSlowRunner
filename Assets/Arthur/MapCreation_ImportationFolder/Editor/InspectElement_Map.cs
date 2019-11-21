@@ -223,8 +223,10 @@ public class InspectElement_Map : Editor
                     }
                 }
 
-                for (int i = 0; i < map.elementTest.Roads_Position.Count; i++){
-                    for (int j = 0; j < map.elementTest.Roads_Position.Count; j++){
+                for (int i = 0; i < map.elementTest.Roads_Position.Count; i++)
+                {
+                    for (int j = 0; j < map.elementTest.Roads_Position.Count; j++)
+                    {
                         //TODO : Check if needed in Upgrade Case
                         /*if (map.elementTest.Roads_Position[i] != map.elementTest.Roads_Position[j]){
                             /*if (Vector3.Distance(map.elementTest.Roads_Position[i].transform.position, map.elementTest.Roads_Position[j].transform.position) < map.distance_Check)
@@ -239,8 +241,11 @@ public class InspectElement_Map : Editor
                     else if (map.elementTest.Roads_Position[i].GetComponent<InspectElement>().Event == InspectElement.Tyle_Evenement.Chantier){
                         map.elementTest.Roads_Position[i].GetComponent<MeshRenderer>().material = map.elementTest.chantier_Mat;
                     }
-                    else if(map.elementTest.Roads_Position[i].GetComponent<InspectElement>().Event == InspectElement.Tyle_Evenement.Monument){
+                    else if (map.elementTest.Roads_Position[i].GetComponent<InspectElement>().Event == InspectElement.Tyle_Evenement.Monument){
                         map.elementTest.Roads_Position[i].GetComponent<MeshRenderer>().material = map.elementTest.monument_Mat;
+                    }
+                    else if (map.elementTest.Roads_Position[i].GetComponent<InspectElement>().Event == InspectElement.Tyle_Evenement.Feux_Rouge){
+                        map.elementTest.Roads_Position[i].GetComponent<MeshRenderer>().material = map.elementTest.feux_Rouge_Mat;
                     }
                 }
             }

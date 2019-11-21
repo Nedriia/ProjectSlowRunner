@@ -173,6 +173,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &511227
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -280,7 +282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 1
+  type: 5
   Event: 1
   distance_Check: 1.2
   neighborHex:
@@ -297,6 +299,8 @@ MonoBehaviour:
   - {fileID: 1246403297}
   - {fileID: 199806250}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1704310
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -446,6 +450,8 @@ MonoBehaviour:
   - {fileID: 1744411909}
   - {fileID: 1205837512}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &5609031
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -582,6 +588,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &7221672
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -706,6 +714,8 @@ MonoBehaviour:
   - {fileID: 870554645}
   - {fileID: 495403083}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &8953742
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -855,6 +865,8 @@ MonoBehaviour:
   - {fileID: 225747111}
   - {fileID: 865840632}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &15480292
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1004,6 +1016,8 @@ MonoBehaviour:
   - {fileID: 2009191250}
   - {fileID: 471178079}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &21176443
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1153,6 +1167,8 @@ MonoBehaviour:
   - {fileID: 79205943}
   - {fileID: 968472414}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &24917177
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1342,7 +1358,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 1
+  type: 5
   Event: 1
   distance_Check: 1.2
   neighborHex:
@@ -1359,6 +1375,8 @@ MonoBehaviour:
   - {fileID: 1216832197}
   - {fileID: 314762608}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &35664568
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1552,6 +1570,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &36102293
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1762,6 +1782,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &41464480
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1873,6 +1895,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &43272669
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1997,6 +2021,8 @@ MonoBehaviour:
   - {fileID: 1151712784}
   - {fileID: 150694501}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &47553303
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2146,6 +2172,8 @@ MonoBehaviour:
   - {fileID: 762123621}
   - {fileID: 1433259154}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &54056007
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2282,6 +2310,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &55878240
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2526,6 +2556,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &62478636
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2637,6 +2669,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &64612300
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2748,6 +2782,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &66598118
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2971,6 +3007,8 @@ MonoBehaviour:
   - {fileID: 1886590964}
   - {fileID: 625188412}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &69684682
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3107,6 +3145,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &72185781
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3367,6 +3407,8 @@ MonoBehaviour:
   - {fileID: 100862129}
   - {fileID: 24917175}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &79205945
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3503,6 +3545,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &81820007
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3798,6 +3842,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &95824846
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3909,6 +3955,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &96392139
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4033,6 +4081,8 @@ MonoBehaviour:
   - {fileID: 337406240}
   - {fileID: 1412801338}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &98064788
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4165,7 +4215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 1
+  type: 5
   Event: 1
   distance_Check: 1.2
   neighborHex:
@@ -4182,6 +4232,8 @@ MonoBehaviour:
   - {fileID: 2023565110}
   - {fileID: 79205943}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &100862131
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4643,6 +4695,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &117481641
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4754,6 +4808,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &119171118
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4865,6 +4921,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &129807978
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4976,6 +5034,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &132423597
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5179,6 +5239,8 @@ MonoBehaviour:
   - {fileID: 1285038200}
   - {fileID: 499458929}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &137171898
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5327,6 +5389,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &141404436
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5438,6 +5502,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &145158270
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5740,6 +5806,8 @@ MonoBehaviour:
   - {fileID: 47553301}
   - {fileID: 1830868947}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &150694503
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5872,7 +5940,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 1
+  type: 5
   Event: 1
   distance_Check: 1.2
   neighborHex:
@@ -5889,6 +5957,8 @@ MonoBehaviour:
   - {fileID: 1206942929}
   - {fileID: 311963649}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &161802421
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6044,6 +6114,8 @@ MonoBehaviour:
   - {fileID: 233168763}
   - {fileID: 2009191250}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &164242423
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6182,6 +6254,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &173461271
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6289,7 +6363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 1
+  type: 5
   Event: 1
   distance_Check: 1.2
   neighborHex:
@@ -6306,6 +6380,8 @@ MonoBehaviour:
   - {fileID: 979282304}
   - {fileID: 1690680956}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &179475616
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6442,6 +6518,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &182749308
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6553,6 +6631,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &183613269
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6664,6 +6744,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &186796457
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6775,6 +6857,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &190539974
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6886,6 +6970,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &192418435
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6993,7 +7079,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 1
+  type: 5
   Event: 1
   distance_Check: 1.2
   neighborHex:
@@ -7010,6 +7096,8 @@ MonoBehaviour:
   - {fileID: 311963649}
   - {fileID: 418816411}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &194186077
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7146,6 +7234,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &196124749
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7253,7 +7343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 1
+  type: 5
   Event: 1
   distance_Check: 1.2
   neighborHex:
@@ -7270,6 +7360,8 @@ MonoBehaviour:
   - {fileID: 328247352}
   - {fileID: 1704308}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &199806252
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7481,6 +7573,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &202999286
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7605,6 +7699,8 @@ MonoBehaviour:
   - {fileID: 1073860587}
   - {fileID: 1122883090}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &204009568
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7842,6 +7938,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &217166935
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7953,6 +8051,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &217906972
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8064,6 +8164,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &219043767
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8188,6 +8290,8 @@ MonoBehaviour:
   - {fileID: 895671327}
   - {fileID: 807353512}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &219350769
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8330,6 +8434,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &222704630
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8437,7 +8543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 1
+  type: 5
   Event: 1
   distance_Check: 1.2
   neighborHex:
@@ -8454,6 +8560,8 @@ MonoBehaviour:
   - {fileID: 301808040}
   - {fileID: 930687405}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &225398344
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8603,6 +8711,8 @@ MonoBehaviour:
   - {fileID: 777362209}
   - {fileID: 15480290}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &225747113
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8752,6 +8862,8 @@ MonoBehaviour:
   - {fileID: 2034648696}
   - {fileID: 164242421}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &233168765
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8888,6 +9000,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &239403945
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9012,6 +9126,8 @@ MonoBehaviour:
   - {fileID: 1895322647}
   - {fileID: 709759611}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &247787551
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9319,6 +9435,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &261086855
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9430,6 +9548,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &266448602
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9560,6 +9680,8 @@ MonoBehaviour:
   - {fileID: 1662628719}
   - {fileID: 1205837512}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &274997541
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9844,6 +9966,8 @@ MonoBehaviour:
   - {fileID: 1777057428}
   - {fileID: 366230899}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &277870169
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9980,6 +10104,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &279784215
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10209,6 +10335,8 @@ MonoBehaviour:
   - {fileID: 599163772}
   - {fileID: 441029153}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &284916788
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10345,6 +10473,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &286475783
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10456,6 +10586,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &288383439
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10643,6 +10775,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &292860242
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10754,6 +10888,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &294359811
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10865,6 +11001,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &297263743
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10976,6 +11114,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &298678500
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11100,6 +11240,8 @@ MonoBehaviour:
   - {fileID: 1361827542}
   - {fileID: 1900225492}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &300478112
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11232,7 +11374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 1
+  type: 5
   Event: 1
   distance_Check: 1.2
   neighborHex:
@@ -11249,6 +11391,8 @@ MonoBehaviour:
   - {fileID: 1900225492}
   - {fileID: 225398342}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &301808042
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11385,6 +11529,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &303989637
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11496,6 +11642,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &306269672
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11660,7 +11808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 1
+  type: 5
   Event: 1
   distance_Check: 1.2
   neighborHex:
@@ -11677,6 +11825,8 @@ MonoBehaviour:
   - {fileID: 161802419}
   - {fileID: 194186075}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &311963651
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11813,6 +11963,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &314235497
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11937,6 +12089,8 @@ MonoBehaviour:
   - {fileID: 35664566}
   - {fileID: 1272703370}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &314762610
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12073,6 +12227,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &318920869
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12387,6 +12543,8 @@ MonoBehaviour:
   - {fileID: 2040869564}
   - {fileID: 274997539}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &322882708
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12580,6 +12738,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &324459381
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12691,6 +12851,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &324983489
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12802,6 +12964,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &325818341
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12909,7 +13073,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 1
+  type: 5
   Event: 1
   distance_Check: 1.2
   neighborHex:
@@ -12932,6 +13096,8 @@ MonoBehaviour:
   - {fileID: 1216832197}
   - {fileID: 199806250}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &328247354
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13070,6 +13236,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &332248494
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13181,6 +13349,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &336537711
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13292,6 +13462,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &336879900
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13422,6 +13594,8 @@ MonoBehaviour:
   - {fileID: 98064786}
   - {fileID: 2096724967}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &337406242
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13799,6 +13973,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &362045908
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13906,7 +14082,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 1
+  type: 5
   Event: 1
   distance_Check: 1.2
   neighborHex:
@@ -13923,6 +14099,8 @@ MonoBehaviour:
   - {fileID: 1216832197}
   - {fileID: 1235381627}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &364589348
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14059,6 +14237,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &365157857
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14170,6 +14350,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &365825451
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14300,6 +14482,8 @@ MonoBehaviour:
   - {fileID: 1329995261}
   - {fileID: 1578789651}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &366230901
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14438,6 +14622,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &370360908
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14545,7 +14731,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 1
+  type: 5
   Event: 1
   distance_Check: 1.2
   neighborHex:
@@ -14562,6 +14748,8 @@ MonoBehaviour:
   - {fileID: 1314186016}
   - {fileID: 1878017187}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &373868190
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14698,6 +14886,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &377591855
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14822,6 +15012,8 @@ MonoBehaviour:
   - {fileID: 1149098578}
   - {fileID: 857514890}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &381409173
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15063,6 +15255,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &389790867
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15280,6 +15474,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &395816450
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15391,6 +15587,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &396581386
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15498,7 +15696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 1
+  type: 5
   Event: 1
   distance_Check: 1.2
   neighborHex:
@@ -15515,6 +15713,8 @@ MonoBehaviour:
   - {fileID: 500349584}
   - {fileID: 1149098578}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &396722469
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15730,6 +15930,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &404722225
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15841,6 +16043,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &411225076
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16022,6 +16226,8 @@ MonoBehaviour:
   - {fileID: 194186075}
   - {fileID: 822099125}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &418816413
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16158,6 +16364,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &420364146
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16440,6 +16648,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &426620162
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16608,6 +16818,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &432342256
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16732,6 +16944,8 @@ MonoBehaviour:
   - {fileID: 836189215}
   - {fileID: 1405722452}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &433970734
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16955,7 +17169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 1
+  type: 5
   Event: 1
   distance_Check: 1.2
   neighborHex:
@@ -16972,6 +17186,8 @@ MonoBehaviour:
   - {fileID: 284916786}
   - {fileID: 328247352}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &441029155
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17187,6 +17403,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &452070399
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17298,6 +17516,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &454588808
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17422,6 +17642,8 @@ MonoBehaviour:
   - {fileID: 1708517638}
   - {fileID: 746042100}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &461775439
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17650,6 +17872,8 @@ MonoBehaviour:
   - {fileID: 21176441}
   - {fileID: 1744411909}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &471178081
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17799,6 +18023,8 @@ MonoBehaviour:
   - {fileID: 1578789651}
   - {fileID: 1838521697}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &471239756
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17992,6 +18218,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &472784298
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18182,6 +18410,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &479113405
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18299,6 +18529,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &493340888
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18423,6 +18655,8 @@ MonoBehaviour:
   - {fileID: 1838521697}
   - {fileID: 862192228}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &494189713
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18578,6 +18812,8 @@ MonoBehaviour:
   - {fileID: 8953740}
   - {fileID: 1930566875}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &495403085
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18727,6 +18963,8 @@ MonoBehaviour:
   - {fileID: 1037399469}
   - {fileID: 602495997}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &497579277
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18876,6 +19114,8 @@ MonoBehaviour:
   - {fileID: 1746316543}
   - {fileID: 2000711151}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &498676361
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19025,6 +19265,8 @@ MonoBehaviour:
   - {fileID: 137171896}
   - {fileID: 855633774}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &499458931
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19157,7 +19399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 1
+  type: 5
   Event: 1
   distance_Check: 1.2
   neighborHex:
@@ -19174,6 +19416,8 @@ MonoBehaviour:
   - {fileID: 2096724967}
   - {fileID: 396722467}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &500349586
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19402,6 +19646,8 @@ MonoBehaviour:
   - {fileID: 1485765172}
   - {fileID: 1466442490}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &504127725
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19538,6 +19784,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &505493530
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19706,6 +19954,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &508253677
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19931,6 +20181,8 @@ MonoBehaviour:
   - {fileID: 1662628719}
   - {fileID: 1532844605}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &513657722
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20067,6 +20319,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &516481942
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20178,6 +20432,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &520933530
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20302,6 +20558,8 @@ MonoBehaviour:
   - {fileID: 1000579963}
   - {fileID: 783460438}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &532757940
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20438,6 +20696,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &536624473
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20568,6 +20828,8 @@ MonoBehaviour:
   - {fileID: 1151712784}
   - {fileID: 1119176302}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &537965482
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20776,6 +21038,8 @@ MonoBehaviour:
   - {fileID: 1137226623}
   - {fileID: 1531911005}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &549645129
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20912,6 +21176,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &554229021
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21104,6 +21370,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &559964110
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21272,6 +21540,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &568776396
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21383,6 +21653,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &569329627
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21500,6 +21772,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &576197365
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21611,6 +21885,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &582478596
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22172,6 +22448,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &598424024
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22302,6 +22580,8 @@ MonoBehaviour:
   - {fileID: 284916786}
   - {fileID: 855633774}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &599163774
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22453,6 +22733,8 @@ MonoBehaviour:
   - {fileID: 497579275}
   - {fileID: 1485765172}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &602495999
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22589,6 +22871,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &602648954
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22713,6 +22997,8 @@ MonoBehaviour:
   - {fileID: 1027953780}
   - {fileID: 1343657726}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &607644304
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22849,6 +23135,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &616559471
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22960,6 +23248,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &620040430
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23217,6 +23507,8 @@ MonoBehaviour:
   - {fileID: 69684680}
   - {fileID: 1347433774}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &625188414
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23392,6 +23684,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &627165476
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23516,6 +23810,8 @@ MonoBehaviour:
   - {fileID: 796232709}
   - {fileID: 895671327}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &631442585
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23810,6 +24106,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &632609841
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23921,6 +24219,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &632908590
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24032,6 +24332,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &637849217
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24143,6 +24445,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &642270591
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24374,6 +24678,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &650041154
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24485,6 +24791,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &650765467
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24596,6 +24904,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &667930550
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24720,6 +25030,8 @@ MonoBehaviour:
   - {fileID: 2040869564}
   - {fileID: 678728546}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &675781579
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24869,6 +25181,8 @@ MonoBehaviour:
   - {fileID: 675781577}
   - {fileID: 1061629333}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &678728548
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25005,6 +25319,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &680726488
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25129,6 +25445,8 @@ MonoBehaviour:
   - {fileID: 1038833252}
   - {fileID: 796232709}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &693959825
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25265,6 +25583,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &695141683
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25324,6 +25644,50 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 695141680}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &698846514 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1393830603733914, guid: 4791f8b71d9c3564cb8eef739ceb6c08,
+    type: 3}
+  m_PrefabInstance: {fileID: 1098328596}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &698846515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698846514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51287cd175ec3724c83f40dbfde9d60c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentCube: {fileID: 0}
+  mainTarget: {fileID: 0}
+  planet: {fileID: 6496860844886677559}
+  car: {fileID: 698846518}
+  rotationSpeed: 5
+  path_Waypoints:
+  - {fileID: 532757938}
+  - {fileID: 1528161142}
+  - {fileID: 5609029}
+  - {fileID: 2034648696}
+  - {fileID: 2096724967}
+  - {fileID: 328247352}
+  - {fileID: 1343657726}
+  finalPath: []
+  speed: 1
+  index: 0
+  indexTarget: 0
+  timer: 0
+  waited: 0
+  direction: {x: 0, y: 0, z: 0}
+--- !u!4 &698846518 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4017315767301700, guid: 4791f8b71d9c3564cb8eef739ceb6c08,
+    type: 3}
+  m_PrefabInstance: {fileID: 1098328596}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &700391951
 GameObject:
   m_ObjectHideFlags: 0
@@ -25376,6 +25740,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &700391954
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25487,6 +25853,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &700437164
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25641,6 +26009,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &704993357
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25752,6 +26122,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &705033225
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25876,6 +26248,8 @@ MonoBehaviour:
   - {fileID: 2089597381}
   - {fileID: 247787549}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &709759613
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26025,6 +26399,8 @@ MonoBehaviour:
   - {fileID: 752484053}
   - {fileID: 1726640915}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &713563952
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26253,6 +26629,8 @@ MonoBehaviour:
   - {fileID: 2016751560}
   - {fileID: 886573190}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &715894445
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26389,6 +26767,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &717237630
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26614,6 +26994,8 @@ MonoBehaviour:
   - {fileID: 886573190}
   - {fileID: 1000579963}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &728752768
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26750,6 +27132,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &729579808
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26903,6 +27287,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &733970104
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27014,6 +27400,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &737451301
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27258,6 +27646,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &741384849
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27382,6 +27772,8 @@ MonoBehaviour:
   - {fileID: 461775437}
   - {fileID: 1760749886}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &746042102
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27518,6 +27910,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &750520536
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27642,6 +28036,8 @@ MonoBehaviour:
   - {fileID: 797439651}
   - {fileID: 1283969656}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &752264023
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27791,6 +28187,8 @@ MonoBehaviour:
   - {fileID: 713563950}
   - {fileID: 2089597381}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &752484055
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27984,6 +28382,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &753627229
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28095,6 +28495,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &754435339
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28206,6 +28608,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &756121248
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28415,6 +28819,8 @@ MonoBehaviour:
   - {fileID: 1127935494}
   - {fileID: 1038833252}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &760568579
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28566,6 +28972,8 @@ MonoBehaviour:
   - {fileID: 1708004266}
   - {fileID: 54056005}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &762123623
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28702,6 +29110,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &763102165
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28826,6 +29236,8 @@ MonoBehaviour:
   - {fileID: 1716367107}
   - {fileID: 225747111}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &777362211
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28962,6 +29374,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &780047148
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29086,6 +29500,8 @@ MonoBehaviour:
   - {fileID: 1314186016}
   - {fileID: 1234076707}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &781549479
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29235,6 +29651,8 @@ MonoBehaviour:
   - {fileID: 532757938}
   - {fileID: 963991504}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &783460440
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29371,6 +29789,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &790411230
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29482,6 +29902,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &793209043
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29593,6 +30015,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &794426715
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29717,6 +30141,8 @@ MonoBehaviour:
   - {fileID: 693959823}
   - {fileID: 631442583}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &796232711
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29866,6 +30292,8 @@ MonoBehaviour:
   - {fileID: 1986549082}
   - {fileID: 752264021}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &797439653
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30002,6 +30430,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &798988096
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30132,6 +30562,8 @@ MonoBehaviour:
   - {fileID: 219350767}
   - {fileID: 1986549082}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &807353514
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30343,6 +30775,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &807788433
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30467,6 +30901,8 @@ MonoBehaviour:
   - {fileID: 1412801338}
   - {fileID: 1409740498}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &820880813
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30580,7 +31016,7 @@ Transform:
   m_Children:
   - {fileID: 394337340}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &822099124
 GameObject:
@@ -30647,6 +31083,8 @@ MonoBehaviour:
   - {fileID: 418816411}
   - {fileID: 1459390620}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &822099127
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30871,6 +31309,8 @@ MonoBehaviour:
   - {fileID: 1890965286}
   - {fileID: 433970732}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &836189217
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31091,6 +31531,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &844869582
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31202,6 +31644,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &852872656
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31427,6 +31871,8 @@ MonoBehaviour:
   - {fileID: 599163772}
   - {fileID: 499458929}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &855633776
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31576,6 +32022,8 @@ MonoBehaviour:
   - {fileID: 2085531628}
   - {fileID: 381409171}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &857514892
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31725,6 +32173,8 @@ MonoBehaviour:
   - {fileID: 494189711}
   - {fileID: 2126812941}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &862192230
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31861,6 +32311,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &862281999
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31991,6 +32443,8 @@ MonoBehaviour:
   - {fileID: 1726640915}
   - {fileID: 1599324238}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &865840634
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32142,6 +32596,8 @@ MonoBehaviour:
   - {fileID: 1846316368}
   - {fileID: 8953740}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &870554647
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32278,6 +32734,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &870830934
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32389,6 +32847,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &886482986
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32513,6 +32973,8 @@ MonoBehaviour:
   - {fileID: 715894443}
   - {fileID: 728752766}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &886573192
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32655,6 +33117,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &895141846
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32779,6 +33243,8 @@ MonoBehaviour:
   - {fileID: 631442583}
   - {fileID: 219350767}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &895671329
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33259,6 +33725,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &922288028
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33370,6 +33838,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &924287289
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33582,7 +34052,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 1
+  type: 5
   Event: 1
   distance_Check: 1.2
   neighborHex:
@@ -33599,6 +34069,8 @@ MonoBehaviour:
   - {fileID: 225398342}
   - {fileID: 1847508550}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &930687407
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33735,6 +34207,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &932271477
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33909,6 +34383,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &935015740
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34020,6 +34496,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &941454580
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34208,6 +34686,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &955371421
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34332,6 +34812,8 @@ MonoBehaviour:
   - {fileID: 1119176302}
   - {fileID: 1324545941}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &959355955
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34481,6 +34963,8 @@ MonoBehaviour:
   - {fileID: 1777057428}
   - {fileID: 783460438}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &963991506
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34630,6 +35114,8 @@ MonoBehaviour:
   - {fileID: 1633135415}
   - {fileID: 24917175}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &968472416
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34873,6 +35359,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &979240113
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34997,6 +35485,8 @@ MonoBehaviour:
   - {fileID: 1076399575}
   - {fileID: 179475614}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &979282306
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35133,6 +35623,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &983693795
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35257,6 +35749,8 @@ MonoBehaviour:
   - {fileID: 1466442490}
   - {fileID: 337406240}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &986758910
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35393,6 +35887,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &994110547
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35523,6 +36019,8 @@ MonoBehaviour:
   - {fileID: 1839917073}
   - {fileID: 2016751560}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &996123622
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35775,6 +36273,8 @@ MonoBehaviour:
   - {fileID: 728752766}
   - {fileID: 532757938}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1000579965
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36012,6 +36512,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1003435687
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36169,6 +36671,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1014515646
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36293,6 +36797,8 @@ MonoBehaviour:
   - {fileID: 1930566875}
   - {fileID: 2087177044}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1027319754
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36442,6 +36948,8 @@ MonoBehaviour:
   - {fileID: 1459390620}
   - {fileID: 607644302}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1027953782
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36578,6 +37086,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1028372314
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36702,6 +37212,8 @@ MonoBehaviour:
   - {fileID: 1127781885}
   - {fileID: 497579275}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1037399471
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36851,6 +37363,8 @@ MonoBehaviour:
   - {fileID: 760568577}
   - {fileID: 693959823}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1038833254
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36993,6 +37507,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1044788178
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37104,6 +37620,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1048677972
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37215,6 +37733,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1056025812
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37339,6 +37859,8 @@ MonoBehaviour:
   - {fileID: 678728546}
   - {fileID: 1528161142}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1061629335
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37478,7 +38000,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
   type: 1
-  Event: 0
+  Event: 3
   distance_Check: 1.2
   neighborHex:
   - {fileID: 2083382823}
@@ -37494,6 +38016,8 @@ MonoBehaviour:
   - {fileID: 2083382823}
   - {fileID: 204009566}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1073860589
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37643,6 +38167,8 @@ MonoBehaviour:
   - {fileID: 2126812941}
   - {fileID: 979282304}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1076399577
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37779,6 +38305,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1076869096
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37890,6 +38418,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1077368846
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38001,6 +38531,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1087250154
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38112,6 +38644,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1093924031
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38177,6 +38711,75 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 934046566}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1098328596
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1393830603733914, guid: 4791f8b71d9c3564cb8eef739ceb6c08, type: 3}
+      propertyPath: m_Name
+      value: SM_Veh_SchoolBus_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017315767301700, guid: 4791f8b71d9c3564cb8eef739ceb6c08, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017315767301700, guid: 4791f8b71d9c3564cb8eef739ceb6c08, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017315767301700, guid: 4791f8b71d9c3564cb8eef739ceb6c08, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017315767301700, guid: 4791f8b71d9c3564cb8eef739ceb6c08, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017315767301700, guid: 4791f8b71d9c3564cb8eef739ceb6c08, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017315767301700, guid: 4791f8b71d9c3564cb8eef739ceb6c08, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017315767301700, guid: 4791f8b71d9c3564cb8eef739ceb6c08, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017315767301700, guid: 4791f8b71d9c3564cb8eef739ceb6c08, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017315767301700, guid: 4791f8b71d9c3564cb8eef739ceb6c08, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017315767301700, guid: 4791f8b71d9c3564cb8eef739ceb6c08, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017315767301700, guid: 4791f8b71d9c3564cb8eef739ceb6c08, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017315767301700, guid: 4791f8b71d9c3564cb8eef739ceb6c08, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017315767301700, guid: 4791f8b71d9c3564cb8eef739ceb6c08, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017315767301700, guid: 4791f8b71d9c3564cb8eef739ceb6c08, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4791f8b71d9c3564cb8eef739ceb6c08, type: 3}
 --- !u!1 &1101917802
 GameObject:
   m_ObjectHideFlags: 0
@@ -38225,7 +38828,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 1
+  type: 5
   Event: 1
   distance_Check: 1.2
   neighborHex:
@@ -38242,6 +38845,8 @@ MonoBehaviour:
   - {fileID: 1690680956}
   - {fileID: 1122716849}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1101917805
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38457,6 +39062,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1102719421
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38568,6 +39175,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1109144174
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38679,6 +39288,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1115932047
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38888,6 +39499,8 @@ MonoBehaviour:
   - {fileID: 537965480}
   - {fileID: 959355953}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1119176304
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39037,6 +39650,8 @@ MonoBehaviour:
   - {fileID: 1101917803}
   - {fileID: 760568577}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1122716851
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39186,6 +39801,8 @@ MonoBehaviour:
   - {fileID: 204009566}
   - {fileID: 1746316543}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1122883092
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39322,6 +39939,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1123253607
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39433,6 +40052,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1125620633
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39550,6 +40171,8 @@ MonoBehaviour:
   - {fileID: 1626245347}
   - {fileID: 1037399469}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1127781887
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39699,6 +40322,8 @@ MonoBehaviour:
   - {fileID: 760568577}
   - {fileID: 1605606564}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1127935496
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39835,6 +40460,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1128127282
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39946,6 +40573,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1129011648
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40057,6 +40686,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1130555970
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40304,6 +40935,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1132604608
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40428,6 +41061,8 @@ MonoBehaviour:
   - {fileID: 549645127}
   - {fileID: 1633135415}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1137226625
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40636,6 +41271,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1144089697
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40760,6 +41397,8 @@ MonoBehaviour:
   - {fileID: 1343657726}
   - {fileID: 1200310981}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1148898690
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40915,6 +41554,8 @@ MonoBehaviour:
   - {fileID: 2023565110}
   - {fileID: 381409171}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1149098580
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41053,6 +41694,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1151242391
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41177,6 +41820,8 @@ MonoBehaviour:
   - {fileID: 537965480}
   - {fileID: 47553301}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1151712786
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41313,6 +41958,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1163772487
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41424,6 +42071,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1164327205
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41731,6 +42380,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1169441175
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41842,6 +42493,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1169631869
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42023,6 +42676,8 @@ MonoBehaviour:
   - {fileID: 1618542685}
   - {fileID: 537965480}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1186557110
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42159,6 +42814,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1191037003
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42283,6 +42940,8 @@ MonoBehaviour:
   - {fileID: 1148898688}
   - {fileID: 1246403297}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1200310983
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42418,6 +43077,8 @@ MonoBehaviour:
   - {fileID: 274997539}
   - {fileID: 5609029}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1205837509
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42564,7 +43225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 1
+  type: 5
   Event: 1
   distance_Check: 1.2
   neighborHex:
@@ -42581,6 +43242,8 @@ MonoBehaviour:
   - {fileID: 1847508550}
   - {fileID: 161802419}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1206942931
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42719,7 +43382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 1
+  type: 5
   Event: 1
   distance_Check: 1.2
   neighborHex:
@@ -42742,6 +43405,8 @@ MonoBehaviour:
   - {fileID: 35664566}
   - {fileID: 364589346}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1216832199
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42937,6 +43602,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1222909128
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43142,6 +43809,8 @@ MonoBehaviour:
   - {fileID: 1708517638}
   - {fileID: 2018492523}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1225502682
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43385,6 +44054,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1233179072
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43509,6 +44180,8 @@ MonoBehaviour:
   - {fileID: 781549477}
   - {fileID: 1285038200}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1234076709
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43658,6 +44331,8 @@ MonoBehaviour:
   - {fileID: 1681842028}
   - {fileID: 364589346}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1235381629
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43794,6 +44469,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1235675863
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43918,6 +44595,8 @@ MonoBehaviour:
   - {fileID: 2034648696}
   - {fileID: 1371977822}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1243896034
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44067,6 +44746,8 @@ MonoBehaviour:
   - {fileID: 1200310981}
   - {fileID: 1704308}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1246403299
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44282,6 +44963,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1252150254
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44393,6 +45076,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1253989155
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44504,6 +45189,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1254890079
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44694,6 +45381,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1265017222
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44951,6 +45640,8 @@ MonoBehaviour:
   - {fileID: 314762608}
   - {fileID: 1777057428}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1272703372
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45206,6 +45897,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1276069694
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45422,6 +46115,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1280012560
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45545,7 +46240,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1283969655
 GameObject:
@@ -45618,6 +46313,8 @@ MonoBehaviour:
   - {fileID: 1890965286}
   - {fileID: 1681842028}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1283969658
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45769,6 +46466,8 @@ MonoBehaviour:
   - {fileID: 1347433774}
   - {fileID: 1225502680}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1284490523
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45905,6 +46604,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1284598760
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46029,6 +46730,8 @@ MonoBehaviour:
   - {fileID: 1234076707}
   - {fileID: 137171896}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1285038202
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46244,6 +46947,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1291007964
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46355,6 +47060,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1295966164
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46769,6 +47476,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1313854825
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46876,7 +47585,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 1
+  type: 5
   Event: 1
   distance_Check: 1.2
   neighborHex:
@@ -46905,6 +47614,8 @@ MonoBehaviour:
   - {fileID: 1933783537}
   - {fileID: 373868188}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1314186018
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47045,6 +47756,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1322120819
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47156,6 +47869,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1322148290
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47280,6 +47995,8 @@ MonoBehaviour:
   - {fileID: 959355953}
   - {fileID: 1708004266}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1324545943
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47473,6 +48190,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1325039266
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47584,6 +48303,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1326053597
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47695,6 +48416,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1326796124
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47819,6 +48542,8 @@ MonoBehaviour:
   - {fileID: 366230899}
   - {fileID: 2087177044}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1329995263
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48078,7 +48803,7 @@ RectTransform:
   - {fileID: 1471578484}
   - {fileID: 807758662}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -48137,6 +48862,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1334574798
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48261,6 +48988,8 @@ MonoBehaviour:
   - {fileID: 1878017187}
   - {fileID: 1495487860}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1336237459
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48397,6 +49126,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1342910120
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48606,6 +49337,8 @@ MonoBehaviour:
   - {fileID: 1148898688}
   - {fileID: 1839917073}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1343657728
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48744,6 +49477,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1344984276
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48868,6 +49603,8 @@ MonoBehaviour:
   - {fileID: 625188412}
   - {fileID: 1284490521}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1347433776
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49017,6 +49754,8 @@ MonoBehaviour:
   - {fileID: 1626245347}
   - {fileID: 300478110}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1361827544
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49166,6 +49905,8 @@ MonoBehaviour:
   - {fileID: 1243896032}
   - {fileID: 1649843247}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1371977824
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49302,6 +50043,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1373522905
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49413,6 +50156,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1375381941
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49524,6 +50269,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1388481789
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49635,6 +50382,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1391613711
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49836,6 +50585,8 @@ MonoBehaviour:
   - {fileID: 433970732}
   - {fileID: 1885068469}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1405722454
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50024,6 +50775,8 @@ MonoBehaviour:
   - {fileID: 1662628719}
   - {fileID: 820880811}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1409740500
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50173,6 +50926,8 @@ MonoBehaviour:
   - {fileID: 98064786}
   - {fileID: 820880811}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1412801340
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50322,6 +51077,8 @@ MonoBehaviour:
   - {fileID: 1495487860}
   - {fileID: 1475972852}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1413087817
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50458,6 +51215,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1414924793
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50569,6 +51328,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1415067415
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50680,6 +51441,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1415432247
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50791,6 +51554,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1416269545
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50902,6 +51667,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1428108363
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51105,6 +51872,8 @@ MonoBehaviour:
   - {fileID: 54056005}
   - {fileID: 1886590964}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1433259156
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51241,6 +52010,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1435515086
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51352,6 +52123,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1437551249
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51463,6 +52236,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1439015588
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51587,6 +52362,8 @@ MonoBehaviour:
   - {fileID: 2018492523}
   - {fileID: 996123620}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1443738876
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51766,7 +52543,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1451502814
 GameObject:
@@ -51820,6 +52597,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1451502817
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -52077,6 +52856,8 @@ MonoBehaviour:
   - {fileID: 822099125}
   - {fileID: 1027953780}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1459390622
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -52213,6 +52994,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1459494027
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -52337,6 +53120,8 @@ MonoBehaviour:
   - {fileID: 1532844605}
   - {fileID: 1626245347}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1460147436
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -52473,6 +53258,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1462822580
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -52698,6 +53485,8 @@ MonoBehaviour:
   - {fileID: 504127723}
   - {fileID: 986758908}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1466442492
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -52840,6 +53629,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1471355339
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -53043,6 +53834,8 @@ MonoBehaviour:
   - {fileID: 1413087815}
   - {fileID: 164242421}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1475972854
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -53179,6 +53972,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1480575880
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -53290,6 +54085,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1481194702
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -53420,6 +54217,8 @@ MonoBehaviour:
   - {fileID: 504127723}
   - {fileID: 2083382823}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1485765174
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -53632,6 +54431,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1489998504
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -53756,6 +54557,8 @@ MonoBehaviour:
   - {fileID: 1336237457}
   - {fileID: 1413087815}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1495487862
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -53892,6 +54695,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1501584452
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -54003,6 +54808,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1515174298
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -54418,6 +55225,8 @@ MonoBehaviour:
   - {fileID: 1061629333}
   - {fileID: 599163772}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1528161144
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -54554,6 +55363,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1531716252
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -54678,6 +55489,8 @@ MonoBehaviour:
   - {fileID: 549645127}
   - {fileID: 2045567468}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1531911007
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -54827,6 +55640,8 @@ MonoBehaviour:
   - {fileID: 513657720}
   - {fileID: 1460147434}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1532844607
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -54963,6 +55778,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1551760967
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -55207,6 +56024,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1556873360
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -55324,6 +56143,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1576556535
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -55435,6 +56256,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1576944716
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -55559,6 +56382,8 @@ MonoBehaviour:
   - {fileID: 366230899}
   - {fileID: 471239754}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1578789653
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -55695,6 +56520,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1579195517
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -55806,6 +56633,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1581775005
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -55917,6 +56746,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1583952215
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -56133,6 +56964,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1587425362
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -56257,6 +57090,8 @@ MonoBehaviour:
   - {fileID: 865840632}
   - {fileID: 1933783537}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1599324240
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -56393,6 +57228,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1604113377
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -56517,6 +57354,8 @@ MonoBehaviour:
   - {fileID: 1127935494}
   - {fileID: 1716367107}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1605606566
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -56653,6 +57492,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1609040245
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -56764,6 +57605,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1613986988
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -56888,6 +57731,8 @@ MonoBehaviour:
   - {fileID: 2000711151}
   - {fileID: 1186557108}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1618542687
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -57099,6 +57944,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1623664210
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -57289,6 +58136,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1625377224
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -57425,6 +58274,8 @@ MonoBehaviour:
   - {fileID: 1830868947}
   - {fileID: 1361827542}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1626245349
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -57662,6 +58513,8 @@ MonoBehaviour:
   - {fileID: 968472414}
   - {fileID: 1137226623}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1633135417
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -57877,6 +58730,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1641500292
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -58077,6 +58932,8 @@ MonoBehaviour:
   - {fileID: 1371977822}
   - {fileID: 2085531628}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1649843249
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -58288,6 +59145,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1660379838
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -58418,6 +59277,8 @@ MonoBehaviour:
   - {fileID: 513657720}
   - {fileID: 1409740498}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1662628721
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -58556,6 +59417,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1669511472
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -58879,6 +59742,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1677761862
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -59003,6 +59868,8 @@ MonoBehaviour:
   - {fileID: 1283969656}
   - {fileID: 1235381627}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1681842030
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -59139,6 +60006,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1682739245
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -59256,6 +60125,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1690107734
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -59363,7 +60234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 1
+  type: 5
   Event: 1
   distance_Check: 1.2
   neighborHex:
@@ -59380,6 +60251,8 @@ MonoBehaviour:
   - {fileID: 179475614}
   - {fileID: 1101917803}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1690680958
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -59666,6 +60539,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1704175270
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -59790,6 +60665,8 @@ MonoBehaviour:
   - {fileID: 1324545941}
   - {fileID: 762123621}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1708004268
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -59939,6 +60816,8 @@ MonoBehaviour:
   - {fileID: 1225502680}
   - {fileID: 461775437}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1708517640
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -60075,6 +60954,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1710574299
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -60192,9 +61073,9 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 40
+  field of view: 90
   orthographic: 0
-  orthographic size: 5
+  orthographic size: 13.76
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -60217,14 +61098,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1715079179}
-  m_LocalRotation: {x: 0.37194782, y: -0, z: -0, w: 0.9282537}
-  m_LocalPosition: {x: -0, y: 7.5, z: -8.5}
+  m_LocalRotation: {x: 0.60876137, y: 0, z: 0, w: 0.7933534}
+  m_LocalPosition: {x: -0.5, y: 14, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 503583647823688829}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 43.672, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 75, y: 0, z: 0}
 --- !u!114 &1715079183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60232,7 +61113,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1715079179}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5dc80663dd4ec5e49a1be1a98d07e312, type: 3}
   m_Name: 
@@ -60254,57 +61135,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test:
-  - {fileID: 1205837508}
-  - {fileID: 777362210}
-  - {fileID: 1578789652}
-  - {fileID: 511226}
-  - {fileID: 1746316544}
-  - {fileID: 1283969657}
-  - {fileID: 1708517639}
-  - {fileID: 498676360}
-  - {fileID: 996123621}
-  - {fileID: 1662628720}
-  - {fileID: 274997540}
-  - {fileID: 855633775}
-  - {fileID: 499458930}
-  - {fileID: 137171897}
-  - {fileID: 1148898689}
-  - {fileID: 607644303}
-  - {fileID: 1122883091}
-  - {fileID: 1475972853}
-  - {fileID: 164242422}
-  - {fileID: 1329995262}
-  - {fileID: 366230900}
-  - {fileID: 277870168}
-  - {fileID: 1127781886}
-  - {fileID: 1037399470}
-  - {fileID: 1626245348}
-  - {fileID: 2023565111}
-  - {fileID: 1149098579}
-  - {fileID: 1761906696}
-  - {fileID: 807353513}
-  - {fileID: 2016751561}
-  - {fileID: 2087177045}
-  - {fileID: 599163773}
-  - {fileID: 21176442}
-  - {fileID: 328247353}
-  - {fileID: 199806251}
-  - {fileID: 1704309}
-  - {fileID: 1314186017}
-  - {fileID: 373868189}
-  - {fileID: 1101917804}
-  - {fileID: 179475615}
-  - {fileID: 500349585}
-  - {fileID: 396722468}
-  - {fileID: 100862130}
-  - {fileID: 301808041}
-  - {fileID: 225398343}
-  - {fileID: 161802420}
-  - {fileID: 1641500291}
-  - {fileID: 471239755}
-  - {fileID: 1838521698}
-  - {fileID: 494189712}
-  - {fileID: 857514891}
+  - {fileID: 1073860588}
+  - {fileID: 1942056623}
+  - {fileID: 675781578}
+  - {fileID: 1760749887}
+  - {fileID: 461775438}
+  - {fileID: 1225502681}
   isoSphere: {fileID: 6496860844886677559}
   Roads_Position:
   - {fileID: 2040869564}
@@ -60509,7 +61345,32 @@ MonoBehaviour:
   - {fileID: 1744411909}
   - {fileID: 5609029}
   - {fileID: 1205837512}
-  Monuments_Position: []
+  Monuments_Position:
+  - {fileID: 930687405}
+  - {fileID: 225398342}
+  - {fileID: 301808040}
+  - {fileID: 1847508550}
+  - {fileID: 1206942929}
+  - {fileID: 161802419}
+  - {fileID: 311963649}
+  - {fileID: 194186075}
+  - {fileID: 373868188}
+  - {fileID: 1933783537}
+  - {fileID: 1314186016}
+  - {fileID: 441029153}
+  - {fileID: 100862129}
+  - {fileID: 2023565110}
+  - {fileID: 396722467}
+  - {fileID: 500349584}
+  - {fileID: 1216832197}
+  - {fileID: 364589346}
+  - {fileID: 328247352}
+  - {fileID: 199806250}
+  - {fileID: 1704308}
+  - {fileID: 35664566}
+  - {fileID: 1101917803}
+  - {fileID: 1690680956}
+  - {fileID: 179475614}
   city: {fileID: 2100000, guid: fd95d3916d125c142b491881c0ad93e4, type: 2}
   road: {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   grass: {fileID: 2100000, guid: 34c05f7b82dbc8349b7dab9b37fbee90, type: 2}
@@ -60520,6 +61381,7 @@ MonoBehaviour:
   monument_Mat: {fileID: 2100000, guid: d23bec9e3931ee04c8894565359624e4, type: 2}
   restaurant_Mat: {fileID: 2100000, guid: ce10507030eb2c142878473c3813959f, type: 2}
   chantier_Mat: {fileID: 2100000, guid: 5e6bb2c44ac8c0a4b8fe26c7d5759217, type: 2}
+  feux_Rouge_Mat: {fileID: 2100000, guid: dd8093f34fd706648bd1a1fafaf04f51, type: 2}
   pathPlanned: {fileID: 2100000, guid: 5f58af862ef783149a5a2b13536fafe4, type: 2}
   pathTemp: {fileID: 2100000, guid: 7f44b288202172c498b3cdea7a511801, type: 2}
   alreadyPassed: {fileID: 2100000, guid: dc71ba3e5bc380c4eb5759121d830a9d, type: 2}
@@ -60790,6 +61652,8 @@ MonoBehaviour:
   - {fileID: 1605606564}
   - {fileID: 777362209}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1716367109
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -60926,6 +61790,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1717152444
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61037,6 +61903,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1722634239
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61161,6 +62029,8 @@ MonoBehaviour:
   - {fileID: 865840632}
   - {fileID: 713563950}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1726640917
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61297,6 +62167,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1735670293
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61570,6 +62442,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1743581087
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61694,6 +62568,8 @@ MonoBehaviour:
   - {fileID: 471178079}
   - {fileID: 5609029}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1744411911
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61843,6 +62719,8 @@ MonoBehaviour:
   - {fileID: 1122883090}
   - {fileID: 498676359}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1746316545
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -62115,6 +62993,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1757318193
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -62239,6 +63119,8 @@ MonoBehaviour:
   - {fileID: 746042100}
   - {fileID: 1942056622}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1760749888
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -62388,6 +63270,8 @@ MonoBehaviour:
   - {fileID: 1885068469}
   - {fileID: 1314186016}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1761906697
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -62524,6 +63408,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1763369517
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -62654,6 +63540,8 @@ MonoBehaviour:
   - {fileID: 277870167}
   - {fileID: 963991504}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1777057430
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -63026,6 +63914,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1783758601
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -63137,6 +64027,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1785570886
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -63248,6 +64140,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1792379085
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -63365,6 +64259,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1800942620
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -63489,6 +64385,8 @@ MonoBehaviour:
   - {fileID: 2045567468}
   - {fileID: 1895322647}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1801631327
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -63682,6 +64580,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1809694566
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -63793,6 +64693,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1810274346
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -63904,6 +64806,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1816499442
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -64051,6 +64955,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1825512320
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -64162,6 +65068,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1827632189
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -64273,6 +65181,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1827866969
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -64397,6 +65307,8 @@ MonoBehaviour:
   - {fileID: 1626245347}
   - {fileID: 150694501}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1830868949
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -64612,6 +65524,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1838400459
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -64736,6 +65650,8 @@ MonoBehaviour:
   - {fileID: 471239754}
   - {fileID: 494189711}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1838521699
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -64885,6 +65801,8 @@ MonoBehaviour:
   - {fileID: 1343657726}
   - {fileID: 996123620}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1839917075
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -65021,6 +65939,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1844493546
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -65145,6 +66065,8 @@ MonoBehaviour:
   - {fileID: 1942056622}
   - {fileID: 870554645}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1846316370
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -65413,7 +66335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 1
+  type: 5
   Event: 1
   distance_Check: 1.2
   neighborHex:
@@ -65430,6 +66352,8 @@ MonoBehaviour:
   - {fileID: 930687405}
   - {fileID: 1206942929}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1847508552
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -65566,6 +66490,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1852479363
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -65677,6 +66603,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1856031923
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -65788,6 +66716,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1863781897
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -65899,6 +66829,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1872673771
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -66010,6 +66942,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1873206701
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -66191,6 +67125,8 @@ MonoBehaviour:
   - {fileID: 373868188}
   - {fileID: 1336237457}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1878017189
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -66333,6 +67269,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1884333772
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -66457,6 +67395,8 @@ MonoBehaviour:
   - {fileID: 1405722452}
   - {fileID: 1761906695}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1885068471
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -66685,6 +67625,8 @@ MonoBehaviour:
   - {fileID: 1433259154}
   - {fileID: 69684680}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1886590966
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -66834,6 +67776,8 @@ MonoBehaviour:
   - {fileID: 1283969656}
   - {fileID: 836189215}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1890965288
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -66970,6 +67914,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1891330444
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -67094,6 +68040,8 @@ MonoBehaviour:
   - {fileID: 247787549}
   - {fileID: 1801631325}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1895322649
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -67230,6 +68178,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1899740337
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -67354,6 +68304,8 @@ MonoBehaviour:
   - {fileID: 300478110}
   - {fileID: 301808040}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1900225494
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -67490,6 +68442,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1913040539
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -67680,6 +68634,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1915125373
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -67791,6 +68747,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1922073828
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -68048,6 +69006,8 @@ MonoBehaviour:
   - {fileID: 495403083}
   - {fileID: 1027319752}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1930566877
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -68184,6 +69144,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1932454258
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -68291,7 +69253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 1
+  type: 5
   Event: 1
   distance_Check: 1.2
   neighborHex:
@@ -68308,6 +69270,8 @@ MonoBehaviour:
   - {fileID: 1314186016}
   - {fileID: 1599324238}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1933783539
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -68498,7 +69462,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
   type: 1
-  Event: 0
+  Event: 4
   distance_Check: 1.2
   neighborHex:
   - {fileID: 1760749886}
@@ -68514,6 +69478,8 @@ MonoBehaviour:
   - {fileID: 1760749886}
   - {fileID: 1846316368}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1942056624
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -68656,6 +69622,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1942983090
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -68767,6 +69735,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1943078494
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -69128,6 +70098,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1949665763
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -69239,6 +70211,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1953446908
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -69350,6 +70324,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1960010920
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -69562,6 +70538,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1974115618
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -69730,6 +70708,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1975708378
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -69841,6 +70821,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1982353639
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -69952,6 +70934,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1985241540
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -70063,6 +71047,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1986020290
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -70187,6 +71173,8 @@ MonoBehaviour:
   - {fileID: 807353512}
   - {fileID: 797439651}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1986549084
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -70323,6 +71311,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1990227006
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -70434,6 +71424,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &1998173813
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -70545,6 +71537,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &2000586874
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -70669,6 +71663,8 @@ MonoBehaviour:
   - {fileID: 498676359}
   - {fileID: 1618542685}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &2000711153
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -70824,6 +71820,8 @@ MonoBehaviour:
   - {fileID: 164242421}
   - {fileID: 21176441}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &2009191252
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -71078,6 +72076,8 @@ MonoBehaviour:
   - {fileID: 996123620}
   - {fileID: 715894443}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &2016751562
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -71227,6 +72227,8 @@ MonoBehaviour:
   - {fileID: 1225502680}
   - {fileID: 1443738874}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &2018492525
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -71365,7 +72367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 1
+  type: 5
   Event: 1
   distance_Check: 1.2
   neighborHex:
@@ -71382,6 +72384,8 @@ MonoBehaviour:
   - {fileID: 1149098578}
   - {fileID: 100862129}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &2023565112
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -71518,6 +72522,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &2027886646
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -71743,6 +72749,8 @@ MonoBehaviour:
   - {fileID: 233168763}
   - {fileID: 1243896032}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &2034648698
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -71892,6 +72900,8 @@ MonoBehaviour:
   - {fileID: 675781577}
   - {fileID: 322882706}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &2040869566
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -72028,6 +73038,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &2041958412
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -72152,6 +73164,8 @@ MonoBehaviour:
   - {fileID: 1801631325}
   - {fileID: 1531911005}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &2045567470
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -72424,6 +73438,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &2058836739
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -72649,6 +73665,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &2063208512
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -72899,6 +73917,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &2070553105
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -73010,6 +74030,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &2074164598
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -73121,6 +74143,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &2075754449
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -73232,6 +74256,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &2079942575
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -73349,6 +74375,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &2082349666
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -73473,6 +74501,8 @@ MonoBehaviour:
   - {fileID: 1485765172}
   - {fileID: 1073860587}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &2083382825
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -73622,6 +74652,8 @@ MonoBehaviour:
   - {fileID: 1649843247}
   - {fileID: 857514890}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &2085531630
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -73771,6 +74803,8 @@ MonoBehaviour:
   - {fileID: 1027319752}
   - {fileID: 1329995261}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &2087177046
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -73920,6 +74954,8 @@ MonoBehaviour:
   - {fileID: 709759611}
   - {fileID: 752484053}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &2089597383
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -74056,6 +75092,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &2090821720
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -74167,6 +75205,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &2092228809
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -74375,6 +75415,8 @@ MonoBehaviour:
   - {fileID: 337406240}
   - {fileID: 500349584}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &2096724969
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -74511,6 +75553,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &2109099365
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -74697,6 +75741,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &2121621327
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -74808,6 +75854,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &2122838127
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -74932,6 +75980,8 @@ MonoBehaviour:
   - {fileID: 862192228}
   - {fileID: 1076399575}
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &2126812943
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -75125,6 +76175,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &2141723914
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -75236,6 +76288,8 @@ MonoBehaviour:
   distance_Check: 1.2
   neighborHex: []
   visited: 0
+  busy: 0
+  carInTheTile: {fileID: 0}
 --- !u!65 &2144435750
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -76706,10 +77760,55 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 808261060155700103, guid: 9d360146ea2cb4a44aa897a4aa05ac15,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 808261060155700103, guid: 9d360146ea2cb4a44aa897a4aa05ac15,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 808261060155700103, guid: 9d360146ea2cb4a44aa897a4aa05ac15,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 808261060155700103, guid: 9d360146ea2cb4a44aa897a4aa05ac15,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 808261060155700103, guid: 9d360146ea2cb4a44aa897a4aa05ac15,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 808261060155700103, guid: 9d360146ea2cb4a44aa897a4aa05ac15,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 808261060155700103, guid: 9d360146ea2cb4a44aa897a4aa05ac15,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 808261060155700103, guid: 9d360146ea2cb4a44aa897a4aa05ac15,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 808261060155700103, guid: 9d360146ea2cb4a44aa897a4aa05ac15,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3440053450353302122, guid: 9d360146ea2cb4a44aa897a4aa05ac15,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0787
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3440053450353302122, guid: 9d360146ea2cb4a44aa897a4aa05ac15,
         type: 3}
@@ -76744,7 +77843,7 @@ PrefabInstance:
     - target: {fileID: 3440053450353302122, guid: 9d360146ea2cb4a44aa897a4aa05ac15,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3440053450353302122, guid: 9d360146ea2cb4a44aa897a4aa05ac15,
         type: 3}
@@ -76806,9 +77905,123 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.103
       objectReference: {fileID: 0}
+    - target: {fileID: 808261060155700102, guid: 9d360146ea2cb4a44aa897a4aa05ac15,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 808261060155700102, guid: 9d360146ea2cb4a44aa897a4aa05ac15,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 808261058923036213, guid: 9d360146ea2cb4a44aa897a4aa05ac15, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9d360146ea2cb4a44aa897a4aa05ac15, type: 3}
+--- !u!1001 &1137873324148962065
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1138937073324172869, guid: ee626215a55aac94c94378d3adc6cd82,
+        type: 3}
+      propertyPath: m_Name
+      value: Bus
+      objectReference: {fileID: 0}
+    - target: {fileID: 1136472921708350899, guid: ee626215a55aac94c94378d3adc6cd82,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.9985404
+      objectReference: {fileID: 0}
+    - target: {fileID: 1136472921708350899, guid: ee626215a55aac94c94378d3adc6cd82,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5055614
+      objectReference: {fileID: 0}
+    - target: {fileID: 1136472921708350899, guid: ee626215a55aac94c94378d3adc6cd82,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1136472921708350899, guid: ee626215a55aac94c94378d3adc6cd82,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1136472921708350899, guid: ee626215a55aac94c94378d3adc6cd82,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1136472921708350899, guid: ee626215a55aac94c94378d3adc6cd82,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1136472921708350899, guid: ee626215a55aac94c94378d3adc6cd82,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1136472921708350899, guid: ee626215a55aac94c94378d3adc6cd82,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1136472921708350899, guid: ee626215a55aac94c94378d3adc6cd82,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1136472921708350899, guid: ee626215a55aac94c94378d3adc6cd82,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1136472921708350899, guid: ee626215a55aac94c94378d3adc6cd82,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1137873322620572650, guid: ee626215a55aac94c94378d3adc6cd82,
+        type: 3}
+      propertyPath: planet
+      value: 
+      objectReference: {fileID: 6496860844886677559}
+    - target: {fileID: 1137873322620572650, guid: ee626215a55aac94c94378d3adc6cd82,
+        type: 3}
+      propertyPath: path_Waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1314186016}
+    - target: {fileID: 1137873322620572650, guid: ee626215a55aac94c94378d3adc6cd82,
+        type: 3}
+      propertyPath: path_Waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 752264021}
+    - target: {fileID: 1137873322620572650, guid: ee626215a55aac94c94378d3adc6cd82,
+        type: 3}
+      propertyPath: path_Waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 219350767}
+    - target: {fileID: 1137873322620572650, guid: ee626215a55aac94c94378d3adc6cd82,
+        type: 3}
+      propertyPath: path_Waypoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 1605606564}
+    - target: {fileID: 1137873322620572650, guid: ee626215a55aac94c94378d3adc6cd82,
+        type: 3}
+      propertyPath: path_Waypoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 1633135415}
+    - target: {fileID: 1137873322620572650, guid: ee626215a55aac94c94378d3adc6cd82,
+        type: 3}
+      propertyPath: path_Waypoints.Array.data[5]
+      value: 
+      objectReference: {fileID: 1149098578}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ee626215a55aac94c94378d3adc6cd82, type: 3}
 --- !u!1 &1858282106764068197
 GameObject:
   m_ObjectHideFlags: 0
@@ -81678,7 +82891,7 @@ Transform:
   m_Children:
   - {fileID: 1858282106764068202}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &1858282106904431226
 SphereCollider:
@@ -81781,7 +82994,7 @@ PrefabInstance:
     - target: {fileID: 6927216166645033503, guid: 4c78daf05ef5aa342ac77194f981fc86,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6927216166645033503, guid: 4c78daf05ef5aa342ac77194f981fc86,
         type: 3}
@@ -81831,6 +83044,95 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 808261059054855085}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3494581512218420574
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3493171416998022285, guid: 9c16da9c3c5092d438b02e311677323d,
+        type: 3}
+      propertyPath: m_Name
+      value: Garbage_Truck
+      objectReference: {fileID: 0}
+    - target: {fileID: 3490845197776959647, guid: 9c16da9c3c5092d438b02e311677323d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3490845197776959647, guid: 9c16da9c3c5092d438b02e311677323d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5032134
+      objectReference: {fileID: 0}
+    - target: {fileID: 3490845197776959647, guid: 9c16da9c3c5092d438b02e311677323d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.894
+      objectReference: {fileID: 0}
+    - target: {fileID: 3490845197776959647, guid: 9c16da9c3c5092d438b02e311677323d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3490845197776959647, guid: 9c16da9c3c5092d438b02e311677323d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3490845197776959647, guid: 9c16da9c3c5092d438b02e311677323d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3490845197776959647, guid: 9c16da9c3c5092d438b02e311677323d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3490845197776959647, guid: 9c16da9c3c5092d438b02e311677323d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3490845197776959647, guid: 9c16da9c3c5092d438b02e311677323d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3490845197776959647, guid: 9c16da9c3c5092d438b02e311677323d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3490845197776959647, guid: 9c16da9c3c5092d438b02e311677323d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3494581511003379984, guid: 9c16da9c3c5092d438b02e311677323d,
+        type: 3}
+      propertyPath: planet
+      value: 
+      objectReference: {fileID: 6496860844886677559}
+    - target: {fileID: 3494581511003379984, guid: 9c16da9c3c5092d438b02e311677323d,
+        type: 3}
+      propertyPath: path_Waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 194186075}
+    - target: {fileID: 3494581511003379984, guid: 9c16da9c3c5092d438b02e311677323d,
+        type: 3}
+      propertyPath: path_Waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 1225502680}
+    - target: {fileID: 3494581511003379984, guid: 9c16da9c3c5092d438b02e311677323d,
+        type: 3}
+      propertyPath: path_Waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 537965480}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9c16da9c3c5092d438b02e311677323d, type: 3}
 --- !u!4 &6496860844886677559
 Transform:
   m_ObjectHideFlags: 0
@@ -82324,7 +83626,7 @@ Transform:
   - {fileID: 1578789651}
   - {fileID: 1273878827}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8045677377154717814
 GameObject:
