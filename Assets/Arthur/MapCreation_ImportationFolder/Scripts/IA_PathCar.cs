@@ -5,7 +5,7 @@ using System.Linq;
 using DG.Tweening;
 
 [SelectionBase]
-public class PlayerController : MonoBehaviour
+public class IA_PathCar : MonoBehaviour
 {
     //public bool walking = false;
 
@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     //Prefab Planet
     public Transform planet;
     public Transform car;
-    [Range(0.5f,10f)]
+    [Range(0.5f, 10f)]
     public float rotationSpeed;
 
     public List<Transform> waypoints = new List<Transform>();
@@ -58,36 +58,45 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (finalPath.Count != 0){
+        if (finalPath.Count != 0)
+        {
             FollowPath();
         }
         //GET CURRENT CUBE (UNDER PLAYER)
 
         RayCastDown();
 
-        if (currentCube.GetComponent<Walkable>().movingGround){
+        if (currentCube.GetComponent<Walkable>().movingGround)
+        {
             transform.parent = currentCube.parent;
         }
-        else{
+        else
+        {
             transform.parent = null;
         }
 
         // CLICK ON CUBE
 
-        if (Input.GetMouseButtonDown(0)){
+        if (Input.GetMouseButtonDown(0))
+        {
             Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition); RaycastHit mouseHit;
 
-            if (Physics.Raycast(mouseRay, out mouseHit)){
-                if (mouseHit.transform.GetComponent<Walkable>() != null){
+            if (Physics.Raycast(mouseRay, out mouseHit))
+            {
+                if (mouseHit.transform.GetComponent<Walkable>() != null)
+                {
                     clickedCube = mouseHit.transform;
                     DOTween.Kill(gameObject.transform);
-                    if (clickedCube != currentCube){
-                        if (finalPath.Count != 0){
-                            foreach (Transform element in finalPath){
+                    if (clickedCube != currentCube)
+                    {
+                        if (finalPath.Count != 0)
+                        {
+                            foreach (Transform element in finalPath)
+                            {
                                 var checkVar = element.GetComponent<InspectElement>();
                                 if (element.GetComponent<MeshRenderer>().sharedMaterial != controllerMat.alreadyPassed && checkVar.Event == InspectElement.Tyle_Evenement.Empty || checkVar.Event == InspectElement.Tyle_Evenement.Monument)
                                     element.GetComponent<MeshRenderer>().material = controllerMat.road;
-                                else if(element.GetComponent<MeshRenderer>().sharedMaterial != controllerMat.alreadyPassed && checkVar.Event == InspectElement.Tyle_Evenement.Restaurant)
+                                else if (element.GetComponent<MeshRenderer>().sharedMaterial != controllerMat.alreadyPassed && checkVar.Event == InspectElement.Tyle_Evenement.Restaurant)
                                     element.GetComponent<MeshRenderer>().material = controllerMat.restaurant_Mat;
                                 else if (element.GetComponent<MeshRenderer>().sharedMaterial != controllerMat.alreadyPassed && checkVar.Event == InspectElement.Tyle_Evenement.Chantier)
                                     element.GetComponent<MeshRenderer>().material = controllerMat.chantier_Mat;
@@ -119,20 +128,23 @@ public class PlayerController : MonoBehaviour
         {
             //Pick the next destination
             //Check if it's not the last element
-            if (!manager.finalClient){
+            if (!manager.finalClient)
+            {
                 index = 0;
                 manager.NextClient();
                 mainTarget = manager.Get_Destination();
 
                 setNew_Distination();
             }
-            else{
+            else
+            {
                 waypoints.Clear();
                 finalPath.Clear();
                 index = 0;
                 Time.timeScale = 0;
 
-                if (manager.levelIsOver){
+                if (manager.levelIsOver)
+                {
                     //End of the level
                     manager.managerScore.enabled = false;
                     Debug.Log("End of the level");
@@ -320,13 +332,16 @@ public class PlayerController : MonoBehaviour
         Ray playerRay = new Ray(transform.GetChild(0).position, -transform.up);
         RaycastHit playerHit;
 
-        if (Physics.Raycast(playerRay, out playerHit)){
-            if (playerHit.transform.GetComponent<Walkable>() != null){
+        if (Physics.Raycast(playerRay, out playerHit))
+        {
+            if (playerHit.transform.GetComponent<Walkable>() != null)
+            {
                 currentCube = playerHit.transform;
 
                 playerHit.transform.GetComponent<MeshRenderer>().material = controllerMat.alreadyPassed;
 
-                if(index != 0){
+                if (index != 0)
+                {
                     if (index == finalPath.Count)
                         finalPath[index].GetComponent<InspectElement>().visited = true;
                     else

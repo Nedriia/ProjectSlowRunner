@@ -9,9 +9,9 @@ public class StateClient : MonoBehaviour
     private Image spriteClient;
     public float stateEmotion;
 
-    private float decreaseFactor_Impact = 0.15f;
-    private float decreaseFactor = 0.9999f;
-    public float currentDecrease = 0.9999f;
+    private float decreaseFactor_Impact = 0.989f;
+    private float decreaseFactor = 0.999f;
+    public float currentDecrease = 0.999f;
 
     public PlayerController controller;
     private InspectElement tempCube;
@@ -24,6 +24,18 @@ public class StateClient : MonoBehaviour
 
     public Text percentageState;
 
+    [Header("Test Reboot Ideas")]
+    public Image feedBackEmotion;
+    public Sprite AngryFace;
+    public Sprite HappyFace;
+    public Sprite LoveFace;
+    public Sprite WonderingFace;
+    public Sprite NeutralFace;
+
+    [Header("PopUp Text")]
+    public GameObject floatingText;
+    public Canvas canvas;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,16 +45,13 @@ public class StateClient : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(stateEmotion > 60 )
-        {
+        if(stateEmotion > 60 ){
             percentageState.color = Color.green;
         }
-        else if(stateEmotion > 31 && stateEmotion < 60)
-        {
+        else if(stateEmotion > 31 && stateEmotion < 60){
             percentageState.color = Color.yellow;
         }
-        else
-        {
+        else{
             percentageState.color = Color.red;
         }
         percentageState.text = Mathf.Round(stateEmotion) + "%";
@@ -75,12 +84,15 @@ public class StateClient : MonoBehaviour
             }
 
             if (tempCube.visited){
-                Debug.Log("already been here");
+                //Debug.Log("already been here");
+                feedBackEmotion.sprite = WonderingFace;
                 currentDecrease = decreaseFactor_Impact;
+                ShowFloatingText(false);
             }
             else
             {
                 currentDecrease = decreaseFactor;
+                ShowFloatingText(true);
             }
         }
 
@@ -105,6 +117,25 @@ public class StateClient : MonoBehaviour
         }
     }
 
+    void ShowFloatingText(bool value)
+    {
+        if(floatingText != null)
+        {
+            var floattext = Instantiate(floatingText, canvas.transform.position, Quaternion.identity,canvas.transform);
+            if (value){
+                var tmp_Floatingtext = floattext.GetComponent<Text>();
+                tmp_Floatingtext.text = "+1";
+                tmp_Floatingtext.color = Color.green;
+            }
+            else {
+                var tmp_Floatingtext = floattext.GetComponent<Text>();
+                tmp_Floatingtext.text = "-1";
+                tmp_Floatingtext.color = Color.red;
+            }
+            Destroy(floattext,0.75f);
+        }
+    }
+
     public void CheckCondition_Hated(string condition)
     {
         foreach (TasteCustomer element in client.TasteHated)
@@ -112,7 +143,8 @@ public class StateClient : MonoBehaviour
             if (element.ToString() == condition)
             {
                 imageColorFeedback.color = Color.red;
-                Debug.Log("I Hate it");
+                //Debug.Log("I Hate it");
+                feedBackEmotion.sprite = AngryFace;
                 if (stateEmotion - hatedImpact >= 0)
                     stateEmotion -= hatedImpact;
                 else
@@ -131,7 +163,8 @@ public class StateClient : MonoBehaviour
             if (element.ToString() == condition)
             {
                 imageColorFeedback.color = Color.green;
-                Debug.Log("I Like it");
+                feedBackEmotion.sprite = HappyFace;
+                //Debug.Log("I Like it");
                 if (stateEmotion + loveImpact <= 100)
                     stateEmotion += loveImpact;
                 else
@@ -143,7 +176,8 @@ public class StateClient : MonoBehaviour
         if (!found)
         {
             imageColorFeedback.color = Color.white;
-            Debug.Log("I Don't Care");
+            feedBackEmotion.sprite = NeutralFace;
+            //Debug.Log("I Don't Care");
         }
         found = false;
     }

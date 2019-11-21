@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AmbientEquatorColor: {r: 0.5686275, g: 0.5686275, b: 0.5686275, a: 1}
-  m_AmbientGroundColor: {r: 0, g: 0, b: 0, a: 1}
+  m_AmbientSkyColor: {r: 0, g: 0, b: 0, a: 1}
+  m_AmbientEquatorColor: {r: 0.7264151, g: 0.7264151, b: 0.7264151, a: 1}
+  m_AmbientGroundColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
@@ -9506,7 +9506,6 @@ GameObject:
   - component: {fileID: 1471578484}
   - component: {fileID: 1471578487}
   - component: {fileID: 1471578486}
-  - component: {fileID: 1471578485}
   m_Layer: 5
   m_Name: Percentage
   m_TagString: Untagged
@@ -9533,18 +9532,6 @@ RectTransform:
   m_AnchoredPosition: {x: -89, y: -113}
   m_SizeDelta: {x: 500, y: 30}
   m_Pivot: {x: 0.5, y: 1}
---- !u!114 &1471578485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1471578483}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1f4c83b9ef31de40a2b3a0e29c49ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1471578486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11417,6 +11404,45 @@ MonoBehaviour:
   - {fileID: 8785286874931348776}
   - {fileID: 8785286874931348969}
   - {fileID: 8785286874931348942}
+  - {fileID: 8785286874931348803}
+  - {fileID: 8785286874931348802}
+  - {fileID: 8785286874931348801}
+  - {fileID: 8785286874931348800}
+  - {fileID: 8785286874931348831}
+  - {fileID: 8785286874931348830}
+  - {fileID: 8785286874931348829}
+  - {fileID: 8785286874931348828}
+  - {fileID: 8785286874931348827}
+  - {fileID: 8785286874931348826}
+  - {fileID: 8785286874931348825}
+  - {fileID: 8785286874931348824}
+  - {fileID: 8785286874931348823}
+  - {fileID: 8785286874931348822}
+  - {fileID: 8785286874931348821}
+  - {fileID: 8785286874931348819}
+  - {fileID: 8785286874931348817}
+  - {fileID: 8785286874931348816}
+  - {fileID: 8785286874931348847}
+  - {fileID: 8785286874931348846}
+  - {fileID: 8785286874931348845}
+  - {fileID: 8785286874931348844}
+  - {fileID: 8785286874931348843}
+  - {fileID: 8785286874931348842}
+  - {fileID: 8785286874931348841}
+  - {fileID: 8785286874931348840}
+  - {fileID: 8785286874931348839}
+  - {fileID: 8785286874931348838}
+  - {fileID: 8785286874931348837}
+  - {fileID: 8785286874931348836}
+  - {fileID: 8785286874931348835}
+  - {fileID: 8785286874931348834}
+  - {fileID: 8785286874931348832}
+  - {fileID: 8785286874931348862}
+  - {fileID: 8785286874931348859}
+  - {fileID: 8785286874931348857}
+  - {fileID: 8785286874931348856}
+  - {fileID: 8785286874931348854}
+  - {fileID: 8785286874931348853}
   isoSphere: {fileID: 4364321273752776452}
   Roads_Position:
   - {fileID: 912896319502637393}
@@ -28861,7 +28887,7 @@ PrefabInstance:
     - target: {fileID: 808261058923036219, guid: 9d360146ea2cb4a44aa897a4aa05ac15,
         type: 3}
       propertyPath: speedInChantier
-      value: 0.2
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 808261058923036219, guid: 9d360146ea2cb4a44aa897a4aa05ac15,
         type: 3}
@@ -28941,17 +28967,17 @@ PrefabInstance:
     - target: {fileID: 3440053450353302122, guid: 9d360146ea2cb4a44aa897a4aa05ac15,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.05
+      value: 0.075
       objectReference: {fileID: 0}
     - target: {fileID: 3440053450353302122, guid: 9d360146ea2cb4a44aa897a4aa05ac15,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.05
+      value: 0.075
       objectReference: {fileID: 0}
     - target: {fileID: 3440053450353302122, guid: 9d360146ea2cb4a44aa897a4aa05ac15,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.05
+      value: 0.075
       objectReference: {fileID: 0}
     - target: {fileID: 808261058923036213, guid: 9d360146ea2cb4a44aa897a4aa05ac15,
         type: 3}
@@ -37770,6 +37796,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6927216166645033503, guid: 4c78daf05ef5aa342ac77194f981fc86,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6927216166645033503, guid: 4c78daf05ef5aa342ac77194f981fc86,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6927216166645033503, guid: 4c78daf05ef5aa342ac77194f981fc86,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 6927216166645033502, guid: 4c78daf05ef5aa342ac77194f981fc86,
         type: 3}
