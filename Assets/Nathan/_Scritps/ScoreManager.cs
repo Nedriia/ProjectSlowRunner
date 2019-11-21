@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
-   public static int score;
+   public static float score;
    Text text;
 
    void Awake()
@@ -17,7 +17,11 @@ public class ScoreManager : MonoBehaviour
 
    void Update()
    {
-       text.text = "Score: " + score;
-       score += 1;
-   }
+        text.text = score.ToString("F0") + " $ ";
+        if (Time.timeScale != 0)
+        {        
+            score += 0.03f;
+            score = Mathf.Round(score * 100f) / 100f;
+        }
+    }
 }

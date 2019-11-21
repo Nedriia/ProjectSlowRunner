@@ -23,7 +23,7 @@ public class Walkable : MonoBehaviour
     [Space]
 
     [Header("Offsets")]
-    public float walkPointOffset = 0f;
+    public float walkPointOffset = 0.5f;
     public float stairOffset = .4f;
 
     public Vector3 GetWalkPoint()
@@ -35,8 +35,8 @@ public class Walkable : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.gray;
-        float stair = isStair ? .4f : 0;
-        Gizmos.DrawSphere(GetWalkPoint(), .005f);
+        float stair = isStair ? .4f : 0.5f;
+        Gizmos.DrawSphere(GetWalkPoint(), .05f);
 
         if (possiblePaths == null)
             return;

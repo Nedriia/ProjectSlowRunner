@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Patrick 1
   m_EditorClassIdentifier: 
   Name: Patochi
-  Face: {fileID: 21300000, guid: 0d7780428855f2242a9c3efd088b6c61, type: 3}
+  Face: {fileID: 21300000, guid: 8830ab29d0865944ea4115c7ab8e0004, type: 3}
   NumberOfStars: 1
   Template: {fileID: 11400000, guid: d601e6f089fff7a47a6935652a0f2371, type: 2}
   BaseGainMoney: 5

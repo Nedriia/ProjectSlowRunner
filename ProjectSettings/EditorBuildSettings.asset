@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Arthur/Scenes/Icosphere.unity
-    guid: 8dda93515ed156841b662df692fe7b69
+    path: Assets/Scenes/Menu.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Arthur/Scenes/Icosphere_TestTile.unity
+    guid: d9ac1b155011c92489d4604ace820a96
   m_configObjects: {}

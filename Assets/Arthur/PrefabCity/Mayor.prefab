@@ -15,7 +15,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5442505017325098218
 Transform:
@@ -70,6 +70,10 @@ PrefabInstance:
     - target: {fileID: 1426761401228798, guid: d2cc7aa5b74e38e49a2b6b3d62afa808, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Potplants_01 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426761401228798, guid: d2cc7aa5b74e38e49a2b6b3d62afa808, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4487404791396254, guid: d2cc7aa5b74e38e49a2b6b3d62afa808, type: 3}
       propertyPath: m_LocalPosition.x
@@ -134,6 +138,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5442505017325098218}
     m_Modifications:
+    - target: {fileID: 1208169762403846, guid: 87fcb071b565e8445a5684486ec2d743, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4496442374530784, guid: 87fcb071b565e8445a5684486ec2d743, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.61644536
@@ -196,6 +204,10 @@ PrefabInstance:
     - target: {fileID: 1833945839784438, guid: 538e890f4f92e2a479bc5fed46c8fa03, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Skylight_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1833945839784438, guid: 538e890f4f92e2a479bc5fed46c8fa03, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4827028295627068, guid: 538e890f4f92e2a479bc5fed46c8fa03, type: 3}
       propertyPath: m_LocalPosition.x
@@ -366,6 +378,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Potplants_01 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1426761401228798, guid: d2cc7aa5b74e38e49a2b6b3d62afa808, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4487404791396254, guid: d2cc7aa5b74e38e49a2b6b3d62afa808, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.535965
@@ -429,6 +445,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5442505017325098218}
     m_Modifications:
+    - target: {fileID: 1833945839784438, guid: 538e890f4f92e2a479bc5fed46c8fa03, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4827028295627068, guid: 538e890f4f92e2a479bc5fed46c8fa03, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.4454648
@@ -492,6 +512,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5442505017325098218}
     m_Modifications:
+    - target: {fileID: 1045906053049568, guid: 20d8a0bed63c15845abfca2d68c5b2c4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4816984431849308, guid: 20d8a0bed63c15845abfca2d68c5b2c4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.0769636
@@ -559,6 +583,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Hex_Concrete_01 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1390583952798874, guid: 68bf428649800184e8726edf7521ae8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4096105331308734, guid: 68bf428649800184e8726edf7521ae8c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -609,6 +637,10 @@ PrefabInstance:
     - target: {fileID: 1426761401228798, guid: d2cc7aa5b74e38e49a2b6b3d62afa808, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Potplants_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426761401228798, guid: d2cc7aa5b74e38e49a2b6b3d62afa808, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4487404791396254, guid: d2cc7aa5b74e38e49a2b6b3d62afa808, type: 3}
       propertyPath: m_LocalPosition.x
@@ -676,6 +708,10 @@ PrefabInstance:
     - target: {fileID: 1426761401228798, guid: d2cc7aa5b74e38e49a2b6b3d62afa808, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Potplants_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426761401228798, guid: d2cc7aa5b74e38e49a2b6b3d62afa808, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4487404791396254, guid: d2cc7aa5b74e38e49a2b6b3d62afa808, type: 3}
       propertyPath: m_LocalPosition.x
