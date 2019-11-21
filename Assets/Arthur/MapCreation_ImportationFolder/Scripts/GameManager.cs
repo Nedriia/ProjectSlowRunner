@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
     public float score;
     public float priceRestaurant = 20;
 
+    public GameObject canvasGG;
+
     private void Awake()
     {
         currentClient = EventClient_List[0];

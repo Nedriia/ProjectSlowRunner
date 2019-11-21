@@ -17,8 +17,11 @@ public class ScoreManager : MonoBehaviour
 
    void Update()
    {
-       text.text = score + " $ ";
-       score += 0.03f;
-       score = Mathf.Round(score * 100f) / 100f;
+        text.text = score.ToString("F0") + " $ ";
+        if (Time.timeScale != 0)
+        {        
+            score += 0.03f;
+            score = Mathf.Round(score * 100f) / 100f;
+        }
     }
 }

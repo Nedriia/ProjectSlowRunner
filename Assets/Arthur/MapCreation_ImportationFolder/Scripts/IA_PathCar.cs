@@ -30,7 +30,7 @@ public class IA_PathCar : MonoBehaviour
     public int indexTarget;
 
     public float timer;
-    private float timerToWait = 2;
+    private float timerToWait = 0;
     public bool waited = false;
 
     private MapEditor_MainController controllerMat;
@@ -54,7 +54,7 @@ public class IA_PathCar : MonoBehaviour
     {
         direction = transform.forward.normalized;
 
-        if(indexTarget%2 == 0 && !waited){
+        /*if(indexTarget%2 != 0 && !waited){
             //Wait
             timer += Time.deltaTime;
             if (timer > timerToWait){
@@ -64,7 +64,7 @@ public class IA_PathCar : MonoBehaviour
             }
             else
                 speed = 0;
-        }
+        }*/
         if (finalPath.Count != 0){
             FollowPath();
         }
@@ -194,6 +194,14 @@ public class IA_PathCar : MonoBehaviour
         if (Physics.Raycast(playerRay, out playerHit)){
             if (playerHit.transform.GetComponent<Walkable>() != null){
                 currentCube = playerHit.transform;
+
+                if (currentCube.GetComponent<InspectElement>().Event == InspectElement.Tyle_Evenement.Feux_Rouge){
+                    if (currentCube.GetComponent<FeuxRouge>().red)
+                        speed = 0;
+                    else
+                        speed = currentSpeed;
+                }
+
                 if (tmp_currentCube == null)
                     tmp_currentCube = currentCube;
                 var checkElement = currentCube.GetComponent<InspectElement>();
@@ -207,7 +215,7 @@ public class IA_PathCar : MonoBehaviour
             checkElementTmp.busy = false;
             checkElementTmp.carInTheTile = null;
             tmp_currentCube = currentCube;
-        }
+        }     
     }
 
     public void setNew_Distination()
