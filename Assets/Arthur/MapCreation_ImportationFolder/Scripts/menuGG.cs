@@ -5,14 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class menuGG : MonoBehaviour
 {
-    public void Menu()
+    public string Scene;
+    public string NextScene;
+
+    /*public void Menu()
     {
         SceneManager.LoadScene("");
-    }
+    }*/
 
     public void Retry()
     {
-        SceneManager.LoadScene("");
+        SceneManager.LoadScene(Scene);
     }
 
     public void Quit()
@@ -22,7 +25,7 @@ public class menuGG : MonoBehaviour
 
     public void Next()
     {
-        SceneManager.LoadScene("");
+        SceneManager.LoadScene(NextScene);
     }
 
 }

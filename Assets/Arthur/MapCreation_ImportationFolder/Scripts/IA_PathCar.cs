@@ -26,6 +26,7 @@ public class IA_PathCar : MonoBehaviour
 
     public float speed;
     private float currentSpeed;
+
     public int index;
     public int indexTarget;
 
@@ -35,6 +36,8 @@ public class IA_PathCar : MonoBehaviour
 
     private MapEditor_MainController controllerMat;
     public Vector3 direction;
+
+    public float step;
 
 
     void Start()
@@ -50,9 +53,20 @@ public class IA_PathCar : MonoBehaviour
         currentSpeed = speed;
     }
 
-    void Update()
-    {
+    void Update(){
         direction = transform.forward.normalized;
+
+        if (checkTrafic()){
+            //Get the car on the tile busy
+            if (finalPath[index + 1].GetComponent<InspectElement>().carInTheTile.transform.rotation.y >= car.transform.rotation.y + step ||
+                finalPath[index + 1].GetComponent<InspectElement>().carInTheTile.transform.rotation.y <= car.transform.rotation.y - step){}
+            else{
+                //behind the car 
+                speed = finalPath[index + 1].GetComponent<InspectElement>().carInTheTile.speed;
+            }
+        }else{
+            speed = currentSpeed;
+        }
 
         /*if(indexTarget%2 != 0 && !waited){
             //Wait
@@ -197,9 +211,12 @@ public class IA_PathCar : MonoBehaviour
 
                 if (currentCube.GetComponent<InspectElement>().Event == InspectElement.Tyle_Evenement.Feux_Rouge){
                     if (currentCube.GetComponent<FeuxRouge>().red)
-                        speed = 0;
+                    {
+                        currentSpeed = 0;
+                    }
+                        
                     else
-                        speed = currentSpeed;
+                        currentSpeed = 1;
                 }
 
                 if (tmp_currentCube == null)
@@ -221,5 +238,10 @@ public class IA_PathCar : MonoBehaviour
     public void setNew_Distination()
     {
         FindPath(mainTarget);
+    }
+
+    public bool checkTrafic()
+    {
+        return (finalPath[index + 1].GetComponent<InspectElement>().busy);
     }
 }

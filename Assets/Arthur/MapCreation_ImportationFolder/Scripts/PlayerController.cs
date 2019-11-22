@@ -35,14 +35,9 @@ public class PlayerController : MonoBehaviour
     public float speedInChantier;
     public int index;
 
-
-
     private MapEditor_MainController controllerMat;
-
     public GameManager manager;
-
     public Vector3 direction;
-
     public float step;
 
     void Start()
@@ -367,9 +362,9 @@ public class PlayerController : MonoBehaviour
                 if (currentCube.GetComponent<InspectElement>().Event == InspectElement.Tyle_Evenement.Feux_Rouge)
                 {
                     if (currentCube.GetComponent<FeuxRouge>().red)
-                        speed = 0;
+                        optimalSpeed = 0;
                     else
-                        speed = optimalSpeed;
+                        optimalSpeed = 1;
                 }
                     
                 if(playerHit.transform.GetComponent<InspectElement>().Event != InspectElement.Tyle_Evenement.Feux_Rouge)
