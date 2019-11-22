@@ -24,6 +24,8 @@ namespace MirzaBeig
             
             public class MouseFollow : MonoBehaviour
             {
+                public GameObject Taxi;
+
                 // =================================	
                 // Nested classes and structures.
                 // =================================
@@ -63,13 +65,13 @@ namespace MirzaBeig
 
                 void Update()
                 {
-                    Vector3 mousePosition = Input.mousePosition;
-                    mousePosition.z = distanceFromCamera;
+                    //Vector3 mousePosition = Input.mousePosition;
+                    //mousePosition.z = distanceFromCamera;
 
-                    Vector3 mouseScreenToWorld = Camera.main.ScreenToWorldPoint(mousePosition);
+                    //Vector3 mouseScreenToWorld = Camera.main.ScreenToWorldPoint(mousePosition);
 
                     float deltaTime = !ignoreTimeScale ? Time.deltaTime : Time.unscaledDeltaTime;
-                    Vector3 position = Vector3.Lerp(transform.position, mouseScreenToWorld, 1.0f - Mathf.Exp(-speed * deltaTime));
+                    Vector3 position = Vector3.Lerp(transform.position, Taxi.transform.position, 1.0f - Mathf.Exp(-speed * deltaTime));
 
                     transform.position = position;
                 }
