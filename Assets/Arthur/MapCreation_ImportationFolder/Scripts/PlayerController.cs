@@ -76,8 +76,10 @@ public class PlayerController : MonoBehaviour
                                     else if (element.GetComponent<MeshRenderer>().sharedMaterial != controllerMat.alreadyPassed && checkVar.Event == InspectElement.Tyle_Evenement.Chantier)
                                         element.GetComponent<MeshRenderer>().material = controllerMat.chantier_Mat;
 
-                                    if (checkVar.visited)
+                                    if (checkVar.visited){
+                                        //element.GetComponent<MeshRenderer>().material.color = Color.Lerp(element.GetComponent<MeshRenderer>().material.color, controllerMat.alreadyPassed.color, 2.5f * Time.deltaTime);
                                         element.GetComponent<MeshRenderer>().material = controllerMat.alreadyPassed;
+                                    }
                                     if(checkVar.visited && checkVar.Event == InspectElement.Tyle_Evenement.Feux_Rouge)
                                         element.GetComponent<MeshRenderer>().material = controllerMat.feux_Rouge_Mat;
                                 }
@@ -366,11 +368,14 @@ public class PlayerController : MonoBehaviour
                     else
                         optimalSpeed = 1;
                 }
-                    
-                if(playerHit.transform.GetComponent<InspectElement>().Event != InspectElement.Tyle_Evenement.Feux_Rouge)
-                    playerHit.transform.GetComponent<MeshRenderer>().material = controllerMat.alreadyPassed;
 
-                if(index != 0){
+                if (playerHit.transform.GetComponent<InspectElement>().Event != InspectElement.Tyle_Evenement.Feux_Rouge)
+                {
+                    //playerHit.transform.GetComponent<MeshRenderer>().material = controllerMat.alreadyPassed;
+                    playerHit.transform.GetComponent<MeshRenderer>().material.Lerp(playerHit.transform.GetComponent<MeshRenderer>().material, controllerMat.alreadyPassed, 6.5f * Time.deltaTime);
+                }
+
+                if (index != 0){
                     if (index == finalPath.Count)
                         finalPath[index].GetComponent<InspectElement>().visited = true;
                     else
