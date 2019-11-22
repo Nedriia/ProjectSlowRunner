@@ -20,7 +20,6 @@ public class StateClient : MonoBehaviour
     public int hatedImpact, loveImpact;
 
     public Slider sliderValue;
-    public Image imageColorFeedback;
 
     public Text percentageState;
 
@@ -142,7 +141,7 @@ public class StateClient : MonoBehaviour
         {
             if (element.ToString() == condition)
             {
-                imageColorFeedback.color = Color.red;
+                //imageColorFeedback.color = Color.red;
                 //Debug.Log("I Hate it");
                 feedBackEmotion.sprite = AngryFace;
                 if (stateEmotion - hatedImpact >= 0)
@@ -162,7 +161,7 @@ public class StateClient : MonoBehaviour
         {
             if (element.ToString() == condition)
             {
-                imageColorFeedback.color = Color.green;
+                //imageColorFeedback.color = Color.green;
                 feedBackEmotion.sprite = HappyFace;
                 //Debug.Log("I Like it");
                 if (stateEmotion + loveImpact <= 100)
@@ -175,7 +174,7 @@ public class StateClient : MonoBehaviour
         }
         if (!found)
         {
-            imageColorFeedback.color = Color.white;
+            //imageColorFeedback.color = Color.white;
             feedBackEmotion.sprite = NeutralFace;
             //Debug.Log("I Don't Care");
         }
