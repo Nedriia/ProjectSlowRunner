@@ -1653,18 +1653,18 @@ MonoBehaviour:
   indicator: {fileID: 0}
   planet: {fileID: 0}
   car: {fileID: 808261060155700103}
-  offset: -90
+  rotationSpeed: 0
   waypoints: []
   finalPath: []
   temp_finalPath: []
   finalform: 0
-  road: {fileID: 2100000, guid: 659b904ceda7e544db3a1571aa1966c0, type: 2}
   speed: 0.25
+  optimalSpeed: 0
+  speedInChantier: 0
   index: 0
-  pathPlanned: {fileID: 2100000, guid: 5f58af862ef783149a5a2b13536fafe4, type: 2}
-  pathTemp: {fileID: 2100000, guid: 7f44b288202172c498b3cdea7a511801, type: 2}
-  alreadyPassed: {fileID: 2100000, guid: dc71ba3e5bc380c4eb5759121d830a9d, type: 2}
   manager: {fileID: 0}
+  direction: {x: 0, y: 0, z: 0}
+  step: 0
 --- !u!114 &808261058923036213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1823,10 +1823,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2135123329179873692}
     m_Modifications:
-    - target: {fileID: 1327774057208936, guid: 6afeb05f0fdcfa740b8f1df15b796d15, type: 3}
-      propertyPath: m_Name
-      value: toye_car_tire_v01
-      objectReference: {fileID: 0}
     - target: {fileID: 4652578380327430, guid: 6afeb05f0fdcfa740b8f1df15b796d15, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.691
@@ -1871,6 +1867,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1327774057208936, guid: 6afeb05f0fdcfa740b8f1df15b796d15, type: 3}
+      propertyPath: m_Name
+      value: toye_car_tire_v01
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6afeb05f0fdcfa740b8f1df15b796d15, type: 3}
 --- !u!4 &803613637421204883 stripped
@@ -1886,10 +1886,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2135123329179873692}
     m_Modifications:
-    - target: {fileID: 1327774057208936, guid: 6afeb05f0fdcfa740b8f1df15b796d15, type: 3}
-      propertyPath: m_Name
-      value: toye_car_tire_v01 (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 4652578380327430, guid: 6afeb05f0fdcfa740b8f1df15b796d15, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.691
@@ -1934,6 +1930,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1327774057208936, guid: 6afeb05f0fdcfa740b8f1df15b796d15, type: 3}
+      propertyPath: m_Name
+      value: toye_car_tire_v01 (3)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6afeb05f0fdcfa740b8f1df15b796d15, type: 3}
 --- !u!4 &803613637237265326 stripped
@@ -1949,10 +1949,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2135123329179873692}
     m_Modifications:
-    - target: {fileID: 1327774057208936, guid: 6afeb05f0fdcfa740b8f1df15b796d15, type: 3}
-      propertyPath: m_Name
-      value: toye_car_tire_v01 (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 4652578380327430, guid: 6afeb05f0fdcfa740b8f1df15b796d15, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.691
@@ -1997,6 +1993,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1327774057208936, guid: 6afeb05f0fdcfa740b8f1df15b796d15, type: 3}
+      propertyPath: m_Name
+      value: toye_car_tire_v01 (2)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6afeb05f0fdcfa740b8f1df15b796d15, type: 3}
 --- !u!4 &803613636023867852 stripped
@@ -2012,10 +2012,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2135123329179873692}
     m_Modifications:
-    - target: {fileID: 1327774057208936, guid: 6afeb05f0fdcfa740b8f1df15b796d15, type: 3}
-      propertyPath: m_Name
-      value: toye_car_tire_v01 (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 4652578380327430, guid: 6afeb05f0fdcfa740b8f1df15b796d15, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.691
@@ -2059,6 +2055,10 @@ PrefabInstance:
     - target: {fileID: 4652578380327430, guid: 6afeb05f0fdcfa740b8f1df15b796d15, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1327774057208936, guid: 6afeb05f0fdcfa740b8f1df15b796d15, type: 3}
+      propertyPath: m_Name
+      value: toye_car_tire_v01 (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6afeb05f0fdcfa740b8f1df15b796d15, type: 3}
