@@ -21,6 +21,7 @@ public class PerspectivePan : MonoBehaviour
             Vector3 direction = touchStart - GetWorldPosition(groundZ);
             Camera.main.transform.position += direction;
             //Camera.main.transform.position = new Vector3(Mathf.Clamp(Camera.main.transform.position.x, boundsMin.x, boundsMax.x), Mathf.Clamp(Camera.main.transform.position.y, boundsMin.y, boundsMax.y));
+            Camera.main.transform.position = new Vector3(Mathf.Clamp(Camera.main.transform.position.x, -2, 7), Mathf.Clamp(Camera.main.transform.position.y, -6, 24), Mathf.Clamp(Camera.main.transform.position.z, -10, 3));
         }
     }
 

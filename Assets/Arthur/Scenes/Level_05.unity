@@ -23201,7 +23201,6 @@ MonoBehaviour:
   hatedImpact: 10
   loveImpact: 20
   sliderValue: {fileID: 434384253}
-  imageColorFeedback: {fileID: 2121163964}
   percentageState: {fileID: 1471578486}
   feedBackEmotion: {fileID: 209960807}
   AngryFace: {fileID: -2302736193492601978, guid: e0564e0dde82e084987a6c62c79ee2ae,
@@ -28435,6 +28434,53 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c16da9c3c5092d438b02e311677323d, type: 3}
+--- !u!1 &2089722703
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2089722705}
+  - component: {fileID: 2089722704}
+  m_Layer: 0
+  m_Name: CameraPan
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2089722704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089722703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26ef7e6f09525cb40b22a0b361f66a4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 1715079181}
+  boundsMax: {x: 0, y: 0, z: 0}
+  boundsMin: {x: 0, y: 0, z: 0}
+  groundZ: -5
+--- !u!4 &2089722705
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089722703}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2095866655
 GameObject:
   m_ObjectHideFlags: 0
