@@ -24,7 +24,7 @@ public class IA_PathCar : MonoBehaviour
 
     public List<Transform> finalPath = new List<Transform>();
 
-    public float speed;
+    public float speed = 0.5f;
     private float currentSpeed;
 
     public int index;
@@ -56,10 +56,13 @@ public class IA_PathCar : MonoBehaviour
     void Update(){
         direction = transform.forward.normalized;
 
-        if (checkTrafic()){
+        if (CheckTrafic()){
             //Get the car on the tile busy
-            if (finalPath[index + 1].GetComponent<InspectElement>().carInTheTile.transform.rotation.y >= car.transform.rotation.y + step ||
-                finalPath[index + 1].GetComponent<InspectElement>().carInTheTile.transform.rotation.y <= car.transform.rotation.y - step){}
+            Debug.Log(finalPath[index].GetComponent<InspectElement>().carInTheTile.transform.rotation.y);
+            Debug.Log(car.transform.rotation.y + step);
+
+            if (finalPath[index].GetComponent<InspectElement>().carInTheTile.transform.rotation.y >= car.transform.rotation.y + step ||
+                finalPath[index].GetComponent<InspectElement>().carInTheTile.transform.rotation.y <= car.transform.rotation.y - step){}
             else{
                 //behind the car 
                 speed = finalPath[index + 1].GetComponent<InspectElement>().carInTheTile.speed;
@@ -67,22 +70,9 @@ public class IA_PathCar : MonoBehaviour
         }else{
             speed = currentSpeed;
         }
-
-        /*if(indexTarget%2 != 0 && !waited){
-            //Wait
-            timer += Time.deltaTime;
-            if (timer > timerToWait){
-                speed = currentSpeed;
-                timer = 0;
-                waited = true;
-            }
-            else
-                speed = 0;
-        }*/
         if (finalPath.Count != 0){
             FollowPath();
         }
-        //GET CURRENT CUBE (UNDER PLAYER)
 
         RayCastDown();
 
@@ -211,12 +201,9 @@ public class IA_PathCar : MonoBehaviour
 
                 if (currentCube.GetComponent<InspectElement>().Event == InspectElement.Tyle_Evenement.Feux_Rouge){
                     if (currentCube.GetComponent<FeuxRouge>().red)
-                    {
-                        currentSpeed = 0;
-                    }
-                        
+                        currentSpeed = 0;                    
                     else
-                        currentSpeed = 1;
+                        currentSpeed = 0.5f;
                 }
 
                 if (tmp_currentCube == null)
@@ -240,7 +227,7 @@ public class IA_PathCar : MonoBehaviour
         FindPath(mainTarget);
     }
 
-    public bool checkTrafic()
+    public bool CheckTrafic()
     {
         return (finalPath[index + 1].GetComponent<InspectElement>().busy);
     }

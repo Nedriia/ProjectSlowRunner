@@ -39,7 +39,7 @@ public class TinderSelection_Manager : MonoBehaviour
 
                     //Load client infos / sprite / Destination
                     controller.mainTarget = manager.Random_Destination();
-                    controller.setNew_Distination();
+                    //controller.setNew_Distination();
 
                     //-> timeScale is 0 here
                     Time.timeScale = 1;
@@ -57,7 +57,7 @@ public class TinderSelection_Manager : MonoBehaviour
             this.gameObject.SetActive(false);
 
             controller.mainTarget = manager.Random_Destination();           
-            controller.setNew_Distination();
+           // controller.setNew_Distination();
 
             manager.levelIsOver = true;
         }
