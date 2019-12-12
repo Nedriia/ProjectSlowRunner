@@ -7,6 +7,7 @@ public class menuGG : MonoBehaviour
 {
     public string Scene;
     public string NextScene;
+    public Animator anim;
 
     /*public void Menu()
     {
@@ -25,6 +26,16 @@ public class menuGG : MonoBehaviour
 
     public void Next()
     {
+        //SceneManager.LoadScene(NextScene);
+        //Debug.Log("Button Pressed");
+        StartCoroutine(ChangeScene());
+        //anim.SetTrigger("CloseWindow");
+    }
+
+    public IEnumerator ChangeScene()
+    {
+        anim.SetTrigger("CloseWindow");
+        yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene(NextScene);
     }
 

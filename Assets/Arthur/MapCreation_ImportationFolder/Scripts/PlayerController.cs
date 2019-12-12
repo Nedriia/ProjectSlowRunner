@@ -182,7 +182,7 @@ public class PlayerController : MonoBehaviour
                 }
             }*/
             Debug.Log("Level is over");
-            Time.timeScale = 0;
+            Time.timeScale = 1;
             manager.canvasGG.SetActive(true);
         }
         if (waypoints.Count != 0){
