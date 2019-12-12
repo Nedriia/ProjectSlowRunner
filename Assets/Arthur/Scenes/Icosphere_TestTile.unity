@@ -11291,6 +11291,7 @@ GameObject:
   - component: {fileID: 1715079187}
   - component: {fileID: 1715079188}
   - component: {fileID: 1715079189}
+  - component: {fileID: 1715079190}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -11371,7 +11372,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1715079179}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bb44e6c8e7f003b42a7b393e5a1770bf, type: 3}
   m_Name: 
@@ -11695,6 +11696,30 @@ MonoBehaviour:
   managerScore: {fileID: 420683143}
   score: 0
   priceRestaurant: 20
+--- !u!114 &1715079190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715079179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb7dd37c5ea85bd41b0e786485b6da67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotSpeed: 0.1
+  startRotation: 180
+  smoothRotation: 2
+  target: {fileID: 4364321273752776452}
+  rotationSensitivityY: 1
+  rotationSensitivityX: 1
+  rotationLimit: {x: -360, y: 360}
+  zAxisDistance: 10
+  xRotationAxis: 0
+  yRotationAxis: 0
+  zoomSensitivity: 2
+  cameraZoomRangeFOV: {x: 10, y: 60}
 --- !u!64 &1718278869
 MeshCollider:
   m_ObjectHideFlags: 0
