@@ -56,43 +56,30 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
+        if (Input.GetMouseButton(0)){
             Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition); RaycastHit mouseHit;
-            if (Physics.Raycast(mouseRay, out mouseHit))
-            {
-                if (mouseHit.transform.GetComponent<Walkable>() != null)
-                {
+            if (Physics.Raycast(mouseRay, out mouseHit)){
+                if (mouseHit.transform.GetComponent<Walkable>() != null){
                     clickedCube = mouseHit.transform;
-                    if (Vector3.Distance(clickedCube.position, list_points[list_points.Count - 1].position) < clickedCube.transform.localScale.x + 0.5f)
-                    {
-                        if (clickedCube.GetComponent<InspectElement>().type == InspectElement.Tyle_Type.CrossRoads || !list_points.Contains(clickedCube) && clickedCube != mainTarget)
-                        {
-                            foreach (WalkPath p in clickedCube.GetComponent<Walkable>().possiblePaths)
-                            {
-                                if (p.target == list_points[list_points.Count() - 1] || p.target == currentCube)
-                                {
-                                    if (finalPath.Count != 0)
-                                    {
-                                        foreach (Transform element in finalPath)
-                                        {
+                    if (Vector3.Distance(clickedCube.position, list_points[list_points.Count - 1].position) < clickedCube.transform.localScale.x + 0.5f){
+                        if (clickedCube.GetComponent<InspectElement>().type == InspectElement.Tyle_Type.CrossRoads || !list_points.Contains(clickedCube) && clickedCube != mainTarget){
+                            foreach (WalkPath p in clickedCube.GetComponent<Walkable>().possiblePaths){
+                                if (p.target == list_points[list_points.Count() - 1] || p.target == currentCube){
+                                    if (finalPath.Count != 0){
+                                        foreach (Transform element in finalPath){
                                             if (!list_points.Contains(element))
                                                 element.GetComponent<MeshRenderer>().material = controllerMat.road;
                                         }
-                                        for (int i = finalPath.Count - 1; i >= 0; --i)
-                                        {
+                                        for (int i = finalPath.Count - 1; i >= 0; --i){
                                             if (i != index + 1)
                                                 finalPath.RemoveAt(i);
                                             else
                                                 break;
                                         }
                                     }
-                                    //finalPath.Clear();
                                     Clicked_NewFindPath(clickedCube);
                                     list_points.Add(clickedCube);
                                     clickedCube.GetComponent<MeshRenderer>().material = controllerMat.pathTemp;
-                                    /*foreach (Transform element in list_points)
-                                        element.GetComponent<MeshRenderer>().material = controllerMat.pathTemp;*/
                                     for (int i = 0; i < list_points.Count; ++i)
                                         finalPath.Insert(i, list_points[i]);
                                 }
@@ -203,7 +190,7 @@ public class PlayerController : MonoBehaviour
     }
 
     void ExploreCube(List<Transform> nextCubes, List<Transform> visitedCubes, Transform target)
-    {
+    {    
         Transform current = nextCubes.First();
         nextCubes.Remove(current);
 
@@ -216,8 +203,12 @@ public class PlayerController : MonoBehaviour
         {
             if (!visitedCubes.Contains(path.target) && path.active)
             {
-                nextCubes.Add(path.target);
-                path.target.GetComponent<Walkable>().previousBlock = current;
+                /*if (Vector3.Angle(path.target.position, clickedCube.position) < 40 && Vector3.Angle(path.target.position, clickedCube.position) != 0)
+                {*/
+                    Debug.Log(Vector3.Angle(path.target.position, clickedCube.position) + " " + path.target);
+                    nextCubes.Add(path.target);
+                    path.target.GetComponent<Walkable>().previousBlock = current;
+                /*}*/
             }
         }
         visitedCubes.Add(current);
@@ -230,19 +221,7 @@ public class PlayerController : MonoBehaviour
     void BuildPath(Transform target)
     {
         Transform cube = target;
-        if (finalform)
-        {
-            while (cube != waypoints[0])
-            {
-                temp_finalPath.Insert(0, cube);
-                cube.GetComponent<MeshRenderer>().material = controllerMat.pathTemp;
-                if (cube.GetComponent<Walkable>().previousBlock != null)
-                    cube = cube.GetComponent<Walkable>().previousBlock;
-                else
-                    return;
-            }
-        }
-        else if (!finalform)
+        if (!finalform)
         {
             while (cube != clickedCube)
             {
