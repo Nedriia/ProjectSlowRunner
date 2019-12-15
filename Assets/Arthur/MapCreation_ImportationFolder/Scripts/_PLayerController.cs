@@ -206,7 +206,7 @@ public class _PLayerController : MonoBehaviour
             {
                 clickedCube = mouseHit.transform;
                 if (clickedCube != list_points[list_points.Count - 2]){
-                    if (clickedCube.GetComponent<InspectElement>().type == InspectElement.Tyle_Type.CrossRoads || !list_points.Contains(clickedCube) && clickedCube != mainTarget){
+                    if (clickedCube.GetComponent<InspectElement>().type == InspectElement.Tyle_Type.CrossRoads || clickedCube != mainTarget){
                         foreach (WalkPath p in clickedCube.GetComponent<Walkable>().possiblePaths){
                             if (!lastWaypointReached){
                                 if (p.target == list_points[list_points.Count() - 1]){
@@ -233,7 +233,7 @@ public class _PLayerController : MonoBehaviour
                             }
                             else if(lastWaypointReached)
                             {
-                                if (p.target == list_points[list_points.Count() - 1]){
+                                if (p.target == currentCube){
                                     float angle = Vector3.Angle(car.transform.forward, clickedCube.position - car.transform.position);
                                     if (angle < 100 && angle > -100)
                                     {
