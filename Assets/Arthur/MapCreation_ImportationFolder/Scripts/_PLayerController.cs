@@ -37,7 +37,7 @@ public class _PLayerController : MonoBehaviour
     public GameManager manager;
 
     bool move = false;
-    float threesholdRotation_Traffic = 135;
+    public float threesholdRotation_Traffic;
     public bool lastWaypointReached = false;
 
     void Start()
@@ -65,6 +65,34 @@ public class _PLayerController : MonoBehaviour
             
             if (finalPath.Count != 0)
                 FollowPath();
+            if (CheckTrafic())
+            {
+                var truck = finalPath[index].GetComponent<InspectElement>().carInTheTile;
+                if (truck.transform.forward.x != 1 || truck.transform.forward.x != -1 &&
+                        truck.transform.forward.z != 1 || truck.transform.forward.z != -1)
+                {
+                    Debug.Log("Truck is Turning");
+                    var heading = car.transform.position - truck.transform.position;
+                    float dot = Vector3.Dot(heading, truck.transform.forward);
+                    if (dot < 0)
+                    {
+                        speed = truck.speed;
+                    }
+                    else if (dot > 0)
+                    {
+                        Debug.Log("Car is front of so Frontal Collision");
+                    }
+                }
+                else if(truck.transform.rotation.eulerAngles.y >= car.transform.rotation.eulerAngles.y + threesholdRotation_Traffic &&
+                   truck.transform.rotation.eulerAngles.y >= car.transform.rotation.eulerAngles.y + threesholdRotation_Traffic)
+                {
+                    Debug.Log("Frontal Collision");
+                }
+            }
+            else
+            {
+                speed = optimalSpeed;
+            }
         }
 
         if (mainTarget == currentCube)
@@ -73,9 +101,10 @@ public class _PLayerController : MonoBehaviour
             Time.timeScale = 0;
             manager.canvasGG.SetActive(true);
         }
-        if(currentCube == list_points[list_points.Count - 1] && move){
+
+        if(index == list_points.Count && move){
             lastWaypointReached = true;
-        }
+        }      
     }
 
     public void EraseLastPoint()
@@ -262,5 +291,9 @@ public class _PLayerController : MonoBehaviour
                 }
             }
         }
+    }
+    public bool CheckTrafic()
+    {
+        return (finalPath[index].GetComponent<InspectElement>().busy);
     }
 }
