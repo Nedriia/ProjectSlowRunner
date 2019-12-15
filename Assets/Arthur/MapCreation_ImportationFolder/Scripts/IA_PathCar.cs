@@ -58,8 +58,9 @@ public class IA_PathCar : MonoBehaviour
 
         if (CheckTrafic()){
             //Get the car on the tile busy
-            Debug.Log(finalPath[index].GetComponent<InspectElement>().carInTheTile.transform.rotation.y);
-            Debug.Log(car.transform.rotation.y + step);
+
+            /*Debug.Log(finalPath[index].GetComponent<InspectElement>().carInTheTile.transform.rotation.y);
+            Debug.Log(car.transform.rotation.y + step);*/
 
             if (finalPath[index].GetComponent<InspectElement>().carInTheTile.transform.rotation.y >= car.transform.rotation.y + step ||
                 finalPath[index].GetComponent<InspectElement>().carInTheTile.transform.rotation.y <= car.transform.rotation.y - step){}

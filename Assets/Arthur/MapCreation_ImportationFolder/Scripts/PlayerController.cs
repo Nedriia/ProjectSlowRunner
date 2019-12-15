@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using DG.Tweening;
+using System;
 
 [SelectionBase]
 public class PlayerController : MonoBehaviour
@@ -39,9 +40,17 @@ public class PlayerController : MonoBehaviour
     private MapEditor_MainController controllerMat;
     public GameManager manager;
     public Vector3 direction;
-    public float step;
 
     bool move = false;
+    bool wait = false;
+
+    float timer;
+    public bool alreayBlocked = false;
+    public bool blocked = false;
+    public Transform truck;
+
+    public float threesholdRotation_Traffic;
+    bool feux = false;
 
     void Start()
     {
@@ -56,60 +65,66 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        //Pulse  Material
         if (Input.GetMouseButton(0)){
             Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition); RaycastHit mouseHit;
             if (Physics.Raycast(mouseRay, out mouseHit)){
                 if (mouseHit.transform.GetComponent<Walkable>() != null){
                     clickedCube = mouseHit.transform;
-                    if (Vector3.Distance(clickedCube.position, list_points[list_points.Count - 1].position) < clickedCube.transform.localScale.x + 0.5f){
-                        if (clickedCube.GetComponent<InspectElement>().type == InspectElement.Tyle_Type.CrossRoads || !list_points.Contains(clickedCube) && clickedCube != mainTarget){
-                            foreach (WalkPath p in clickedCube.GetComponent<Walkable>().possiblePaths){
-                                if (p.target == list_points[list_points.Count() - 1] || p.target == currentCube){
-                                    if (finalPath.Count != 0){
-                                        foreach (Transform element in finalPath){
-                                            if (!list_points.Contains(element))
-                                                element.GetComponent<MeshRenderer>().material = controllerMat.road;
+                    if (!move){
+                        if (Vector3.Distance(clickedCube.position, list_points[list_points.Count - 1].position) < clickedCube.transform.localScale.x + 0.5f){
+                            if (/*clickedCube.GetComponent<InspectElement>().type == InspectElement.Tyle_Type.CrossRoads|| !list_points.Contains(clickedCube) &&*/ clickedCube != mainTarget){
+                                foreach (WalkPath p in clickedCube.GetComponent<Walkable>().possiblePaths){
+                                    if (p.target == list_points[list_points.Count() - 1] || p.target == currentCube){
+                                        if (finalPath.Count != 0){
+                                            foreach (Transform element in finalPath){
+                                                if (!list_points.Contains(element))
+                                                    element.GetComponent<MeshRenderer>().material = controllerMat.road;
+                                            }
+                                            for (int i = finalPath.Count - 1; i >= 0; --i){
+                                                if (i != index + 1)
+                                                    finalPath.RemoveAt(i);
+                                                else
+                                                    break;
+                                            }
                                         }
-                                        for (int i = finalPath.Count - 1; i >= 0; --i){
-                                            if (i != index + 1)
-                                                finalPath.RemoveAt(i);
-                                            else
-                                                break;
-                                        }
+                                        Clicked_NewFindPath(clickedCube);
+                                        list_points.Add(clickedCube);
+                                        clickedCube.GetComponent<MeshRenderer>().material = controllerMat.pathTemp;
+                                        for (int i = 0; i < list_points.Count; ++i)
+                                            finalPath.Insert(i, list_points[i]);
                                     }
-                                    Clicked_NewFindPath(clickedCube);
-                                    list_points.Add(clickedCube);
-                                    clickedCube.GetComponent<MeshRenderer>().material = controllerMat.pathTemp;
-                                    for (int i = 0; i < list_points.Count; ++i)
-                                        finalPath.Insert(i, list_points[i]);
                                 }
                             }
                         }
                     }
-                }
-            }
-        }
-
-        if (Input.GetKeyDown(KeyCode.A) && list_points.Count > 1)
-        {
-            if (list_points.Count != 0/* && list_points[list_points.Count - 1] == mainTarget*/)
-            {
-                move = true;
-            }
-        }
-
-        if (Input.GetKeyDown(KeyCode.Z) && !move)
-        {
-            if (list_points.Count > 1)
-            {
-                list_points[list_points.Count - 1].GetComponent<MeshRenderer>().material = controllerMat.road;
-                list_points.RemoveAt(list_points.Count - 1);
-                foreach (Transform element in finalPath)
-                {
-                    if (list_points.Contains(element))
-                        element.GetComponent<MeshRenderer>().material = controllerMat.pathTemp;
-                    else
-                        element.GetComponent<MeshRenderer>().material = controllerMat.road;
+                    else if(move && Vector3.Angle(car.transform.forward, clickedCube.position - car.transform.position) < 90){
+                        if (Vector3.Distance(clickedCube.position, list_points[list_points.Count - 1].position) < clickedCube.transform.localScale.x + 0.5f){
+                            if (clickedCube.GetComponent<InspectElement>().type == InspectElement.Tyle_Type.CrossRoads || !list_points.Contains(clickedCube) && clickedCube != mainTarget){
+                                foreach (WalkPath p in clickedCube.GetComponent<Walkable>().possiblePaths){
+                                    if (p.target == list_points[list_points.Count() - 1] || p.target == currentCube){
+                                        if (finalPath.Count != 0){
+                                            foreach (Transform element in finalPath){
+                                                if (!list_points.Contains(element))
+                                                    element.GetComponent<MeshRenderer>().material = controllerMat.road;
+                                            }
+                                            for (int i = finalPath.Count - 1; i >= 0; --i){
+                                                if (i != index + 1)
+                                                    finalPath.RemoveAt(i);
+                                                else
+                                                    break;
+                                            }
+                                        }
+                                        Clicked_NewFindPath(clickedCube);
+                                        list_points.Add(clickedCube);
+                                        clickedCube.GetComponent<MeshRenderer>().material = controllerMat.pathTemp;
+                                        for (int i = 0; i < list_points.Count; ++i)
+                                            finalPath.Insert(i, list_points[i]);
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -120,24 +135,58 @@ public class PlayerController : MonoBehaviour
 
             direction = gameObject.transform.forward.normalized;
             RayCastDown();
-            if (CheckTrafic())
+            if (!feux)
             {
-                //Get the car on the tile busy
-                if (finalPath[index].GetComponent<InspectElement>().carInTheTile.transform.rotation.y >= car.transform.rotation.y + step ||
-                    finalPath[index].GetComponent<InspectElement>().carInTheTile.transform.rotation.y <= car.transform.rotation.y - step)
+                if (CheckTrafic())
                 {
-                    //Frontal Collision
-                    Debug.Log("Frontal Collision");
+                    //Get the car on the tile busy
+                    if (finalPath[index].GetComponent<InspectElement>().carInTheTile.transform.rotation.eulerAngles.y >= car.transform.rotation.eulerAngles.y + threesholdRotation_Traffic ||
+                        finalPath[index].GetComponent<InspectElement>().carInTheTile.transform.rotation.eulerAngles.y <= car.transform.rotation.eulerAngles.y - threesholdRotation_Traffic)
+                    {
+                        //Frontal Collision
+                        Debug.Log("Frontal Collision");
+                        /*Time.timeScale = 0;
+                        manager.canvasGG.SetActive(true);*/
+                    }
+                    else
+                    {
+                        Debug.Log("Follow");
+                        if (finalPath[index].GetComponent<InspectElement>().carInTheTile.speed != 0)
+                            speed = finalPath[index].GetComponent<InspectElement>().carInTheTile.speed - 0.1f;
+                        else
+                            speed = finalPath[index].GetComponent<InspectElement>().carInTheTile.speed;
+                        Debug.Log(finalPath[index].GetComponent<InspectElement>().carInTheTile.speed);
+                    }
                 }
-                else
+                else if (finalPath[index].GetComponent<InspectElement>().type == InspectElement.Tyle_Type.CrossRoads && !alreayBlocked)
                 {
-                    speed = finalPath[index].GetComponent<InspectElement>().carInTheTile.speed;
-                    Debug.Log(finalPath[index].GetComponent<InspectElement>().carInTheTile.speed);
+                    Debug.Log("CrossRoads Detected");
+                    var roadsAvailable = finalPath[index].GetComponent<Walkable>();
+                    for (int i = 0; i < roadsAvailable.possiblePaths.Count; ++i)
+                    {
+                        if (roadsAvailable.possiblePaths[i].target.GetComponent<InspectElement>().busy)
+                        {
+                            truck = roadsAvailable.possiblePaths[i].target.GetComponent<InspectElement>().carInTheTile.transform;
+                            Debug.Log(roadsAvailable.possiblePaths[i].target);
+                            Debug.Log(roadsAvailable.possiblePaths[i].target.GetComponent<InspectElement>().carInTheTile);
+                            if (car.transform.forward.x != roadsAvailable.possiblePaths[i].target.GetComponent<InspectElement>().carInTheTile.transform.forward.x)
+                            {
+                                speed = 0;
+                                alreayBlocked = true;
+                            }
+                        }
+                    }
                 }
             }
             else
             {
-                speed = optimalSpeed;
+                if (!alreayBlocked)
+                    speed = optimalSpeed;
+                else
+                {
+                    alreayBlocked = false;
+                    speed = optimalSpeed;
+                }
             }
 
             if (finalPath.Count != 0)
@@ -170,15 +219,38 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void EraseLastPoint()
+    {
+        if (!move){
+            if (list_points.Count > 1){
+                list_points[list_points.Count - 1].GetComponent<MeshRenderer>().material = controllerMat.road;
+                list_points.RemoveAt(list_points.Count - 1);
+                foreach (Transform element in finalPath){
+                    if (list_points.Contains(element))
+                        element.GetComponent<MeshRenderer>().material = controllerMat.pathTemp;
+                    else
+                        element.GetComponent<MeshRenderer>().material = controllerMat.road;
+                }
+            }
+        }
+    }
+
+    public void StartMovement()
+    {
+        if (list_points.Count > 1){
+            if (list_points.Count != 0/* && list_points[list_points.Count - 1] == mainTarget*/){
+                move = true;
+            }
+        }
+    }
+
     public void Clicked_NewFindPath(Transform pointFrom)
     {
         List<Transform> nextCubes = new List<Transform>();
         List<Transform> pastCubes = new List<Transform>();
 
-        foreach (WalkPath path in pointFrom.GetComponent<Walkable>().possiblePaths)
-        {
-            if (path.active)
-            {
+        foreach (WalkPath path in pointFrom.GetComponent<Walkable>().possiblePaths){
+            if (path.active){
                 nextCubes.Add(path.target);
                 path.target.GetComponent<Walkable>().previousBlock = pointFrom;
             }
@@ -194,8 +266,7 @@ public class PlayerController : MonoBehaviour
         Transform current = nextCubes.First();
         nextCubes.Remove(current);
 
-        if (current == target)
-        {
+        if (current == target){
             return;
         }
 
@@ -205,7 +276,7 @@ public class PlayerController : MonoBehaviour
             {
                 /*if (Vector3.Angle(path.target.position, clickedCube.position) < 40 && Vector3.Angle(path.target.position, clickedCube.position) != 0)
                 {*/
-                    Debug.Log(Vector3.Angle(path.target.position, clickedCube.position) + " " + path.target);
+                    //Debug.Log(Vector3.Angle(path.target.position, clickedCube.position) + " " + path.target);
                     nextCubes.Add(path.target);
                     path.target.GetComponent<Walkable>().previousBlock = current;
                 /*}*/
@@ -289,9 +360,15 @@ public class PlayerController : MonoBehaviour
                 if (currentCube.GetComponent<InspectElement>().Event == InspectElement.Tyle_Evenement.Feux_Rouge)
                 {
                     if (currentCube.GetComponent<FeuxRouge>().red)
+                    {
                         optimalSpeed = 0;
+                        feux = true;
+                    }
                     else
+                    {
                         optimalSpeed = 1;
+                        feux = false;
+                    }
                 }
                 playerHit.transform.GetComponent<MeshRenderer>().material.Lerp(playerHit.transform.GetComponent<MeshRenderer>().material, controllerMat.alreadyPassed, 6.5f * Time.deltaTime);
 
