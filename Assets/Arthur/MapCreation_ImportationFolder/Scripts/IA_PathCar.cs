@@ -6,115 +6,82 @@ using System.Collections;
 [SelectionBase]
 public class IA_PathCar : MonoBehaviour
 {
-    //public bool walking = false;
-
-    [Space]
+    [Header("Pathfinding Value")]
     public Transform currentCube;
     private Transform tmp_currentCube;
     public Transform mainTarget;
 
-    //Prefab Planet
-    public Transform planet;
-    public Transform car;
-    [Range(0.5f,10f)]
-    public float rotationSpeed;
-
+    [Header("Path")]
     public List<Transform> path_Waypoints = new List<Transform>();
+    public List<Transform> finalPath = new List<Transform>();
     [Space]
 
-    public List<Transform> finalPath = new List<Transform>();
-
+    [Header("Car variables")]
+    public Transform planet;
+    public Transform car;
+    [Range(0.5f, 10f)]
+    public float step;
     public float speed = 0.5f;
     private float currentSpeed;
-
-    public int index;
-    public int indexTarget;
-
-    public float timer;
-    private float timerToWait = 0;
-    public bool waited = false;
-
-    private MapEditor_MainController controllerMat;
+    public float rotationSpeed;
     public Vector3 direction;
+    [Space]
 
-    public float step;
-
+    int index;
+    int indexTarget;
 
     void Start()
     {
-        controllerMat = Camera.main.GetComponent<MapEditor_MainController>();
         RayCastDown();
-        //TODO : assign target
         index = 0;
         indexTarget = 0;
         mainTarget = path_Waypoints[indexTarget];
         FindPath(mainTarget);
-
         currentSpeed = speed;
     }
-
     void Update(){
-        direction = transform.forward.normalized;
-
-        if (CheckTrafic()){
-            //Get the car on the tile busy
-
-            /*Debug.Log(finalPath[index].GetComponent<InspectElement>().carInTheTile.transform.rotation.y);
-            Debug.Log(car.transform.rotation.y + step);*/
-
-            if (finalPath[index].GetComponent<InspectElement>().carInTheTile.transform.rotation.y >= car.transform.rotation.y + step ||
-                finalPath[index].GetComponent<InspectElement>().carInTheTile.transform.rotation.y <= car.transform.rotation.y - step){}
-            else{
-                //behind the car 
-                speed = finalPath[index + 1].GetComponent<InspectElement>().carInTheTile.speed;
+        if (speed > 0){
+            /*if (CheckTrafic()){
+                var tmp_truck = finalPath[index].GetComponent<InspectElement>().carInTheTile;
+                if (tmp_truck.transform.rotation.y >= car.transform.rotation.y + step ||
+                    tmp_truck.transform.rotation.y <= car.transform.rotation.y - step) { }
+                else
+                    speed = tmp_truck.speed;
             }
-        }else{
-            speed = currentSpeed;
+            else
+                speed = currentSpeed;*/
+            if (finalPath.Count != 0)
+                FollowPath();
         }
-        if (finalPath.Count != 0){
-            FollowPath();
-        }
-
         RayCastDown();
-
-        if (currentCube.GetComponent<Walkable>().movingGround){
-            transform.parent = currentCube.parent;
-        }
-        else{
-            transform.parent = null;
-        }
     }
 
     public void FindPath(Transform target)
     {
         List<Transform> nextCubes = new List<Transform>();
         List<Transform> pastCubes = new List<Transform>();
+        var tmp_currenCube = currentCube.GetComponent<Walkable>().possiblePaths;
 
-        foreach (WalkPath path in currentCube.GetComponent<Walkable>().possiblePaths)
-        {
-            if (path.active)
-            {
+        foreach (WalkPath path in tmp_currenCube){
+            if (path.active){
                 nextCubes.Add(path.target);
                 path.target.GetComponent<Walkable>().previousBlock = currentCube;
             }
         }
-
         pastCubes.Add(currentCube);
-
         ExploreCube(nextCubes, pastCubes, target);
         BuildPath(target);
     }
-
     void ExploreCube(List<Transform> nextCubes, List<Transform> visitedCubes, Transform target)
     {
         Transform current = nextCubes.First();
         nextCubes.Remove(current);
 
-        if (current == target){
+        if (current == target)
             return;
-        }
 
-        foreach (WalkPath path in current.GetComponent<Walkable>().possiblePaths){
+        var tmp_walkable = current.GetComponent<Walkable>().possiblePaths;
+        foreach (WalkPath path in tmp_walkable){
             if (!visitedCubes.Contains(path.target) && path.active){
                 nextCubes.Add(path.target);
                 path.target.GetComponent<Walkable>().previousBlock = current;
@@ -122,49 +89,43 @@ public class IA_PathCar : MonoBehaviour
         }
 
         visitedCubes.Add(current);
-
         if (nextCubes.Any()){
             ExploreCube(nextCubes, visitedCubes, target);
         }
     }
-
     void BuildPath(Transform target)
     {
         Transform cube = target;
         while (cube != currentCube)
         {
             finalPath.Insert(0, cube);
-            if (cube.GetComponent<Walkable>().previousBlock != null)
+            var tmp_previous = cube.GetComponent<Walkable>().previousBlock;
+            if (tmp_previous != null)
                 cube = cube.GetComponent<Walkable>().previousBlock;
             else
                 return;
         }
         finalPath.Insert(finalPath.Count - 1, target);
     }
-
     void FollowPath()
     {
-        //TODO : Check offset variables
-        //TODO : Replace 0.5f value by something working in all cases
         transform.position = Vector3.MoveTowards(transform.position, finalPath[index].transform.position + finalPath[index].transform.up * 0.5f, Time.deltaTime * speed);
 
         Debug.DrawRay(finalPath[index].transform.position + finalPath[index].transform.up * 0.5f, finalPath[index].transform.up, Color.blue, 1);
 
         var rotationTo = Quaternion.LookRotation(Vector3.RotateTowards(car.forward, finalPath[index].transform.position + finalPath[index].transform.up * 0.5f - car.transform.position, rotationSpeed * Time.deltaTime, 0.0f));
-        car.transform.rotation = Quaternion.Euler(new Vector3(0, rotationTo.eulerAngles.y, 0)); // We only need to rotate on one axe
+        car.transform.rotation = Quaternion.Euler(new Vector3(0, rotationTo.eulerAngles.y, 0));
 
         if (transform.position == path_Waypoints[indexTarget].transform.position + path_Waypoints[indexTarget].transform.up * 0.5f)
         {
             ++indexTarget;
             if (indexTarget <= path_Waypoints.Count - 1){
-                waited = false;
                 index = 0;
                 mainTarget = path_Waypoints[indexTarget];
                 finalPath.Clear();
                 FindPath(mainTarget);               
             }
             else{
-                waited = false;
                 indexTarget = 0;
                 index = 0;
                 mainTarget = path_Waypoints[indexTarget];
@@ -173,24 +134,13 @@ public class IA_PathCar : MonoBehaviour
             }
         }
 
-        if (transform.position == finalPath[index].transform.position + finalPath[index].transform.up * 0.5f)
-        {
-            if (index <= finalPath.Count - 1){
+        if (transform.position == finalPath[index].transform.position + finalPath[index].transform.up * 0.5f){
+            if (index <= finalPath.Count - 1)
                 ++index;
-            }
-            else if (index >= finalPath.Count){
+            else if (index >= finalPath.Count)
                 index = 0;
-            }
         }    
     }
-
-    void Clear()
-    {
-        foreach (Transform t in finalPath){
-            t.GetComponent<Walkable>().previousBlock = null;
-        }
-    }
-
     public void RayCastDown()
     {
         Ray playerRay = new Ray(transform.GetChild(0).position, -transform.up);
@@ -200,16 +150,15 @@ public class IA_PathCar : MonoBehaviour
             if (playerHit.transform.GetComponent<Walkable>() != null){
                 currentCube = playerHit.transform;
 
-                if (currentCube.GetComponent<InspectElement>().Event == InspectElement.Tyle_Evenement.Feux_Rouge){
+                var checkElement = currentCube.GetComponent<InspectElement>();
+                if (checkElement.Event == InspectElement.Tyle_Evenement.Feux_Rouge){
                     if (currentCube.GetComponent<FeuxRouge>().red)
-                        currentSpeed = 0;                    
+                        speed = 0;                    
                     else
-                        currentSpeed = 0.5f;
+                        speed = currentSpeed;
                 }
-
                 if (tmp_currentCube == null)
                     tmp_currentCube = currentCube;
-                var checkElement = currentCube.GetComponent<InspectElement>();
                 checkElement.busy = true;
                 checkElement.carInTheTile = this;
             }
@@ -222,14 +171,8 @@ public class IA_PathCar : MonoBehaviour
             tmp_currentCube = currentCube;
         }     
     }
-
-    public void setNew_Distination()
-    {
-        FindPath(mainTarget);
-    }
-
     public bool CheckTrafic()
     {
-        return (finalPath[index + 1].GetComponent<InspectElement>().busy);
+        return (finalPath[index].GetComponent<InspectElement>().busy);
     }
 }

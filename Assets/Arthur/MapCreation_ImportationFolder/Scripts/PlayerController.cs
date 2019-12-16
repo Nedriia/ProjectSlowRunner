@@ -151,11 +151,11 @@ public class PlayerController : MonoBehaviour
                     else
                     {
                         Debug.Log("Follow");
-                        if (finalPath[index].GetComponent<InspectElement>().carInTheTile.speed != 0)
+                        /*if (finalPath[index].GetComponent<InspectElement>().carInTheTile.speed != 0)
                             speed = finalPath[index].GetComponent<InspectElement>().carInTheTile.speed - 0.1f;
                         else
                             speed = finalPath[index].GetComponent<InspectElement>().carInTheTile.speed;
-                        Debug.Log(finalPath[index].GetComponent<InspectElement>().carInTheTile.speed);
+                        Debug.Log(finalPath[index].GetComponent<InspectElement>().carInTheTile.speed);*/
                     }
                 }
                 else if (finalPath[index].GetComponent<InspectElement>().type == InspectElement.Tyle_Type.CrossRoads && !alreayBlocked)

@@ -8,37 +8,30 @@ using System;
 [SelectionBase]
 public class _PLayerController : MonoBehaviour
 {
-    //public bool walking = false;
-
-    [Space]
+    [Header("Pathfindin Values")]
     public Transform currentCube;
     public Transform clickedCube;
     public Transform mainTarget;
+    [Space]
 
-    public Transform indicator;
-
-    //Prefab Planet
-    public Transform planet;
-    public Transform car;
+    [Header("Car values")]
     [Range(0.5f, 10f)]
     public float rotationSpeed;
-
+    public Transform planet;
+    public Transform car;
+    public float speed;
+    public float threesholdRotation_Traffic;
+    [Space]
+    public GameManager manager;
+    public int index;
+    [Header("Paths")]
     public List<Transform> finalPath = new List<Transform>();
-    public List<Transform> temp_finalPath = new List<Transform>();
     public List<Transform> list_points = new List<Transform>();
 
-    //public gravityAttractor planet;
-    public float speed;
-    public float optimalSpeed;
-    public float speedInChantier;
-    public int index;
-
-    private MapEditor_MainController controllerMat;
-    public GameManager manager;
-
     bool move = false;
-    public float threesholdRotation_Traffic;
-    public bool lastWaypointReached = false;
+    bool lastWaypointReached = false;
+    MapEditor_MainController controllerMat;
+    float optimalSpeed;
 
     void Start()
     {
@@ -48,60 +41,64 @@ public class _PLayerController : MonoBehaviour
         index = 0;
         list_points.Add(currentCube);
         list_points.Add(currentCube);
-
+        optimalSpeed = speed;
         Time.timeScale = 1;
     }
-
     void Update()
     {
         //Click For new point
         if (Input.GetMouseButton(0)){
             PaintPath();
         }
-
         if (move)
         {
             RayCastDown();
-            
-            if (finalPath.Count != 0)
-                FollowPath();
-            if (CheckTrafic())
+            if (speed != 0)
             {
-                var truck = finalPath[index].GetComponent<InspectElement>().carInTheTile;
-                if (truck.transform.forward.x != 1 || truck.transform.forward.x != -1 &&
-                        truck.transform.forward.z != 1 || truck.transform.forward.z != -1)
+                if (finalPath.Count != 0)
+                    FollowPath();
+                if (CheckTrafic())
                 {
-                    Debug.Log("Truck is Turning");
-                    var heading = car.transform.position - truck.transform.position;
-                    float dot = Vector3.Dot(heading, truck.transform.forward);
-                    if (dot < 0)
+                    var truck = finalPath[index].GetComponent<InspectElement>().carInTheTile;
+                    if (truck.transform.forward.x != 1 || truck.transform.forward.x != -1 &&
+                            truck.transform.forward.z != 1 || truck.transform.forward.z != -1)
                     {
-                        speed = truck.speed;
+                        Debug.Log("Truck is Turning");
+                        var heading = car.transform.position - truck.transform.position;
+                        float dot = Vector3.Dot(heading, truck.transform.forward);
+                        if (dot < 0)
+                        {
+                            if (truck.speed != 0)
+                                speed = truck.speed - 0.1f;
+                            else
+                                speed = truck.speed;
+                        }
+                        else if (dot > 0)
+                        {
+                            Debug.Log("Car is front of so Frontal Collision");
+                        }
                     }
-                    else if (dot > 0)
+                    else if (truck.transform.rotation.eulerAngles.y >= car.transform.rotation.eulerAngles.y + threesholdRotation_Traffic &&
+                       truck.transform.rotation.eulerAngles.y >= car.transform.rotation.eulerAngles.y + threesholdRotation_Traffic)
                     {
-                        Debug.Log("Car is front of so Frontal Collision");
+                        Debug.Log("Frontal Collision");
                     }
                 }
-                else if(truck.transform.rotation.eulerAngles.y >= car.transform.rotation.eulerAngles.y + threesholdRotation_Traffic &&
-                   truck.transform.rotation.eulerAngles.y >= car.transform.rotation.eulerAngles.y + threesholdRotation_Traffic)
+                else
                 {
-                    Debug.Log("Frontal Collision");
+                    speed = optimalSpeed;
                 }
             }
             else
-            {
+            if (!CheckTrafic())
                 speed = optimalSpeed;
-            }
         }
-
         if (mainTarget == currentCube)
         {
             //Level is Over
             Time.timeScale = 0;
             manager.canvasGG.SetActive(true);
         }
-
         if(index == list_points.Count && move){
             lastWaypointReached = true;
         }      
@@ -115,19 +112,21 @@ public class _PLayerController : MonoBehaviour
                 list_points.RemoveAt(list_points.Count - 1);
                 for(int i = 0; i < finalPath.Count; ++i)
                 {
+                    var tmp_material = finalPath[i].GetComponent<MeshRenderer>().material;
                     if (finalPath[i] != null && list_points.Contains(finalPath[i]))
-                        finalPath[i].GetComponent<MeshRenderer>().material = controllerMat.pathTemp;
+                         tmp_material = controllerMat.pathTemp;
                     else
-                        finalPath[i].GetComponent<MeshRenderer>().material = controllerMat.road;
+                        tmp_material = controllerMat.road;
                 }
             }
 
             for (int i = 0; i < finalPath.Count; ++i)
             {
+                var tmp_material = finalPath[i].GetComponent<MeshRenderer>().material;
                 if (finalPath[i] != null && list_points.Contains(finalPath[i]))
-                    finalPath[i].GetComponent<MeshRenderer>().material = controllerMat.pathTemp;
+                    tmp_material = controllerMat.pathTemp;
                 else
-                    finalPath[i].GetComponent<MeshRenderer>().material = controllerMat.pathPlanned;
+                    tmp_material = controllerMat.pathPlanned;
             }
         }
     }
@@ -145,11 +144,9 @@ public class _PLayerController : MonoBehaviour
     {
         List<Transform> nextCubes = new List<Transform>();
         List<Transform> pastCubes = new List<Transform>();
-
-        foreach (WalkPath path in pointFrom.GetComponent<Walkable>().possiblePaths)
-        {
-            if (path.active)
-            {
+        var tmp_paths = pointFrom.GetComponent<Walkable>().possiblePaths;
+        foreach (WalkPath path in tmp_paths){
+            if (path.active){
                 nextCubes.Add(path.target);
                 path.target.GetComponent<Walkable>().previousBlock = pointFrom;
             }
@@ -166,8 +163,8 @@ public class _PLayerController : MonoBehaviour
 
         if (current == target)
             return;
-
-        foreach (WalkPath path in current.GetComponent<Walkable>().possiblePaths){
+        var tmp_paths = current.GetComponent<Walkable>().possiblePaths;
+        foreach (WalkPath path in tmp_paths){
             if (!visitedCubes.Contains(path.target) && path.active){
                 nextCubes.Add(path.target);
                 path.target.GetComponent<Walkable>().previousBlock = current;
@@ -183,17 +180,13 @@ public class _PLayerController : MonoBehaviour
         while (cube != clickedCube){
             finalPath.Insert(0, cube);
             cube.GetComponent<MeshRenderer>().material = controllerMat.pathPlanned;
-            if (cube.GetComponent<Walkable>().previousBlock != null)
-                cube = cube.GetComponent<Walkable>().previousBlock;
+            var tmp_previous = cube.GetComponent<Walkable>().previousBlock;
+            if (tmp_previous != null)
+                cube = tmp_previous;
             else
                 return;
         }
         finalPath.Insert(finalPath.Count - 1, target);
-
-        foreach (Transform element in temp_finalPath)
-            finalPath.Insert(finalPath.Count - 1, element);
-
-        temp_finalPath.Clear();
     }
     void FollowPath()
     {
@@ -201,7 +194,7 @@ public class _PLayerController : MonoBehaviour
         Debug.DrawRay(finalPath[index].transform.position + finalPath[index].transform.up * 0.5f, finalPath[index].transform.up, Color.blue, 1);
 
         var rotationTo = Quaternion.LookRotation(Vector3.RotateTowards(car.forward, finalPath[index].transform.position + finalPath[index].transform.up * 0.5f - car.transform.position, rotationSpeed * Time.deltaTime, 0.0f));
-        car.transform.rotation = Quaternion.Euler(new Vector3(0, rotationTo.eulerAngles.y, 0)); // We only need to rotate on one axe
+        car.transform.rotation = Quaternion.Euler(new Vector3(0, rotationTo.eulerAngles.y, 0));
 
         if (transform.position == finalPath[index].transform.position + finalPath[index].transform.up * 0.5f){
             if (index <= finalPath.Count - 1)
@@ -216,6 +209,13 @@ public class _PLayerController : MonoBehaviour
         if (Physics.Raycast(playerRay, out playerHit)){
             if (playerHit.transform.GetComponent<Walkable>() != null){
                 currentCube = playerHit.transform;
+                if (currentCube.GetComponent<InspectElement>().Event == InspectElement.Tyle_Evenement.Feux_Rouge)
+                {
+                    if (currentCube.GetComponent<FeuxRouge>().red)
+                        speed = 0;
+                    else
+                        speed = optimalSpeed;
+                }
                 playerHit.transform.GetComponent<MeshRenderer>().material.Lerp(playerHit.transform.GetComponent<MeshRenderer>().material, controllerMat.alreadyPassed, 6.5f * Time.deltaTime);
                 if (index != 0){
                     if (index == finalPath.Count)
