@@ -71,10 +71,10 @@ public class StateClient : MonoBehaviour
                     else if (tempCube.Event == InspectElement.Tyle_Evenement.Restaurant){
                         //CheckCondition_Hated("RestaurantT (TasteCustomer)");
                         //pay
-                        if ((ScoreManager.score - controller.manager.priceRestaurant) <= 0)
+                        /*if ((ScoreManager.score - controller.manager.priceRestaurant) <= 0)
                             ScoreManager.score = 0;
                         else
-                            ScoreManager.score -= controller.manager.priceRestaurant;
+                            ScoreManager.score -= controller.manager.priceRestaurant;*/
                     }
                 }
             }
@@ -183,7 +183,7 @@ public class StateClient : MonoBehaviour
 
     public void Load_ClientInfo()
     {
-        client = Camera.main.GetComponent<GameManager>().currentClient;
+        //client = Camera.main.GetComponent<GameManager>().currentClient;
         spriteClient = Camera.main.GetComponent<ClientCard>().clientSpriteCanvas;
 
         stateEmotion = (client.BaseLevelAngryness + client.BaseLevelHappyness) / 2;

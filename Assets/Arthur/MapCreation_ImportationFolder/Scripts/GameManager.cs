@@ -1,48 +1,98 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class GameManager : MonoBehaviour
 {
-    public List<CustomerData> ClientRandom_List;
-
-    public List<CustomerData> EventClient_List;
+    //public List<CustomerData> ClientRandom_List;
+    //public List<CustomerData> EventClient_List;
     public List<Transform> DestinationPointList;
     public int index = 0;
 
     //CHANGE THAT LATER
-    public CustomerData currentClient;
+    //public CustomerData currentClient;
     public Transform currentDestination;
 
-    public bool finalClient = false;
+    //public bool finalClient = false;
 
-    private StateClient client_info;
+    //private StateClient client_info;
 
-    [Header("Tinder Selection Panel")]
-    public GameObject tinder_Selection;
-    public CardLogic[] list_cardToDisplay;
+    //[Header("Tinder Selection Panel")]
+    //public GameObject tinder_Selection;
+    //public CardLogic[] list_cardToDisplay;
 
-    private ClientCard client_Card;
+    //private ClientCard client_Card;
 
     public bool levelIsOver = false;
-    public ScoreManager managerScore;
-    public float score;
-    public float priceRestaurant = 20;
+    //public ScoreManager managerScore;
+    //public float score;
+    //public float priceRestaurant = 20;
 
     public GameObject canvasGG;
+    public GameObject truckCollision;
+    public GameObject greyCasesDefeat;
+
+    [Header("Score Variables")]
+    private MapEditor_MainController controller;
+    public int numberOfCaseTot;
+    public int numberOfCase;
+    public float timeTot;
+    public bool levelEnded = false;
+    public float maxTimeAcceleration;
+    public float timerGrey_Cases;
+    public float limitTimerGrey;
+    public float limitTimeStar;
+    private bool evaluate ;
+    public int numberOfstar = 0;
+
+    public List<GameObject> stars;
 
     private void Awake()
     {
-        currentClient = EventClient_List[0];
+        evaluate = false;
+        //currentClient = EventClient_List[0];
         currentDestination = DestinationPointList[0];
-
+        /*
         client_info = GetComponent<StateClient>();
 
-        client_Card = Camera.main.GetComponent<ClientCard>();
+        client_Card = Camera.main.GetComponent<ClientCard>();*/
     }
 
-    public void Initialize_TinderSystem()
+    private void Start()
+    {
+        controller = GetComponent<MapEditor_MainController>();
+        numberOfCaseTot = controller.Roads_Position.Count - 1;
+    }
+
+    internal void EvaluateLevel()
+    {
+        if (levelEnded)
+        {
+            ++numberOfstar;
+            stars[0].SetActive(true);
+        }
+        if (numberOfCase == numberOfCaseTot)
+        {
+            ++numberOfstar;
+            stars[1].SetActive(true);
+        }
+        if (timeTot > limitTimeStar)
+        {
+            ++numberOfstar;
+            stars[2].SetActive(true);
+        }
+        evaluate = true;
+    }
+
+    public bool GetEvaluation()
+    {
+        return (evaluate);
+    }
+
+    /*public void Initialize_TinderSystem()
     {
         //Check if it's not the same of the actual client
         if (!finalClient)
@@ -106,18 +156,24 @@ public class GameManager : MonoBehaviour
     public CustomerData Get_Client()
     {
         return currentClient;
-    }
+    }*/
 
     public Transform Get_Destination()
     {
         return currentDestination;
     }
-
+    /*
     public Transform Random_Destination()
     {
         int tmp = DestinationPointList.Count;
         currentDestination = DestinationPointList[Random.Range(0, tmp - 2)];
         Debug.Log(currentDestination);
         return Get_Destination();
-    }
+    }*/
+
+    public void FastTravel()
+    {
+        Time.timeScale += Time.deltaTime;
+        Time.timeScale = Mathf.Clamp(Time.timeScale, 0, maxTimeAcceleration);
+    }  
 }

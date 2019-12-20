@@ -52,6 +52,7 @@ public class _PLayerController : MonoBehaviour
         }
         if (move)
         {
+            manager.timeTot += Time.deltaTime;
             RayCastDown();
             if (speed != 0)
             {
@@ -76,12 +77,16 @@ public class _PLayerController : MonoBehaviour
                         else if (dot > 0)
                         {
                             Debug.Log("Car is front of so Frontal Collision");
+                            Time.timeScale = 0;
+                            manager.truckCollision.SetActive(true);
                         }
                     }
                     else if (truck.transform.rotation.eulerAngles.y >= car.transform.rotation.eulerAngles.y + threesholdRotation_Traffic &&
                        truck.transform.rotation.eulerAngles.y >= car.transform.rotation.eulerAngles.y + threesholdRotation_Traffic)
                     {
                         Debug.Log("Frontal Collision");
+                        Time.timeScale = 0;
+                        manager.truckCollision.SetActive(true);
                     }
                 }
                 else
@@ -93,11 +98,18 @@ public class _PLayerController : MonoBehaviour
             if (!CheckTrafic())
                 speed = optimalSpeed;
         }
-        if (mainTarget == currentCube)
+        if (mainTarget == currentCube && !manager.GetEvaluation())
         {
             //Level is Over
             Time.timeScale = 0;
             manager.canvasGG.SetActive(true);
+            manager.levelEnded = true;
+            manager.EvaluateLevel();
+        }
+        if(manager.timerGrey_Cases > manager.limitTimerGrey)
+        {
+            Time.timeScale = 0;
+            manager.greyCasesDefeat.SetActive(true);
         }
         if(index == list_points.Count && move){
             lastWaypointReached = true;
@@ -209,7 +221,11 @@ public class _PLayerController : MonoBehaviour
         if (Physics.Raycast(playerRay, out playerHit)){
             if (playerHit.transform.GetComponent<Walkable>() != null){
                 currentCube = playerHit.transform;
-                if (currentCube.GetComponent<InspectElement>().Event == InspectElement.Tyle_Evenement.Feux_Rouge)
+                var tmp_cube = currentCube.GetComponent<InspectElement>();
+                if (finalPath.Count > 0 && finalPath[index].GetComponent<InspectElement>().visited)
+                    manager.timerGrey_Cases += Time.deltaTime;
+  
+                if (tmp_cube.Event == InspectElement.Tyle_Evenement.Feux_Rouge)
                 {
                     if (currentCube.GetComponent<FeuxRouge>().red)
                         speed = 0;
@@ -221,7 +237,11 @@ public class _PLayerController : MonoBehaviour
                     if (index == finalPath.Count)
                         finalPath[index].GetComponent<InspectElement>().visited = true;
                     else
+                    {
+                        if(!finalPath[index - 1].GetComponent<InspectElement>().visited)
+                            ++manager.numberOfCase;
                         finalPath[index - 1].GetComponent<InspectElement>().visited = true;
+                    }
                 }
             }
         }
