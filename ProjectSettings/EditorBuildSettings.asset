@@ -11,7 +11,19 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Arthur/Scenes/Level_05.unity
     guid: 6e7dff8c3f4fbb445b9017afc51520f0
-  - enabled: 1
+  - enabled: 0
     path: Assets/Robin/Scene/Level_04B.unity
     guid: 77eb97888f187204ba37876b549d3d20
+  - enabled: 1
+    path: Assets/Arthur/Levels_Contruction/Level_1_1.unity
+    guid: 4edea5c201918ac4b94ae8b710f06c3c
+  - enabled: 1
+    path: Assets/Arthur/Levels_Contruction/Level_1_2.unity
+    guid: 14e9bdd6963ef0047ac5b80fe99547c9
+  - enabled: 1
+    path: Assets/Arthur/Levels_Contruction/Level_1_3.unity
+    guid: bd1424442fc888c47808ff453e02d242
+  - enabled: 1
+    path: Assets/Arthur/Levels_Contruction/Level_1_4.unity
+    guid: d679faf4667129a4897f91b90878d01c
   m_configObjects: {}

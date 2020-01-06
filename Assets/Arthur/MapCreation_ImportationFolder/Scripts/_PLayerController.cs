@@ -231,7 +231,7 @@ public class _PLayerController : MonoBehaviour
                 currentCube = playerHit.transform;
                 var tmp_cube = currentCube.GetComponent<InspectElement>();
                 //Case has already been visited
-                if (finalPath.Count > 0 && finalPath[index].GetComponent<InspectElement>().visited && currentCube != mainTarget)
+                if (finalPath.Count > 0 && finalPath[index].GetComponent<InspectElement>().visited && currentCube != mainTarget && finalPath[index].GetComponent<InspectElement>().Event != InspectElement.Tyle_Evenement.Monument && finalPath[index -1].GetComponent<InspectElement>().Event != InspectElement.Tyle_Evenement.Monument)
                 {
                     manager.timerGrey_Cases += Time.deltaTime;
                     updateCanvas_Values.slowDown = true;
@@ -245,21 +245,32 @@ public class _PLayerController : MonoBehaviour
                         speed = 0;
                     else
                         speed = optimalSpeed;
-                }
-                playerHit.transform.GetComponent<MeshRenderer>().material.Lerp(playerHit.transform.GetComponent<MeshRenderer>().material, controllerMat.alreadyPassed, 6.5f * Time.deltaTime);
+                }               
                 if (index != 0){
-                    if (index == finalPath.Count)
+                    if (index == finalPath.Count )
                         finalPath[index].GetComponent<InspectElement>().visited = true;
                     else
-                    {
-                        if(!finalPath[index - 1].GetComponent<InspectElement>().visited)
-                        {
-                            ++manager.numberOfCase;
-                            updateCanvas_Values.IncreaseEachCase();
-                            if (tmp_cube.Event == InspectElement.Tyle_Evenement.Monument)
-                                updateCanvas_Values.IncreaseEachMonument();
+                    {                       
+                        if (tmp_cube.Divers_Event == InspectElement.Divers.Empty) {
+                            playerHit.transform.GetComponent<MeshRenderer>().material.Lerp(playerHit.transform.GetComponent<MeshRenderer>().material, controllerMat.alreadyPassed, 6.5f * Time.deltaTime);
+                            
+                            if (!finalPath[index - 1].GetComponent<InspectElement>().visited){
+                                ++manager.numberOfCase;
+                                updateCanvas_Values.IncreaseEachCase();
+                                if (tmp_cube.Event == InspectElement.Tyle_Evenement.Monument)
+                                    updateCanvas_Values.IncreaseEachMonument();
+                                if (tmp_cube.Event == InspectElement.Tyle_Evenement.Malus)
+                                    updateCanvas_Values.DecreaseEachMalus();                             
+                            }
+                            if(finalPath[index - 1].GetComponent<InspectElement>().Divers_Event != InspectElement.Divers.CrossRoads)
+                                    finalPath[index - 1].GetComponent<InspectElement>().visited = true;
+                                else
+                                finalPath[index - 1].GetComponent<MeshRenderer>().material.Lerp(playerHit.transform.GetComponent<MeshRenderer>().material, controllerMat.road, 100.5f * Time.deltaTime);
                         }
-                        finalPath[index - 1].GetComponent<InspectElement>().visited = true;
+                        else if(tmp_cube.Divers_Event == InspectElement.Divers.OneShotRoad)
+                        {
+                            tmp_cube.GetComponent<Walkable>().possiblePaths.Clear();
+                        }
                     }
                 }
             }

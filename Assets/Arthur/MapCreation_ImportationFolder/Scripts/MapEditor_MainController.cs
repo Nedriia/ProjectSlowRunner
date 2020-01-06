@@ -8,6 +8,7 @@ public class MapEditor_MainController : MonoBehaviour
     public Transform isoSphere;
     public List<Transform> Roads_Position = new List<Transform>();
     public List<Transform> Monuments_Position = new List<Transform>();
+    public List<Transform> Malus_Position = new List<Transform>();
 
     public Material city;
     public Material road;
@@ -18,6 +19,7 @@ public class MapEditor_MainController : MonoBehaviour
     public Material default_Mat;
 
     public Material monument_Mat;
+    public Material Malus_Mat;
     public Material restaurant_Mat;
     public Material chantier_Mat;
     public Material feux_Rouge_Mat;
