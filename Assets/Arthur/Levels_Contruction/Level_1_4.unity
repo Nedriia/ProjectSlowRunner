@@ -39856,7 +39856,7 @@ MonoBehaviour:
   levelEnded: 0
   maxTimeAcceleration: 4
   timerGrey_Cases: 0
-  limitTimerGrey: 6
+  limitTimerGrey: 10
   limitTimeStar: 46
   numberOfstar: 0
   stars:

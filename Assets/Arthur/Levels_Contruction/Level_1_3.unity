@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 112000000, guid: 4e66e6299d462774a87ee0d9c0a177de,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -39017,7 +39017,7 @@ MonoBehaviour:
   levelEnded: 0
   maxTimeAcceleration: 4
   timerGrey_Cases: 0
-  limitTimerGrey: 6
+  limitTimerGrey: 10
   limitTimeStar: 46
   numberOfstar: 0
   stars:
