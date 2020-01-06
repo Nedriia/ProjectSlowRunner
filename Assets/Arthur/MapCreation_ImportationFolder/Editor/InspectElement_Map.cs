@@ -35,6 +35,20 @@ public class InspectElement_Map : Editor
             map.elementTest.test.Clear();
         }
 
+        if (GUILayout.Button("ActualizeBoxCollider"))
+        {
+            foreach (Transform element in map.elementTest.Roads_Position)
+            {
+                var go = new GameObject();
+                go.name = "DetectionCollision_Swipe";
+                BoxCollider bxCollider = go.AddComponent<BoxCollider>();
+                bxCollider.center = element.transform.position;
+                bxCollider.gameObject.layer = 9; //-> 9 is layerMask value for road
+                bxCollider.size = new Vector3(map.elementTest.scaleX, 1, map.elementTest.scaleZ);
+                go.transform.SetParent(element);
+            }
+        }
+
         //Monument and Road Block are specific case -> like they are event for the player, we need to keep track of them
         if (GUILayout.Button("Monument"))
         {
@@ -55,6 +69,7 @@ public class InspectElement_Map : Editor
                 element.type = InspectElement.Tyle_Type.Road;
                 if (!map.elementTest.Roads_Position.Contains(element.transform))
                     map.elementTest.Roads_Position.Add(element.transform);
+                element.GetComponent<BoxCollider>().size = new Vector3(map.elementTest.scaleX, 1, map.elementTest.scaleZ);
             }
             map.elementTest.test.Clear();
         }
@@ -87,7 +102,10 @@ public class InspectElement_Map : Editor
                 }
             }
             for (int i = 0; i < map.elementTest.Roads_Position.Count; i++)
+            {
                 map.elementTest.Roads_Position[i].GetComponent<InspectElement>().neighborHex.Clear();
+                map.elementTest.Roads_Position[i].GetComponent<BoxCollider>().size = new Vector3(1, 1, 1);
+            }
             for (int i = 0; i < map.elementTest.Monuments_Position.Count; i++)
                 map.elementTest.Monuments_Position[i].GetComponent<InspectElement>().neighborHex.Clear();
             map.elementTest.Roads_Position.Clear();

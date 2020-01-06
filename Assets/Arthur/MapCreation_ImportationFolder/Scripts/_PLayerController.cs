@@ -35,6 +35,8 @@ public class _PLayerController : MonoBehaviour
 
     [Header("Canvas info Update")]
     public Canvas_UpdateInfo updateCanvas_Values;
+    public LayerMask layerMask = 1 << 9;
+    public LayerMask layerMaskDefault = 1 << 0;
 
     void Start()
     {
@@ -221,7 +223,7 @@ public class _PLayerController : MonoBehaviour
     {
         Ray playerRay = new Ray(transform.GetChild(0).position, -transform.up);
         RaycastHit playerHit;
-        if (Physics.Raycast(playerRay, out playerHit)){
+        if (Physics.Raycast(playerRay, out playerHit,50,layerMaskDefault.value)){
             if (playerHit.transform.GetComponent<Walkable>() != null){
                 currentCube = playerHit.transform;
                 var tmp_cube = currentCube.GetComponent<InspectElement>();
@@ -263,22 +265,30 @@ public class _PLayerController : MonoBehaviour
     void PaintPath()
     {
         Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition); RaycastHit mouseHit;
-        if (Physics.Raycast(mouseRay, out mouseHit))
+        if (Physics.Raycast(mouseRay, out mouseHit,50, layerMask.value)) //We want to have bigger detection collision so we have to handle multiple collision
         {
-            if (mouseHit.transform.GetComponent<Walkable>() != null)
+            if (mouseHit.transform.parent.GetComponent<Walkable>() != null)
             {
-                clickedCube = mouseHit.transform;
-                if (clickedCube != list_points[list_points.Count - 2]){
-                    if (clickedCube.GetComponent<InspectElement>().type == InspectElement.Tyle_Type.CrossRoads || clickedCube != mainTarget){
-                        foreach (WalkPath p in clickedCube.GetComponent<Walkable>().possiblePaths){
-                            if (!lastWaypointReached){
-                                if (p.target == list_points[list_points.Count() - 1]){
-                                    if (finalPath.Count != 0){
-                                        foreach (Transform element in finalPath){
+                clickedCube = mouseHit.transform.parent;
+                if (clickedCube != list_points[list_points.Count - 2])
+                {
+                    if (clickedCube.GetComponent<InspectElement>().type == InspectElement.Tyle_Type.CrossRoads || clickedCube != mainTarget)
+                    {
+                        foreach (WalkPath p in clickedCube.GetComponent<Walkable>().possiblePaths)
+                        {
+                            if (!lastWaypointReached)
+                            {
+                                if (p.target == list_points[list_points.Count() - 1])
+                                {
+                                    if (finalPath.Count != 0)
+                                    {
+                                        foreach (Transform element in finalPath)
+                                        {
                                             if (!list_points.Contains(element))
                                                 element.GetComponent<MeshRenderer>().material = controllerMat.road;
                                         }
-                                        for (int i = finalPath.Count - 1; i >= 0; --i){
+                                        for (int i = finalPath.Count - 1; i >= 0; --i)
+                                        {
                                             if (i != index + 1)
                                                 finalPath.RemoveAt(i);
                                             else
@@ -294,9 +304,10 @@ public class _PLayerController : MonoBehaviour
                                         finalPath.Insert(i, list_points[i]);
                                 }
                             }
-                            else if(lastWaypointReached)
+                            else if (lastWaypointReached)
                             {
-                                if (p.target == currentCube){
+                                if (p.target == currentCube)
+                                {
                                     float angle = Vector3.Angle(car.transform.forward, clickedCube.position - car.transform.position);
                                     if (angle < 100 && angle > -100)
                                     {
@@ -325,6 +336,8 @@ public class _PLayerController : MonoBehaviour
                 }
             }
         }
+        else
+            Debug.Log("nope");
     }
     public bool CheckTrafic()
     {

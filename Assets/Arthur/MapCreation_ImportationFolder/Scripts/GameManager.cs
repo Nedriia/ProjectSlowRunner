@@ -31,6 +31,8 @@ public class GameManager : MonoBehaviour
     //public float score;
     //public float priceRestaurant = 20;
 
+    [Header("Canvas")]
+    public GameObject CanvasButton;
     public GameObject canvasGG;
     public GameObject truckCollision;
     public GameObject greyCasesDefeat;
@@ -63,14 +65,20 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        CanvasButton.SetActive(true);
         controller = GetComponent<MapEditor_MainController>();
         numberOfCaseTot = controller.Roads_Position.Count - 1;
+
+        greyCasesDefeat.SetActive(false);
+        truckCollision.SetActive(false);
+        canvasGG.SetActive(false);
     }
 
     internal void EvaluateLevel()
     {
         if (levelEnded)
         {
+            CanvasButton.SetActive(false);
             ++numberOfstar;
             stars[0].SetActive(true);
         }
