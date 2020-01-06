@@ -4519,7 +4519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 5
   Event: 0
   Divers_Event: 0
   distance_Check: 1.2
@@ -4557,7 +4557,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: d23bec9e3931ee04c8894565359624e4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8268,7 +8268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
   type: 1
-  Event: 0
+  Event: 1
   Divers_Event: 0
   distance_Check: 1.2
   neighborHex:
@@ -12945,7 +12945,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 5
   Event: 0
   Divers_Event: 0
   distance_Check: 1.2
@@ -12983,7 +12983,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: d23bec9e3931ee04c8894565359624e4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30460,7 +30460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 5
   Event: 0
   Divers_Event: 0
   distance_Check: 1.2
@@ -30498,7 +30498,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: d23bec9e3931ee04c8894565359624e4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33513,9 +33513,9 @@ MonoBehaviour:
   controllerManager: {fileID: 1177220515}
   increaseMoney: 0.03
   decreaseMoney_SlowDown: 0.065
-  increaseMoneyOnCases: 10
-  increaseMoneyOnMonument: 100
-  decreaseValueMalus: 10
+  increaseMoneyOnCases: 5
+  increaseMoneyOnMonument: 50
+  decreaseValueMalus: 25
   slowDown: 0
   textColor_ToChange: {fileID: 47913097}
 --- !u!114 &1715079184
@@ -33531,62 +33531,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test:
-  - {fileID: 2040621013}
-  - {fileID: 1579536055}
-  - {fileID: 1155917751}
-  - {fileID: 1783540705}
-  - {fileID: 612498219}
-  - {fileID: 1870737269}
-  - {fileID: 767785726}
-  - {fileID: 1795452514}
-  - {fileID: 896090973}
-  - {fileID: 1724187034}
-  - {fileID: 1649538134}
-  - {fileID: 2131894813}
-  - {fileID: 1189814773}
-  - {fileID: 1708004267}
-  - {fileID: 906421924}
-  - {fileID: 1606998203}
-  - {fileID: 1902728391}
-  - {fileID: 663997524}
-  - {fileID: 1469500546}
-  - {fileID: 1159465086}
-  - {fileID: 1616151540}
-  - {fileID: 1082088598}
-  - {fileID: 1108209196}
-  - {fileID: 1339616422}
-  - {fileID: 1604530209}
-  - {fileID: 965465402}
-  - {fileID: 1962502449}
-  - {fileID: 1633931307}
-  - {fileID: 1686115971}
-  - {fileID: 1014007130}
-  - {fileID: 235584335}
-  - {fileID: 666148879}
-  - {fileID: 2062314868}
-  - {fileID: 319782803}
-  - {fileID: 11591279}
-  - {fileID: 2008080002}
-  - {fileID: 1997884887}
-  - {fileID: 633170072}
-  - {fileID: 478459403}
-  - {fileID: 1937771364}
-  - {fileID: 361295972}
-  - {fileID: 1974163473}
-  - {fileID: 233724011}
-  - {fileID: 298763578}
-  - {fileID: 2093276600}
-  - {fileID: 1599649998}
-  - {fileID: 2071357856}
-  - {fileID: 1818265273}
-  - {fileID: 602505588}
+  - {fileID: 2070321414}
   - {fileID: 407109109}
-  - {fileID: 2129247181}
-  - {fileID: 565171309}
-  - {fileID: 1683360299}
-  - {fileID: 949663259}
-  - {fileID: 996787259}
-  - {fileID: 2081366193}
+  - {fileID: 1818265273}
+  - {fileID: 1795452514}
   isoSphere: {fileID: 6496860844886677559}
   Roads_Position:
   - {fileID: 906421928}
@@ -33655,6 +33603,10 @@ MonoBehaviour:
   - {fileID: 1106635107}
   - {fileID: 936863644}
   - {fileID: 1054381600}
+  - {fileID: 237189452}
+  - {fileID: 1615896504}
+  - {fileID: 660472967}
+  - {fileID: 2070321413}
   Malus_Position:
   - {fileID: 1586453338}
   - {fileID: 615631494}
@@ -35884,7 +35836,7 @@ MonoBehaviour:
   elementTest: {fileID: 1715079184}
   type: 1
   Event: 4
-  Divers_Event: 0
+  Divers_Event: 2
   distance_Check: 1.2
   neighborHex:
   - {fileID: 1962502448}
@@ -36158,7 +36110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
   type: 1
-  Event: 0
+  Event: 1
   Divers_Event: 0
   distance_Check: 1.2
   neighborHex:
@@ -41329,7 +41281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementTest: {fileID: 1715079184}
-  type: 0
+  type: 5
   Event: 0
   Divers_Event: 0
   distance_Check: 1.2
@@ -41367,7 +41319,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: a23678cecea04479c96089f26297d751, type: 3}
+  - {fileID: 2100000, guid: d23bec9e3931ee04c8894565359624e4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

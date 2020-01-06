@@ -32,7 +32,8 @@ public class InspectElement : MonoBehaviour
     public enum Divers
     {
         Empty,
-        CrossRoads
+        CrossRoads,
+        OneShotRoad
     }
 
     public Tyle_Type type;
