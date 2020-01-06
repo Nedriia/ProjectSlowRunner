@@ -81,7 +81,8 @@ public class _PLayerController : MonoBehaviour
                         }
                         else if (dot > 0)
                         {
-                            Debug.Log("Car is front of so Frontal Collision");
+                            //Frontal Collsion
+                            move = false;
                             Time.timeScale = 0;
                             manager.truckCollision.SetActive(true);
                         }
@@ -89,7 +90,8 @@ public class _PLayerController : MonoBehaviour
                     else if (truck.transform.rotation.eulerAngles.y >= car.transform.rotation.eulerAngles.y + threesholdRotation_Traffic &&
                        truck.transform.rotation.eulerAngles.y >= car.transform.rotation.eulerAngles.y + threesholdRotation_Traffic)
                     {
-                        Debug.Log("Frontal Collision");
+                        //Frontal Collsion
+                        move = false;
                         Time.timeScale = 0;
                         manager.truckCollision.SetActive(true);
                     }
@@ -114,6 +116,7 @@ public class _PLayerController : MonoBehaviour
         }
         if(manager.timerGrey_Cases > manager.limitTimerGrey)
         {
+            move = false;
             Time.timeScale = 0;
             manager.greyCasesDefeat.SetActive(true);
         }
@@ -343,7 +346,6 @@ public class _PLayerController : MonoBehaviour
     {
         return (finalPath[index].GetComponent<InspectElement>().busy);
     }
-
     public bool MovementActivate()
     {
         return move;
