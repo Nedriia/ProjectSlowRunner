@@ -30,6 +30,8 @@ public class IA_PathCar : MonoBehaviour
     int index;
     int indexTarget;
 
+    public LayerMask layerMaskDefault = 1 << 0;
+
     void Start()
     {
         RayCastDown();
@@ -146,7 +148,7 @@ public class IA_PathCar : MonoBehaviour
         Ray playerRay = new Ray(transform.GetChild(0).position, -transform.up);
         RaycastHit playerHit;
 
-        if (Physics.Raycast(playerRay, out playerHit)){
+        if (Physics.Raycast(playerRay, out playerHit,50, layerMaskDefault.value)){
             if (playerHit.transform.GetComponent<Walkable>() != null){
                 currentCube = playerHit.transform;
 

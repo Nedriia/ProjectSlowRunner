@@ -34,7 +34,7 @@ public class menuGG : MonoBehaviour
 
     public IEnumerator ChangeScene()
     {
-        anim.SetTrigger("CloseWindow");
+        //anim.SetTrigger("CloseWindow");
         yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene(NextScene);
     }

@@ -33,6 +33,11 @@ public class _PLayerController : MonoBehaviour
     MapEditor_MainController controllerMat;
     float optimalSpeed;
 
+    [Header("Canvas info Update")]
+    public Canvas_UpdateInfo updateCanvas_Values;
+    public LayerMask layerMask = 1 << 9;
+    public LayerMask layerMaskDefault = 1 << 0;
+
     void Start()
     {
         controllerMat = Camera.main.GetComponent<MapEditor_MainController>();
@@ -52,12 +57,13 @@ public class _PLayerController : MonoBehaviour
         }
         if (move)
         {
+            manager.timeTot += Time.deltaTime;
             RayCastDown();
             if (speed != 0)
             {
                 if (finalPath.Count != 0)
                     FollowPath();
-                if (CheckTrafic())
+                if (currentCube != mainTarget && CheckTrafic())
                 {
                     var truck = finalPath[index].GetComponent<InspectElement>().carInTheTile;
                     if (truck.transform.forward.x != 1 || truck.transform.forward.x != -1 &&
@@ -75,13 +81,19 @@ public class _PLayerController : MonoBehaviour
                         }
                         else if (dot > 0)
                         {
-                            Debug.Log("Car is front of so Frontal Collision");
+                            //Frontal Collsion
+                            move = false;
+                            Time.timeScale = 0;
+                            manager.truckCollision.SetActive(true);
                         }
                     }
                     else if (truck.transform.rotation.eulerAngles.y >= car.transform.rotation.eulerAngles.y + threesholdRotation_Traffic &&
                        truck.transform.rotation.eulerAngles.y >= car.transform.rotation.eulerAngles.y + threesholdRotation_Traffic)
                     {
-                        Debug.Log("Frontal Collision");
+                        //Frontal Collsion
+                        move = false;
+                        Time.timeScale = 0;
+                        manager.truckCollision.SetActive(true);
                     }
                 }
                 else
@@ -90,14 +102,23 @@ public class _PLayerController : MonoBehaviour
                 }
             }
             else
-            if (!CheckTrafic())
+            if (currentCube != mainTarget && !CheckTrafic())
                 speed = optimalSpeed;
         }
-        if (mainTarget == currentCube)
+        if (mainTarget == currentCube && !manager.GetEvaluation())
         {
             //Level is Over
+            move = false;
             Time.timeScale = 0;
             manager.canvasGG.SetActive(true);
+            manager.levelEnded = true;
+            manager.EvaluateLevel();
+        }
+        if(manager.timerGrey_Cases > manager.limitTimerGrey)
+        {
+            move = false;
+            Time.timeScale = 0;
+            manager.greyCasesDefeat.SetActive(true);
         }
         if(index == list_points.Count && move){
             lastWaypointReached = true;
@@ -205,11 +226,20 @@ public class _PLayerController : MonoBehaviour
     {
         Ray playerRay = new Ray(transform.GetChild(0).position, -transform.up);
         RaycastHit playerHit;
-
-        if (Physics.Raycast(playerRay, out playerHit)){
+        if (Physics.Raycast(playerRay, out playerHit,50,layerMaskDefault.value)){
             if (playerHit.transform.GetComponent<Walkable>() != null){
                 currentCube = playerHit.transform;
-                if (currentCube.GetComponent<InspectElement>().Event == InspectElement.Tyle_Evenement.Feux_Rouge)
+                var tmp_cube = currentCube.GetComponent<InspectElement>();
+                //Case has already been visited
+                if (finalPath.Count > 0 && finalPath[index].GetComponent<InspectElement>().visited && currentCube != mainTarget)
+                {
+                    manager.timerGrey_Cases += Time.deltaTime;
+                    updateCanvas_Values.slowDown = true;
+                }
+                else
+                    updateCanvas_Values.slowDown = false;
+
+                if (tmp_cube.Event == InspectElement.Tyle_Evenement.Feux_Rouge)
                 {
                     if (currentCube.GetComponent<FeuxRouge>().red)
                         speed = 0;
@@ -221,7 +251,16 @@ public class _PLayerController : MonoBehaviour
                     if (index == finalPath.Count)
                         finalPath[index].GetComponent<InspectElement>().visited = true;
                     else
+                    {
+                        if(!finalPath[index - 1].GetComponent<InspectElement>().visited)
+                        {
+                            ++manager.numberOfCase;
+                            updateCanvas_Values.IncreaseEachCase();
+                            if (tmp_cube.Event == InspectElement.Tyle_Evenement.Monument)
+                                updateCanvas_Values.IncreaseEachMonument();
+                        }
                         finalPath[index - 1].GetComponent<InspectElement>().visited = true;
+                    }
                 }
             }
         }
@@ -229,22 +268,30 @@ public class _PLayerController : MonoBehaviour
     void PaintPath()
     {
         Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition); RaycastHit mouseHit;
-        if (Physics.Raycast(mouseRay, out mouseHit))
+        if (Physics.Raycast(mouseRay, out mouseHit,50, layerMask.value)) //We want to have bigger detection collision so we have to handle multiple collision
         {
-            if (mouseHit.transform.GetComponent<Walkable>() != null)
+            if (mouseHit.transform.parent.GetComponent<Walkable>() != null)
             {
-                clickedCube = mouseHit.transform;
-                if (clickedCube != list_points[list_points.Count - 2]){
-                    if (clickedCube.GetComponent<InspectElement>().type == InspectElement.Tyle_Type.CrossRoads || clickedCube != mainTarget){
-                        foreach (WalkPath p in clickedCube.GetComponent<Walkable>().possiblePaths){
-                            if (!lastWaypointReached){
-                                if (p.target == list_points[list_points.Count() - 1]){
-                                    if (finalPath.Count != 0){
-                                        foreach (Transform element in finalPath){
+                clickedCube = mouseHit.transform.parent;
+                if (clickedCube != list_points[list_points.Count - 2])
+                {
+                    if (clickedCube.GetComponent<InspectElement>().type == InspectElement.Tyle_Type.CrossRoads || clickedCube != mainTarget)
+                    {
+                        foreach (WalkPath p in clickedCube.GetComponent<Walkable>().possiblePaths)
+                        {
+                            if (!lastWaypointReached)
+                            {
+                                if (p.target == list_points[list_points.Count() - 1])
+                                {
+                                    if (finalPath.Count != 0)
+                                    {
+                                        foreach (Transform element in finalPath)
+                                        {
                                             if (!list_points.Contains(element))
                                                 element.GetComponent<MeshRenderer>().material = controllerMat.road;
                                         }
-                                        for (int i = finalPath.Count - 1; i >= 0; --i){
+                                        for (int i = finalPath.Count - 1; i >= 0; --i)
+                                        {
                                             if (i != index + 1)
                                                 finalPath.RemoveAt(i);
                                             else
@@ -260,9 +307,10 @@ public class _PLayerController : MonoBehaviour
                                         finalPath.Insert(i, list_points[i]);
                                 }
                             }
-                            else if(lastWaypointReached)
+                            else if (lastWaypointReached)
                             {
-                                if (p.target == currentCube){
+                                if (p.target == currentCube)
+                                {
                                     float angle = Vector3.Angle(car.transform.forward, clickedCube.position - car.transform.position);
                                     if (angle < 100 && angle > -100)
                                     {
@@ -291,9 +339,15 @@ public class _PLayerController : MonoBehaviour
                 }
             }
         }
+        else
+            Debug.Log("nope");
     }
     public bool CheckTrafic()
     {
         return (finalPath[index].GetComponent<InspectElement>().busy);
+    }
+    public bool MovementActivate()
+    {
+        return move;
     }
 }

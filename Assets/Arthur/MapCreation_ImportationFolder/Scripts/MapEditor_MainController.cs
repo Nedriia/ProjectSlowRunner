@@ -30,4 +30,8 @@ public class MapEditor_MainController : MonoBehaviour
     public GameObject[] cityPrefab;
     public GameObject[] grassPrefab;
     public GameObject[] monumentPrefab;
+
+    [Header("Collision variables for Road")]
+    public float scaleX;
+    public float scaleZ;
 }

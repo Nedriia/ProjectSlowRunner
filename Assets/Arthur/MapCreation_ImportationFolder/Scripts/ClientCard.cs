@@ -43,7 +43,7 @@ public class ClientCard : MonoBehaviour
     {
         manager = GetComponent<GameManager>();
         //Random client
-        currentClient = manager.currentClient;
+        //currentClient = manager.currentClient;
 
         NewClient(currentClient);
 
@@ -61,17 +61,17 @@ public class ClientCard : MonoBehaviour
             canvas.SetActive(true);
             Time.timeScale = 1;
             canvas.SetActive(true);
-            if (manager.managerScore.enabled == false)
+            /*if (manager.managerScore.enabled == false)
             {
                 manager.managerScore.enabled = true;
-            }
+            }*/
         }
 
-        if (currentClient != manager.currentClient)
+        /*if (currentClient != manager.currentClient)
         {
             currentClient = manager.currentClient;
             NewClient_InGame(currentClient);
-        }
+        }*/
     }
 
     public void NewClient(CustomerData client)
