@@ -33,6 +33,9 @@ public class _PLayerController : MonoBehaviour
     MapEditor_MainController controllerMat;
     float optimalSpeed;
 
+    [Header("Canvas info Update")]
+    public Canvas_UpdateInfo updateCanvas_Values;
+
     void Start()
     {
         controllerMat = Camera.main.GetComponent<MapEditor_MainController>();
@@ -58,7 +61,7 @@ public class _PLayerController : MonoBehaviour
             {
                 if (finalPath.Count != 0)
                     FollowPath();
-                if (CheckTrafic())
+                if (currentCube != mainTarget && CheckTrafic())
                 {
                     var truck = finalPath[index].GetComponent<InspectElement>().carInTheTile;
                     if (truck.transform.forward.x != 1 || truck.transform.forward.x != -1 &&
@@ -95,12 +98,13 @@ public class _PLayerController : MonoBehaviour
                 }
             }
             else
-            if (!CheckTrafic())
+            if (currentCube != mainTarget && !CheckTrafic())
                 speed = optimalSpeed;
         }
         if (mainTarget == currentCube && !manager.GetEvaluation())
         {
             //Level is Over
+            move = false;
             Time.timeScale = 0;
             manager.canvasGG.SetActive(true);
             manager.levelEnded = true;
@@ -217,14 +221,19 @@ public class _PLayerController : MonoBehaviour
     {
         Ray playerRay = new Ray(transform.GetChild(0).position, -transform.up);
         RaycastHit playerHit;
-
         if (Physics.Raycast(playerRay, out playerHit)){
             if (playerHit.transform.GetComponent<Walkable>() != null){
                 currentCube = playerHit.transform;
                 var tmp_cube = currentCube.GetComponent<InspectElement>();
-                if (finalPath.Count > 0 && finalPath[index].GetComponent<InspectElement>().visited)
+                //Case has already been visited
+                if (finalPath.Count > 0 && finalPath[index].GetComponent<InspectElement>().visited && currentCube != mainTarget)
+                {
                     manager.timerGrey_Cases += Time.deltaTime;
-  
+                    updateCanvas_Values.slowDown = true;
+                }
+                else
+                    updateCanvas_Values.slowDown = false;
+
                 if (tmp_cube.Event == InspectElement.Tyle_Evenement.Feux_Rouge)
                 {
                     if (currentCube.GetComponent<FeuxRouge>().red)
@@ -239,7 +248,12 @@ public class _PLayerController : MonoBehaviour
                     else
                     {
                         if(!finalPath[index - 1].GetComponent<InspectElement>().visited)
+                        {
                             ++manager.numberOfCase;
+                            updateCanvas_Values.IncreaseEachCase();
+                            if (tmp_cube.Event == InspectElement.Tyle_Evenement.Monument)
+                                updateCanvas_Values.IncreaseEachMonument();
+                        }
                         finalPath[index - 1].GetComponent<InspectElement>().visited = true;
                     }
                 }
@@ -315,5 +329,10 @@ public class _PLayerController : MonoBehaviour
     public bool CheckTrafic()
     {
         return (finalPath[index].GetComponent<InspectElement>().busy);
+    }
+
+    public bool MovementActivate()
+    {
+        return move;
     }
 }
