@@ -13,7 +13,8 @@ public class InspectElement : MonoBehaviour
         City,
         Grass,
         CrossRoads,
-        Monument_Source
+        Monument_Source,
+        Malus_Source
     }
 
     public enum Tyle_Evenement
@@ -24,11 +25,19 @@ public class InspectElement : MonoBehaviour
         Monument,
         Chantier,
         Restaurant,
-        Feux_Rouge
+        Feux_Rouge,
+        Malus
+    }
+
+    public enum Divers
+    {
+        Empty,
+        CrossRoads
     }
 
     public Tyle_Type type;
     public Tyle_Evenement Event;
+    public Divers Divers_Event;
 
     public float distance_Check;
 

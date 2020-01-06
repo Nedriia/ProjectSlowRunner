@@ -20,6 +20,8 @@ public class Canvas_UpdateInfo : MonoBehaviour
     private int increaseMoneyOnCases;
     [SerializeField]
     private int increaseMoneyOnMonument;
+    [SerializeField]
+    private int decreaseValueMalus;
 
     public bool slowDown;
     public Text textColor_ToChange;
@@ -35,6 +37,8 @@ public class Canvas_UpdateInfo : MonoBehaviour
     void Update()
     {
         if (controllerManager.MovementActivate()){
+            if (score <= 0)
+                score = 0;
             if (!slowDown)
             {
                 score += increaseMoney;
@@ -58,5 +62,14 @@ public class Canvas_UpdateInfo : MonoBehaviour
     public void IncreaseEachMonument()
     {
         score += increaseMoneyOnMonument;
+    }
+    public void DecreaseEachMalus()
+    {
+        textColor_ToChange.color = Color.red;
+
+        if (score <= 0)
+            score = 0;
+        else
+            score -= decreaseValueMalus;
     }
 }

@@ -49,8 +49,15 @@ public class InspectElement_Map : Editor
             }
         }
 
-        //Monument and Road Block are specific case -> like they are event for the player, we need to keep track of them
-        if (GUILayout.Button("Monument"))
+        if (GUILayout.Button("EMERGENCY"))
+        {
+            map.elementTest.Roads_Position.Clear();
+            map.elementTest.test.Clear();
+            map.elementTest.Monuments_Position.Clear();
+        }
+
+            //Monument and Road Block are specific case -> like they are event for the player, we need to keep track of them
+            if (GUILayout.Button("Monument"))
         {
             //Check for neighbour in Genereate method
             foreach (InspectElement element in map.elementTest.test){
@@ -62,6 +69,19 @@ public class InspectElement_Map : Editor
             map.elementTest.test.Clear();
         }
 
+        if (GUILayout.Button("Malus"))
+        {
+            //Check for neighbour in Genereate method
+            foreach (InspectElement element in map.elementTest.test)
+            {
+                element.GetComponent<MeshRenderer>().material = map.elementTest.Malus_Mat;
+                element.type = InspectElement.Tyle_Type.Malus_Source;
+                if (!map.elementTest.Malus_Position.Contains(element.transform))
+                    map.elementTest.Malus_Position.Add(element.transform);
+            }
+            map.elementTest.test.Clear();
+        }
+
         if (GUILayout.Button("Road"))
         {
             foreach (InspectElement element in map.elementTest.test){
@@ -69,7 +89,6 @@ public class InspectElement_Map : Editor
                 element.type = InspectElement.Tyle_Type.Road;
                 if (!map.elementTest.Roads_Position.Contains(element.transform))
                     map.elementTest.Roads_Position.Add(element.transform);
-                element.GetComponent<BoxCollider>().size = new Vector3(map.elementTest.scaleX, 1, map.elementTest.scaleZ);
             }
             map.elementTest.test.Clear();
         }
@@ -108,8 +127,12 @@ public class InspectElement_Map : Editor
             }
             for (int i = 0; i < map.elementTest.Monuments_Position.Count; i++)
                 map.elementTest.Monuments_Position[i].GetComponent<InspectElement>().neighborHex.Clear();
+
+            for (int i = 0; i < map.elementTest.Malus_Position.Count; i++)
+                map.elementTest.Malus_Position[i].GetComponent<InspectElement>().neighborHex.Clear();
             map.elementTest.Roads_Position.Clear();
             map.elementTest.Monuments_Position.Clear();
+            map.elementTest.Malus_Position.Clear();
             map.elementTest.test.Clear();
         }
 
@@ -156,7 +179,7 @@ public class InspectElement_Map : Editor
             }
 
             //Monument
-            if (map.elementTest.Monuments_Position.Count != 0){
+            /*if (map.elementTest.Monuments_Position.Count != 0){
                 for (int j = 0; j < map.elementTest.isoSphere.childCount; j++){
                     for (int i = 0; i < map.elementTest.Monuments_Position.Count; i++){
                         if (Vector3.Distance(map.elementTest.isoSphere.GetChild(j).position, map.elementTest.Monuments_Position[i].position) < map.distance_Check && map.elementTest.isoSphere.GetChild(j) != map.elementTest.Monuments_Position[i]){
@@ -165,7 +188,22 @@ public class InspectElement_Map : Editor
                         }
                     }
                 }
-            }
+            }*/
+
+            /*if (map.elementTest.Malus_Position.Count != 0)
+            {
+                for (int j = 0; j < map.elementTest.isoSphere.childCount; j++)
+                {
+                    for (int i = 0; i < map.elementTest.Malus_Position.Count; i++)
+                    {
+                        if (Vector3.Distance(map.elementTest.isoSphere.GetChild(j).position, map.elementTest.Malus_Position[i].position) < map.distance_Check && map.elementTest.isoSphere.GetChild(j) != map.elementTest.Malus_Position[i])
+                        {
+                            if (map.elementTest.isoSphere.GetChild(j).GetComponent<InspectElement>().Event == InspectElement.Tyle_Evenement.Empty)
+                                map.elementTest.isoSphere.GetChild(j).GetComponent<InspectElement>().Event = InspectElement.Tyle_Evenement.Monument;
+                        }
+                    }
+                }
+            }*/
 
             //Prefabs instantiation
             /*for (int i = 0; i < map.elementTest.isoSphere.transform.childCount; i++){
