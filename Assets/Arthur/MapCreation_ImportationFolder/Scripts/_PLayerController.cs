@@ -281,7 +281,7 @@ public class _PLayerController : MonoBehaviour
         Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition); RaycastHit mouseHit;
         if (Physics.Raycast(mouseRay, out mouseHit,50, layerMask.value)) //We want to have bigger detection collision so we have to handle multiple collision
         {
-            if (mouseHit.transform.parent.GetComponent<Walkable>() != null)
+            if (mouseHit.transform.parent.GetComponent<Walkable>() != null && mouseHit.transform.parent.GetComponent<InspectElement>().possible)
             {
                 clickedCube = mouseHit.transform.parent;
                 if (clickedCube != list_points[list_points.Count - 2])
@@ -292,8 +292,8 @@ public class _PLayerController : MonoBehaviour
                         {
                             if (!lastWaypointReached)
                             {
-                                if (p.target == list_points[list_points.Count() - 1])
-                                {
+                                /*if (p.target == list_points[list_points.Count() - 1])
+                                {*/
                                     if (finalPath.Count != 0)
                                     {
                                         foreach (Transform element in finalPath)
@@ -316,7 +316,7 @@ public class _PLayerController : MonoBehaviour
                                     clickedCube.GetComponent<MeshRenderer>().material = controllerMat.pathTemp;
                                     for (int i = 0; i < list_points.Count; ++i)
                                         finalPath.Insert(i, list_points[i]);
-                                }
+                                //}
                             }
                             else if (lastWaypointReached)
                             {

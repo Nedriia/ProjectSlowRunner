@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 112000000, guid: 4e66e6299d462774a87ee0d9c0a177de,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -179,6 +179,8 @@ MonoBehaviour:
   - {fileID: 2008080001}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &11591280
 BoxCollider:
@@ -318,6 +320,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &17893295
 BoxCollider:
@@ -497,6 +501,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &26828291
 BoxCollider:
@@ -625,6 +631,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &30704880
 BoxCollider:
@@ -739,6 +747,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &35588256
 BoxCollider:
@@ -952,6 +962,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &39118080
 BoxCollider:
@@ -1066,6 +1078,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &40034519
 BoxCollider:
@@ -1180,6 +1194,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &41988637
 BoxCollider:
@@ -1373,6 +1389,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &53888294
 BoxCollider:
@@ -1719,6 +1737,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &74394369
 BoxCollider:
@@ -1898,6 +1918,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &75965317
 BoxCollider:
@@ -2105,6 +2127,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &89259763
 BoxCollider:
@@ -2805,6 +2829,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &146921845
 BoxCollider:
@@ -3097,6 +3123,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &150570798
 BoxCollider:
@@ -3211,6 +3239,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &155981076
 BoxCollider:
@@ -3325,6 +3355,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &160001034
 BoxCollider:
@@ -3483,6 +3515,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &173573525
 BoxCollider:
@@ -3597,6 +3631,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &187332792
 BoxCollider:
@@ -3962,6 +3998,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &212572736
 BoxCollider:
@@ -4062,6 +4100,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &218231828
 BoxCollider:
@@ -4240,6 +4280,8 @@ MonoBehaviour:
   - {fileID: 896090972}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 1
   carInTheTile: {fileID: 0}
 --- !u!65 &233724012
 BoxCollider:
@@ -4387,6 +4429,8 @@ MonoBehaviour:
   - {fileID: 666148878}
   visited: 0
   busy: 0
+  possible: 1
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &235584336
 BoxCollider:
@@ -4526,6 +4570,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &237189454
 BoxCollider:
@@ -4640,6 +4686,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &248730584
 BoxCollider:
@@ -4754,6 +4802,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &251016631
 BoxCollider:
@@ -5260,6 +5310,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &278142898
 BoxCollider:
@@ -5479,6 +5531,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &286875571
 BoxCollider:
@@ -5717,6 +5771,8 @@ MonoBehaviour:
   - {fileID: 2093276599}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &298763579
 BoxCollider:
@@ -5842,6 +5898,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &299192155
 BoxCollider:
@@ -6156,6 +6214,8 @@ MonoBehaviour:
   - {fileID: 11591278}
   visited: 0
   busy: 0
+  possible: 1
+  turnable: 1
   carInTheTile: {fileID: 0}
 --- !u!65 &319782804
 BoxCollider:
@@ -6592,6 +6652,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &339343528
 BoxCollider:
@@ -6784,6 +6846,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &340511249
 BoxCollider:
@@ -7228,6 +7292,8 @@ MonoBehaviour:
   - {fileID: 2071357855}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &361295973
 BoxCollider:
@@ -7367,6 +7433,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &377520819
 BoxCollider:
@@ -7663,6 +7731,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &387694228
 BoxCollider:
@@ -7921,6 +7991,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &395659755
 BoxCollider:
@@ -8158,6 +8230,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &404006546
 BoxCollider:
@@ -8276,6 +8350,8 @@ MonoBehaviour:
   - {fileID: 1818265272}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &407109110
 BoxCollider:
@@ -8689,6 +8765,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &425628032
 BoxCollider:
@@ -8987,6 +9065,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &444932844
 BoxCollider:
@@ -9588,6 +9668,8 @@ MonoBehaviour:
   - {fileID: 1937771363}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &478459404
 BoxCollider:
@@ -9859,6 +9941,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &494189870
 BoxCollider:
@@ -10345,6 +10429,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &562454009
 BoxCollider:
@@ -10463,6 +10549,8 @@ MonoBehaviour:
   - {fileID: 1724187033}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &565171310
 BoxCollider:
@@ -10814,6 +10902,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &586614675
 BoxCollider:
@@ -11007,6 +11097,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &592693989
 BoxCollider:
@@ -11357,6 +11449,8 @@ MonoBehaviour:
   - {fileID: 2129247180}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &602505589
 BoxCollider:
@@ -11544,6 +11638,8 @@ MonoBehaviour:
   - {fileID: 1783540704}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &612498220
 BoxCollider:
@@ -11683,6 +11779,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &614479725
 BoxCollider:
@@ -11797,6 +11895,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &615631496
 BoxCollider:
@@ -12333,6 +12433,8 @@ MonoBehaviour:
   - {fileID: 478459402}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &633170073
 BoxCollider:
@@ -12680,6 +12782,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &642980175
 BoxCollider:
@@ -12794,6 +12898,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &649869337
 BoxCollider:
@@ -12952,6 +13058,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &660472969
 BoxCollider:
@@ -13066,6 +13174,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &662742219
 BoxCollider:
@@ -13345,6 +13455,8 @@ MonoBehaviour:
   - {fileID: 1902728390}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &663997525
 BoxCollider:
@@ -13488,6 +13600,8 @@ MonoBehaviour:
   - {fileID: 2062314867}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &666148880
 BoxCollider:
@@ -13627,6 +13741,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &666998196
 BoxCollider:
@@ -13741,6 +13857,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &675847557
 BoxCollider:
@@ -13841,6 +13959,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &676016746
 BoxCollider:
@@ -14012,6 +14132,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &710094578
 BoxCollider:
@@ -14639,6 +14761,8 @@ MonoBehaviour:
   - {fileID: 1870737268}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &767785727
 BoxCollider:
@@ -14778,6 +14902,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &768347509
 BoxCollider:
@@ -14892,6 +15018,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &808079305
 BoxCollider:
@@ -15116,6 +15244,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &832392343
 BoxCollider:
@@ -15230,6 +15360,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &833748279
 BoxCollider:
@@ -15344,6 +15476,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &834055474
 BoxCollider:
@@ -15682,6 +15816,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &850153568
 BoxCollider:
@@ -15897,6 +16033,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &861116346
 BoxCollider:
@@ -16025,6 +16163,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &864278733
 BoxCollider:
@@ -16183,6 +16323,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &885175218
 BoxCollider:
@@ -16346,6 +16488,8 @@ MonoBehaviour:
   - {fileID: 1974163472}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &896090974
 BoxCollider:
@@ -16822,6 +16966,8 @@ MonoBehaviour:
   - {fileID: 1159465085}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &906421925
 BoxCollider:
@@ -16960,6 +17106,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &911358608
 BoxCollider:
@@ -17237,6 +17385,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &929936889
 BoxCollider:
@@ -17351,6 +17501,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &931313149
 BoxCollider:
@@ -17598,6 +17750,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &936863646
 BoxCollider:
@@ -17845,6 +17999,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &941950705
 BoxCollider:
@@ -18036,6 +18192,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &948964558
 BoxCollider:
@@ -18154,6 +18312,8 @@ MonoBehaviour:
   - {fileID: 1683360298}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &949663260
 BoxCollider:
@@ -18426,6 +18586,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &957793410
 BoxCollider:
@@ -18671,6 +18833,8 @@ MonoBehaviour:
   - {fileID: 767785725}
   visited: 0
   busy: 0
+  possible: 1
+  turnable: 1
   carInTheTile: {fileID: 0}
 --- !u!65 &965465403
 BoxCollider:
@@ -19267,6 +19431,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &985794399
 BoxCollider:
@@ -19381,6 +19547,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &990432741
 BoxCollider:
@@ -19498,6 +19666,8 @@ MonoBehaviour:
   - {fileID: 949663258}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &996787260
 BoxCollider:
@@ -19736,6 +19906,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1000722477
 BoxCollider:
@@ -19977,6 +20149,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1007931985
 BoxCollider:
@@ -20109,6 +20283,8 @@ MonoBehaviour:
   - {fileID: 235584334}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1014007131
 BoxCollider:
@@ -20317,6 +20493,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1032782967
 BoxCollider:
@@ -20431,6 +20609,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1032835047
 BoxCollider:
@@ -20545,6 +20725,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1045258008
 BoxCollider:
@@ -20659,6 +20841,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1054381602
 BoxCollider:
@@ -20805,6 +20989,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1067810681
 BoxCollider:
@@ -20923,6 +21109,8 @@ MonoBehaviour:
   - {fileID: 1469500545}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1082088599
 BoxCollider:
@@ -21220,6 +21408,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1106569174
 BoxCollider:
@@ -21334,6 +21524,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1106635109
 BoxCollider:
@@ -21452,6 +21644,8 @@ MonoBehaviour:
   - {fileID: 1604530208}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1108209197
 BoxCollider:
@@ -21577,6 +21771,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1108558748
 BoxCollider:
@@ -21828,6 +22024,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1129027406
 BoxCollider:
@@ -22154,6 +22352,8 @@ MonoBehaviour:
   - {fileID: 1579536054}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1155917752
 BoxCollider:
@@ -22303,6 +22503,8 @@ MonoBehaviour:
   - {fileID: 1155917750}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1159465087
 BoxCollider:
@@ -22442,6 +22644,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1162744349
 BoxCollider:
@@ -22641,7 +22845,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 808261059054855085}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1177220515
+--- !u!114 &1177220514
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -22649,6 +22853,53 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177220513}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 345e239f161ba9342a044d0f55d20ffb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentCube: {fileID: 0}
+  clickedCube: {fileID: 0}
+  mainTarget: {fileID: 0}
+  MainTarget_Level: {fileID: 0}
+  rotationSpeed: 5
+  planet: {fileID: 6496860844886677559}
+  car: {fileID: 1568344612}
+  speed: 1
+  threesholdRotation_Traffic: 10
+  manager: {fileID: 1715079189}
+  index: 0
+  finalPath: []
+  updateCanvas_Values: {fileID: 1715079183}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  layerMaskDefault:
+    serializedVersion: 2
+    m_Bits: 1
+  directionSupposed: 
+  directionIntX: 0
+  directionIntZ: 0
+  target: {fileID: 0}
+  list_walkPath: []
+  list_TurnablePosition:
+  - {fileID: 965465402}
+  - {fileID: 1604530209}
+  - {fileID: 319782803}
+  - {fileID: 233724011}
+  - {fileID: 1683360299}
+  direction: {x: 0, y: 0, z: 0}
+  privateCube: {fileID: 0}
+  pointToTurn: {fileID: 0}
+  tmp_target: {fileID: 1870737268}
+  derived: 0
+--- !u!114 &1177220515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177220513}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d473ef9f5e93ddb42bf6f9888657259f, type: 3}
   m_Name: 
@@ -22712,6 +22963,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1178246768
 BoxCollider:
@@ -22919,6 +23172,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1185487887
 BoxCollider:
@@ -23170,6 +23425,8 @@ MonoBehaviour:
   - {fileID: 319782802}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1189814774
 BoxCollider:
@@ -23359,6 +23616,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1220219683
 BoxCollider:
@@ -23548,6 +23807,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1224997465
 BoxCollider:
@@ -23842,6 +24103,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1246083801
 BoxCollider:
@@ -24694,6 +24957,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1291963292
 BoxCollider:
@@ -24993,6 +25258,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1301468183
 BoxCollider:
@@ -25182,6 +25449,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1315868166
 BoxCollider:
@@ -25470,6 +25739,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1332168855
 BoxCollider:
@@ -25602,6 +25873,8 @@ MonoBehaviour:
   - {fileID: 1082088597}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1339616423
 BoxCollider:
@@ -25908,6 +26181,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1365822499
 BoxCollider:
@@ -26008,6 +26283,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1366273745
 BoxCollider:
@@ -26136,6 +26413,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1381529663
 BoxCollider:
@@ -26280,6 +26559,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1384557737
 BoxCollider:
@@ -26408,6 +26689,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1387030104
 BoxCollider:
@@ -26599,6 +26882,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1402766719
 BoxCollider:
@@ -26752,6 +27037,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1417282642
 BoxCollider:
@@ -27380,6 +27667,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1468782112
 BoxCollider:
@@ -27498,6 +27787,8 @@ MonoBehaviour:
   - {fileID: 663997523}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1469500547
 BoxCollider:
@@ -27839,6 +28130,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1503758771
 BoxCollider:
@@ -27939,6 +28232,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1517801693
 BoxCollider:
@@ -28478,6 +28773,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1531275073
 BoxCollider:
@@ -28592,6 +28889,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1534824094
 BoxCollider:
@@ -29009,6 +29308,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1574946303
 BoxCollider:
@@ -29127,6 +29428,8 @@ MonoBehaviour:
   - {fileID: 1633931306}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1579536056
 BoxCollider:
@@ -29504,6 +29807,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1586453340
 BoxCollider:
@@ -29679,6 +29984,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1588914324
 BoxCollider:
@@ -29807,6 +30114,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1594489774
 BoxCollider:
@@ -29925,6 +30234,8 @@ MonoBehaviour:
   - {fileID: 2093276599}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1599649999
 BoxCollider:
@@ -30069,6 +30380,8 @@ MonoBehaviour:
   - {fileID: 1686115970}
   visited: 0
   busy: 0
+  possible: 1
+  turnable: 1
   carInTheTile: {fileID: 0}
 --- !u!65 &1604530210
 BoxCollider:
@@ -30214,6 +30527,8 @@ MonoBehaviour:
   - {fileID: 1616151539}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1606998204
 BoxCollider:
@@ -30353,6 +30668,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1607940373
 BoxCollider:
@@ -30467,6 +30784,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1615896506
 BoxCollider:
@@ -30585,6 +30904,8 @@ MonoBehaviour:
   - {fileID: 1108209195}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1616151541
 BoxCollider:
@@ -31035,6 +31356,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1633249461
 BoxCollider:
@@ -31232,6 +31555,8 @@ MonoBehaviour:
   - {fileID: 1962502448}
   visited: 0
   busy: 0
+  possible: 1
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1633931308
 BoxCollider:
@@ -31371,6 +31696,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1639058236
 BoxCollider:
@@ -31565,6 +31892,8 @@ MonoBehaviour:
   - {fileID: 2131894812}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1649538135
 BoxCollider:
@@ -32362,6 +32691,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1676483541
 BoxCollider:
@@ -32476,6 +32807,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1677459062
 BoxCollider:
@@ -32595,6 +32928,8 @@ MonoBehaviour:
   - {fileID: 1724187033}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 1
   carInTheTile: {fileID: 0}
 --- !u!65 &1683360300
 BoxCollider:
@@ -32740,6 +33075,8 @@ MonoBehaviour:
   - {fileID: 1014007129}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1686115972
 BoxCollider:
@@ -33042,6 +33379,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1698417428
 BoxCollider:
@@ -33231,6 +33570,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1705500444
 BoxCollider:
@@ -33345,6 +33686,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1708004268
 BoxCollider:
@@ -33510,7 +33853,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentCashText_Display: {fileID: 47913097}
   currentSceneText_Display: {fileID: 1766421355}
-  controllerManager: {fileID: 1177220515}
+  controllerManager: {fileID: 1177220514}
   increaseMoney: 0.03
   decreaseMoney_SlowDown: 0.065
   increaseMoneyOnCases: 5
@@ -33535,6 +33878,23 @@ MonoBehaviour:
   - {fileID: 407109109}
   - {fileID: 1818265273}
   - {fileID: 1795452514}
+  - {fileID: 965465402}
+  - {fileID: 1633931307}
+  - {fileID: 319782803}
+  - {fileID: 1604530209}
+  - {fileID: 235584335}
+  - {fileID: 1469500546}
+  - {fileID: 1606998203}
+  - {fileID: 11591279}
+  - {fileID: 1997884887}
+  - {fileID: 1599649998}
+  - {fileID: 233724011}
+  - {fileID: 1683360299}
+  - {fileID: 1339616422}
+  - {fileID: 1686115971}
+  - {fileID: 1783540705}
+  - {fileID: 1649538134}
+  - {fileID: 2062314868}
   isoSphere: {fileID: 6496860844886677559}
   Roads_Position:
   - {fileID: 906421928}
@@ -33880,6 +34240,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1715230102
 BoxCollider:
@@ -33999,6 +34361,8 @@ MonoBehaviour:
   - {fileID: 565171308}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1724187035
 BoxCollider:
@@ -34262,6 +34626,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1730512161
 BoxCollider:
@@ -34406,6 +34772,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1732995767
 BoxCollider:
@@ -34772,6 +35140,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1744089372
 BoxCollider:
@@ -35233,6 +35603,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1774787833
 BoxCollider:
@@ -35585,6 +35957,8 @@ MonoBehaviour:
   - {fileID: 612498218}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1783540706
 BoxCollider:
@@ -35710,6 +36084,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1788695400
 BoxCollider:
@@ -35843,6 +36219,8 @@ MonoBehaviour:
   - {fileID: 965465401}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1795452515
 BoxCollider:
@@ -36000,6 +36378,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1812040476
 BoxCollider:
@@ -36118,6 +36498,8 @@ MonoBehaviour:
   - {fileID: 233724010}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1818265274
 BoxCollider:
@@ -36764,6 +37146,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1856626908
 BoxCollider:
@@ -36878,6 +37262,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1859984503
 BoxCollider:
@@ -36978,6 +37364,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1862941792
 BoxCollider:
@@ -37110,6 +37498,8 @@ MonoBehaviour:
   - {fileID: 767785725}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1870737270
 BoxCollider:
@@ -37372,6 +37762,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1899228553
 BoxCollider:
@@ -37490,6 +37882,8 @@ MonoBehaviour:
   - {fileID: 1606998202}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1902728392
 BoxCollider:
@@ -37845,6 +38239,8 @@ MonoBehaviour:
   - {fileID: 1599649997}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1937771365
 BoxCollider:
@@ -38446,6 +38842,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1955468263
 BoxCollider:
@@ -38564,6 +38962,8 @@ MonoBehaviour:
   - {fileID: 1795452513}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1962502450
 BoxCollider:
@@ -38883,6 +39283,8 @@ MonoBehaviour:
   - {fileID: 361295971}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1974163474
 BoxCollider:
@@ -39101,6 +39503,8 @@ MonoBehaviour:
   - {fileID: 633170071}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1997884888
 BoxCollider:
@@ -39270,6 +39674,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &2002057681
 BoxCollider:
@@ -39519,6 +39925,8 @@ MonoBehaviour:
   - {fileID: 1997884886}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &2008080003
 BoxCollider:
@@ -39838,6 +40246,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &2022144778
 BoxCollider:
@@ -39938,6 +40348,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &2026467007
 BoxCollider:
@@ -40300,6 +40712,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &2040621014
 BoxCollider:
@@ -40533,6 +40947,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &2047856070
 BoxCollider:
@@ -40740,6 +41156,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &2055416342
 BoxCollider:
@@ -40898,6 +41316,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &2061375231
 BoxCollider:
@@ -41016,6 +41436,8 @@ MonoBehaviour:
   - {fileID: 666148878}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &2062314869
 BoxCollider:
@@ -41288,6 +41710,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &2070321415
 BoxCollider:
@@ -41406,6 +41830,8 @@ MonoBehaviour:
   - {fileID: 602505587}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &2071357857
 BoxCollider:
@@ -41545,6 +41971,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &2076790982
 BoxCollider:
@@ -41659,6 +42087,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &2077579246
 BoxCollider:
@@ -41773,6 +42203,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &2081366194
 BoxCollider:
@@ -42024,6 +42456,8 @@ MonoBehaviour:
   - {fileID: 298763577}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &2093276601
 BoxCollider:
@@ -42480,6 +42914,8 @@ MonoBehaviour:
   - {fileID: 565171308}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &2129247182
 BoxCollider:
@@ -42623,6 +43059,8 @@ MonoBehaviour:
   - {fileID: 1189814772}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &2131894814
 BoxCollider:
