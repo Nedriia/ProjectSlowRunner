@@ -9,7 +9,7 @@ public class Canvas_UpdateInfo : MonoBehaviour
     public Text currentCashText_Display;
     public Text currentSceneText_Display;
 
-    public _PLayerController controllerManager;
+    public _PLayerController_Swipe controllerManager;
     private float score = 0;
 
     [SerializeField]

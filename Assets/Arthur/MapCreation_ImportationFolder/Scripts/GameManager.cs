@@ -82,7 +82,7 @@ public class GameManager : MonoBehaviour
             ++numberOfstar;
             stars[0].SetActive(true);
         }
-        if (numberOfCase == numberOfCaseTot)
+        if (numberOfCase >= numberOfCaseTot)
         {
             ++numberOfstar;
             stars[1].SetActive(true);

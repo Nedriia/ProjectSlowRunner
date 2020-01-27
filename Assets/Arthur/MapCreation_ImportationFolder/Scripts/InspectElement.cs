@@ -45,5 +45,7 @@ public class InspectElement : MonoBehaviour
     public List<Transform> neighborHex;
     public bool visited;
     public bool busy;
+    public bool possible;
+    public bool turnable = false;
     public IA_PathCar carInTheTile;
 }
