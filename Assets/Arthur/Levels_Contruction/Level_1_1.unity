@@ -22857,12 +22857,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 345e239f161ba9342a044d0f55d20ffb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MainTarget_Level: {fileID: 0}
   currentCube: {fileID: 0}
   clickedCube: {fileID: 0}
   mainTarget: {fileID: 0}
-  MainTarget_Level: {fileID: 0}
   rotationSpeed: 5
-  planet: {fileID: 6496860844886677559}
   car: {fileID: 1568344612}
   speed: 1
   threesholdRotation_Traffic: 10
@@ -22876,22 +22875,13 @@ MonoBehaviour:
   layerMaskDefault:
     serializedVersion: 2
     m_Bits: 1
-  directionSupposed: 
-  directionIntX: 0
-  directionIntZ: 0
-  target: {fileID: 0}
-  list_walkPath: []
   list_TurnablePosition:
   - {fileID: 965465402}
   - {fileID: 1604530209}
   - {fileID: 319782803}
   - {fileID: 233724011}
   - {fileID: 1683360299}
-  direction: {x: 0, y: 0, z: 0}
-  privateCube: {fileID: 0}
-  pointToTurn: {fileID: 0}
-  tmp_target: {fileID: 1870737268}
-  derived: 0
+  - {fileID: 1599649998}
 --- !u!114 &1177220515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33895,6 +33885,10 @@ MonoBehaviour:
   - {fileID: 1783540705}
   - {fileID: 1649538134}
   - {fileID: 2062314868}
+  - {fileID: 906421924}
+  - {fileID: 40034518}
+  - {fileID: 361295972}
+  - {fileID: 2129247181}
   isoSphere: {fileID: 6496860844886677559}
   Roads_Position:
   - {fileID: 906421928}
@@ -34179,7 +34173,7 @@ MonoBehaviour:
   levelEnded: 0
   maxTimeAcceleration: 4
   timerGrey_Cases: 0
-  limitTimerGrey: 8
+  limitTimerGrey: 18
   limitTimeStar: 46
   numberOfstar: 0
   stars:
