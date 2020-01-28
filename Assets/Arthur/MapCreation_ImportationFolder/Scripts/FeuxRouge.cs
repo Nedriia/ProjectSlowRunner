@@ -32,5 +32,16 @@ public class FeuxRouge : MonoBehaviour
                 Trafficlight.material = RedM;
             }
         }
+        else
+        {
+            if (red)
+            {
+                red = false;
+            }
+            else
+            {
+                red = true;
+            }
+        }
     }
 }

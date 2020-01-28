@@ -179,6 +179,8 @@ MonoBehaviour:
   - {fileID: 2008080001}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &11591280
 BoxCollider:
@@ -318,6 +320,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &17893295
 BoxCollider:
@@ -497,6 +501,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &26828291
 BoxCollider:
@@ -625,6 +631,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &30704880
 BoxCollider:
@@ -739,6 +747,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &35588256
 BoxCollider:
@@ -1030,6 +1040,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &39118080
 BoxCollider:
@@ -1144,6 +1156,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &40034519
 BoxCollider:
@@ -1258,6 +1272,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &41988637
 BoxCollider:
@@ -1451,6 +1467,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &53888294
 BoxCollider:
@@ -6531,6 +6549,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &74394369
 BoxCollider:
@@ -6710,6 +6730,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &75965317
 BoxCollider:
@@ -6917,6 +6939,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &89259763
 BoxCollider:
@@ -7629,40 +7653,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 138851142}
   m_CullTransparentMesh: 0
---- !u!114 &140352918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2632920529489934785}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dc3a469fa005734dbb6a30033882398, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentCube: {fileID: 0}
-  clickedCube: {fileID: 0}
-  mainTarget: {fileID: 0}
-  indicator: {fileID: 8804715035772501410}
-  planet: {fileID: 6496860844886677559}
-  car: {fileID: 2128777258}
-  rotationSpeed: 5
-  waypoints: []
-  finalPath: []
-  temp_finalPath: []
-  list_points: []
-  finalform: 0
-  speed: 1
-  optimalSpeed: 1
-  speedInChantier: 1
-  index: 0
-  manager: {fileID: 1715079189}
-  direction: {x: 0, y: 0, z: 0}
-  alreayBlocked: 0
-  blocked: 0
-  truck: {fileID: 0}
-  threesholdRotation_Traffic: 135
 --- !u!1 &146921842
 GameObject:
   m_ObjectHideFlags: 0
@@ -7717,6 +7707,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &146921845
 BoxCollider:
@@ -8009,6 +8001,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &150570798
 BoxCollider:
@@ -8123,6 +8117,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &155981076
 BoxCollider:
@@ -8237,6 +8233,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &160001034
 BoxCollider:
@@ -8395,6 +8393,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &173573525
 BoxCollider:
@@ -8509,6 +8509,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &187332792
 BoxCollider:
@@ -8874,6 +8876,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &212572736
 BoxCollider:
@@ -8974,6 +8978,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &218231828
 BoxCollider:
@@ -9041,13 +9047,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 218231826}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0.0005173411, y: 0.0011581779, z: -0.0010643752, w: 0.9999986}
   m_LocalPosition: {x: 0, y: 0, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 969001828}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.059000004, y: 0.133, z: -0.12200001}
 --- !u!1 &224264044
 GameObject:
   m_ObjectHideFlags: 0
@@ -9230,6 +9236,8 @@ MonoBehaviour:
   - {fileID: 896090972}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 1
   carInTheTile: {fileID: 0}
 --- !u!65 &233724012
 BoxCollider:
@@ -9377,6 +9385,8 @@ MonoBehaviour:
   - {fileID: 666148878}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &235584336
 BoxCollider:
@@ -9516,6 +9526,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &237189454
 BoxCollider:
@@ -14369,6 +14381,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &248730584
 BoxCollider:
@@ -14483,6 +14497,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &251016631
 BoxCollider:
@@ -14694,7 +14710,7 @@ MonoBehaviour:
   PowerToHide: {fileID: 1297556233}
   powerToHide2: {fileID: 1944765850}
   client: {fileID: 0}
-  state: {fileID: 1715079188}
+  state: {fileID: 0}
 --- !u!95 &251276976
 Animator:
   serializedVersion: 3
@@ -14912,7 +14928,7 @@ Transform:
   - {fileID: 764757287}
   - {fileID: 562546577}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &277406605
 GameObject:
@@ -15101,6 +15117,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &278142898
 BoxCollider:
@@ -15320,6 +15338,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &286875571
 BoxCollider:
@@ -15558,6 +15578,8 @@ MonoBehaviour:
   - {fileID: 2093276599}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &298763579
 BoxCollider:
@@ -15683,6 +15705,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &299192155
 BoxCollider:
@@ -16102,6 +16126,8 @@ MonoBehaviour:
   - {fileID: 11591278}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 1
   carInTheTile: {fileID: 0}
 --- !u!65 &319782804
 BoxCollider:
@@ -16538,6 +16564,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &339343528
 BoxCollider:
@@ -16730,6 +16758,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &340511249
 BoxCollider:
@@ -17174,6 +17204,8 @@ MonoBehaviour:
   - {fileID: 2071357855}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &361295973
 BoxCollider:
@@ -17313,6 +17345,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &377520819
 BoxCollider:
@@ -17526,7 +17560,7 @@ Transform:
   - {fileID: 663492768}
   - {fileID: 2006265880}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &382757297
 GameObject:
@@ -17687,6 +17721,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &387694228
 BoxCollider:
@@ -17845,6 +17881,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &395659755
 BoxCollider:
@@ -18082,6 +18120,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &404006546
 BoxCollider:
@@ -18200,6 +18240,8 @@ MonoBehaviour:
   - {fileID: 1818265272}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &407109110
 BoxCollider:
@@ -18540,6 +18582,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &425628032
 BoxCollider:
@@ -18943,6 +18987,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &444932844
 BoxCollider:
@@ -19580,6 +19626,8 @@ MonoBehaviour:
   - {fileID: 1937771363}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &478459404
 BoxCollider:
@@ -19851,6 +19899,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &494189870
 BoxCollider:
@@ -24936,6 +24986,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &562454009
 BoxCollider:
@@ -25121,6 +25173,8 @@ MonoBehaviour:
   - {fileID: 1724187033}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &565171310
 BoxCollider:
@@ -25556,6 +25610,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &586614675
 BoxCollider:
@@ -25749,6 +25805,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &592693989
 BoxCollider:
@@ -26177,6 +26235,8 @@ MonoBehaviour:
   - {fileID: 2129247180}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &602505589
 BoxCollider:
@@ -26364,6 +26424,8 @@ MonoBehaviour:
   - {fileID: 1783540704}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &612498220
 BoxCollider:
@@ -26503,6 +26565,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &614479725
 BoxCollider:
@@ -26617,6 +26681,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &615631496
 BoxCollider:
@@ -27153,6 +27219,8 @@ MonoBehaviour:
   - {fileID: 478459402}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &633170073
 BoxCollider:
@@ -27445,7 +27513,7 @@ MonoBehaviour:
   - {fileID: 1132500814}
   - {fileID: 1749621806}
   currentIndex: 0
-  controller: {fileID: 140352918}
+  controller: {fileID: 0}
 --- !u!1 &642980172
 GameObject:
   m_ObjectHideFlags: 0
@@ -27500,6 +27568,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &642980175
 BoxCollider:
@@ -27692,6 +27762,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &649869337
 BoxCollider:
@@ -27907,6 +27979,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &660472969
 BoxCollider:
@@ -28021,6 +28095,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &662742219
 BoxCollider:
@@ -28300,6 +28376,8 @@ MonoBehaviour:
   - {fileID: 1902728390}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &663997525
 BoxCollider:
@@ -28443,6 +28521,8 @@ MonoBehaviour:
   - {fileID: 2062314867}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &666148880
 BoxCollider:
@@ -28582,6 +28662,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &666998196
 BoxCollider:
@@ -28696,6 +28778,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &675847557
 BoxCollider:
@@ -28796,6 +28880,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &676016746
 BoxCollider:
@@ -33778,6 +33864,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &710094578
 BoxCollider:
@@ -34805,6 +34893,8 @@ MonoBehaviour:
   - {fileID: 1870737268}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &767785727
 BoxCollider:
@@ -34944,6 +35034,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &768347509
 BoxCollider:
@@ -35013,7 +35105,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 781180172}
-  - component: {fileID: 781180174}
   m_Layer: 0
   m_Name: Waypoints
   m_TagString: Untagged
@@ -35028,8 +35119,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 781180171}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 9.23, y: 0, z: -2.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2079443265}
@@ -35064,21 +35155,8 @@ Transform:
   - {fileID: 224264045}
   - {fileID: 1469917460}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &781180174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 781180171}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f998aaa1829729a4d8f0a826e582611e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LineRoad: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &801486467
 GameObject:
   m_ObjectHideFlags: 0
@@ -35211,6 +35289,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &808079305
 BoxCollider:
@@ -35282,9 +35362,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Circular Spectrum
       objectReference: {fileID: 0}
+    - target: {fileID: 1367623113585302, guid: 3787256bfa6f0e44b9def35b7764354e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4219367459737822, guid: 3787256bfa6f0e44b9def35b7764354e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 7.07
       objectReference: {fileID: 0}
     - target: {fileID: 4219367459737822, guid: 3787256bfa6f0e44b9def35b7764354e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -35503,6 +35587,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &832392343
 BoxCollider:
@@ -35617,6 +35703,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &833748279
 BoxCollider:
@@ -35731,6 +35819,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &834055474
 BoxCollider:
@@ -36147,6 +36237,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &850153568
 BoxCollider:
@@ -36362,6 +36454,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &861116346
 BoxCollider:
@@ -36490,6 +36584,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &864278733
 BoxCollider:
@@ -36648,6 +36744,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &885175218
 BoxCollider:
@@ -36811,6 +36909,8 @@ MonoBehaviour:
   - {fileID: 1974163472}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &896090974
 BoxCollider:
@@ -37062,7 +37162,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &903096392
 Transform:
@@ -37287,6 +37387,8 @@ MonoBehaviour:
   - {fileID: 1159465085}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &906421925
 BoxCollider:
@@ -37425,6 +37527,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &911358608
 BoxCollider:
@@ -37702,6 +37806,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &929936889
 BoxCollider:
@@ -37816,6 +37922,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &931313149
 BoxCollider:
@@ -38063,6 +38171,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &936863646
 BoxCollider:
@@ -38205,7 +38315,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1177220515}
+      - m_Target: {fileID: 0}
         m_MethodName: EraseLastPoint
         m_Mode: 1
         m_Arguments:
@@ -38310,6 +38420,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &941950705
 BoxCollider:
@@ -38576,6 +38688,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &948964558
 BoxCollider:
@@ -38694,6 +38808,8 @@ MonoBehaviour:
   - {fileID: 1683360298}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &949663260
 BoxCollider:
@@ -38861,7 +38977,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1177220515}
+      - m_Target: {fileID: 0}
         m_MethodName: StartMovement
         m_Mode: 1
         m_Arguments:
@@ -38966,6 +39082,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &957793410
 BoxCollider:
@@ -39179,14 +39297,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 965465400}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0.0005173411, y: 0.0011581779, z: -0.0010643752, w: 0.9999986}
   m_LocalPosition: {x: 4, y: 0, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 639609077}
   m_Father: {fileID: 969001828}
   m_RootOrder: 49
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.059000004, y: 0.133, z: -0.12200001}
 --- !u!114 &965465402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39211,6 +39329,8 @@ MonoBehaviour:
   - {fileID: 767785725}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 1
   carInTheTile: {fileID: 0}
 --- !u!65 &965465403
 BoxCollider:
@@ -39760,6 +39880,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &985794399
 BoxCollider:
@@ -39874,6 +39996,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &990432741
 BoxCollider:
@@ -39997,6 +40121,8 @@ MonoBehaviour:
   - {fileID: 949663258}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &996787260
 BoxCollider:
@@ -40316,6 +40442,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1000722477
 BoxCollider:
@@ -40662,6 +40790,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1007931985
 BoxCollider:
@@ -40851,6 +40981,8 @@ MonoBehaviour:
   - {fileID: 235584334}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1014007131
 BoxCollider:
@@ -40990,6 +41122,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1032782967
 BoxCollider:
@@ -41104,6 +41238,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1032835047
 BoxCollider:
@@ -41218,6 +41354,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1045258008
 BoxCollider:
@@ -41332,6 +41470,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1054381602
 BoxCollider:
@@ -41478,6 +41618,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1067810681
 BoxCollider:
@@ -41566,14 +41708,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1082088596}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0.0005173411, y: 0.0011581779, z: -0.0010643752, w: 0.9999986}
   m_LocalPosition: {x: 2, y: 0, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1341784998}
   m_Father: {fileID: 969001828}
   m_RootOrder: 27
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.059000004, y: 0.133, z: -0.12200001}
 --- !u!114 &1082088598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41596,6 +41738,8 @@ MonoBehaviour:
   - {fileID: 1469500545}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1082088599
 BoxCollider:
@@ -41760,6 +41904,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1086282457}
   m_CullTransparentMesh: 0
+--- !u!114 &1089070318 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3497466240945819052, guid: ebfbddb74d8fa6949a4cbb58d2873106,
+    type: 3}
+  m_PrefabInstance: {fileID: 1873115995}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 345e239f161ba9342a044d0f55d20ffb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1102426435
 GameObject:
   m_ObjectHideFlags: 0
@@ -41971,6 +42127,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1106569174
 BoxCollider:
@@ -42085,6 +42243,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1106635109
 BoxCollider:
@@ -42203,6 +42363,8 @@ MonoBehaviour:
   - {fileID: 1604530208}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1108209197
 BoxCollider:
@@ -42328,6 +42490,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1108558748
 BoxCollider:
@@ -42579,6 +42743,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1129027406
 BoxCollider:
@@ -43212,6 +43378,8 @@ MonoBehaviour:
   - {fileID: 1579536054}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1155917752
 BoxCollider:
@@ -43355,6 +43523,8 @@ MonoBehaviour:
   - {fileID: 1155917750}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1159465087
 BoxCollider:
@@ -43494,6 +43664,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1162744349
 BoxCollider:
@@ -43687,37 +43859,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1164794269}
   m_CullTransparentMesh: 0
---- !u!114 &1177220515
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2632920529489934785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d473ef9f5e93ddb42bf6f9888657259f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentCube: {fileID: 0}
-  clickedCube: {fileID: 0}
-  mainTarget: {fileID: 0}
-  rotationSpeed: 5
-  planet: {fileID: 6496860844886677559}
-  car: {fileID: 4917028936914758}
-  speed: 1
-  threesholdRotation_Traffic: 10
-  manager: {fileID: 1715079189}
-  index: 0
-  finalPath: []
-  list_points: []
-  updateCanvas_Values: {fileID: 1715079183}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 512
-  layerMaskDefault:
-    serializedVersion: 2
-    m_Bits: 1
 --- !u!1 &1178246766
 GameObject:
   m_ObjectHideFlags: 0
@@ -43758,6 +43899,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1178246768
 BoxCollider:
@@ -44043,6 +44186,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1185487887
 BoxCollider:
@@ -44294,6 +44439,8 @@ MonoBehaviour:
   - {fileID: 319782802}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1189814774
 BoxCollider:
@@ -44561,6 +44708,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1220219683
 BoxCollider:
@@ -44637,7 +44786,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &1221081762
 AudioSource:
   m_ObjectHideFlags: 0
@@ -44746,7 +44895,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1224359687
 GameObject:
@@ -44877,6 +45026,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1224997465
 BoxCollider:
@@ -45009,11 +45160,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1229159082}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2, z: 0}
+  m_LocalPosition: {x: 7, y: -2, z: 0}
   m_LocalScale: {x: 3, y: 1, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1230200735
 GameObject:
@@ -45391,6 +45542,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1246083801
 BoxCollider:
@@ -45911,7 +46064,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1286928639
 GameObject:
@@ -46165,6 +46318,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1291963292
 BoxCollider:
@@ -46390,7 +46545,7 @@ MonoBehaviour:
   PowerToHide: {fileID: 251276970}
   powerToHide2: {fileID: 1944765850}
   client: {fileID: 0}
-  state: {fileID: 1715079188}
+  state: {fileID: 0}
 --- !u!95 &1297556239
 Animator:
   serializedVersion: 3
@@ -46464,6 +46619,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1301468183
 BoxCollider:
@@ -46731,6 +46888,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1315868166
 BoxCollider:
@@ -46972,7 +47131,7 @@ RectTransform:
   - {fileID: 1721179534}
   - {fileID: 1837153012}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -47019,6 +47178,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1332168855
 BoxCollider:
@@ -47121,14 +47282,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1339616420}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0.0005173411, y: 0.0011581779, z: -0.0010643752, w: 0.9999986}
   m_LocalPosition: {x: 3, y: 0, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1665272400}
   m_Father: {fileID: 969001828}
   m_RootOrder: 38
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.059000004, y: 0.133, z: -0.12200001}
 --- !u!114 &1339616422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47151,6 +47312,8 @@ MonoBehaviour:
   - {fileID: 1082088597}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1339616423
 BoxCollider:
@@ -47592,6 +47755,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1365822499
 BoxCollider:
@@ -47692,6 +47857,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1366273745
 BoxCollider:
@@ -47820,6 +47987,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1381529663
 BoxCollider:
@@ -47964,6 +48133,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1384557737
 BoxCollider:
@@ -48092,6 +48263,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1387030104
 BoxCollider:
@@ -48283,6 +48456,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1402766719
 BoxCollider:
@@ -48436,6 +48611,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1417282642
 BoxCollider:
@@ -48787,7 +48964,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1453017487
 GameObject:
@@ -49064,6 +49241,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1468782112
 BoxCollider:
@@ -49152,14 +49331,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1469500544}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0.0005173411, y: 0.0011581779, z: -0.0010643752, w: 0.9999986}
   m_LocalPosition: {x: 1, y: 0, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1851664498}
   m_Father: {fileID: 969001828}
   m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.059000004, y: 0.133, z: -0.12200001}
 --- !u!114 &1469500546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49182,6 +49361,8 @@ MonoBehaviour:
   - {fileID: 663997523}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1469500547
 BoxCollider:
@@ -54436,6 +54617,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1503758771
 BoxCollider:
@@ -54536,6 +54719,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1517801693
 BoxCollider:
@@ -55258,6 +55443,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1531275073
 BoxCollider:
@@ -55372,6 +55559,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1534824094
 BoxCollider:
@@ -55759,8 +55948,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1562256606}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 9.2, y: 0, z: -1.97}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 698882824}
@@ -55769,8 +55958,8 @@ Transform:
   - {fileID: 275452643}
   - {fileID: 947423634}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1570253955
 GameObject:
   m_ObjectHideFlags: 0
@@ -55945,6 +56134,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1574946303
 BoxCollider:
@@ -56168,6 +56359,8 @@ MonoBehaviour:
   - {fileID: 1633931306}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1579536056
 BoxCollider:
@@ -56545,6 +56738,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1586453340
 BoxCollider:
@@ -56720,6 +56915,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1588914324
 BoxCollider:
@@ -56848,6 +57045,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1594489774
 BoxCollider:
@@ -56966,6 +57165,8 @@ MonoBehaviour:
   - {fileID: 2093276599}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 1
   carInTheTile: {fileID: 0}
 --- !u!65 &1599649999
 BoxCollider:
@@ -57110,6 +57311,8 @@ MonoBehaviour:
   - {fileID: 1686115970}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 1
   carInTheTile: {fileID: 0}
 --- !u!65 &1604530210
 BoxCollider:
@@ -57333,6 +57536,8 @@ MonoBehaviour:
   - {fileID: 1616151539}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1606998204
 BoxCollider:
@@ -57472,6 +57677,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1607940373
 BoxCollider:
@@ -57586,6 +57793,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1615896506
 BoxCollider:
@@ -57704,6 +57913,8 @@ MonoBehaviour:
   - {fileID: 1108209195}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1616151541
 BoxCollider:
@@ -58159,6 +58370,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1633249461
 BoxCollider:
@@ -58356,6 +58569,8 @@ MonoBehaviour:
   - {fileID: 1962502448}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1633931308
 BoxCollider:
@@ -58495,6 +58710,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1639058236
 BoxCollider:
@@ -58689,6 +58906,8 @@ MonoBehaviour:
   - {fileID: 2131894812}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1649538135
 BoxCollider:
@@ -59486,6 +59705,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1676483541
 BoxCollider:
@@ -59600,6 +59821,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1677459062
 BoxCollider:
@@ -59719,6 +59942,8 @@ MonoBehaviour:
   - {fileID: 1724187033}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 1
   carInTheTile: {fileID: 0}
 --- !u!65 &1683360300
 BoxCollider:
@@ -59864,6 +60089,8 @@ MonoBehaviour:
   - {fileID: 1014007129}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1686115972
 BoxCollider:
@@ -60166,6 +60393,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1698417428
 BoxCollider:
@@ -60355,6 +60584,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1705500444
 BoxCollider:
@@ -60469,6 +60700,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1708004268
 BoxCollider:
@@ -60540,13 +60773,10 @@ GameObject:
   - component: {fileID: 1715079182}
   - component: {fileID: 1715079181}
   - component: {fileID: 1715079180}
-  - component: {fileID: 1715079185}
   - component: {fileID: 1715079184}
-  - component: {fileID: 1715079186}
   - component: {fileID: 1715079187}
-  - component: {fileID: 1715079188}
-  - component: {fileID: 1715079189}
   - component: {fileID: 1715079183}
+  - component: {fileID: 1715079185}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -60612,14 +60842,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1715079179}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 18, z: 0}
+  m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
+  m_LocalPosition: {x: 8, y: 15, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 503583647823688829}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 90, z: 0}
 --- !u!114 &1715079183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60634,7 +60864,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentCashText_Display: {fileID: 47913097}
   currentSceneText_Display: {fileID: 1766421355}
-  controllerManager: {fileID: 1177220515}
+  controllerManager: {fileID: 1089070318}
   increaseMoney: 0.03
   decreaseMoney_SlowDown: 0.065
   increaseMoneyOnCases: 5
@@ -60655,67 +60885,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test:
-  - {fileID: 2070321414}
-  - {fileID: 407109109}
-  - {fileID: 1818265273}
-  - {fileID: 1795452514}
   - {fileID: 444932843}
-  - {fileID: 1579536055}
-  - {fileID: 896090973}
-  - {fileID: 233724011}
-  - {fileID: 1724187034}
-  - {fileID: 89259762}
-  - {fileID: 298763578}
-  - {fileID: 1633931307}
-  - {fileID: 1962502449}
-  - {fileID: 1705500443}
-  - {fileID: 2081366193}
-  - {fileID: 615631495}
-  - {fileID: 1155917751}
-  - {fileID: 1615896505}
-  - {fileID: 929936888}
-  - {fileID: 1301468182}
-  - {fileID: 1189814773}
-  - {fileID: 1715230101}
-  - {fileID: 160001033}
-  - {fileID: 1708004267}
-  - {fileID: 1108558747}
-  - {fileID: 387694227}
-  - {fileID: 26828290}
-  - {fileID: 425628031}
-  - {fileID: 395659754}
-  - {fileID: 377520818}
-  - {fileID: 218231827}
-  - {fileID: 187332791}
-  - {fileID: 30704879}
-  - {fileID: 1788695399}
-  - {fileID: 948964557}
-  - {fileID: 75965316}
-  - {fileID: 1856626907}
-  - {fileID: 2093276600}
-  - {fileID: 361295972}
-  - {fileID: 1586453339}
-  - {fileID: 1045258007}
-  - {fileID: 1339616422}
-  - {fileID: 767785726}
-  - {fileID: 663997524}
-  - {fileID: 1783540705}
-  - {fileID: 1315868165}
-  - {fileID: 996787259}
-  - {fileID: 1032835046}
-  - {fileID: 251016630}
+  - {fileID: 150570797}
   - {fileID: 642980174}
-  - {fileID: 586614674}
-  - {fileID: 1774787832}
-  - {fileID: 592693988}
-  - {fileID: 478459403}
-  - {fileID: 339343527}
-  - {fileID: 985794398}
-  - {fileID: 1639058235}
-  - {fileID: 1387030103}
-  - {fileID: 990432740}
-  - {fileID: 2061375230}
-  - {fileID: 340511248}
+  - {fileID: 1812040475}
+  - {fileID: 1155917751}
+  - {fileID: 1795452514}
+  - {fileID: 896090973}
+  - {fileID: 1159465086}
+  - {fileID: 906421924}
+  - {fileID: 1007931984}
+  - {fileID: 1606998203}
+  - {fileID: 1902728391}
   isoSphere: {fileID: 6496860844886677559}
   Roads_Position:
   - {fileID: 906421928}
@@ -60814,10 +60995,8 @@ MonoBehaviour:
   - {fileID: 2454930910527299155, guid: fc881d31c1b5f4f40bfdbf5c6b89bf36, type: 3}
   - {fileID: 361725603309304063, guid: 87f64d0ff93f6644081b89802539e5f4, type: 3}
   - {fileID: 2454930910527299155, guid: fc881d31c1b5f4f40bfdbf5c6b89bf36, type: 3}
-  grassPrefab:
-  - {fileID: 1110802649544280, guid: c903a5b42ec9ea04089eb3a1f02c51c8, type: 3}
-  monumentPrefab:
-  - {fileID: 1415973868248422, guid: 25cba09db03db5f4ca304e42752ec650, type: 3}
+  grassPrefab: []
+  monumentPrefab: []
   scaleX: 1.65
   scaleZ: 1.65
 --- !u!114 &1715079185
@@ -60827,52 +61006,34 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1715079179}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79a0275f4d4b0f14198692740b749976, type: 3}
+  m_Script: {fileID: 11500000, guid: 922a9d424daae1a4e83d4987cc8940f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1715079186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1715079179}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b0d1d8d22ea32449b31287c80d5ad66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  client:
-  - {fileID: 11400000, guid: a4a54c99dfeca33488bb425be1408227, type: 2}
-  - {fileID: 11400000, guid: e2aad69ecda94c54e976dbf00e79ce8f, type: 2}
-  - {fileID: 11400000, guid: a4800da013008b648be2a27c3be9389f, type: 2}
-  currentClient: {fileID: 0}
-  clientImage: {fileID: 503583648327851597}
-  name: {fileID: 503583646664658193}
-  maxProfitText: {fileID: 8069613695979123853}
-  estimateText: {fileID: 8069613694517998384}
-  baseMutator: {fileID: 8069613695076887561}
-  likeable: {fileID: 503583648075773924}
-  hated: {fileID: 503583648362738404}
-  speakable: {fileID: 8069613694740352750}
-  starsDisplay: {fileID: 289081890}
-  textPrefab: {fileID: 4265321304049657269, guid: fcc33a1a911237e42904d2d49c2d422a,
-    type: 3}
-  card: {fileID: 503583647823688817}
-  one_star: {fileID: -4755692756211384940, guid: e644a82ed300a934b850ee5ed4688065,
-    type: 3}
-  two_star: {fileID: -5234823667487288830, guid: e644a82ed300a934b850ee5ed4688065,
-    type: 3}
-  three_star: {fileID: -3805581486255343993, guid: e644a82ed300a934b850ee5ed4688065,
-    type: 3}
-  four_star: {fileID: 6072854134572474686, guid: e644a82ed300a934b850ee5ed4688065,
-    type: 3}
-  five_star: {fileID: 1920994157133721471, guid: e644a82ed300a934b850ee5ed4688065,
-    type: 3}
-  canvas: {fileID: 1332025773}
-  clientSpriteCanvas: {fileID: 1698015383}
+  levelEnded: 0
+  index: 0
+  levelIsOver: 0
+  CanvasButton: {fileID: 1332025773}
+  canvasGG: {fileID: 1570253955}
+  truckCollision: {fileID: 2006265879}
+  greyCasesDefeat: {fileID: 663492767}
+  numberOfCaseTot: 0
+  numberOfCase: 0
+  timeTot: 0
+  maxTimeAcceleration: 4
+  timerGrey_Cases: 0
+  limitTimerGrey: 18
+  limitTimeStar: 46
+  numberOfstar: 0
+  stars:
+  - {fileID: 2126901253}
+  - {fileID: 2019951148}
+  - {fileID: 1587371767}
+  player: {fileID: 2632920529489934787}
+  mainTarget_Level: {fileID: 0}
+  mainTarget: {fileID: 996787258}
+  tmp_target: {fileID: 0}
 --- !u!114 &1715079187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60885,70 +61046,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0666b5aa3b5e2f5448d9e5f78cfc0462, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1715079188
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1715079179}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67f4f79140c9c664291ac68bb0ac25f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stateEmotion: 0
-  currentDecrease: 0.9999
-  controller: {fileID: 140352918}
-  hatedImpact: 10
-  loveImpact: 20
-  sliderValue: {fileID: 434384253}
-  percentageState: {fileID: 1471578486}
-  feedBackEmotion: {fileID: 209960807}
-  AngryFace: {fileID: -2302736193492601978, guid: e0564e0dde82e084987a6c62c79ee2ae,
-    type: 3}
-  HappyFace: {fileID: -4510836698365954324, guid: e0564e0dde82e084987a6c62c79ee2ae,
-    type: 3}
-  LoveFace: {fileID: 3551200718831743466, guid: e0564e0dde82e084987a6c62c79ee2ae,
-    type: 3}
-  WonderingFace: {fileID: 6928861355032662417, guid: e0564e0dde82e084987a6c62c79ee2ae,
-    type: 3}
-  NeutralFace: {fileID: 4119131112165788675, guid: e0564e0dde82e084987a6c62c79ee2ae,
-    type: 3}
---- !u!114 &1715079189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1715079179}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 922a9d424daae1a4e83d4987cc8940f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DestinationPointList:
-  - {fileID: 996787258}
-  index: 0
-  currentDestination: {fileID: 0}
-  levelIsOver: 0
-  CanvasButton: {fileID: 1332025773}
-  canvasGG: {fileID: 1570253955}
-  truckCollision: {fileID: 2006265879}
-  greyCasesDefeat: {fileID: 663492767}
-  numberOfCaseTot: 0
-  numberOfCase: 0
-  timeTot: 0
-  levelEnded: 0
-  maxTimeAcceleration: 4
-  timerGrey_Cases: 0
-  limitTimerGrey: 8
-  limitTimeStar: 46
-  numberOfstar: 0
-  stars:
-  - {fileID: 2126901253}
-  - {fileID: 2019951148}
-  - {fileID: 1587371767}
 --- !u!1 &1715230099
 GameObject:
   m_ObjectHideFlags: 0
@@ -61003,6 +61100,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1715230102
 BoxCollider:
@@ -61199,6 +61298,8 @@ MonoBehaviour:
   - {fileID: 565171308}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1724187035
 BoxCollider:
@@ -61357,7 +61458,7 @@ MonoBehaviour:
   OnLongClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1715079189}
+      - m_Target: {fileID: 1715079185}
         m_MethodName: FastTravel
         m_Mode: 1
         m_Arguments:
@@ -61462,6 +61563,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1730512161
 BoxCollider:
@@ -61606,6 +61709,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1732995767
 BoxCollider:
@@ -61972,6 +62077,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1744089372
 BoxCollider:
@@ -62334,7 +62441,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.021355547, y: 0.15656048}
   m_AnchorMax: {x: 0.966, y: 0.88218683}
-  m_AnchoredPosition: {x: 5, y: 2.3999996}
+  m_AnchoredPosition: {x: 5, y: 2.4000244}
   m_SizeDelta: {x: 4.4000244, y: 4.399994}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1766421355
@@ -62433,6 +62540,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1774787833
 BoxCollider:
@@ -62890,6 +62999,8 @@ MonoBehaviour:
   - {fileID: 612498218}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1783540706
 BoxCollider:
@@ -63015,6 +63126,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1788695400
 BoxCollider:
@@ -63118,14 +63231,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1795452512}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0.0005173411, y: 0.0011581779, z: -0.0010643752, w: 0.9999986}
   m_LocalPosition: {x: 4, y: 0, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 229873107}
   m_Father: {fileID: 969001828}
   m_RootOrder: 50
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.059000004, y: 0.133, z: -0.12200001}
 --- !u!114 &1795452514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63148,6 +63261,8 @@ MonoBehaviour:
   - {fileID: 965465401}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1795452515
 BoxCollider:
@@ -63305,6 +63420,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1812040476
 BoxCollider:
@@ -63528,6 +63645,8 @@ MonoBehaviour:
   - {fileID: 233724010}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1818265274
 BoxCollider:
@@ -64397,6 +64516,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1856626908
 BoxCollider:
@@ -64511,6 +64632,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1859984503
 BoxCollider:
@@ -64611,6 +64734,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1862941792
 BoxCollider:
@@ -64743,6 +64868,8 @@ MonoBehaviour:
   - {fileID: 767785725}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1870737270
 BoxCollider:
@@ -64828,6 +64955,116 @@ MonoBehaviour:
   visited: 0
   walkPointOffset: 0.5
   stairOffset: 0.4
+--- !u!1001 &1873115995
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2248696335882494562, guid: ebfbddb74d8fa6949a4cbb58d2873106,
+        type: 3}
+      propertyPath: m_Name
+      value: Player (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2248696335882494562, guid: ebfbddb74d8fa6949a4cbb58d2873106,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3497466240945819052, guid: ebfbddb74d8fa6949a4cbb58d2873106,
+        type: 3}
+      propertyPath: updateCanvas_Values
+      value: 
+      objectReference: {fileID: 1715079183}
+    - target: {fileID: 3497466240945819052, guid: ebfbddb74d8fa6949a4cbb58d2873106,
+        type: 3}
+      propertyPath: list_TurnablePosition.Array.data[0]
+      value: 
+      objectReference: {fileID: 965465402}
+    - target: {fileID: 3497466240945819052, guid: ebfbddb74d8fa6949a4cbb58d2873106,
+        type: 3}
+      propertyPath: list_TurnablePosition.Array.data[1]
+      value: 
+      objectReference: {fileID: 1604530209}
+    - target: {fileID: 3497466240945819052, guid: ebfbddb74d8fa6949a4cbb58d2873106,
+        type: 3}
+      propertyPath: list_TurnablePosition.Array.data[2]
+      value: 
+      objectReference: {fileID: 319782803}
+    - target: {fileID: 3497466240945819052, guid: ebfbddb74d8fa6949a4cbb58d2873106,
+        type: 3}
+      propertyPath: list_TurnablePosition.Array.data[3]
+      value: 
+      objectReference: {fileID: 1997884887}
+    - target: {fileID: 3497466240945819052, guid: ebfbddb74d8fa6949a4cbb58d2873106,
+        type: 3}
+      propertyPath: list_TurnablePosition.Array.data[4]
+      value: 
+      objectReference: {fileID: 233724011}
+    - target: {fileID: 3497466240945819052, guid: ebfbddb74d8fa6949a4cbb58d2873106,
+        type: 3}
+      propertyPath: list_TurnablePosition.Array.data[5]
+      value: 
+      objectReference: {fileID: 1683360299}
+    - target: {fileID: 2248696335882494564, guid: ebfbddb74d8fa6949a4cbb58d2873106,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2248696335882494564, guid: ebfbddb74d8fa6949a4cbb58d2873106,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2248696335882494564, guid: ebfbddb74d8fa6949a4cbb58d2873106,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2248696335882494564, guid: ebfbddb74d8fa6949a4cbb58d2873106,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2248696335882494564, guid: ebfbddb74d8fa6949a4cbb58d2873106,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2248696335882494564, guid: ebfbddb74d8fa6949a4cbb58d2873106,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2248696335882494564, guid: ebfbddb74d8fa6949a4cbb58d2873106,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2248696335882494564, guid: ebfbddb74d8fa6949a4cbb58d2873106,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2248696335882494564, guid: ebfbddb74d8fa6949a4cbb58d2873106,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2248696335882494564, guid: ebfbddb74d8fa6949a4cbb58d2873106,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 2248696335882494564, guid: ebfbddb74d8fa6949a4cbb58d2873106,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2248696335882494561, guid: ebfbddb74d8fa6949a4cbb58d2873106, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: ebfbddb74d8fa6949a4cbb58d2873106, type: 3}
 --- !u!1 &1876457965
 GameObject:
   m_ObjectHideFlags: 0
@@ -65083,6 +65320,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1899228553
 BoxCollider:
@@ -65201,6 +65440,8 @@ MonoBehaviour:
   - {fileID: 1606998202}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1902728392
 BoxCollider:
@@ -65377,7 +65618,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1913925316
 GameObject:
@@ -65649,6 +65890,8 @@ MonoBehaviour:
   - {fileID: 1599649997}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1937771365
 BoxCollider:
@@ -66018,7 +66261,7 @@ MonoBehaviour:
   PowerToHide: {fileID: 251276970}
   powerToHide2: {fileID: 1297556233}
   client: {fileID: 0}
-  state: {fileID: 1715079188}
+  state: {fileID: 0}
 --- !u!95 &1944765856
 Animator:
   serializedVersion: 3
@@ -66250,6 +66493,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1955468263
 BoxCollider:
@@ -66368,6 +66613,8 @@ MonoBehaviour:
   - {fileID: 1795452513}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1962502450
 BoxCollider:
@@ -66687,6 +66934,8 @@ MonoBehaviour:
   - {fileID: 361295971}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1974163474
 BoxCollider:
@@ -66990,6 +67239,8 @@ MonoBehaviour:
   - {fileID: 633170071}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &1997884888
 BoxCollider:
@@ -67159,6 +67410,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &2002057681
 BoxCollider:
@@ -67408,6 +67661,8 @@ MonoBehaviour:
   - {fileID: 1997884886}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &2008080003
 BoxCollider:
@@ -67727,6 +67982,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &2022144778
 BoxCollider:
@@ -67827,6 +68084,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &2026467007
 BoxCollider:
@@ -68189,6 +68448,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &2040621014
 BoxCollider:
@@ -68422,6 +68683,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &2047856070
 BoxCollider:
@@ -68629,6 +68892,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &2055416342
 BoxCollider:
@@ -68787,6 +69052,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &2061375231
 BoxCollider:
@@ -68905,6 +69172,8 @@ MonoBehaviour:
   - {fileID: 666148878}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &2062314869
 BoxCollider:
@@ -69177,6 +69446,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &2070321415
 BoxCollider:
@@ -69295,6 +69566,8 @@ MonoBehaviour:
   - {fileID: 602505587}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &2071357857
 BoxCollider:
@@ -69434,6 +69707,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &2076790982
 BoxCollider:
@@ -69548,6 +69823,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &2077579246
 BoxCollider:
@@ -69824,6 +70101,8 @@ MonoBehaviour:
   neighborHex: []
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &2081366194
 BoxCollider:
@@ -70075,6 +70354,8 @@ MonoBehaviour:
   - {fileID: 298763577}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &2093276601
 BoxCollider:
@@ -70738,6 +71019,8 @@ MonoBehaviour:
   - {fileID: 565171308}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &2129247182
 BoxCollider:
@@ -70959,6 +71242,8 @@ MonoBehaviour:
   - {fileID: 1189814772}
   visited: 0
   busy: 0
+  possible: 0
+  turnable: 0
   carInTheTile: {fileID: 0}
 --- !u!65 &2131894814
 BoxCollider:
@@ -71143,8 +71428,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1551165125748240}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -2.1, y: 1.8, z: 4.1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 4882029928445905964}
@@ -71152,7 +71437,7 @@ Transform:
   - {fileID: 4748513280464820}
   m_Father: {fileID: 6235803011756914194}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!23 &23125132942421754
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -72568,7 +72853,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1629863386839311157}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -0.0035871158, y: 0, z: 0.047418203}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 1627970418360416873}
@@ -78251,7 +78536,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!33 &1858282106904431224
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -78273,7 +78558,7 @@ Transform:
   m_Children:
   - {fileID: 1858282106764068202}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &1858282106904431226
 SphereCollider:
@@ -78341,7 +78626,7 @@ PrefabInstance:
     - target: {fileID: 6927216166645033491, guid: 4c78daf05ef5aa342ac77194f981fc86,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6927216166645033503, guid: 4c78daf05ef5aa342ac77194f981fc86,
         type: 3}
@@ -78381,7 +78666,7 @@ PrefabInstance:
     - target: {fileID: 6927216166645033503, guid: 4c78daf05ef5aa342ac77194f981fc86,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6927216166645033503, guid: 4c78daf05ef5aa342ac77194f981fc86,
         type: 3}
@@ -78434,17 +78719,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2632920529489934791}
-  - component: {fileID: 140352918}
-  - component: {fileID: 2632920529489934786}
-  - component: {fileID: 1177220515}
+  - component: {fileID: 2632920529489934787}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2632920529489934786
+  m_IsActive: 0
+--- !u!114 &2632920529489934787
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -78453,10 +78736,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 2632920529489934785}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 953f65d218af86b48aaa41a70141361f, type: 3}
+  m_Script: {fileID: 11500000, guid: 345e239f161ba9342a044d0f55d20ffb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Money: 5.5
+  currentCube: {fileID: 0}
+  rotationSpeed: 5
+  car: {fileID: 4917028936914758}
+  speed: 1
+  threesholdRotation_Traffic: 10
+  index: 0
+  finalPath: []
+  updateCanvas_Values: {fileID: 1715079183}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  layerMaskDefault:
+    serializedVersion: 2
+    m_Bits: 1
+  list_TurnablePosition:
+  - {fileID: 965465402}
+  - {fileID: 1604530209}
+  - {fileID: 319782803}
+  - {fileID: 233724011}
+  - {fileID: 1683360299}
+  - {fileID: 1599649998}
 --- !u!4 &2632920529489934791
 Transform:
   m_ObjectHideFlags: 0
@@ -78464,14 +78767,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2632920529489934785}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 3.03, y: 1.12, z: -9.172}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.773, z: -5}
+  m_LocalScale: {x: 0.3, y: 0.2, z: 0.25}
   m_Children:
   - {fileID: 6235803011756914194}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!199 &4882029928430578058
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -102054,7 +102357,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6976458538784785409}
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0.103, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.22, y: 0.22, z: 0.22}
   m_Children:
   - {fileID: 1627768130813334065}
@@ -102070,15 +102373,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8045677377154717814}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -2, y: 0, z: -9.2}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 969001828}
   - {fileID: 1055406956}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6976458538784785409
 GameObject:
   m_ObjectHideFlags: 0
@@ -102479,9 +102782,3 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 
---- !u!4 &8804715035772501410 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6927216166645033503, guid: 4c78daf05ef5aa342ac77194f981fc86,
-    type: 3}
-  m_PrefabInstance: {fileID: 1878788063966713789}
-  m_PrefabAsset: {fileID: 0}
