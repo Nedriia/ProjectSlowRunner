@@ -42,7 +42,7 @@ public class _PLayerController : MonoBehaviour
     {
         controllerMat = Camera.main.GetComponent<MapEditor_MainController>();
         RayCastDown();
-        mainTarget = manager.Get_Destination();
+        //mainTarget = manager.Get_Destination();
         index = 0;
         list_points.Add(currentCube);
         list_points.Add(currentCube);
