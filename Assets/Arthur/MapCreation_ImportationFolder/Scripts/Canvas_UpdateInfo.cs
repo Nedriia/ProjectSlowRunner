@@ -10,7 +10,7 @@ public class Canvas_UpdateInfo : MonoBehaviour
     public Text currentSceneText_Display;
 
     public _PLayerController_Swipe controllerManager;
-    private float score = 0;
+    private float score = 10;
 
     [SerializeField]
     private float increaseMoney;
@@ -71,5 +71,10 @@ public class Canvas_UpdateInfo : MonoBehaviour
             score = 0;
         else
             score -= decreaseValueMalus;
+    }
+
+    public float Get_Score()
+    {
+        return score;
     }
 }

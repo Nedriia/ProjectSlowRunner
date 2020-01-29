@@ -87,8 +87,7 @@ public class _PLayerController_Swipe : MonoBehaviour
         if (directionSupposed != "")
         {
             int dist_min = int.MaxValue;
-            for (int i = 0; i < list_TurnablePosition.Count; ++i)
-            {
+            for (int i = 0; i < list_TurnablePosition.Count; ++i){
                 int tmp_dist = 0;
                 for (int j = 0; j < finalPath.Count; ++j)
                 {
@@ -122,12 +121,14 @@ public class _PLayerController_Swipe : MonoBehaviour
 
                 if (target != null)
                 {
+                    //Block the road for the pathfindings
                     foreach (WalkPath Roads in tmp.possiblePaths)
                     {
                         if (Roads.target.gameObject != target.gameObject && Roads.target.gameObject != privateCube.gameObject)
                             Roads.active = false;
                     }
 
+                    //Change material to road if the cube has not been visited
                     for (int i = finalPath.Count - 1; i >= 0; --i)
                     {
                         if (!finalPath[i].GetComponent<InspectElement>().visited)
@@ -138,20 +139,33 @@ public class _PLayerController_Swipe : MonoBehaviour
                     }
                     SetMovement(false);
                     finalPath.Clear();
-
+                    if (!derived && manager.Gettmp_target() != null)
+                        manager.Settmp_target(null);
                     Clicked_NewFindPath(currentCube);
                     SetMovement(true);
 
                     directionSupposed = "";
 
+                    //Open back the path
                     foreach (WalkPath element in tmp.possiblePaths)
                     {
                         if (!element.active)
                             element.active = true;
                     }
-
                     index = 1;
+                    //Visual indication to know where the point to turn is
                     pointToTurn.GetComponent<MeshRenderer>().material = controllerMat.restaurant_Mat;
+                }
+                else
+                {
+                    for (int i = finalPath.Count - 1; i >= 0; --i)
+                    {
+                        if (!finalPath[i].GetComponent<InspectElement>().visited)
+                        {
+                            finalPath[i].GetComponent<MeshRenderer>().material = controllerMat.road;
+                            finalPath.RemoveAt(i);
+                        }
+                    }
                 }
             }
         }
@@ -161,42 +175,30 @@ public class _PLayerController_Swipe : MonoBehaviour
             directionIntZ = 0;
         }
 
-        if (move)
-        {
+        if (move){
             manager.timeTot += Time.deltaTime;
             RayCastDown();
-            if (move)
+            if (speed != 0)
             {
-                if (speed != 0)
+                if (finalPath.Count != 0)
+                    FollowPath();
+                if (currentCube != manager.GetmainTarget() && CheckTrafic())
                 {
-                    if (finalPath.Count != 0)
-                        FollowPath();
-                    if (currentCube != manager.GetmainTarget() && CheckTrafic())
+                    var truck = currentCube.GetComponent<InspectElement>().carInTheTile;
+                    if (truck.transform.forward.x != 1 || truck.transform.forward.x != -1 &&
+                            truck.transform.forward.z != 1 || truck.transform.forward.z != -1)
                     {
-                        var truck = currentCube.GetComponent<InspectElement>().carInTheTile;
-                        if (truck.transform.forward.x != 1 || truck.transform.forward.x != -1 &&
-                                truck.transform.forward.z != 1 || truck.transform.forward.z != -1)
+                        //Truck is turning
+                        var heading = car.transform.position - truck.transform.position;
+                        float dot = Vector3.Dot(heading, truck.transform.forward);
+                        if (dot < 0)
                         {
-                            //Truck is turning
-                            var heading = car.transform.position - truck.transform.position;
-                            float dot = Vector3.Dot(heading, truck.transform.forward);
-                            if (dot < 0)
-                            {
-                                if (truck.speed != 0)
-                                    speed = truck.speed - 0.1f;
-                                else
-                                    speed = truck.speed;
-                            }
-                            else if (dot > 0)
-                            {
-                                //Frontal Collision
-                                move = false;
-                                Time.timeScale = 0;
-                                manager.truckCollision.SetActive(true);
-                            }
+                            if (truck.speed != 0)
+                                speed = truck.speed - 0.1f;
+                            else
+                                speed = truck.speed;
                         }
-                        else if (truck.transform.rotation.eulerAngles.y >= car.transform.rotation.eulerAngles.y + threesholdRotation_Traffic &&
-                            truck.transform.rotation.eulerAngles.y >= car.transform.rotation.eulerAngles.y + threesholdRotation_Traffic)
+                        else if (dot > 0)
                         {
                             //Frontal Collision
                             move = false;
@@ -204,22 +206,42 @@ public class _PLayerController_Swipe : MonoBehaviour
                             manager.truckCollision.SetActive(true);
                         }
                     }
-                    else
-                        speed = optimalSpeed;
+                    else if (truck.transform.rotation.eulerAngles.y >= car.transform.rotation.eulerAngles.y + threesholdRotation_Traffic &&
+                        truck.transform.rotation.eulerAngles.y >= car.transform.rotation.eulerAngles.y + threesholdRotation_Traffic)
+                    {
+                        //Frontal Collision
+                        move = false;
+                        Time.timeScale = 0;
+                        manager.truckCollision.SetActive(true);
+                    }
                 }
                 else
-                {
-                    if (currentCube != manager.GetmainTarget() && !CheckTrafic())
-                        speed = optimalSpeed;
-                }
+                    speed = optimalSpeed;
+            }
+            else
+            {
+                if (currentCube != manager.GetmainTarget() && !CheckTrafic())
+                    speed = optimalSpeed;
             }
         }
 
         if (manager.Gettmp_target() != null && currentCube == manager.Gettmp_target())
         {
-            manager.SetmainTarget(manager.GetMainTarget_Level());
-            index = 1;
+            manager.Settmp_target(null);
+            for (int i = finalPath.Count - 1; i >= 0; --i)
+            {
+                if (!finalPath[i].GetComponent<InspectElement>().visited)
+                {
+                    finalPath[i].GetComponent<MeshRenderer>().material = controllerMat.road;
+                    finalPath.RemoveAt(i);
+                }
+            }
+
+            SetMovement(false);
+            finalPath.Clear();
             Clicked_NewFindPath(currentCube);
+            SetMovement(true);
+            index = 1;
         }
         else
         {
@@ -306,6 +328,8 @@ public class _PLayerController_Swipe : MonoBehaviour
 
             if (manager.Gettmp_target() != null)
                 manager.SetmainTarget(manager.Gettmp_target());
+            else
+                manager.SetmainTarget(manager.GetmainTarget());
         }
         else
             manager.SetmainTarget(manager.GetMainTarget_Level());
@@ -368,7 +392,7 @@ public class _PLayerController_Swipe : MonoBehaviour
     void BuildPath(Transform target)
     {
         Transform cube = target;
-        while (cube != currentCube)
+        while (cube != currentCube/* && finalPath.Count < 50*/)
         {
             finalPath.Insert(0, cube);
             cube.GetComponent<MeshRenderer>().material = controllerMat.pathPlanned;
@@ -407,7 +431,6 @@ public class _PLayerController_Swipe : MonoBehaviour
             {
                 currentCube = playerHit.transform;
                 var tmp_cube = currentCube.GetComponent<InspectElement>();
-
                 if (finalPath.Count > 0 &&
                     finalPath[index].GetComponent<InspectElement>().visited &&
                     currentCube != manager.GetmainTarget() &&

@@ -17,11 +17,13 @@ public class GameManager : MonoBehaviour
     public GameObject canvasGG;
     public GameObject truckCollision;
     public GameObject greyCasesDefeat;
+    public GameObject outOfMoney;
 
     [Header("Score Variables")]
     private MapEditor_MainController controller;
     public int numberOfCaseTot;
     public int numberOfCase;
+    private Canvas_UpdateInfo updateInfo;
 
     [Header("Timer Values")]
     public float timeTot;
@@ -78,6 +80,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        updateInfo = Camera.main.GetComponent<Canvas_UpdateInfo>();
         CanvasButton.SetActive(true);
         controller = GetComponent<MapEditor_MainController>();
         numberOfCaseTot = controller.Roads_Position.Count - 1;
@@ -94,6 +97,13 @@ public class GameManager : MonoBehaviour
             player.SetMovement(false);
             Time.timeScale = 0;
             greyCasesDefeat.SetActive(true);
+        }
+
+        if(updateInfo.Get_Score() <= 1)
+        {
+            player.SetMovement(false);
+            Time.timeScale = 0;
+            outOfMoney.SetActive(true);
         }
     }
 
