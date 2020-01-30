@@ -48,6 +48,25 @@ public class _PLayerController_Swipe : MonoBehaviour
     string directionSupposed = "";
     int directionIntX = 0, directionIntZ = 0;
 
+    [Space]
+    [Space]
+    public const float MAX_SWIPE_TIME = 0.5f;
+
+    // Factor of the screen width that we consider a swipe
+    // 0.17 works well for portrait mode 16:9 phone
+    public const float MIN_SWIPE_DISTANCE = 0.17f;
+
+    public static bool swipedRight = false;
+    public static bool swipedLeft = false;
+    public static bool swipedUp = false;
+    public static bool swipedDown = false;
+
+
+    public bool debugWithArrowKeys = true;
+
+    Vector2 startPos;
+    float startTime;
+
     void Start()
     {
         controllerMat = Camera.main.GetComponent<MapEditor_MainController>();
@@ -63,22 +82,88 @@ public class _PLayerController_Swipe : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        swipedRight = false;
+        swipedLeft = false;
+        swipedUp = false;
+        swipedDown = false;
+
+        if (Input.touches.Length > 0)
+        {
+            Touch t = Input.GetTouch(0);
+            if (t.phase == TouchPhase.Began){
+                startPos = new Vector2(t.position.x / (float)Screen.width, t.position.y / (float)Screen.width);
+                startTime = Time.time;
+            }
+            if (t.phase == TouchPhase.Ended)
+            {
+                if (Time.time - startTime > MAX_SWIPE_TIME) // press too long
+                    return;
+
+                Vector2 endPos = new Vector2(t.position.x / (float)Screen.width, t.position.y / (float)Screen.width);
+                Vector2 swipe = new Vector2(endPos.x - startPos.x, endPos.y - startPos.y);
+
+                if (swipe.magnitude < MIN_SWIPE_DISTANCE) // Too short swipe
+                    return;
+
+                if (Mathf.Abs(swipe.x) > Mathf.Abs(swipe.y))
+                { // Horizontal swipe
+                    if (swipe.x > 0)
+                    {//Right
+                        directionIntX = 0;
+                        directionIntZ = 1;
+                        directionSupposed = "right";
+                    }
+                    else
+                    {//Left
+                        directionIntX = 0;
+                        directionIntZ = -1;
+                        directionSupposed = "left";
+                    }
+                }
+                else
+                { // Vertical swipe
+                    if (swipe.y > 0)
+                    {//Top
+                        directionIntX = -1;
+                        directionIntZ = 0;
+                        directionSupposed = "Up";
+                    }
+                    else
+                    {//Bot
+                        directionIntX = 1;
+                        directionIntZ = 0;
+                        directionSupposed = "Down";                     
+                    }
+                }
+            }
+        }
+
+        if (debugWithArrowKeys)
+        {
+            swipedDown = swipedDown || Input.GetKeyDown(KeyCode.DownArrow);
+            swipedUp = swipedUp || Input.GetKeyDown(KeyCode.UpArrow);
+            swipedRight = swipedRight || Input.GetKeyDown(KeyCode.RightArrow);
+            swipedLeft = swipedLeft || Input.GetKeyDown(KeyCode.LeftArrow);
+        }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        if (swipedLeft)
         {
             directionIntZ = (int)Math.Round(Input.GetAxisRaw("Horizontal"));
             directionSupposed = "left";
         }
-        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        else if (swipedRight)
         {
             directionIntZ = (int)Math.Round(Input.GetAxisRaw("Horizontal"));
             directionSupposed = "right";
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (swipedDown)
         {
             directionIntX = -(int)Math.Round(Input.GetAxisRaw("Vertical"));
             directionSupposed = "Down";
         }
-        else if (Input.GetKeyDown(KeyCode.UpArrow))
+        else if (swipedUp)
         {
             directionIntX = -(int)Math.Round(Input.GetAxisRaw("Vertical"));
             directionSupposed = "Up";
@@ -145,6 +230,10 @@ public class _PLayerController_Swipe : MonoBehaviour
                     SetMovement(true);
 
                     directionSupposed = "";
+                    swipedRight = false;
+                    swipedLeft = false;
+                    swipedUp = false;
+                    swipedDown = false;
 
                     //Open back the path
                     foreach (WalkPath element in tmp.possiblePaths)
@@ -158,6 +247,8 @@ public class _PLayerController_Swipe : MonoBehaviour
                 }
                 else
                 {
+                    //Corriger cette erreur -> si aucune target n'est trouvée, on nettoie le path et il ne se passe rien d'autre
+                    derived = true;
                     for (int i = finalPath.Count - 1; i >= 0; --i)
                     {
                         if (!finalPath[i].GetComponent<InspectElement>().visited)
@@ -166,6 +257,7 @@ public class _PLayerController_Swipe : MonoBehaviour
                             finalPath.RemoveAt(i);
                         }
                     }
+                    Clicked_NewFindPath(currentCube);
                 }
             }
         }
@@ -380,6 +472,10 @@ public class _PLayerController_Swipe : MonoBehaviour
                 move = true;
 
                 directionSupposed = "";
+                swipedRight = false;
+                swipedLeft = false;
+                swipedUp = false;
+                swipedDown = false;
                 directionIntX = 0;
                 directionIntZ = 0;
 
@@ -442,7 +538,9 @@ public class _PLayerController_Swipe : MonoBehaviour
                     updateCanvas_Values.slowDown = true;
                 }
                 else
+                {
                     updateCanvas_Values.slowDown = false;
+                }
 
                 if (tmp_cube.Event == InspectElement.Tyle_Evenement.Feux_Rouge)
                 {
