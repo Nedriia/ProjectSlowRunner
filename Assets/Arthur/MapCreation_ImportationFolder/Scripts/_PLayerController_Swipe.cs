@@ -67,6 +67,8 @@ public class _PLayerController_Swipe : MonoBehaviour
     Vector2 startPos;
     float startTime;
 
+    public NodeCheckActivation nodeactivation;
+
     void Start()
     {
         controllerMat = Camera.main.GetComponent<MapEditor_MainController>();
@@ -243,7 +245,7 @@ public class _PLayerController_Swipe : MonoBehaviour
                     }
                     index = 1;
                     //Visual indication to know where the point to turn is
-                    pointToTurn.GetComponent<MeshRenderer>().material = controllerMat.restaurant_Mat;
+                    //pointToTurn.GetComponent<MeshRenderer>().material = controllerMat.restaurant_Mat;
                 }
                 else
                 {
@@ -505,7 +507,7 @@ public class _PLayerController_Swipe : MonoBehaviour
     void FollowPath()
     {
         transform.position = Vector3.MoveTowards(transform.position, finalPath[index].transform.position + finalPath[index].transform.up * 0.5f, Time.deltaTime * speed);
-        Debug.DrawRay(finalPath[index].transform.position + finalPath[index].transform.up * 0.5f, finalPath[index].transform.up, Color.red, 1);
+        //Debug.DrawRay(finalPath[index].transform.position + finalPath[index].transform.up * 0.5f, finalPath[index].transform.up, Color.red, 1);
 
         var rotationTo = Quaternion.LookRotation(Vector3.RotateTowards(car.forward, finalPath[index].transform.position + finalPath[index].transform.up * 0.5f - car.transform.position, rotationSpeed * Time.deltaTime, 0.0f));
         car.transform.rotation = Quaternion.Euler(new Vector3(0, rotationTo.eulerAngles.y, 0));
@@ -520,7 +522,7 @@ public class _PLayerController_Swipe : MonoBehaviour
     {
         Ray playerRay = new Ray(transform.GetChild(0).position, -transform.up);
         RaycastHit playerHit;
-        Debug.DrawRay(transform.GetChild(0).position, -transform.up, Color.blue, 1);
+        //Debug.DrawRay(transform.GetChild(0).position, -transform.up, Color.blue, 1);
         if (Physics.Raycast(playerRay, out playerHit, 50, layerMaskDefault.value))
         {
             if (playerHit.transform.GetComponent<Walkable>() != null)
@@ -558,7 +560,8 @@ public class _PLayerController_Swipe : MonoBehaviour
                     {
                         if (tmp_cube.Divers_Event == InspectElement.Divers.Empty)
                         {
-                            playerHit.transform.GetComponent<MeshRenderer>().material.Lerp(playerHit.transform.GetComponent<MeshRenderer>().material, controllerMat.alreadyPassed, 6.5f * Time.deltaTime);
+                            playerHit.transform.GetComponent<MeshRenderer>().material = controllerMat.alreadyPassed;
+                            //playerHit.transform.GetComponent<MeshRenderer>().material.Lerp(playerHit.transform.GetComponent<MeshRenderer>().material, controllerMat.alreadyPassed, 6.5f * Time.deltaTime);
                             if (finalPath[index - 1].GetComponent<InspectElement>().Divers_Event != InspectElement.Divers.CrossRoads)
                             {
                                 check = false;
@@ -571,6 +574,7 @@ public class _PLayerController_Swipe : MonoBehaviour
                                     if (tmp_cube.Event == InspectElement.Tyle_Evenement.Malus)
                                         updateCanvas_Values.DecreaseEachMalus();
                                     finalPath[index - 1].GetComponent<InspectElement>().visited = true;
+                                    nodeactivation.CheckDesactivation();
                                 }
                             }
                             else
