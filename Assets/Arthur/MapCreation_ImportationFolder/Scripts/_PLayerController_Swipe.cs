@@ -7,6 +7,7 @@ using System;
 public class _PLayerController_Swipe : MonoBehaviour
 {
     bool move { get; set; }
+    public bool start = true;
     [Header("Manager values")]
     bool derived = false;
     bool check = false;
@@ -68,6 +69,10 @@ public class _PLayerController_Swipe : MonoBehaviour
     float startTime;
 
     public NodeCheckActivation nodeactivation;
+
+    [Header("Feedback Canvas")]
+    public GameObject CanvasMoney;
+    public GameObject CanvasGlitch;
 
     void Start()
     {
@@ -261,6 +266,7 @@ public class _PLayerController_Swipe : MonoBehaviour
                     }
                     Clicked_NewFindPath(currentCube);
                 }
+                pointToTurn.GetComponent<MeshRenderer>().material = controllerMat.restaurant_Mat;
             }
         }
         else
@@ -278,7 +284,7 @@ public class _PLayerController_Swipe : MonoBehaviour
                     FollowPath();
                 if (currentCube != manager.GetmainTarget() && CheckTrafic())
                 {
-                    var truck = currentCube.GetComponent<InspectElement>().carInTheTile;
+                    var truck = finalPath[index].GetComponent<InspectElement>().carInTheTile;
                     if (truck.transform.forward.x != 1 || truck.transform.forward.x != -1 &&
                             truck.transform.forward.z != 1 || truck.transform.forward.z != -1)
                     {
@@ -454,8 +460,10 @@ public class _PLayerController_Swipe : MonoBehaviour
             visitedCubes.Add(current);
             if (nextCubes.Any())
                 ExploreCube(nextCubes, visitedCubes, target);
-            if (nextCubes.Count == 0 && !derived)
+
+            if (nextCubes.Count == 0 && !derived && !start)
             {
+                start = false;
                 derived = true;
                 var tmp = pointToTurn.GetComponent<Walkable>();
                 for (int i = finalPath.Count - 1; i >= 0; --i)
@@ -569,10 +577,24 @@ public class _PLayerController_Swipe : MonoBehaviour
                                 {
                                     ++manager.numberOfCase;
                                     updateCanvas_Values.IncreaseEachCase();
+                                    
                                     if (tmp_cube.Event == InspectElement.Tyle_Evenement.Monument)
+                                    {
                                         updateCanvas_Values.IncreaseEachMonument();
-                                    if (tmp_cube.Event == InspectElement.Tyle_Evenement.Malus)
+                                        CanvasMoney.SetActive(true);
+                                        CanvasGlitch.SetActive(false);
+                                    }
+                                    else if (tmp_cube.Event == InspectElement.Tyle_Evenement.Malus)
+                                    {
                                         updateCanvas_Values.DecreaseEachMalus();
+                                        CanvasGlitch.SetActive(true);
+                                        CanvasMoney.SetActive(false);
+                                    }
+                                    else
+                                    {
+                                        CanvasGlitch.SetActive(false);
+                                        CanvasMoney.SetActive(false);
+                                    }
                                     finalPath[index - 1].GetComponent<InspectElement>().visited = true;
                                     nodeactivation.CheckDesactivation();
                                 }

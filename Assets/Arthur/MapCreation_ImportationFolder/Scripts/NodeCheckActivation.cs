@@ -18,6 +18,8 @@ public class NodeCheckActivation : MonoBehaviour
         public List<Point> list;
     }
     private bool check = true;
+    public Material alreadyPassed;
+
 
     // Start is called before the first frame update
     void Awake()
@@ -55,7 +57,7 @@ public class NodeCheckActivation : MonoBehaviour
                     ++a;
                 }
                 if (check){
-                    ListOfPointLists.list[i].list[0].gameObject.SetActive(false);
+                    ListOfPointLists.list[i].list[0].gameObject.GetComponent<MeshRenderer>().material = alreadyPassed;
                 }
                 else
                 {
