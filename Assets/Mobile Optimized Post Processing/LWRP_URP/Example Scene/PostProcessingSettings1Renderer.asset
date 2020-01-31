@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d652980d569f447ba09aa2a6768f3f, type: 3}
   m_Name: NewPostProcessorRenderPass
   m_EditorClassIdentifier: 
-  Settings: {fileID: 11400000, guid: 986f220e2f2c3b340a82e059dc91c414, type: 2}
+  Settings: {fileID: 11400000, guid: 0f6c81f7ab8f38148a6c650b281bcdef, type: 2}
   Order: 1000
   Enabled: 1
 --- !u!114 &11400000

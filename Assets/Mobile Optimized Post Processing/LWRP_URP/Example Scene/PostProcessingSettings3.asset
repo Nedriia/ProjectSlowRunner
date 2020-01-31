@@ -25,13 +25,13 @@ MonoBehaviour:
   Exposure: 3.17
   LUTEnabled: 1
   LUT: {fileID: 2800000, guid: b3802d5f74c7288429b8eede51f2223d, type: 3}
-  LUTIntensity: 0.28
+  LUTIntensity: 0.43
   ColorsAmount: 32
   ChromaticAbberationEnabled: 1
-  ColorsShiftAmount: 0.0141
-  FishEyeEffectFactor: 1
+  ColorsShiftAmount: 0.0006
+  FishEyeEffectFactor: 0.25
   FishEyeEffectStart: 0.3
-  FishEyeEffectEnd: 1
+  FishEyeEffectEnd: 0.27
   BloomEnabled: 1
   BloomBlurRadius: 0.00289
   BloomBlurTextureResolutionDivider: 10

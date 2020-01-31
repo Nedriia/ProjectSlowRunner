@@ -45,6 +45,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d652980d569f447ba09aa2a6768f3f, type: 3}
   m_Name: PostProcessorRenderPass
   m_EditorClassIdentifier: 
-  Settings: {fileID: 11400000, guid: 0ee2791cd1533cf4fa446c66a825d575, type: 2}
+  Settings: {fileID: 11400000, guid: 3875325e8251ff543833ce070430b29a, type: 2}
   Order: 1000
   Enabled: 1
