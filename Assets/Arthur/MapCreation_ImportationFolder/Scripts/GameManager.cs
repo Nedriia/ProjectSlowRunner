@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     public GameObject truckCollision;
     public GameObject greyCasesDefeat;
     public GameObject outOfMoney;
+    public Text casesCountTextDisplay;
+    public Text timeCountTextDisplay;
 
     [Header("Score Variables")]
     private MapEditor_MainController controller;
@@ -118,6 +120,7 @@ public class GameManager : MonoBehaviour
         if (numberOfCase >= numberOfCaseTot)
         {
             ++numberOfstar;
+            numberOfCase = numberOfCaseTot;
             stars[1].SetActive(true);
         }
         if (timeTot <= limitTimeStar)
@@ -126,6 +129,9 @@ public class GameManager : MonoBehaviour
             stars[2].SetActive(true);
         }
         evaluate = true;
+        timeCountTextDisplay.text = timeTot.ToString("F2") +" seconds " ;
+        casesCountTextDisplay.text = numberOfCase.ToString() + " / " + numberOfCaseTot.ToString();
+
     }
 
     public bool GetEvaluation()

@@ -349,7 +349,6 @@ public class _PLayerController_Swipe : MonoBehaviour
             {
                 //Level is Over
                 move = false;
-                Time.timeScale = 0;
                 manager.canvasGG.SetActive(true);
                 manager.levelEnded = true;
                 manager.EvaluateLevel();

@@ -29,7 +29,8 @@ public class menuGG : MonoBehaviour
         //SceneManager.LoadScene(NextScene);
         //Debug.Log("Button Pressed");
         //StartCoroutine(ChangeScene());
-        SceneManager.LoadScene(NextScene);
+        if(NextScene != "")
+            SceneManager.LoadScene(NextScene);
         //anim.SetTrigger("CloseWindow");
     }
 

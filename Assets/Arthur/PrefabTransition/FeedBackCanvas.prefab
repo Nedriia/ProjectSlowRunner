@@ -44,11 +44,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanvasGlitch
       objectReference: {fileID: 0}
-    - target: {fileID: 2900377796416699048, guid: 570c696f88ef982449d7770b8fededd6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2900377796416699052, guid: 570c696f88ef982449d7770b8fededd6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -154,15 +149,15 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2900377796838036672, guid: 570c696f88ef982449d7770b8fededd6,
-        type: 3}
-      propertyPath: m_Color.a
-      value: 0.019607844
-      objectReference: {fileID: 0}
     - target: {fileID: 2900377797737198785, guid: 570c696f88ef982449d7770b8fededd6,
         type: 3}
       propertyPath: m_Color.a
       value: 0.25882354
+      objectReference: {fileID: 0}
+    - target: {fileID: 2900377796838036672, guid: 570c696f88ef982449d7770b8fededd6,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.019607844
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 570c696f88ef982449d7770b8fededd6, type: 3}
@@ -183,11 +178,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CanvasMoney
-      objectReference: {fileID: 0}
-    - target: {fileID: 1132626765542206051, guid: 1fc77a88e05defd4c9f2c0cded15062e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1132626765542206077, guid: 1fc77a88e05defd4c9f2c0cded15062e,
         type: 3}
@@ -298,11 +288,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.a
       value: 0.13333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 1132626764968760171, guid: 1fc77a88e05defd4c9f2c0cded15062e,
-        type: 3}
-      propertyPath: m_Color.a
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1fc77a88e05defd4c9f2c0cded15062e, type: 3}
