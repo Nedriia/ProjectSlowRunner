@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 112000000, guid: 4e66e6299d462774a87ee0d9c0a177de,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -36660,13 +36660,14 @@ GameObject:
   - component: {fileID: 1570253957}
   - component: {fileID: 1570253956}
   - component: {fileID: 1570253961}
+  - component: {fileID: 1570253962}
   m_Layer: 5
   m_Name: GGCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1570253956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36778,7 +36779,26 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!111 &1570253961
+--- !u!95 &1570253961
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570253955}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e02df5d084e0e424f88a6f2754e5b8e8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!111 &1570253962
 Animation:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -36787,7 +36807,7 @@ Animation:
   m_GameObject: {fileID: 1570253955}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 0}
+  m_Animation: {fileID: 7400000, guid: dfa586efd3b5c8649b8c653693b43f73, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: dfa586efd3b5c8649b8c653693b43f73, type: 2}
   m_WrapMode: 0
@@ -41715,6 +41735,7 @@ GameObject:
   - component: {fileID: 1715079183}
   - component: {fileID: 1715079185}
   - component: {fileID: 1715079186}
+  - component: {fileID: 1715079188}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -41781,7 +41802,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1715079179}
   m_LocalRotation: {x: 0.2802174, y: 0.51116997, z: -0.18308489, w: 0.7916208}
-  m_LocalPosition: {x: 1.25, y: 6.8, z: -4.46}
+  m_LocalPosition: {x: 1, y: 6, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 503583647823688829}
@@ -41965,6 +41986,8 @@ MonoBehaviour:
   truckCollision: {fileID: 2006265879}
   greyCasesDefeat: {fileID: 663492767}
   outOfMoney: {fileID: 74612595}
+  casesCountTextDisplay: {fileID: 0}
+  timeCountTextDisplay: {fileID: 0}
   numberOfCaseTot: 0
   numberOfCase: 0
   timeTot: 0
@@ -42013,6 +42036,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0666b5aa3b5e2f5448d9e5f78cfc0462, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1715079188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715079179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c57dbf7c62bb858418a981bb4524037a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListOfPointLists:
+    list: []
+  controller: {fileID: 0}
+  alreadyPassed: {fileID: 0}
 --- !u!1 &1715230099
 GameObject:
   m_ObjectHideFlags: 0
@@ -46340,6 +46379,16 @@ PrefabInstance:
       propertyPath: list_TurnablePosition.Array.data[5]
       value: 
       objectReference: {fileID: 1683360299}
+    - target: {fileID: 3497466240945819052, guid: ebfbddb74d8fa6949a4cbb58d2873106,
+        type: 3}
+      propertyPath: CanvasMoney
+      value: 
+      objectReference: {fileID: 464869900}
+    - target: {fileID: 3497466240945819052, guid: ebfbddb74d8fa6949a4cbb58d2873106,
+        type: 3}
+      propertyPath: CanvasGlitch
+      value: 
+      objectReference: {fileID: 201825704}
     - target: {fileID: 2248696335882494564, guid: ebfbddb74d8fa6949a4cbb58d2873106,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: bg
-  m_Shader: {fileID: -6465566751694194690, guid: 5a08f962eb8bc944a9309cebe83aa6c9,
+  m_Shader: {fileID: -6465566751694194690, guid: c5de49d33dcad154ba5bea78067bbc28,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -21,8 +21,12 @@ Material:
     serializedVersion: 3
     m_TexEnvs: []
     m_Floats:
+    - Vector1_1C1701E6: 0.5
     - Vector1_D5B2E161: 0.18
     m_Colors:
+    - Color_35048CF7: {r: 2.8716779, g: 2.1442697, b: 0, a: 0}
     - Color_7BCAB590: {r: 5.3403134, g: 0, b: 4.4937353, a: 0}
     - Color_AED6AF44: {r: 0, g: 0, b: 0, a: 0}
+    - Color_ED76D1E: {r: 0, g: 0, b: 0, a: 0}
+    - Vector2_79943DE9: {r: 8, g: 8, b: 0, a: 0}
     - Vector2_D73E1318: {r: 3, g: 3, b: 3, a: 0}

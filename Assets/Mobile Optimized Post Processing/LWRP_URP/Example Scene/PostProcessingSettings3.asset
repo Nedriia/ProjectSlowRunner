@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: PostProcessingSettings3
   m_EditorClassIdentifier: 
   VignetteEnabled: 1
-  VignettePower: 0.5
+  VignettePower: 0.6
   VignetteCenter: {x: 0, y: 0}
   BlurEnabled: 0
-  BlurRadius: 0.00156
+  BlurRadius: 0
   BlurTextureResolutionDivider: 10
   BlurIterations: 5
   ColorGradingEnabled: 1
@@ -25,19 +25,19 @@ MonoBehaviour:
   Exposure: 3.17
   LUTEnabled: 1
   LUT: {fileID: 2800000, guid: b3802d5f74c7288429b8eede51f2223d, type: 3}
-  LUTIntensity: 0.43
+  LUTIntensity: 0.41
   ColorsAmount: 32
   ChromaticAbberationEnabled: 1
-  ColorsShiftAmount: 0.0006
-  FishEyeEffectFactor: 0.25
+  ColorsShiftAmount: 0.001
+  FishEyeEffectFactor: 0.22
   FishEyeEffectStart: 0.3
   FishEyeEffectEnd: 0.27
   BloomEnabled: 1
-  BloomBlurRadius: 0.00289
+  BloomBlurRadius: 0.00115
   BloomBlurTextureResolutionDivider: 10
   BloomBlurIterations: 10
   FilterTextureResolutionDivider: 2
-  BloomIntensity: 1.03
-  BloomThreshold: 0.09
-  BloomSoftThreshold: 0
+  BloomIntensity: 0.77
+  BloomThreshold: 0.2
+  BloomSoftThreshold: 10
   BloomDebugView: 0

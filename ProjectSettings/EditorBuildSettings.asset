@@ -8,9 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Robin/Scene/MainMenu 1.unity
     guid: 759a67ad2ebfd21409fb5e5dddb712df
-  - enabled: 0
-    path: Assets/Robin/Scene/MinimetroMode/MMMLevel_1_1.unity
-    guid: 158e0daa3c82a0f47abc9f5ef4c19261
   - enabled: 1
     path: Assets/Arthur/Levels_Contruction/Level_1_0.unity
     guid: 8df77de7ce66a044f973715e1eba15e4
